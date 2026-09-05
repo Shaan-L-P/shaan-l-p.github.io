@@ -1,139 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaan's Webpage</title>
+<style>
+  :root {
+    --bg: #b8d8fb;
+    --pill-bg: #b8c8fa;
+    --pill-text: #2e3f9c;
+    --heading: #2f6f9f;
+    --divider: #2e3f9c;
+    --link: #2e3f9c;
+    --text: #2a2a3a;
+  }
 
-    <title>Shaan's Introduction</title>
+  * { box-sizing: border-box; }
 
-    <style>
-        :root {
-            --bg: #b8d8fb;
-            --pill-bg: #b8c8fa;
-            --pill-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --divider: #2e3f9c;
-            --link: #2e3f9c;
-            --text: #2a2a3a;
-        }
+  body {
+    margin: 0;
+    padding: 0 1.5rem 3rem;
+    background-color: var(--bg);
+    font-family: "Courier New", Courier, monospace;
+    color: var(--text);
+  }
 
-        * {
-            box-sizing: border-box;
-        }
+  header.pill {
+    background-color: var(--pill-bg);
+    border-radius: 999px;
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+  }
 
-        body {
-            margin: 0;
-            padding: 0 1.5rem 3rem;
-            background-color: var(--bg);
-            font-family: "Courier New", Courier, monospace;
-            color: var(--text);
-            line-height: 1.6;
-        }
+  header.pill h1 {
+    margin: 0;
+    color: var(--pill-text);
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
 
-        header.pill {
-            background-color: var(--pill-bg);
-            border-radius: 999px;
-            margin: 1.5rem 0;
-            padding: 1.2rem 1.5rem;
-            text-align: center;
-        }
+  hr.divider {
+    border: none;
+    border-top: 4px dashed var(--divider);
+    margin: 1.5rem 0;
+  }
 
-        header.pill h1 {
-            margin: 0;
-            color: var(--pill-text);
-            font-size: 2.2rem;
-            font-weight: bold;
-        }
+  h2 {
+    color: var(--heading);
+    font-size: 1.6rem;
+  }
 
-        nav {
-            text-align: center;
-            margin: 1.5rem 0;
-        }
+  p {
+    font-size: 1.1rem;
+    color: var(--heading);
+  }
 
-        nav a {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
-            margin: 0 1rem;
-        }
+  .links-list a {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 1.2rem;
+  }
 
-        nav a:hover,
-        nav a:focus {
-            color: #2e1f66;
-        }
+  .links-list a:hover, .links-list a:focus, a:hover, a:focus {
+    color: #2e1f66;
+  }
 
-        hr.divider {
-            border: none;
-            border-top: 4px dashed var(--divider);
-            margin: 1.5rem 0;
-        }
+  footer.root-line {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text);
+  }
 
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+  footer.root-line a {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
+  }
 
-        h2 {
-            color: var(--heading);
-            font-size: 1.6rem;
-        }
+  a:focus {
+    outline: 2px solid var(--divider);
+    outline-offset: 2px;
+  }
 
-        p {
-            font-size: 1.1rem;
-            color: var(--heading);
-        }
+  .site-credit {
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
+    color: var(--text);
+  }
 
-        a:focus {
-            outline: 2px solid var(--divider);
-            outline-offset: 2px;
-        }
+  .site-credit a {
+    color: var(--text);
+  }
 
-        footer {
-            margin-top: 2.5rem;
-            font-size: 0.9rem;
-            color: var(--text);
-            text-align: center;
-        }
-
-        footer a {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
-        }
-    </style>
+</style>
 </head>
-
 <body>
 
 <header class="pill">
-    <h1>Shaan's Introduction</h1>
+  <h1>Shaan's Webpage</h1>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="introduction.html">Introduction</a>
-    <a href="contract.html">Course Contract</a>
-</nav>
+<hr class="divider">
+
+<h2>Hi there!</h2>
+
+<p>Welcome to my personal webpage! I'm a computer science student concentrating in cybersecurity here at UNC Charlotte.</p>
+
+<h2>Find me elsewhere</h2>
+
+<p class="links-list">
+  <a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a>
+  <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a href="https://www.freecodecamp.org/shaanpateluncc" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+  <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC" target="_blank" rel="noopener noreferrer">Codecademy</a>
+</p>
 
 <hr class="divider">
 
-<main>
-
-    <h2>Hi there!</h2>
-
-    <p>
-        Welcome to my personal webpage! I'm a computer science student
-        concentrating in cybersecurity here at UNC Charlotte.
-    </p>
-
-</main>
-
-<hr class="divider">
-
-<footer>
-    <a href="#">YOUR FIRM NAME</a> &copy;2026
+<footer class="root-line">
+  This is the root of my website!
+  <a href="https://webpages.charlotte.edu/spate338/itis3135/index.html">Click to go to my ITIS3135 Site</a>
 </footer>
+
+<p class="site-credit">
+  &copy; 2026 Shaan Patel. Designed by Shaan Patel.
+</p>
 
 </body>
 </html>
