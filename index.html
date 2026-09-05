@@ -1,13 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaan's Webpage</title>
+<style>
+  :root {
+    --bg: #b8d8fb;
+    --pill-bg: #b8c8fa;
+    --pill-text: #2e3f9c;
+    --heading: #2f6f9f;
+    --divider: #2e3f9c;
+    --link: #2e3f9c;
+    --text: #2a2a3a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 1.5rem 3rem;
+    background-color: var(--bg);
+    font-family: "Courier New", Courier, monospace;
+    color: var(--text);
+  }
+  header.pill {
+    background-color: var(--pill-bg);
+    border-radius: 999px;
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+  }
+  header.pill h1 {
+    margin: 0;
+    color: var(--pill-text);
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  hr.divider {
+    border: none;
+    border-top: 4px dashed var(--divider);
+    margin: 1.5rem 0;
+  }
+  h2 {
+    color: var(--heading);
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1.1rem;
+    color: var(--heading);
+  }
+  .links-list a {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 1.2rem;
+  }
+  .links-list a:hover,
+  .links-list a:focus,
+  a:hover,
+  a:focus {
+    color: #2e1f66;
+  }
+  footer.root-line {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text);
+  }
+  footer.root-line a {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  a:focus {
+    outline: 2px solid var(--divider);
+    outline-offset: 2px;
+  }
+  .site-credit {
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
+    color: var(--text);
+  }
+  .site-credit a {
+    color: var(--text);
+  }
+</style>
 </head>
 <body>
-    <p>Yo it's Shaan Patel, and this is the root of my website!</p>
 
-    <a href="itis3135/">Click to go to my ITIS3135 Site</a>
+<header class="pill">
+  <h1>Shaan's Webpage</h1>
+</header>
+
+<hr class="divider">
+
+<h2>Hi there!</h2>
+
+<p>Welcome to my personal webpage! I'm a computer science student concentrating in cybersecurity here at UNC Charlotte.</p>
+
+<h2>Find me elsewhere</h2>
+
+<p class="links-list">
+  <a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a>
+  <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a href="https://www.freecodecamp.org/shaanpateluncc" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+  <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC" target="_blank" rel="noopener noreferrer">Codecademy</a>
+</p>
+
+<hr class="divider">
+
+<footer class="root-line">
+  This is the root of my website!
+  <a href="itis3135/">Click to go to my ITIS3135 Site</a>
+</footer>
+
+<p class="site-credit">
+  &copy; 2026 Shaan Patel. Designed by Shaan Patel.
+</p>
+
 </body>
 </html>
