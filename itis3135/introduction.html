@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shaan's Webpage</title>
+
 <style>
   :root {
     --bg: #b8d8fb;
@@ -15,7 +17,9 @@
     --text: #2a2a3a;
   }
 
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
   body {
     margin: 0;
@@ -23,6 +27,7 @@
     background-color: var(--bg);
     font-family: "Courier New", Courier, monospace;
     color: var(--text);
+    line-height: 1.6;
   }
 
   header.pill {
@@ -38,6 +43,24 @@
     color: var(--pill-text);
     font-size: 2.2rem;
     font-weight: bold;
+  }
+
+  nav {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  nav a {
+    display: inline-block;
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0.5rem 1rem;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: #2e1f66;
   }
 
   hr.divider {
@@ -63,7 +86,10 @@
     margin-right: 1.2rem;
   }
 
-  .links-list a:hover, .links-list a:focus, a:hover, a:focus {
+  .links-list a:hover,
+  .links-list a:focus,
+  a:hover,
+  a:focus {
     color: #2e1f66;
   }
 
@@ -93,40 +119,67 @@
   .site-credit a {
     color: var(--text);
   }
-
 </style>
 </head>
+
 <body>
 
 <header class="pill">
   <h1>Shaan's Webpage</h1>
 </header>
 
+<nav>
+  <a href="index.html">Home</a>
+  <a href="introduction.html">Introduction</a>
+  <a href="contract.html">Course Contract</a>
+</nav>
+
 <hr class="divider">
 
-<h2>Hi there!</h2>
+<main>
 
-<p>Welcome to my personal webpage! I'm a computer science student concentrating in cybersecurity here at UNC Charlotte.</p>
+  <h2>Hi there!</h2>
 
-<h2>Find me elsewhere</h2>
+  <p>
+    Welcome to my personal webpage! I'm a computer science student
+    concentrating in cybersecurity here at UNC Charlotte.
+  </p>
 
-<p class="links-list">
-  <a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a>
-  <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
-  <a href="https://www.freecodecamp.org/shaanpateluncc" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
-  <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC" target="_blank" rel="noopener noreferrer">Codecademy</a>
-</p>
+  <h2>Find me elsewhere</h2>
+
+  <p class="links-list">
+    <a href="https://webpages.charlotte.edu/spate338/"
+       target="_blank"
+       rel="noopener noreferrer">Webspace</a>
+
+    <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
+       target="_blank"
+       rel="noopener noreferrer">GitHub</a>
+
+    <a href="https://www.freecodecamp.org/shaanpateluncc"
+       target="_blank"
+       rel="noopener noreferrer">freeCodeCamp</a>
+
+    <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
+       target="_blank"
+       rel="noopener noreferrer">Codecademy</a>
+  </p>
+
+</main>
 
 <hr class="divider">
 
 <footer class="root-line">
   This is the root of my website!
-  <a href="https://webpages.charlotte.edu/spate338/itis3135/index.html">Click to go to my ITIS3135 Site</a>
+  <a href="index.html">Back to Course Site Home</a>
+  <br><br>
+  <a href="contract.html">View Course Contract</a>
 </footer>
 
 <p class="site-credit">
-  &copy; 2026 Shaan Patel. Designed by Shaan Patel.
+  YOUR FIRM NAME &copy; 2026. Designed by Shaan Patel.
 </p>
 
 </body>
 </html>
+```
