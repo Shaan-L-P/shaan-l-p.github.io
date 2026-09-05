@@ -3,123 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan's Webpage</title>
+    <title>ITIS3135 | Shaan Patel</title>
 
     <style>
-        :root {
-            --bg: #b8d8fb;
-            --pill-bg: #b8c8fa;
-            --pill-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --divider: #2e3f9c;
-            --link: #2e3f9c;
-            --text: #2a2a3a;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
+            background-color: #3f465f;
+            color: #d9a8ff;
+            font-family: Georgia, "Times New Roman", serif;
             margin: 0;
-            padding: 0 1.5rem 3rem;
-            background-color: var(--bg);
-            font-family: "Courier New", Courier, monospace;
-            color: var(--text);
+            padding: 20px 15px;
         }
 
-        header.pill {
-            background-color: var(--pill-bg);
-            border-radius: 999px;
-            margin: 1.5rem 0;
-            padding: 1.2rem 1.5rem;
-            text-align: center;
+        h1 {
+            font-size: 3.2rem;
+            margin: 0 0 35px 0;
         }
 
-        header.pill h1 {
-            margin: 0;
-            color: var(--pill-text);
-            font-size: 2.2rem;
-            font-weight: bold;
+        nav {
+            margin-bottom: 40px;
         }
 
-        hr.divider {
-            border: none;
-            border-top: 4px dashed var(--divider);
-            margin: 1.5rem 0;
+        nav a {
+            color: #b8ff8a;
+            font-size: 1.8rem;
+            margin-right: 8px;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #ffffff;
         }
 
         h2 {
-            color: var(--heading);
-            font-size: 1.6rem;
+            font-size: 2.5rem;
+            margin-bottom: 35px;
         }
 
         p {
-            font-size: 1.1rem;
-            color: var(--heading);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
         }
 
-        a {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
+        .links a {
+            color: #b8ff8a;
+            font-size: 1.8rem;
+            margin-right: 8px;
         }
 
-        a:hover,
-        a:focus {
-            color: #2e1f66;
+        .links a:hover,
+        .links a:focus {
+            color: #ffffff;
         }
 
-        footer.root-line {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--text);
-        }
-
-        footer.root-line a {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        a:focus {
-            outline: 2px solid var(--divider);
-            outline-offset: 2px;
-        }
-
-        .site-credit {
-            margin-top: 2.5rem;
-            font-size: 0.8rem;
-            color: var(--text);
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
         }
     </style>
 </head>
 
 <body>
 
-    <header class="pill">
-        <h1>Shaan's Webpage</h1>
+    <header>
+        <h1>ITIS3135 | Shaan Patel | Shaan Patel</h1>
     </header>
 
-    <hr class="divider">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="contract.html">Contract</a>
+    </nav>
 
-    <h2>Hi there!</h2>
+    <main>
+        <h2>Home</h2>
 
-    <p>
-        Welcome to my personal webpage! I'm a computer science student
-        concentrating in cybersecurity here at UNC Charlotte.
-    </p>
+        <p>Welcome to my webpage for ITIS3135!</p>
 
-    <hr class="divider">
+        <p class="links">
+            <a href="https://webpages.charlotte.edu/spate338/"
+               target="_blank"
+               rel="noopener noreferrer">Webspace</a>
 
-    <footer class="root-line">
-        This is the root of my website!
-        <a href="itis3135/">Click to go to my ITIS3135 Site</a>
+            <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
+               target="_blank"
+               rel="noopener noreferrer">GitHub</a>
+
+            <a href="https://www.freecodecamp.org/shaanpateluncc"
+               target="_blank"
+               rel="noopener noreferrer">FreeCodeCamp</a>
+
+            <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
+               target="_blank"
+               rel="noopener noreferrer">Codecademy</a>
+        </p>
+    </main>
+
+    <footer>
+        Shaan Patel &copy;2026
     </footer>
-
-    <p class="site-credit">
-        &copy; 2026 Shaan Patel. Designed by Shaan Patel.
-    </p>
 
 </body>
 </html>
