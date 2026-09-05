@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shaan's Webpage</title>
+<title>Shaan's Introduction</title>
+
 <style>
   :root {
     --bg: #b8d8fb;
@@ -15,7 +16,9 @@
     --text: #2a2a3a;
   }
 
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
   body {
     margin: 0;
@@ -23,6 +26,7 @@
     background-color: var(--bg);
     font-family: "Courier New", Courier, monospace;
     color: var(--text);
+    line-height: 1.6;
   }
 
   header.pill {
@@ -40,10 +44,32 @@
     font-weight: bold;
   }
 
+  nav {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  nav a {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0 1rem;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: #2e1f66;
+  }
+
   hr.divider {
     border: none;
     border-top: 4px dashed var(--divider);
     margin: 1.5rem 0;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   h2 {
@@ -56,6 +82,31 @@
     color: var(--heading);
   }
 
+  ul,
+  ol {
+    font-size: 1.1rem;
+    color: var(--heading);
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+  }
+
+  .profile-photo {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 1.5rem auto 0.5rem;
+    border-radius: 8px;
+  }
+
+  .photo-caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
   .links-list a {
     color: var(--link);
     text-decoration: underline;
@@ -63,20 +114,11 @@
     margin-right: 1.2rem;
   }
 
-  .links-list a:hover, .links-list a:focus, a:hover, a:focus {
+  .links-list a:hover,
+  .links-list a:focus,
+  a:hover,
+  a:focus {
     color: #2e1f66;
-  }
-
-  footer.root-line {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--text);
-  }
-
-  footer.root-line a {
-    color: var(--link);
-    text-decoration: underline;
-    font-weight: bold;
   }
 
   a:focus {
@@ -84,49 +126,123 @@
     outline-offset: 2px;
   }
 
-  .site-credit {
+  footer {
     margin-top: 2.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text);
   }
 
-  .site-credit a {
-    color: var(--text);
+  footer a {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
   }
-
 </style>
 </head>
+
 <body>
 
 <header class="pill">
-  <h1>Shaan's Webpage</h1>
+  <h1>Shaan's Introduction</h1>
 </header>
 
-<hr class="divider">
-
-<h2>Hi there!</h2>
-
-<p>Welcome to my personal webpage! I'm a computer science student concentrating in cybersecurity here at UNC Charlotte.</p>
-
-<h2>Find me elsewhere</h2>
-
-<p class="links-list">
-  <a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a>
-  <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
-  <a href="https://www.freecodecamp.org/shaanpateluncc" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
-  <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC" target="_blank" rel="noopener noreferrer">Codecademy</a>
-</p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="introduction.html">Introduction</a>
+  <a href="contract.html">Contract</a>
+</nav>
 
 <hr class="divider">
 
-<footer class="root-line">
-  This is the root of my website!
-  <a href="https://webpages.charlotte.edu/spate338/itis3135/index.html">Click to go to my ITIS3135 Site</a>
+<main>
+
+  <img
+    src="images/brooklyn-bridge.jpg"
+    alt="Shaan Patel on the Brooklyn Bridge in New York City"
+    class="profile-photo"
+  >
+
+  <p class="photo-caption">
+    Brooklyn Bridge, NYC Summer 2025
+  </p>
+
+  <p>
+    Hello everyone, I am a Computer Science major here at UNC Charlotte
+    concentrating in Cybersecurity. This is my junior year. I live about
+    an hour and a half away from campus. I enjoy hanging out with friends,
+    playing games, and sports.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Personal Background:</strong>
+      I am 20. I was born in New York but I grew up in Greensboro.
+      My parents are immigrants from India.
+    </li>
+
+    <li>
+      <strong>Professional Background:</strong>
+      I have been a summer camp counselor in my freshman, sophomore
+      and junior years of high school.
+    </li>
+
+    <li>
+      <strong>Academic Background:</strong>
+      Computer Science major, concentration in Cybersecurity
+    </li>
+
+    <li>
+      <strong>Primary Work Computer:</strong>
+      Macbook Pro M3
+    </li>
+
+    <li>
+      <strong>Primary Work Locations:</strong>
+      My desk in my dorm (Holshouser Hall)
+    </li>
+
+    <li>
+      <strong>Alternate Work Locations:</strong>
+      My PC at my home, Popp Martin Student Union, and Atkins Library
+    </li>
+  </ul>
+
+  <h2>Courses I'm Taking and Why</h2>
+
+  <ol>
+    <li>
+      <strong>ITIS3135 - Web Application:</strong>
+      Required for my concentration
+    </li>
+
+    <li>
+      <strong>ITSC2181 - Intro to Computer Systems:</strong>
+      Required for my concentration
+    </li>
+
+    <li>
+      <strong>ITSC3688 - CS &amp; AI: Ethics, Society, Communication:</strong>
+      Required for my concentration
+    </li>
+
+    <li>
+      <strong>MATH2164 - Matrices &amp; Linear Algebra:</strong>
+      Required for my concentration
+    </li>
+
+    <li>
+      <strong>ENGL3081 - Authors Pop Culture Genre Studies:</strong>
+      I needed another elective
+    </li>
+  </ol>
+
+</main>
+
+<hr class="divider">
+
+<footer>
+  <a href="#">Shaan Patel</a> &copy;2026
 </footer>
-
-<p class="site-credit">
-  &copy; 2026 Shaan Patel. Designed by Shaan Patel.
-</p>
 
 </body>
 </html>
