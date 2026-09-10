@@ -1,9 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaan's Webpage</title>
+
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/spate338/itis3135/images/apple-touch-icon.jpg">
 
     <style>
         :root {
@@ -54,9 +59,33 @@
             font-size: 1.6rem;
         }
 
+        .profile-photo {
+            display: block;
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            margin: 1.5rem auto 0.5rem;
+            border-radius: 8px;
+        }
+
+        .photo-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
         p {
             font-size: 1.1rem;
             color: var(--heading);
+        }
+
+        ul {
+            font-size: 1.1rem;
+            color: var(--heading);
+        }
+
+        li {
+            margin-bottom: 0.6rem;
         }
 
         a {
@@ -105,10 +134,28 @@
 
     <h2>Hi there!</h2>
 
+    <img
+        src="itis3135/images/brooklyn-bridge.jpg"
+        alt="Shaan Patel on the Brooklyn Bridge in New York City"
+        class="profile-photo"
+    >
+
+    <p class="photo-caption">
+        Brooklyn Bridge Summer 2025
+    </p>
+
     <p>
         Welcome to my personal webpage! I'm a computer science student
         concentrating in cybersecurity here at UNC Charlotte.
     </p>
+
+    <h2>Interests</h2>
+
+    <ul>
+        <li><strong>Favorite Artist:</strong> Bunii</li>
+        <li><strong>Favorite Show:</strong> <em>Invincible</em></li>
+        <li><strong>Hobbies:</strong> Gaming, drawing</li>
+    </ul>
 
     <hr class="divider">
 
@@ -123,3 +170,4 @@
 
 </body>
 </html>
+```
