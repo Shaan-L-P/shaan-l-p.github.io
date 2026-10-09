@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan's Webpage</title>
+    <title>Shaan's Webpage | Hi There!</title>
 
     <link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
     <link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="/spate338/itis3135/images/apple-touch-icon.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -25,14 +27,19 @@
         }
 
         body {
-            margin: 0;
+            max-width: 900px;
+            margin: 0 auto;
             padding: 0 1.5rem 3rem;
             background-color: var(--bg);
             font-family: "Courier New", Courier, monospace;
             color: var(--text);
         }
 
-        header.pill {
+        h1, h2, h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+        }
+
+        header {
             background-color: var(--pill-bg);
             border-radius: 999px;
             margin: 1.5rem 0;
@@ -40,14 +47,14 @@
             text-align: center;
         }
 
-        header.pill h1 {
+        header h1 {
             margin: 0;
             color: var(--pill-text);
             font-size: 2.2rem;
             font-weight: bold;
         }
 
-        hr.divider {
+        hr {
             border: none;
             border-top: 4px dashed var(--divider);
             margin: 1.5rem 0;
@@ -58,18 +65,28 @@
             font-size: 1.6rem;
         }
 
-        .profile-photo {
+        h3 {
+            color: var(--heading);
+            font-size: 1.3rem;
+        }
+
+        figure {
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        figure img {
             display: block;
             width: 100%;
             max-width: 300px;
             height: auto;
-            margin: 1.5rem auto 0.5rem;
+            margin: 0 auto;
             border-radius: 8px;
         }
 
-        .photo-caption {
+        figcaption {
             text-align: center;
             font-style: italic;
+            color: var(--heading);
             margin-top: 0.5rem;
         }
 
@@ -87,7 +104,8 @@
             margin-bottom: 0.6rem;
         }
 
-        a {
+        a,
+        a:visited {
             color: var(--link);
             text-decoration: underline;
             font-weight: bold;
@@ -98,74 +116,86 @@
             color: #2e1f66;
         }
 
-        footer.root-line {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--text);
-        }
-
-        footer.root-line a {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
         a:focus {
             outline: 2px solid var(--divider);
             outline-offset: 2px;
         }
 
-        .site-credit {
-            margin-top: 2.5rem;
-            font-size: 0.8rem;
+        footer p {
+            font-weight: bold;
+            font-size: 1.2rem;
             color: var(--text);
+        }
+
+        footer small {
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0 1rem 2rem;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            p,
+            ul,
+            footer p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header class="pill">
+    <header>
         <h1>Shaan's Webpage</h1>
     </header>
 
-    <hr class="divider">
+    <hr>
 
-    <h2>Hi there!</h2>
+    <main>
+        <h2>Hi There!</h2>
 
-    <img
-        src="itis3135/images/brooklyn-bridge.jpg"
-        alt="Shaan Patel on the Brooklyn Bridge in New York City"
-        class="profile-photo"
-    >
+        <figure>
+            <img src="images/brooklyn-bridge.jpg" alt="Shaan Patel on the Brooklyn Bridge in New York City">
+            <figcaption>Brooklyn Bridge Summer 2025</figcaption>
+        </figure>
 
-    <p class="photo-caption">
-        Brooklyn Bridge Summer 2025
-    </p>
+        <p>
+            Welcome to my personal webpage! I'm a computer science student
+            concentrating in cybersecurity here at UNC Charlotte.
+        </p>
 
-    <p>
-        Welcome to my personal webpage! I'm a computer science student
-        concentrating in cybersecurity here at UNC Charlotte.
-    </p>
+        <h3>Interests</h3>
 
-    <h2>Interests</h2>
+        <ul>
+            <li><strong>Favorite Artist:</strong> Bunii</li>
+            <li><strong>Favorite Show:</strong> <em>Invincible</em></li>
+            <li><strong>Hobbies:</strong> Gaming, drawing</li>
+        </ul>
+    </main>
 
-    <ul>
-        <li><strong>Favorite Artist:</strong> Bunii</li>
-        <li><strong>Favorite Show:</strong> <em>Invincible</em></li>
-        <li><strong>Hobbies:</strong> Gaming, drawing</li>
-    </ul>
+    <hr>
 
-    <hr class="divider">
+    <footer>
+        <p>
+            This is the root of my website!
+            <a href="itis3135/">Click to go to my ITIS3135 Site</a>
+        </p>
 
-    <footer class="root-line">
-        This is the root of my website!
-        <a href="itis3135/">Click to go to my ITIS3135 Site</a>
+        <p><em>"Simple pages, built with care."</em></p>
+
+        <p><small>&copy; 2026 Shaan Patel. Designed by Shaan Patel.</small></p>
     </footer>
-
-    <p class="site-credit">
-        &copy; 2026 Shaan Patel. Designed by Shaan Patel.
-    </p>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 
