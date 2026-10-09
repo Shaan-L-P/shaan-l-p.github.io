@@ -7,21 +7,18 @@
 
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Introduction</title>
 
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+    <link rel="icon" href="images/favicon-32x32.jpg" type="image/jpeg">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #b8d8fb;
-            --pill-bg: #b8c8fa;
-            --pill-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --divider: #2e3f9c;
-            --link: #2e3f9c;
-            --text: #2a2a3a;
+            --page-background: #b8d8fb;
+            --link-color: #2e3f9c;
+            --heading-color: #2f6f9f;
+            --text-color: #2a2a3a;
         }
 
         * {
@@ -31,221 +28,117 @@
         body {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 1.5rem 3rem;
-            background-color: var(--bg);
+            padding: 20px;
+            background-color: var(--page-background);
+            color: var(--text-color);
             font-family: "Courier Prime", "Courier New", monospace;
-            color: var(--text);
+            line-height: 1.6;
         }
 
-        /*
-         * Classes style specific page components, including the header,
-         * navigation links, headings, profile image, quote, and footer.
-         * Reusing classes keeps the design consistent across the page.
-         */
-
-        .page-header {
-            margin: 1.5rem 0;
-            padding: 1.2rem 1rem;
-            text-align: center;
-            background-color: var(--pill-bg);
-            border-radius: 999px;
+        header,
+        main,
+        footer {
+            margin-bottom: 25px;
         }
 
         .site-title {
-            margin: 0;
-            color: var(--pill-text);
-            font-family: "Montserrat", Helvetica, sans-serif;
-            font-size: 2rem;
-            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--heading-color);
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
         }
 
         .site-subtitle {
-            margin: 0.6rem 0 0;
-            color: var(--pill-text);
-            font-family: "Montserrat", Helvetica, sans-serif;
-            font-size: 1.2rem;
+            margin-top: 0;
+            text-align: center;
         }
 
+        /* Navigation links use classes so their styles remain consistent. */
         .main-nav,
         .footer-links {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 0.7rem;
-            margin: 1.5rem 0;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin: 15px 0;
         }
 
         .nav-link,
         .footer-link {
-            display: inline-block;
-            padding: 0.65rem 1.1rem;
-            background-color: var(--pill-bg);
-            border: 2px solid var(--divider);
-            border-radius: 999px;
-            color: var(--pill-text);
-            font-family: "Montserrat", Helvetica, sans-serif;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            background: none;
+            color: var(--link-color);
+            text-decoration: underline;
             font-weight: bold;
-            text-decoration: none;
-        }
-
-        .nav-link:visited,
-        .footer-link:visited {
-            color: var(--pill-text);
         }
 
         .nav-link:hover,
-        .nav-link:focus,
         .footer-link:hover,
-        .footer-link:focus {
-            background-color: var(--divider);
-            color: #ffffff;
-        }
-
         .nav-link:focus,
         .footer-link:focus {
-            outline: 2px solid var(--text);
-            outline-offset: 3px;
-        }
-
-        .divider {
-            border: none;
-            border-top: 4px dashed var(--divider);
-            margin: 1.5rem 0;
+            color: var(--heading-color);
         }
 
         .section-title {
-            color: var(--heading);
-            font-family: "Montserrat", Helvetica, sans-serif;
-            font-size: 1.7rem;
-        }
-
-        .subsection-title {
-            color: var(--heading);
-            font-family: "Montserrat", Helvetica, sans-serif;
-            font-size: 1.35rem;
+            color: var(--heading-color);
+            font-family: "Montserrat", sans-serif;
         }
 
         .display-name {
-            margin: 1rem 0;
-            color: var(--pill-text);
-            font-family: "Montserrat", Helvetica, sans-serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            white-space: nowrap;
+            text-align: center;
         }
 
-        .profile-figure {
-            margin: 1.5rem 0;
+        figure {
+            margin: 20px auto;
+            text-align: center;
         }
 
-        .profile-photo {
+        .profile-image {
             display: block;
             width: 100%;
             max-width: 300px;
             height: auto;
             margin: 0 auto;
-            border-radius: 8px;
         }
 
-        .photo-caption {
-            margin-top: 0.5rem;
-            color: var(--heading);
-            text-align: center;
+        figcaption {
+            margin-top: 8px;
             font-style: italic;
         }
 
-        .page-text,
-        .background-list,
-        .course-list,
-        .interest-list {
-            color: var(--heading);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .background-list,
-        .interest-list {
-            padding-left: 1.5rem;
-        }
-
-        .background-list li,
-        .interest-list li,
-        .course-list li {
-            margin-bottom: 0.5rem;
-        }
-
-        .course-list {
-            padding-left: 1.5rem;
-        }
-
-        .course-list ol {
-            margin-top: 0.5rem;
-            padding-left: 1.5rem;
-        }
-
-        .quote-block {
-            margin: 1.5rem 0;
-            padding: 1rem 1.5rem;
-            border-left: 5px solid var(--divider);
-            background-color: var(--pill-bg);
-            color: var(--text);
-            font-size: 1.05rem;
-            line-height: 1.7;
+        blockquote {
+            margin: 25px 0;
+            padding-left: 20px;
+            border-left: 3px solid var(--heading-color);
         }
 
         .quote-attribution {
-            margin-bottom: 0;
             text-align: right;
-            font-style: italic;
         }
 
-        .page-footer {
+        footer {
+            padding-top: 15px;
             text-align: center;
         }
 
-        .tagline {
-            color: var(--text);
-            font-weight: bold;
+        .footer-tagline {
+            margin-bottom: 15px;
         }
 
         .copyright {
-            color: var(--text);
-            font-size: 0.85rem;
+            margin-top: 15px;
         }
 
         @media (max-width: 600px) {
             body {
-                padding: 0 1rem 2rem;
-            }
-
-            .site-title {
-                font-size: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.45rem;
-            }
-
-            .display-name {
-                font-size: 1.1rem;
+                padding: 12px;
             }
 
             .main-nav,
             .footer-links {
-                gap: 0.5rem;
-            }
-
-            .nav-link,
-            .footer-link {
-                padding: 0.55rem 0.8rem;
-                font-size: 0.9rem;
-            }
-
-            .page-text,
-            .background-list,
-            .course-list,
-            .interest-list {
-                font-size: 1rem;
+                gap: 10px 15px;
             }
         }
     </style>
@@ -255,115 +148,112 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <header>
         <h1 class="site-title">Shaan Patel's Silly Platypus | ITIS3135</h1>
         <p class="site-subtitle">A Little About Me</p>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="introduction.html">Introduction</a>
+            <a class="nav-link" href="contract.html">Contract</a>
+            <a class="nav-link" href="about.html">About</a>
+        </nav>
     </header>
-
-    <nav class="main-nav" aria-label="Main navigation">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="introduction.html">Introduction</a>
-        <a class="nav-link" href="contract.html">Contract</a>
-        <a class="nav-link" href="about.html">About</a>
-    </nav>
-
-    <hr class="divider">
 
     <main>
         <h2 class="section-title">Introduction</h2>
 
         <h6 class="display-name">Shaan Patel | Silly Platypus</h6>
 
-        <figure class="profile-figure">
-            <img class="profile-photo"
-                 src="images/brooklyn-bridge.jpg"
-                 alt="Shaan Patel on the Brooklyn Bridge in New York City">
-            <figcaption class="photo-caption">Brooklyn Bridge Summer 2025</figcaption>
+        <figure>
+            <img
+                class="profile-image"
+                src="images/brooklyn-bridge.jpg"
+                alt="Shaan Patel on the Brooklyn Bridge in New York City"
+            >
+            <figcaption>Brooklyn Bridge Summer 2025</figcaption>
         </figure>
 
-        <p class="page-text">
-            Welcome to my introduction page! I'm Shaan Patel, a computer science
-            student at UNC Charlotte concentrating in cybersecurity. I'm interested
-            in technology, how computers work, and how cybersecurity helps protect
-            people and information.
+        <p>
+            Hello! My name is Shaan Patel, and I am a Computer Science student
+            at UNC Charlotte concentrating in Cybersecurity. I am interested
+            in technology, computers, and learning how digital systems work.
+            I hope to build a career where I can use my technical skills to
+            help protect people and organizations from cyber threats.
         </p>
 
-        <h3 class="subsection-title">Personal Background</h3>
-
-        <ul class="background-list">
-            <li>
-                <strong>Personal Background:</strong>
-                I grew up in Greensboro, North Carolina. My family and experiences
-                have helped shape my interests and values.
-            </li>
-            <li>
-                <strong>Professional Background:</strong>
-                I have experience working as a Youth Development Leader at the YMCA,
-                where I helped supervise children, support activities, and maintain
-                a safe environment.
-            </li>
-            <li>
-                <strong>Academic Background:</strong>
-                I study computer science at UNC Charlotte with a concentration in
-                cybersecurity. I'm interested in learning more about security,
-                software, and the ways technology affects people.
-            </li>
-        </ul>
-
-        <h3 class="subsection-title">Academic Courses</h3>
-
-        <p class="page-text">
-            These are some of the courses in my academic path:
-        </p>
-
-        <ol class="course-list">
-            <li>
-                Computer Science and Information Technology
-                <ol>
-                    <li>ITIS 3135: Web-Based Application Design and Development</li>
-                    <li>ITSC 2181: Introduction to Computer Systems</li>
-                    <li>ITSC 3688: Computers and Their Impact on Society</li>
-                </ol>
-            </li>
-            <li>
-                Mathematics
-                <ol>
-                    <li>MATH 2164: Matrices and Linear Algebra</li>
-                </ol>
-            </li>
-            <li>
-                English
-                <ol>
-                    <li>ENGL 3081: Technical Communication</li>
-                </ol>
-            </li>
-        </ol>
-
-        <h3 class="subsection-title">Interests</h3>
-
-        <ul class="interest-list">
-            <li><strong>Technology:</strong> I'm interested in cybersecurity, computers, and emerging technology.</li>
-            <li><strong>Gaming:</strong> I enjoy playing video games in my free time.</li>
-            <li><strong>Drawing:</strong> Drawing gives me a creative outlet outside of school.</li>
-            <li><strong>Favorite Artist:</strong> Bunii.</li>
-            <li><strong>Favorite Show:</strong> <em>Invincible</em>.</li>
-        </ul>
-
-        <h3 class="subsection-title">Favorite Quote</h3>
-
-        <blockquote class="quote-block">
+        <section>
+            <h3 class="section-title">Personal Background</h3>
             <p>
-                “People will forget what you said, people will forget what you did,
-                but people will never forget how you made them feel.”
+                I grew up in North Carolina and have always been interested
+                in technology. I enjoy learning how things work and exploring
+                new interests in my free time.
             </p>
+        </section>
+
+        <section>
+            <h3 class="section-title">Professional Background</h3>
+            <p>
+                I have experience working as a Youth Development Leader at
+                the YMCA, where I helped supervise children and support a
+                safe, positive environment. This experience helped me develop
+                communication, responsibility, and teamwork skills.
+            </p>
+        </section>
+
+        <section>
+            <h3 class="section-title">Academic Background</h3>
+            <p>
+                I am pursuing a Bachelor of Science in Computer Science at
+                UNC Charlotte with a concentration in Cybersecurity.
+            </p>
+
+            <h4 class="section-title">Courses I Have Taken or Am Taking</h4>
+            <ol>
+                <li>
+                    Computer Science and Information Technology
+                    <ol>
+                        <li>ITIS 3135</li>
+                        <li>ITSC 2181</li>
+                        <li>ITSC 3688</li>
+                    </ol>
+                </li>
+                <li>
+                    Mathematics
+                    <ol>
+                        <li>MATH 2164</li>
+                    </ol>
+                </li>
+                <li>
+                    English
+                    <ol>
+                        <li>ENGL 3081</li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h3 class="section-title">Interests</h3>
+            <ul>
+                <li>Cybersecurity and technology</li>
+                <li>Video games</li>
+                <li>Drawing and other creative activities</li>
+                <li>Listening to music, especially electronic music</li>
+                <li>Watching animated shows, including <em>Invincible</em></li>
+            </ul>
+        </section>
+
+        <blockquote>
+            “Try to be a rainbow in someone's cloud.”
             <p class="quote-attribution">- Maya Angelou</p>
         </blockquote>
     </main>
 
-    <hr class="divider">
-
-    <footer class="page-footer">
-        <p class="tagline"><em>"Simple pages, built with care."</em></p>
+    <footer>
+        <p class="footer-tagline">
+            <em>Simple pages, built with care.</em>
+        </p>
 
         <nav class="footer-links" aria-label="Profile links">
             <a class="footer-link" href="https://webpages.charlotte.edu/spate338/">CLT Web</a>
@@ -377,6 +267,9 @@
         <p class="copyright">Silly Platypus ©2026 Shaan Patel</p>
     </footer>
 
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script
+        src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
+        defer
+    ></script>
 </body>
 </html>
