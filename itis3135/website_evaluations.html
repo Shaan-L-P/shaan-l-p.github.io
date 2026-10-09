@@ -14,8 +14,8 @@
 
     <style>
         body {
-            background-color: #c9f2dc;
-            color: #1b2a4a;
+            background-color: #b8d8fb;
+            color: #2a2a3a;
             font-family: Helvetica, Arial, sans-serif;
             max-width: 900px;
             margin: 0 auto;
@@ -28,68 +28,71 @@
 
         header img {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 10px;
+            right: 20px;
             max-width: 70px;
         }
 
         h1 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(2rem, 6vw, 3.2rem);
-            margin: 0 0 25px 0;
-            color: #1b2a4a;
-            padding: 0 90px 0 0;
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: #b8c8fa;
+            border-radius: 999px;
+            padding: 20px 110px 20px 30px;
+            text-align: center;
         }
 
         h2 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
-            margin: 0 0 25px 0;
-            color: #1b2a4a;
+            margin-bottom: 35px;
+            color: #2f6f9f;
+            border-bottom: 4px dashed #2e3f9c;
+            padding-bottom: 10px;
         }
 
         h3 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(1.5rem, 4vw, 2.2rem);
             margin: 0 0 15px 0;
-            color: #1b2a4a;
+            color: #2e3f9c;
+        }
+
+        a,
+        a:visited {
+            color: #2e3f9c;
+            font-weight: bold;
+        }
+
+        a:hover,
+        a:focus {
+            color: #2e1f66;
         }
 
         nav {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        nav a,
-        nav a:visited {
-            color: #4a148c;
+        nav a {
             font-size: 1.8rem;
-            font-weight: bold;
-            margin-right: 20px;
+            margin: 0 12px;
             display: inline-block;
-        }
-
-        nav a:hover,
-        nav a:focus {
-            color: #2a0a4f;
         }
 
         p {
             font-size: 1.8rem;
-            margin: 0 0 30px 0;
+            margin-bottom: 30px;
+            color: #2f6f9f;
         }
 
         section {
-            margin-bottom: 40px;
-        }
-
-        h3 a,
-        h3 a:visited {
-            color: #4a148c;
-        }
-
-        h3 a:hover,
-        h3 a:focus {
-            color: #2a0a4f;
+            background-color: #b8c8fa;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            padding: 20px 25px;
         }
 
         ul {
@@ -105,21 +108,15 @@
         footer {
             font-size: 1.5rem;
             margin-top: 35px;
-        }
-
-        footer a,
-        footer a:visited {
-            color: #4a148c;
-        }
-
-        footer a:hover,
-        footer a:focus {
-            color: #2a0a4f;
+            color: #2a2a3a;
+            border-top: 4px dashed #2e3f9c;
+            padding-top: 20px;
         }
 
         footer p {
             font-size: 1.3rem;
             margin: 15px 0 0 0;
+            color: #2a2a3a;
         }
 
         @media (max-width: 600px) {
