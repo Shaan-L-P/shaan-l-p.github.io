@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ITIS3135 | Shaan Patel | Silly Platypus</title>
+    <title>Shaan's Silly Platypus | ITIS3135 | Home</title>
 
     <link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
     <link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
@@ -14,11 +14,17 @@
 
     <style>
         body {
+            /* black background on purpose: the soft pink text and blue links stand out strongly against it */
             background-color: #000000;
             color: #d96b6b;
-            font-family: Helvetica, Montserrat, sans-serif;
-            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
             padding: 20px 15px;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
         }
 
         h1 {
@@ -29,12 +35,21 @@
             padding: 15px;
         }
 
+        a,
+        a:visited {
+            color: #4f78b8;
+        }
+
+        a:hover,
+        a:focus {
+            color: #8fb0e8;
+        }
+
         nav {
             margin-bottom: 40px;
         }
 
         nav a {
-            color: #4f78b8;
             font-size: 1.8rem;
             margin-right: 8px;
             border: 2px solid #4f78b8;
@@ -44,7 +59,6 @@
 
         nav a:hover,
         nav a:focus {
-            color: #8fb0e8;
             border-color: #8fb0e8;
         }
 
@@ -56,6 +70,15 @@
             padding: 15px;
         }
 
+        main img {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin: 0 0 30px 0;
+            border: 2px solid #4f78b8;
+        }
+
         p {
             font-size: 1.8rem;
             margin-bottom: 30px;
@@ -64,20 +87,20 @@
             padding: 15px;
         }
 
-        .links {
+        main ul {
+            list-style: none;
+            margin: 0 0 30px 0;
             border: 2px solid #4f78b8;
             padding: 15px;
         }
 
-        .links a {
-            color: #4f78b8;
-            font-size: 1.8rem;
+        main li {
+            display: inline-block;
             margin-right: 8px;
         }
 
-        .links a:hover,
-        .links a:focus {
-            color: #8fb0e8;
+        main li a {
+            font-size: 1.8rem;
         }
 
         footer {
@@ -88,13 +111,36 @@
             padding: 15px;
         }
 
-        footer a {
-            color: #4f78b8;
+        footer p {
+            font-size: 1.3rem;
+            margin: 15px 0 0 0;
+            border: none;
+            padding: 0;
         }
 
-        footer a:hover,
-        footer a:focus {
-            color: #8fb0e8;
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+            }
+
+            p,
+            main li a {
+                font-size: 1.2rem;
+            }
+
+            footer,
+            footer p {
+                font-size: 1.1rem;
+            }
         }
     </style>
 
@@ -104,7 +150,7 @@
 <body>
 
     <header>
-        <h1>ITIS3135 | Shaan Patel | Silly Platypus</h1>
+        <h1>Shaan's Silly Platypus | ITIS3135</h1>
     </header>
 
     <nav>
@@ -118,36 +164,11 @@
     <main>
         <h2>Home</h2>
 
+        <img src="images/silly-platypus-logo.jpg" alt="Silly platypus logo for Shaan Patel Designs">
+
         <p>Welcome to my webpage for ITIS3135!</p>
 
-        <p class="links">
-            <a href="https://webpages.charlotte.edu/spate338/"
-               target="_blank"
-               rel="noopener noreferrer">Webspace</a>
-
-            <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
-               target="_blank"
-               rel="noopener noreferrer">GitHub.com</a>
-
-            <a href="https://shaan-l-p.github.io/"
-               target="_blank"
-               rel="noopener noreferrer">Github.io</a>
-
-            <a href="https://www.freecodecamp.org/shaanpateluncc"
-               target="_blank"
-               rel="noopener noreferrer">FreeCodeCamp</a>
-
-            <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
-               target="_blank"
-               rel="noopener noreferrer">Codecademy</a>
-        </p>
-    </main>
-
-    <footer>
-        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
-    </footer>
-
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
-
-</body>
-</html>
+        <ul>
+            <li><a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a></li>
+            <li><a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub.com</a></li>
+            <li><a href="https://shaan-l-p.github.io/" target="_blank" rel="noopener
