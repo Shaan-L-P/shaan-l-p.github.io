@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel's Silly Platypus | ITIS3135</title>
+
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Introduction</title>
 
     <link rel="icon" type="image/jpeg" href="images/favicon-32x32.jpg">
 
@@ -20,8 +21,14 @@
             --link-color: #182d80;
         }
 
-        /* Class selectors organize related content and keep formatting consistent. */
-        /* Navigation classes space simple text links without adding boxes. */
+        /*
+         * Classes group related elements and keep the page formatting
+         * consistent. The display-name class makes the h6 prominent.
+         * Navigation and footer classes arrange simple text links.
+         * The profile-figure class centers the photo and caption.
+         * The quote-credit class separates the quote attribution.
+         */
+
         body {
             max-width: 1000px;
             margin: 0 auto;
@@ -52,6 +59,10 @@
         h2 {
             border-bottom: 2px solid var(--heading-color);
             padding-bottom: 5px;
+        }
+
+        h3 {
+            margin-top: 25px;
         }
 
         a:link,
@@ -86,7 +97,8 @@
             font-weight: 700;
             text-align: center;
             white-space: nowrap;
-            margin-bottom: 10px;
+            margin: 10px 0;
+            color: var(--heading-color);
         }
 
         .profile-figure {
@@ -124,16 +136,16 @@
             font-style: normal;
         }
 
+        .footer-tagline {
+            font-style: italic;
+        }
+
         .footer-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 8px 16px;
             margin: 15px 0;
-        }
-
-        .footer-tagline {
-            font-style: italic;
         }
 
         footer hr {
@@ -145,10 +157,6 @@
         @media (max-width: 600px) {
             body {
                 padding: 15px;
-            }
-
-            h1 {
-                font-size: 1.4rem;
             }
 
             .display-name {
@@ -168,7 +176,7 @@
 
 <body>
     <header>
-        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
+        <h6 class="display-name">Shaan Patel | Silly Platypus</h6>
 
         <nav class="main-nav" aria-label="Main navigation">
             <a class="nav-link" href="index.html">Home</a>
@@ -181,8 +189,6 @@
 
     <main>
         <h2>Introduction</h2>
-
-        <p class="display-name">Shaan Patel | Silly Platypus</p>
 
         <figure class="profile-figure">
             <img
@@ -258,18 +264,34 @@
             <ol>
                 <li>
                     ITIS 3135: Web-Based Application Design and Development
+                    <ol>
+                        <li>Learning HTML and CSS</li>
+                        <li>Building and evaluating web pages</li>
+                    </ol>
                 </li>
                 <li>
                     ITSC 2181: Introduction to Computer Systems
+                    <ol>
+                        <li>Learning computer systems concepts</li>
+                    </ol>
                 </li>
                 <li>
                     ITSC 3688: Computers and Their Impact on Society
+                    <ol>
+                        <li>Exploring technology and ethical responsibility</li>
+                    </ol>
                 </li>
                 <li>
                     MATH 2164: Matrices and Linear Algebra
+                    <ol>
+                        <li>Studying matrices and linear algebra concepts</li>
+                    </ol>
                 </li>
                 <li>
                     ENGL 3081: Writing about Literature
+                    <ol>
+                        <li>Practicing literary analysis and writing</li>
+                    </ol>
                 </li>
             </ol>
         </section>
@@ -296,7 +318,7 @@
     <footer>
         <hr>
 
-        <p class="footer-tagline">Simple pages, built with care.</p>
+        <p class="footer-tagline"><em>Simple pages, built with care.</em></p>
 
         <nav class="footer-links" aria-label="External profile links">
             <a class="footer-link" href="https://webpages.charlotte.edu/spate338/">CLT Web</a>
