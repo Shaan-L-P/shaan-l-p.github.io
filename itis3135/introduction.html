@@ -41,6 +41,7 @@
             margin-bottom: 25px;
         }
 
+        /* Class selectors group related page elements and keep their styles consistent. */
         .site-title {
             margin-bottom: 5px;
             color: var(--heading-color);
@@ -53,7 +54,7 @@
             text-align: center;
         }
 
-        /* Navigation links use classes so their styles remain consistent. */
+        /* These navigation classes align plain text links without decorative boxes. */
         .main-nav,
         .footer-links {
             display: flex;
@@ -67,17 +68,20 @@
         .footer-link {
             padding: 0;
             border: none;
-            border-radius: 0;
             background: none;
             color: var(--link-color);
             text-decoration: underline;
             font-weight: bold;
         }
 
-        .nav-link:hover,
-        .footer-link:hover,
-        .nav-link:focus,
-        .footer-link:focus {
+        /* Keep normal and visited links the same color, with a hover color change. */
+        a:link,
+        a:visited {
+            color: var(--link-color);
+        }
+
+        a:hover,
+        a:focus {
             color: var(--heading-color);
         }
 
@@ -86,8 +90,12 @@
             font-family: "Montserrat", sans-serif;
         }
 
+        /* The display-name class makes the required h6 heading readable and prevents wrapping. */
         .display-name {
+            margin: 20px 0;
+            font-size: 1.25rem;
             text-align: center;
+            white-space: nowrap;
         }
 
         figure {
@@ -127,8 +135,12 @@
             margin-bottom: 15px;
         }
 
-        .copyright {
+        .designer-credit {
             margin-top: 15px;
+        }
+
+        .copyright {
+            margin-top: 8px;
         }
 
         @media (max-width: 600px) {
@@ -139,6 +151,10 @@
             .main-nav,
             .footer-links {
                 gap: 10px 15px;
+            }
+
+            .display-name {
+                font-size: 1rem;
             }
         }
     </style>
@@ -207,8 +223,30 @@
                 I am pursuing a Bachelor of Science in Computer Science at
                 UNC Charlotte with a concentration in Cybersecurity.
             </p>
+        </section>
 
-            <h4 class="section-title">Courses I Have Taken or Am Taking</h4>
+        <section>
+            <h3 class="section-title">Computer and Work Information</h3>
+
+            <p>
+                <strong>Primary Work Computer:</strong>
+                My primary computer for schoolwork and programming.
+            </p>
+
+            <p>
+                <strong>Primary Work Location:</strong>
+                UNC Charlotte and my home workspace.
+            </p>
+
+            <p>
+                <strong>Alternate Computer:</strong>
+                Another available computer for completing coursework.
+            </p>
+        </section>
+
+        <section>
+            <h3 class="section-title">Courses I'm Taking</h3>
+
             <ol>
                 <li>
                     Computer Science and Information Technology
@@ -264,6 +302,7 @@
             <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
         </nav>
 
+        <p class="designer-credit">Page designed by Shaan Patel</p>
         <p class="copyright">Silly Platypus ©2026 Shaan Patel</p>
     </footer>
 
