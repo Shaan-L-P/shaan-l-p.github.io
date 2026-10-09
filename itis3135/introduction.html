@@ -1,13 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shaan's Introduction</title>
 
-<link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
-<link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
-<link rel="apple-touch-icon" sizes="180x180" href="/spate338/itis3135/images/apple-touch-icon.jpg">
+<title>Shaan Patel's Silly Platypus | Introduction</title>
+
+<link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+<link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -25,15 +31,16 @@
   }
 
   body {
-    margin: 0;
+    max-width: 900px;
+    margin: auto;
     padding: 0 1.5rem 3rem;
     background-color: var(--bg);
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Courier Prime", "Courier New", monospace;
     color: var(--text);
     line-height: 1.6;
   }
 
-  .pill {
+  header {
     background-color: var(--pill-bg);
     border-radius: 999px;
     margin: 1.5rem 0;
@@ -44,7 +51,8 @@
   h1 {
     margin: 0;
     color: var(--pill-text);
-    font-size: 2.2rem;
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     font-weight: bold;
   }
 
@@ -57,69 +65,11 @@
     color: var(--link);
     text-decoration: underline;
     font-weight: bold;
-    margin: 0 1rem;
+    margin: 0 0.7rem;
   }
 
   nav a:hover,
-  nav a:focus {
-    color: #2e1f66;
-  }
-
-  .divider {
-    border: none;
-    border-top: 4px dashed var(--divider);
-    margin: 1.5rem 0;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  h2 {
-    color: var(--heading);
-    font-size: 1.6rem;
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: var(--heading);
-  }
-
-  ul,
-  ol {
-    font-size: 1.1rem;
-    color: var(--heading);
-  }
-
-  li {
-    margin-bottom: 0.8rem;
-  }
-
-  .profile-photo {
-    display: block;
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    margin: 1.5rem auto 0.5rem;
-    border-radius: 8px;
-  }
-
-  .photo-caption {
-    text-align: center;
-    font-style: italic;
-    margin-top: 0.5rem;
-  }
-
-  .links-list a {
-    color: var(--link);
-    text-decoration: underline;
-    font-weight: bold;
-    margin-right: 1.2rem;
-  }
-
-  .links-list a:hover,
-  .links-list a:focus,
+  nav a:focus,
   a:hover,
   a:focus {
     color: #2e1f66;
@@ -130,16 +80,131 @@
     outline-offset: 2px;
   }
 
+  .divider {
+    border: none;
+    border-top: 4px dashed var(--divider);
+    margin: 1.5rem 0;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: var(--heading);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    color: var(--heading);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 1.3rem;
+  }
+
+  h6 {
+    color: var(--pill-text);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    margin: 1rem 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  p,
+  ul,
+  ol {
+    font-size: 1.05rem;
+    color: var(--heading);
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Classes group styling for the divider, profile photo, and quote attribution. */
+  .divider {
+    border: none;
+    border-top: 4px dashed var(--divider);
+    margin: 1.5rem 0;
+  }
+
+  .profile-photo {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  figure {
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--divider);
+    background-color: var(--pill-bg);
+    color: var(--text);
+  }
+
+  blockquote p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .quote-attribution {
+    text-align: right;
+    font-weight: bold;
+  }
+
   footer {
     margin-top: 2.5rem;
     font-size: 0.9rem;
-    color: var(--text);
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 0.95rem;
   }
 
   footer a {
     color: var(--link);
     text-decoration: underline;
     font-weight: bold;
+    margin: 0 0.4rem;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 0 1rem 2rem;
+    }
+
+    header {
+      border-radius: 24px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 0.3rem 0.5rem;
+    }
+
+    h6 {
+      white-space: normal;
+    }
+
+    figure {
+      margin: 1rem auto;
+    }
   }
 </style>
 
@@ -148,8 +213,8 @@
 
 <body>
 
-<header class="pill">
-  <h1>Shaan's Introduction</h1>
+<header>
+  <h1>Shaan Patel's Silly Platypus</h1>
 </header>
 
 <nav>
@@ -162,55 +227,62 @@
 <hr class="divider">
 
 <main>
+  <h2>Introduction</h2>
 
-  <img
-    src="images/brooklyn-bridge.jpg"
-    alt="Shaan Patel on the Brooklyn Bridge in New York City"
-    class="profile-photo"
-  >
+  <h6>Shaan Patel | Silly Platypus</h6>
 
-  <p class="photo-caption">
-    Brooklyn Bridge, NYC Summer 2025
-  </p>
+  <figure>
+    <img
+      src="images/brooklyn-bridge.jpg"
+      alt="Shaan Patel on the Brooklyn Bridge in New York City"
+      class="profile-photo"
+    >
+    <figcaption>Brooklyn Bridge, NYC, Summer 2025</figcaption>
+  </figure>
 
   <p>
-    Hello everyone, I am a Computer Science major here at UNC Charlotte
-    concentrating in Cybersecurity. This is my junior year. I live about
-    an hour and a half away from campus. I enjoy hanging out with friends,
-    playing games, and sports.
+    Hello everyone! I am a Computer Science major at UNC Charlotte,
+    concentrating in Cybersecurity. This is my junior year, and I live
+    about an hour and a half away from campus. I enjoy hanging out with
+    friends, playing games, and sports.
   </p>
 
   <ul>
     <li>
       <strong>Personal Background:</strong>
-      I am 20. I was born in New York but I grew up in Greensboro.
+      I am 20 years old. I was born in New York but grew up in Greensboro.
       My parents are immigrants from India.
     </li>
 
     <li>
       <strong>Professional Background:</strong>
-      I have been a summer camp counselor in my freshman, sophomore
-      and junior years of high school.
+      I have worked as a summer camp counselor during my freshman,
+      sophomore, and junior years of high school.
     </li>
 
     <li>
       <strong>Academic Background:</strong>
-      Computer Science major, concentration in Cybersecurity
+      I am a Computer Science major with a concentration in Cybersecurity.
     </li>
 
     <li>
       <strong>Primary Work Computer:</strong>
-      Macbook Pro M3
+      MacBook Pro M3.
     </li>
 
     <li>
       <strong>Primary Work Locations:</strong>
-      My desk in my dorm (Holshouser Hall)
+      My desk in my dorm, Holshouser Hall.
+    </li>
+
+    <li>
+      <strong>Alternate Computer:</strong>
+      My PC at home.
     </li>
 
     <li>
       <strong>Alternate Work Locations:</strong>
-      My PC at my home, Popp Martin Student Union, and Atkins Library
+      Popp Martin Student Union and Atkins Library.
     </li>
   </ul>
 
@@ -219,38 +291,75 @@
   <ol>
     <li>
       <strong>ITIS3135 - Web Application:</strong>
-      Required for my concentration
+      Required for my concentration.
+      <ol>
+        <li>Learning to create and style web pages.</li>
+      </ol>
     </li>
 
     <li>
       <strong>ITSC2181 - Intro to Computer Systems:</strong>
-      Required for my concentration
+      Required for my concentration.
+      <ol>
+        <li>Learning about computer systems and how they work.</li>
+      </ol>
     </li>
 
     <li>
       <strong>ITSC3688 - CS &amp; AI: Ethics, Society, Communication:</strong>
-      Required for my concentration
+      Required for my concentration.
+      <ol>
+        <li>Exploring ethical and social questions involving technology and AI.</li>
+      </ol>
     </li>
 
     <li>
       <strong>MATH2164 - Matrices &amp; Linear Algebra:</strong>
-      Required for my concentration
+      Required for my concentration.
+      <ol>
+        <li>Building a mathematical foundation useful in computer science.</li>
+      </ol>
     </li>
 
     <li>
       <strong>ENGL3081 - Authors Pop Culture Genre Studies:</strong>
-      I needed another elective
+      I needed another elective.
+      <ol>
+        <li>Studying authors and genres related to popular culture.</li>
+      </ol>
     </li>
   </ol>
 
+  <h2>Favorite Quote</h2>
+
+  <blockquote>
+    <p>
+      Replace this sentence with a quote that you genuinely like.
+    </p>
+    <p class="quote-attribution">- Quote Author</p>
+  </blockquote>
 </main>
 
 <hr class="divider">
 
 <footer>
-  <a href="#">Shaan Patel</a> &copy;2026
-</footer>
+  <p><em>Simple pages, built with care.</em></p>
 
+  <p>
+    <a href="https://webpages.charlotte.edu/spate338/">CLT Web</a>
+    <a href="https://github.com/">GitHub.io</a>
+    <a href="https://github.com/">GitHub</a>
+    <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
+    <a href="https://www.codecademy.com/">Codecademy</a>
+    <a href="https://www.linkedin.com/in/shaan-patel-uncc/">LinkedIn</a>
+  </p>
+
+  <p>
+    Designed by Shaan Patel |
+    <a href="index.html">Shaan Patel</a>
+    &copy; 2026
+  </p>
+</footer>
 
 <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
