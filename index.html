@@ -39,16 +39,7 @@
             font-family: 'Montserrat', Helvetica, sans-serif;
         }
 
-        /*
-         * Class justification:
-         * The class attributes page-header, page-title, section-title,
-         * subsection-title, and bridge-photo are necessary to apply distinct
-         * styles to specific elements. These class selectors keep the page
-         * layout consistent, make the headings visually distinct, allow the
-         * photograph to be sized responsively, and support mobile styling.
-         * Using class attributes avoids repeating inline styles in the HTML.
-         */
-        .page-header {
+        header {
             background-color: var(--pill-bg);
             border-radius: 999px;
             margin: 1.5rem 0;
@@ -56,7 +47,7 @@
             text-align: center;
         }
 
-        .page-title {
+        h1 {
             margin: 0;
             color: var(--pill-text);
             font-size: 2.2rem;
@@ -69,12 +60,12 @@
             margin: 1.5rem 0;
         }
 
-        .section-title {
+        h2 {
             color: var(--heading);
             font-size: 1.6rem;
         }
 
-        .subsection-title {
+        h3 {
             color: var(--heading);
             font-size: 1.3rem;
         }
@@ -83,7 +74,7 @@
             margin: 1.5rem 0 0.5rem;
         }
 
-        .bridge-photo {
+        main img {
             display: block;
             width: 100%;
             max-width: 300px;
@@ -139,11 +130,11 @@
                 padding: 0 1rem 2rem;
             }
 
-            .page-title {
+            h1 {
                 font-size: 1.6rem;
             }
 
-            .section-title {
+            h2 {
                 font-size: 1.4rem;
             }
 
@@ -156,19 +147,19 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="page-header">
-        <h1 class="page-title">Shaan's Webpage</h1>
+    <header>
+        <h1>Shaan's Webpage</h1>
     </header>
 
     <hr>
 
     <main>
-        <h2 class="section-title">Hi There!</h2>
+        <h2>Hi There!</h2>
 
         <figure>
-            <img class="bridge-photo"
-                 src="/spate338/itis3135/images/brooklyn-bridge.jpg"
-                 alt="Shaan Patel on the Brooklyn Bridge in New York City">
+            <img
+                src="/spate338/itis3135/images/brooklyn-bridge.jpg"
+                alt="Shaan Patel on the Brooklyn Bridge in New York City">
             <figcaption>Brooklyn Bridge Summer 2025</figcaption>
         </figure>
 
@@ -177,7 +168,7 @@
             concentrating in cybersecurity here at UNC Charlotte.
         </p>
 
-        <h3 class="subsection-title">Interests</h3>
+        <h3>Interests</h3>
 
         <ul>
             <li><strong>Favorite Artist:</strong> Bunii</li>
