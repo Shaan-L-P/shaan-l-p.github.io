@@ -14,9 +14,7 @@ a:focus {
     color: var(--heading-color);
 }
 
-h1,
-h2,
-h3 {
+h1 {
     font-family: "Montserrat", Helvetica, sans-serif;
 }
 
