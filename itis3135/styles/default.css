@@ -1,12 +1,25 @@
 
-a:visited {
-  color: var(--link);
+:root {
+    --link: #182d80;
+    --heading-color: #173f68;
 }
 
-h1 {
-  font-family: "Montserrat", Helvetica, sans-serif;
+a:link,
+a:visited {
+    color: var(--link);
+}
+
+a:hover,
+a:focus {
+    color: var(--heading-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", Helvetica, sans-serif;
 }
 
 p {
-  font-family: "Courier Prime", "Courier New", monospace;
+    font-family: "Courier Prime", "Courier New", monospace;
 }
