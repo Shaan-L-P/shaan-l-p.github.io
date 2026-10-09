@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ITIS3135 | Shaan Patel | Silly Platypus | Website Evaluations</title>
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Website Evaluations</title>
 
     <link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
     <link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
@@ -22,61 +22,64 @@
             padding: 20px 15px;
         }
 
-        h1, h2, h3 {
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            color: #1b2a4a;
+        header {
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 70px;
         }
 
         h1 {
-            font-size: 3.2rem;
-            margin: 0 0 35px 0;
-            border: 2px solid #4a148c;
-            padding: 15px;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 25px 0;
+            color: #1b2a4a;
+            padding: 0 90px 0 0;
+        }
+
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin: 0 0 25px 0;
+            color: #1b2a4a;
+        }
+
+        h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin: 0 0 15px 0;
+            color: #1b2a4a;
         }
 
         nav {
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         nav a,
         nav a:visited {
             color: #4a148c;
             font-size: 1.8rem;
-            margin-right: 8px;
-            border: 2px solid #4a148c;
-            padding: 8px 12px;
+            font-weight: bold;
+            margin-right: 20px;
             display: inline-block;
         }
 
         nav a:hover,
         nav a:focus {
             color: #2a0a4f;
-            border-color: #2a0a4f;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 35px;
-            border: 2px solid #4a148c;
-            padding: 15px;
         }
 
         p {
             font-size: 1.8rem;
-            margin-bottom: 30px;
-            border: 2px solid #4a148c;
-            padding: 15px;
+            margin: 0 0 30px 0;
         }
 
         section {
-            margin-bottom: 30px;
-            border: 2px solid #4a148c;
-            padding: 15px;
-        }
-
-        h3 {
-            font-size: 2.2rem;
-            margin: 0 0 15px 0;
+            margin-bottom: 40px;
         }
 
         h3 a,
@@ -87,14 +90,6 @@
         h3 a:hover,
         h3 a:focus {
             color: #2a0a4f;
-        }
-
-        section img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 0 0 20px 0;
-            border: 2px solid #4a148c;
         }
 
         ul {
@@ -110,8 +105,6 @@
         footer {
             font-size: 1.5rem;
             margin-top: 35px;
-            border: 2px solid #4a148c;
-            padding: 15px;
         }
 
         footer a,
@@ -127,23 +120,9 @@
         footer p {
             font-size: 1.3rem;
             margin: 15px 0 0 0;
-            border: none;
-            padding: 0;
         }
 
         @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            h3 {
-                font-size: 1.5rem;
-            }
-
             nav a {
                 font-size: 1.2rem;
                 margin-bottom: 8px;
@@ -154,10 +133,7 @@
                 font-size: 1.2rem;
             }
 
-            footer {
-                font-size: 1.1rem;
-            }
-
+            footer,
             footer p {
                 font-size: 1.1rem;
             }
@@ -170,7 +146,8 @@
 <body>
 
     <header>
-        <h1>ITIS3135 | Shaan Patel | Silly Platypus</h1>
+        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
+        <img src="images/silly-platypus-logo.jpg" alt="Cartoon drawing of a brown platypus with a gray bill">
     </header>
 
     <nav>
@@ -191,8 +168,6 @@
 
         <section>
             <h3><a href="https://www.gov.uk" target="_blank" rel="noopener noreferrer">GOV.UK</a></h3>
-
-            <img src="images/gov-uk-homepage.jpg" alt="Screenshot of the GOV.UK homepage">
 
             <ul>
                 <li>
@@ -216,8 +191,6 @@
 
         <section>
             <h3><a href="https://www.lingscars.com" target="_blank" rel="noopener noreferrer">Ling's Cars</a></h3>
-
-            <img src="images/lings-cars-homepage.jpg" alt="Screenshot of the Ling's Cars homepage">
 
             <ul>
                 <li>
@@ -245,7 +218,8 @@
 
     <footer>
         <a href="shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
-        <p><em>"Designing the web one silly platypus at a time."</em></p>
+        <p>Designed by Shaan Patel</p>
+        <p><em>"Silly code, serious design."</em></p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
