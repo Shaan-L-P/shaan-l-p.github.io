@@ -2,503 +2,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Screen Time Society: Show Watching | What Is Show Watching?</title>
-<link rel="icon" type="image/jpeg" sizes="64x64" href="../images/favicon.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&amp;family=Nunito:wght@400;700&amp;display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- IDs identify and switch between hobby sections. Classes style the validation links and highlighted viewing tip. The div groups the validation links for consistent alignment. -->
-<style>
-:root {
-  --bg: #10265e;
-  --card: #1a3a82;
-  --text: #f6e7c9;
-  --muted: #c3d3ff;
-  --red: #ff4d5e;
-  --sky: #8fc7ff;
-  --coral: #ff8a94;
-}
+    <title>Shaan Patel | Silly Platypus | ITIS3135 | Hobby</title>
 
-* {
-  box-sizing: border-box;
-}
+    <link rel="icon" type="image/jpeg" href="../images/favicon-32x32.jpg">
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Nunito", Verdana, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-header {
-  max-width: 70rem;
-  margin: 0 auto;
-  background: var(--card);
-  border-bottom: 6px solid var(--red);
-  padding: 1.5rem 1rem 1rem;
-  text-align: center;
-}
+    <style>
+        :root {
+            --cream: #f6e7c9;
+            --coral: #b94f43;
+            --dark: #302820;
+            --card: #fff8eb;
+            --border: #d9c5a5;
+            --h1-size: 2.4rem;
+        }
 
-h1 {
-  font-family: "Chakra Petch", Arial, sans-serif;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
-  margin: 0 0 1rem;
-  font-size: 2.4rem;
-  color: var(--coral);
-}
+        * {
+            box-sizing: border-box;
+        }
 
-h2 {
-  font-family: "Chakra Petch", Arial, sans-serif;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
-  font-size: 2rem;
-  color: var(--sky);
-  margin-top: 0;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-h3 {
-  font-family: "Chakra Petch", Arial, sans-serif;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
-  font-size: 1.3rem;
-  color: var(--coral);
-}
+        body {
+            margin: 0;
+            background-color: var(--cream);
+            color: var(--dark);
+            font-family: "Montserrat", Arial, sans-serif;
+            line-height: 1.7;
+            text-align: center;
+        }
 
-header > p {
-  margin: 0 auto 1rem;
-  color: var(--muted);
-  font-size: 1rem;
-  font-style: italic;
-}
+        header {
+            padding: 2rem 1rem 1rem;
+        }
 
-nav {
-  max-width: 100%;
-}
+        h1,
+        h2,
+        h3 {
+            font-family: "Chakra Petch", Arial, sans-serif;
+            line-height: 1.2;
+        }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  gap: 0;
-}
+        h1 {
+            margin: 0 0 1rem;
+            font-size: var(--h1-size);
+            color: var(--coral);
+            letter-spacing: 0.04em;
+        }
 
-nav li {
-  margin: 0;
-  padding: 0;
-}
+        h2 {
+            margin-top: 0;
+            color: var(--coral);
+            font-size: 1.8rem;
+        }
 
-nav li + li::before {
-  content: "\25C6";
-  color: var(--red);
-  margin: 0 0.25rem;
-}
+        h3 {
+            color: var(--coral);
+        }
 
-nav a {
-  display: inline-block;
-  padding: 0.35rem 0.55rem;
-  border-radius: 999px;
-  color: var(--sky);
-  font-weight: 700;
-  text-decoration: none;
-  border: 2px solid transparent;
-}
+        header p {
+            max-width: 48rem;
+            margin: 0 auto 1.5rem;
+        }
 
-nav a:hover,
-nav a:focus-visible {
-  border-color: var(--sky);
-}
+        nav {
+            padding: 0.8rem 1rem;
+            background-color: var(--card);
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
 
-nav a[aria-current="page"] {
-  background: var(--red);
-  color: var(--bg);
-}
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem 1rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-main {
-  max-width: 62rem;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
+        nav a {
+            display: inline-block;
+            padding: 0.4rem 0.55rem;
+            color: var(--coral);
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-section[hidden] {
-  display: none;
-}
+        nav a:hover,
+        nav a:focus {
+            text-decoration: underline;
+            color: var(--dark);
+        }
 
-section {
-  background: var(--card);
-  border: 3px solid #3a5db5;
-  border-radius: 18px;
-  padding: 1.5rem 2rem 2rem;
-}
+        nav a[aria-current="page"] {
+            text-decoration: underline;
+            text-underline-offset: 0.25rem;
+        }
 
-p {
-  margin: 0 0 1.1rem;
-  max-width: 46rem;
-}
+        main {
+            width: 100%;
+            max-width: 62rem;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
 
-a {
-  color: var(--sky);
-  font-weight: 700;
-  text-decoration-style: dotted;
-  text-underline-offset: 4px;
-}
+        section {
+            margin: 0 auto 2rem;
+            padding: 1.5rem 2rem 2rem;
+            background-color: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1rem;
+            text-align: center;
+        }
 
-a:hover {
-  color: var(--coral);
-}
+        section p {
+            max-width: 48rem;
+            margin: 0 auto 1rem;
+        }
 
-ul,
-ol {
-  max-width: 46rem;
-  padding-left: 1.5rem;
-}
+        section ul,
+        section ol {
+            display: table;
+            max-width: 42rem;
+            margin: 1rem auto;
+            padding-left: 1.5rem;
+            text-align: left;
+        }
 
-li {
-  margin-bottom: 0.4rem;
-}
+        figure {
+            max-width: 38rem;
+            margin: 1.5rem auto;
+        }
 
-figure {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: var(--bg);
-  border-radius: 14px;
-  border: 2px dashed var(--red);
-  max-width: 40rem;
-}
+        figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border: 3px solid var(--border);
+            border-radius: 0.75rem;
+        }
 
-figure img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
+        figcaption {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
 
-figure p {
-  margin: 0.8rem 0 0;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
+        table {
+            width: 100%;
+            max-width: 44rem;
+            margin: 1.5rem auto;
+            border-collapse: collapse;
+            background-color: var(--card);
+        }
 
-figcaption {
-  margin-top: 0.8rem;
-  font-weight: 700;
-  color: var(--coral);
-}
+        th,
+        td {
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 46rem;
-  margin: 1rem 0 1.5rem;
-}
+        th {
+            background-color: var(--cream);
+            color: var(--coral);
+        }
 
-caption {
-  text-align: left;
-  font-weight: 700;
-  color: var(--coral);
-  padding-bottom: 0.5rem;
-}
+        a {
+            color: var(--coral);
+        }
 
-th,
-td {
-  border: 2px solid #3a5db5;
-  padding: 0.6rem 0.8rem;
-  text-align: left;
-}
+        .prompt {
+            max-width: 48rem;
+            margin: 1rem auto;
+            padding: 1rem;
+            border-left: 4px solid var(--coral);
+            background-color: var(--cream);
+            text-align: left;
+        }
 
-th {
-  background: var(--bg);
-  color: var(--sky);
-}
+        .prompt p {
+            text-align: left;
+        }
 
-.tip {
-  border-left: 8px solid var(--coral);
-  background: var(--bg);
-  padding: 0.8rem 1.2rem;
-  border-radius: 0 12px 12px 0;
-  max-width: 46rem;
-}
+        .hidden {
+            display: none;
+        }
 
-footer {
-  max-width: 70rem;
-  margin: 0 auto;
-  background: var(--card);
-  border-top: 6px solid var(--red);
-  text-align: center;
-  padding: 1.5rem 1rem;
-}
+        footer {
+            padding: 1.5rem 1rem;
+            border-top: 2px solid var(--border);
+            background-color: var(--card);
+        }
 
-footer p {
-  margin: 0 auto 1rem;
-}
+        footer p {
+            margin: 0.4rem auto;
+        }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+        @media (max-width: 600px) {
+            :root {
+                --h1-size: 1.8rem;
+            }
 
-.badges a {
-  margin: 0.3rem;
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
-  background: var(--coral);
-  color: var(--bg);
-  text-decoration: none;
-}
+            main {
+                padding: 1rem 0.75rem;
+            }
 
-.badges a:hover,
-.badges a:focus-visible {
-  background: var(--sky);
-  color: var(--bg);
-}
+            section {
+                padding: 1rem 1.1rem 1.5rem;
+            }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-  }
+            nav ul {
+                gap: 0.25rem 0.5rem;
+            }
 
-  section {
-    padding: 1rem 1.1rem 1.5rem;
-  }
+            nav a {
+                padding: 0.3rem 0.2rem;
+                font-size: 0.8rem;
+            }
 
-  nav li + li::before {
-    margin: 0 0.1rem;
-  }
+            th,
+            td {
+                padding: 0.5rem 0.3rem;
+            }
+        }
+    </style>
 
-  nav a {
-    padding: 0.3rem 0.2rem;
-    font-size: 0.72rem;
-  }
-}
-</style>
+    <!-- Course-required standards checker -->
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js"></script>
 
-<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <!-- Accumulus cloud validator: must be the last element in the head -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <header>
+        <h1>Shaan Patel | Silly Platypus</h1>
+        <p>
+            Welcome to my hobby page! I enjoy watching shows, discovering interesting
+            stories, and exploring the characters and worlds that make a series memorable.
+        </p>
+    </header>
 
-<header>
-  <h1>Screen Time Society: Show Watching</h1>
-  <p><em>Exploring stories, worlds, and characters one episode at a time.</em></p>
+    <nav aria-label="Hobby page sections">
+        <ul>
+            <li><a href="#what" data-target="what">What</a></li>
+            <li><a href="#who" data-target="who">Who</a></li>
+            <li><a href="#when" data-target="when">When</a></li>
+            <li><a href="#where" data-target="where">Where</a></li>
+            <li><a href="#how" data-target="how">How</a></li>
+            <li><a href="#why" data-target="why">Why</a></li>
+            <li><a href="#prompts" data-target="prompts">AI Prompts</a></li>
+        </ul>
+    </nav>
 
-  <nav aria-label="Hobby sections">
-    <ul>
-      <li><a href="#what" data-target="what" aria-current="page">What</a></li>
-      <li><a href="#who" data-target="who">Who</a></li>
-      <li><a href="#when" data-target="when">When</a></li>
-      <li><a href="#where" data-target="where">Where</a></li>
-      <li><a href="#how" data-target="how">How</a></li>
-      <li><a href="#why" data-target="why">Why</a></li>
-      <li><a href="#prompts" data-target="prompts">AI Prompts</a></li>
-    </ul>
-  </nav>
-</header>
+    <main>
+        <section id="what">
+            <h2>What: Watching Shows</h2>
+            <p>
+                One of my favorite hobbies is watching television shows and animated
+                series. I especially enjoy stories with interesting characters,
+                detailed worlds, intense moments, and themes that make me think.
+            </p>
+            <p>
+                I like exploring different genres, including action, fantasy,
+                science fiction, superhero stories, and anime.
+            </p>
+            <figure>
+                <img src="../images/what.jpg"
+                     alt="A television screen displaying a show">
+                <figcaption>Watching a good series is a great way to unwind.</figcaption>
+            </figure>
+        </section>
 
-<main>
-  <section id="what">
-    <h2>What Is Show Watching?</h2>
-    <p>Show watching is my favorite way to relax and escape into a different world for a while. I love anime, animated series, and big fantasy and superhero shows, especially ones with strong worldbuilding and characters who are not simply good or evil.</p>
-    <p>Some of my favorites are Invincible, Arcane, Death Note, Jujutsu Kaisen, Castlevania, and Game of Thrones. I like shows that have a clear style, a great soundtrack, and stories about power, identity, and tough choices.</p>
-    <figure>
-      <img src="../images/what.jpg" width="600" height="400" alt="A television with a red frame showing a light blue play button.">
-      <p><em>AI prompt used: "Create a flat, colorful cartoon illustration of a TV with a red frame and a light blue play button on a deep blue background, with a few small stars."</em></p>
-      <figcaption>Figure 1: Every good binge starts by pressing play.</figcaption>
-    </figure>
-    <h3>Shows I Come Back To</h3>
-    <ul>
-      <li>Invincible and Arcane: stunning animation with heavy emotional stories</li>
-      <li>Death Note and Jujutsu Kaisen: smart plots, fights, and morally gray characters</li>
-      <li>Castlevania and Game of Thrones: dark fantasy with huge worlds and lore</li>
-    </ul>
-  </section>
+        <section id="who" class="hidden">
+            <h2>Who: Who I Watch With</h2>
+            <p>
+                I usually watch shows on my own because it lets me focus on the story
+                and take everything in at my own pace. I also enjoy discussing shows
+                with friends who have similar interests.
+            </p>
+            <p>
+                Sharing theories, comparing favorite characters, and debating
+                surprising plot twists can make a series even more enjoyable.
+            </p>
+            <figure>
+                <img src="../images/who.jpg"
+                     alt="Friends enjoying entertainment together">
+                <figcaption>Watching together can lead to interesting conversations.</figcaption>
+            </figure>
+        </section>
 
-  <section id="who" hidden>
-    <h2>Who Is Behind This Site?</h2>
-    <p>I am Shaan Patel, a Computer Science student at UNC Charlotte with a concentration in Cybersecurity. I grew up in Greensboro, North Carolina, and watching shows has been one of my favorite ways to spend free time.</p>
-    <p>I like talking about what I watch as much as watching it, whether that means debating which characters were right or sharing a show I think everyone should see. This page is my way of doing that in one place.</p>
-    <figure>
-      <img src="../images/who.jpg" width="600" height="400" alt="A cartoon viewer sits in front of a monitor showing a coral play button, with a bowl of popcorn nearby.">
-      <p><em>AI prompt used: "Make a flat cartoon scene of a person watching a glowing monitor with a coral play button, with a bowl of popcorn on the desk, in blue and red colors."</em></p>
-      <figcaption>Figure 2: The viewer, the screen, and the snacks.</figcaption>
-    </figure>
-    <h3>Quick Facts</h3>
-    <ul>
-      <li>Major: Computer Science, Cybersecurity concentration</li>
-      <li>Home base: Greensboro, North Carolina</li>
-      <li>Favorite kinds of shows: anime, animation, and dark fantasy</li>
-    </ul>
-  </section>
+        <section id="when" class="hidden">
+            <h2>When: When I Watch Shows</h2>
+            <p>
+                I usually watch shows when I have free time after classes,
+                assignments, or other responsibilities. Even a single episode
+                can be a good way to relax after a busy day.
+            </p>
+            <p>
+                When a show really catches my attention, I sometimes watch several
+                episodes in one sitting, especially when the story ends on a cliffhanger.
+            </p>
+            <figure>
+                <img src="../images/when.jpg"
+                     alt="A cozy setup for watching a show in the evening">
+                <figcaption>A relaxing evening is a good time to catch up on a series.</figcaption>
+            </figure>
+        </section>
 
-  <section id="when" hidden>
-    <h2>When Do I Watch?</h2>
-    <p>Watching has to fit around classes and assignments, so my schedule changes a lot. Weeknights are for an episode or two, and weekends are when the long binges happen.</p>
-    <table>
-      <caption>Sample weekly watching schedule</caption>
-      <thead>
-        <tr>
-          <th scope="col">Day</th>
-          <th scope="col">Time</th>
-          <th scope="col">Typical session</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Weeknights</th>
-          <td>9 PM to 11 PM</td>
-          <td>One or two episodes</td>
-        </tr>
-        <tr>
-          <th scope="row">Saturday</th>
-          <td>Afternoon to late night</td>
-          <td>Full season binges</td>
-        </tr>
-        <tr>
-          <th scope="row">Sunday</th>
-          <td>Evening</td>
-          <td>Catching up on new weekly episodes</td>
-        </tr>
-      </tbody>
-    </table>
-    <figure>
-      <img src="../images/when.jpg" width="600" height="400" alt="A glowing clock with a crescent moon in the corner, showing a late night hour.">
-      <p><em>AI prompt used: "Draw a flat cartoon clock with a coral rim and a crescent moon on a deep blue background."</em></p>
-      <figcaption>Figure 3: Most of my best watching happens at night.</figcaption>
-    </figure>
-    <p class="tip">Tip: finale nights are best watched right when they come out, before spoilers spread online.</p>
-  </section>
+        <section id="where" class="hidden">
+            <h2>Where: Where I Watch Shows</h2>
+            <p>
+                I mostly watch shows at home or in my room, where I can get
+                comfortable and pay attention without too many distractions.
+                Streaming services make it easy to continue a series across devices.
+            </p>
+            <p>
+                A comfortable place, a decent screen, and reliable internet are
+                usually all I need.
+            </p>
+            <figure>
+                <img src="../images/where.jpg"
+                     alt="A comfortable room with a screen for watching television">
+                <figcaption>A comfortable viewing space makes the experience better.</figcaption>
+            </figure>
+        </section>
 
-  <section id="where" hidden>
-    <h2>Where Do I Watch?</h2>
-    <p>The place can be almost anywhere. A comfortable seat and a good screen matter more than anything fancy, and a good sound setup makes soundtracks hit harder.</p>
-    <figure>
-      <img src="../images/where.jpg" width="600" height="400" alt="A blue map with a large red location pin marking a spot.">
-      <p><em>AI prompt used: "Make a flat cartoon map in blue tones with a big red location pin in the middle."</em></p>
-      <figcaption>Figure 4: Marking the best spots to watch.</figcaption>
-    </figure>
-    <h3>Favorite Places to Watch</h3>
-    <ul>
-      <li>On the couch with a big screen for the epic shows</li>
-      <li>On my laptop in my room for late night episodes</li>
-      <li>With friends or family when a show is worth sharing</li>
-      <li>On my phone while traveling or waiting around</li>
-    </ul>
-  </section>
+        <section id="how" class="hidden">
+            <h2>How: How I Choose What to Watch</h2>
+            <p>
+                I usually choose a show based on its premise, characters, genre,
+                animation or visual style, and recommendations from people I trust.
+                If the first few episodes grab my attention, I am more likely to
+                keep watching.
+            </p>
+            <p>Some things I look for in a show include:</p>
+            <ul>
+                <li>Interesting and complex characters</li>
+                <li>A story that keeps me curious</li>
+                <li>Memorable action, visuals, or music</li>
+                <li>A fictional world with meaningful details</li>
+                <li>Themes that give me something to think about</li>
+            </ul>
+            <figure>
+                <img src="../images/how.jpg"
+                     alt="A selection of entertainment options">
+                <figcaption>Finding a series that matches my interests is part of the fun.</figcaption>
+            </figure>
+        </section>
 
-  <section id="how" hidden>
-    <h2>How Do I Pick What to Watch?</h2>
-    <p>With so many shows out there, choosing can take longer than watching. A simple routine helps me find shows I will actually finish.</p>
-    <ol>
-      <li>I start with a genre or mood I already love.</li>
-      <li>I watch the trailer and the first episode before deciding.</li>
-      <li>I ask friends who have similar taste for recommendations.</li>
-      <li>I keep a watchlist so I never forget a show.</li>
-      <li>I take breaks and avoid spoilers until I finish.</li>
-    </ol>
-    <figure>
-      <img src="../images/how.jpg" width="600" height="400" alt="A remote control, a bucket of popcorn, and a notepad with a watchlist.">
-      <p><em>AI prompt used: "Create a flat cartoon illustration of a remote control, a red popcorn bucket, and a coral notepad with a list on a deep blue background."</em></p>
-      <figcaption>Figure 5: A remote, popcorn, and a watchlist are all I need.</figcaption>
-    </figure>
-  </section>
+        <section id="why" class="hidden">
+            <h2>Why: Why I Enjoy Watching Shows</h2>
+            <p>
+                Watching shows lets me experience stories and perspectives that
+                are different from my own. I enjoy seeing how characters change,
+                how conflicts develop, and how a fictional world builds its own
+                history and rules.
+            </p>
+            <p>
+                Some of my favorite stories explore identity, morality, ambition,
+                power, and human nature. I especially appreciate shows that give
+                their characters complicated motivations instead of making every
+                character simply good or evil.
+            </p>
+            <figure>
+                <img src="../images/why.jpg"
+                     alt="A person relaxing while watching entertainment">
+                <figcaption>Great stories can entertain while also making us think.</figcaption>
+            </figure>
+        </section>
 
-  <section id="why" hidden>
-    <h2>Why Do I Love It?</h2>
-    <p>Shows let me experience stories that are bigger than everyday life. I love when a series builds a world with its own rules, history, and characters who feel real even when they are making hard choices.</p>
-    <p>It also gives me something to share. Some of my best conversations with friends come from arguing about a finale or recommending a show I could not stop thinking about.</p>
-    <figure>
-      <img src="../images/why.jpg" width="600" height="400" alt="A television with a coral frame showing a red heart.">
-      <p><em>AI prompt used: "Draw a flat cartoon TV with a coral frame showing a big red heart against a deep blue background."</em></p>
-      <figcaption>Figure 6: The best shows leave a mark.</figcaption>
-    </figure>
-    <h3>Top Reasons</h3>
-    <ul>
-      <li>Rich worldbuilding and lore</li>
-      <li>Characters with complicated motives</li>
-      <li>Great music, animation, and style</li>
-    </ul>
-  </section>
+        <section id="prompts" class="hidden">
+            <h2>AI Prompts</h2>
+            <p>
+                I used AI as a brainstorming and editing tool while organizing
+                the information for this page. The prompts helped me structure
+                my ideas and identify ways to make the page easier to navigate.
+            </p>
 
-  <section id="prompts" hidden>
-    <h2>AI Prompts</h2>
-    <p>I used AI in a few different ways while making this site. It helped me fix up my writing so it sounds better and is more grammatically correct, and it generated the images so the whole site feels consistent and lighthearted.</p>
-    <p>I also used it to brainstorm ideas to talk about for my hobby and to put together an outline of how the final product should look.</p>
-    <figure>
-      <img src="../images/prompts.jpg" width="600" height="400" alt="Two chat bubbles, one light blue and one red, filled with lines of text.">
-      <p><em>AI prompt used: "Make a flat cartoon picture of two chat bubbles, one light blue and one red, on a deep blue background."</em></p>
-      <figcaption>Figure 7: A conversation with AI helped build this site.</figcaption>
-    </figure>
-  </section>
-</main>
+            <div class="prompt">
+                <h3>Prompt 1</h3>
+                <p>
+                    Help me brainstorm content for a hobby webpage about watching
+                    television shows and anime. Organize the ideas around what,
+                    who, when, where, how, and why.
+                </p>
+            </div>
 
-<footer>
-  <div class="badges">
-    <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
-    <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/spate338/itis3135/hobby/index.html">Accessibility Check</a>
-  </div>
-  <p>Designed by <a href="../index.html">Shaan Patel Designs</a> &copy; 2026</p>
-</footer>
+            <div class="prompt">
+                <h3>Prompt 2</h3>
+                <p>
+                    Suggest ways to make an HTML hobby page accessible, responsive,
+                    visually consistent, and easy to navigate.
+                </p>
+            </div>
 
-<script>
-(function () {
-  var links = document.querySelectorAll("nav a[data-target]");
-  var sections = document.querySelectorAll("main section");
-  var pageTitle = document.querySelector("title");
+            <div class="prompt">
+                <h3>Prompt 3</h3>
+                <p>
+                    Help me review the CSS for a single-page hobby website, including
+                    responsive typography, image sizing, centered content, and
+                    readable lists.
+                </p>
+            </div>
 
-  function show(id) {
-    var found = false;
+            <p>
+                I reviewed the suggestions and used them to guide the page's
+                organization and styling.
+            </p>
+        </section>
+    </main>
 
-    sections.forEach(function (section) {
-      if (section.id === id) {
-        found = true;
-      }
-    });
+    <footer>
+        <p>Designed by Shaan Patel | Silly Platypus</p>
+        <p>ITIS 3135 Hobby Page</p>
+    </footer>
 
-    if (!found) {
-      id = "what";
-    }
+    <script>
+        const navigationLinks = document.querySelectorAll("nav a[data-target]");
+        const pageSections = document.querySelectorAll("main section");
 
-    sections.forEach(function (section) {
-      section.hidden = section.id !== id;
-    });
+        function showSection(targetId, updateHistory = true) {
+            const targetSection = document.getElementById(targetId);
 
-    links.forEach(function (link) {
-      if (link.getAttribute("data-target") === id) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
+            if (!targetSection || !targetSection.matches("main section")) {
+                return;
+            }
 
-    var activeSection = document.getElementById(id);
-    var sectionHeading = activeSection.querySelector("h2");
-    pageTitle.textContent = "Screen Time Society: Show Watching | " + sectionHeading.textContent;
-  }
+            pageSections.forEach((section) => {
+                section.classList.toggle("hidden", section.id !== targetId);
+            });
 
-  links.forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      var id = link.getAttribute("data-target");
-      show(id);
-      history.replaceState(null, "", "#" + id);
-    });
-  });
+            navigationLinks.forEach((link) => {
+                if (link.dataset.target === targetId) {
+                    link.setAttribute("aria-current", "page");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
+            });
 
-  show(window.location.hash.replace("#", "") || "what");
-})();
-</script>
+            if (updateHistory) {
+                history.replaceState(null, "", `#${targetId}`);
+            }
+        }
 
-<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        navigationLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                showSection(link.dataset.target);
+            });
+        });
 
+        const initialSection = window.location.hash.slice(1);
+        const validInitialSection = Array.from(pageSections).some(
+            (section) => section.id === initialSection
+        );
+
+        showSection(validInitialSection ? initialSection : "what", false);
+    </script>
 </body>
 </html>
