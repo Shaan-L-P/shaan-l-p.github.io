@@ -4,12 +4,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Screen Time Society | Show Watching</title>
+<title>Screen Time Society: Show Watching | What Is Show Watching?</title>
 <link rel="icon" type="image/jpeg" sizes="64x64" href="../images/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&amp;family=Nunito:wght@400;700&amp;display=swap">
 
+<!-- IDs identify and switch between hobby sections. Classes style the validation links and highlighted viewing tip. The div groups the validation links for consistent alignment. -->
 <style>
 :root {
   --bg: #10265e;
@@ -21,7 +22,9 @@
   --coral: #ff8a94;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -33,41 +36,77 @@ body {
 }
 
 header {
+  max-width: 70rem;
+  margin: 0 auto;
   background: var(--card);
   border-bottom: 6px solid var(--red);
   padding: 1.5rem 1rem 1rem;
   text-align: center;
 }
 
-h1, h2, h3 {
+h1 {
   font-family: "Chakra Petch", Arial, sans-serif;
   letter-spacing: 0.04em;
   line-height: 1.2;
+  margin: 0 0 1rem;
+  font-size: 2.4rem;
+  color: var(--coral);
 }
 
-h1 { margin: 0 0 1rem; font-size: 2.4rem; color: var(--coral); }
-h2 { font-size: 2rem; color: var(--sky); margin-top: 0; }
-h3 { font-size: 1.3rem; color: var(--coral); }
+h2 {
+  font-family: "Chakra Petch", Arial, sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  font-size: 2rem;
+  color: var(--sky);
+  margin-top: 0;
+}
+
+h3 {
+  font-family: "Chakra Petch", Arial, sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  font-size: 1.3rem;
+  color: var(--coral);
+}
+
+header > p {
+  margin: 0 auto 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+nav {
+  max-width: 100%;
+}
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
+  gap: 0;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
 }
 
 nav li + li::before {
   content: "\25C6";
   color: var(--red);
-  margin: 0 0.6rem;
+  margin: 0 0.25rem;
 }
 
 nav a {
   display: inline-block;
-  padding: 0.35rem 0.9rem;
+  padding: 0.35rem 0.55rem;
   border-radius: 999px;
   color: var(--sky);
   font-weight: 700;
@@ -75,7 +114,10 @@ nav a {
   border: 2px solid transparent;
 }
 
-nav a:hover, nav a:focus-visible { border-color: var(--sky); }
+nav a:hover,
+nav a:focus-visible {
+  border-color: var(--sky);
+}
 
 nav a[aria-current="page"] {
   background: var(--red);
@@ -88,7 +130,9 @@ main {
   padding: 2rem 1rem;
 }
 
-section[hidden] { display: none; }
+section[hidden] {
+  display: none;
+}
 
 section {
   background: var(--card);
@@ -97,7 +141,10 @@ section {
   padding: 1.5rem 2rem 2rem;
 }
 
-p { margin: 0 0 1.1rem; max-width: 46rem; }
+p {
+  margin: 0 0 1.1rem;
+  max-width: 46rem;
+}
 
 a {
   color: var(--sky);
@@ -106,10 +153,19 @@ a {
   text-underline-offset: 4px;
 }
 
-a:hover { color: var(--coral); }
+a:hover {
+  color: var(--coral);
+}
 
-ul, ol { max-width: 46rem; padding-left: 1.5rem; }
-li { margin-bottom: 0.4rem; }
+ul,
+ol {
+  max-width: 46rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
 
 figure {
   margin: 1.5rem 0;
@@ -127,9 +183,17 @@ figure img {
   border-radius: 10px;
 }
 
-figure p { margin: 0.8rem 0 0; font-size: 0.95rem; color: var(--muted); }
+figure p {
+  margin: 0.8rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
 
-figcaption { margin-top: 0.8rem; font-weight: 700; color: var(--coral); }
+figcaption {
+  margin-top: 0.8rem;
+  font-weight: 700;
+  color: var(--coral);
+}
 
 table {
   border-collapse: collapse;
@@ -138,15 +202,24 @@ table {
   margin: 1rem 0 1.5rem;
 }
 
-caption { text-align: left; font-weight: 700; color: var(--coral); padding-bottom: 0.5rem; }
+caption {
+  text-align: left;
+  font-weight: 700;
+  color: var(--coral);
+  padding-bottom: 0.5rem;
+}
 
-th, td {
+th,
+td {
   border: 2px solid #3a5db5;
   padding: 0.6rem 0.8rem;
   text-align: left;
 }
 
-th { background: var(--bg); color: var(--sky); }
+th {
+  background: var(--bg);
+  color: var(--sky);
+}
 
 .tip {
   border-left: 8px solid var(--coral);
@@ -157,15 +230,23 @@ th { background: var(--bg); color: var(--sky); }
 }
 
 footer {
+  max-width: 70rem;
+  margin: 0 auto;
   background: var(--card);
   border-top: 6px solid var(--red);
   text-align: center;
   padding: 1.5rem 1rem;
 }
 
-footer p { margin: 0 auto 1rem; }
+footer p {
+  margin: 0 auto 1rem;
+}
 
-.badges { display: flex; flex-wrap: wrap; justify-content: center; }
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .badges a {
   margin: 0.3rem;
@@ -176,25 +257,43 @@ footer p { margin: 0 auto 1rem; }
   text-decoration: none;
 }
 
-.badges a:hover, .badges a:focus-visible {
+.badges a:hover,
+.badges a:focus-visible {
   background: var(--sky);
   color: var(--bg);
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 1.8rem; }
-  section { padding: 1rem 1.1rem 1.5rem; }
-  nav li + li::before { margin: 0 0.2rem; }
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 1rem 1.1rem 1.5rem;
+  }
+
+  nav li + li::before {
+    margin: 0 0.1rem;
+  }
+
+  nav a {
+    padding: 0.3rem 0.2rem;
+    font-size: 0.72rem;
+  }
 }
 </style>
+
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </head>
 <body>
 
 <header>
   <h1>Screen Time Society: Show Watching</h1>
+  <p><em>Exploring stories, worlds, and characters one episode at a time.</em></p>
+
   <nav aria-label="Hobby sections">
     <ul>
-      <li><a href="#what" data-target="what">What</a></li>
+      <li><a href="#what" data-target="what" aria-current="page">What</a></li>
       <li><a href="#who" data-target="who">Who</a></li>
       <li><a href="#when" data-target="when">When</a></li>
       <li><a href="#where" data-target="where">Where</a></li>
@@ -246,12 +345,28 @@ footer p { margin: 0 auto 1rem; }
     <table>
       <caption>Sample weekly watching schedule</caption>
       <thead>
-        <tr><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Typical session</th></tr>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Time</th>
+          <th scope="col">Typical session</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><th scope="row">Weeknights</th><td>9 PM to 11 PM</td><td>One or two episodes</td></tr>
-        <tr><th scope="row">Saturday</th><td>Afternoon to late night</td><td>Full season binges</td></tr>
-        <tr><th scope="row">Sunday</th><td>Evening</td><td>Catching up on new weekly episodes</td></tr>
+        <tr>
+          <th scope="row">Weeknights</th>
+          <td>9 PM to 11 PM</td>
+          <td>One or two episodes</td>
+        </tr>
+        <tr>
+          <th scope="row">Saturday</th>
+          <td>Afternoon to late night</td>
+          <td>Full season binges</td>
+        </tr>
+        <tr>
+          <th scope="row">Sunday</th>
+          <td>Evening</td>
+          <td>Catching up on new weekly episodes</td>
+        </tr>
       </tbody>
     </table>
     <figure>
@@ -283,11 +398,11 @@ footer p { margin: 0 auto 1rem; }
     <h2>How Do I Pick What to Watch?</h2>
     <p>With so many shows out there, choosing can take longer than watching. A simple routine helps me find shows I will actually finish.</p>
     <ol>
-      <li>Start with a genre or mood I already love.</li>
-      <li>Watch the trailer and the first episode before deciding.</li>
-      <li>Ask friends who have similar taste for recommendations.</li>
-      <li>Keep a watchlist so I never forget a show.</li>
-      <li>Take breaks and avoid spoilers until I finish.</li>
+      <li>I start with a genre or mood I already love.</li>
+      <li>I watch the trailer and the first episode before deciding.</li>
+      <li>I ask friends who have similar taste for recommendations.</li>
+      <li>I keep a watchlist so I never forget a show.</li>
+      <li>I take breaks and avoid spoilers until I finish.</li>
     </ol>
     <figure>
       <img src="../images/how.jpg" width="600" height="400" alt="A remote control, a bucket of popcorn, and a notepad with a watchlist.">
@@ -338,12 +453,13 @@ footer p { margin: 0 auto 1rem; }
 (function () {
   var links = document.querySelectorAll("nav a[data-target]");
   var sections = document.querySelectorAll("main section");
+  var pageTitle = document.querySelector("title");
 
   function show(id) {
     var found = false;
 
-    sections.forEach(function (s) {
-      if (s.id === id) {
+    sections.forEach(function (section) {
+      if (section.id === id) {
         found = true;
       }
     });
@@ -352,23 +468,27 @@ footer p { margin: 0 auto 1rem; }
       id = "what";
     }
 
-    sections.forEach(function (s) {
-      s.hidden = (s.id !== id);
+    sections.forEach(function (section) {
+      section.hidden = section.id !== id;
     });
 
-    links.forEach(function (a) {
-      if (a.getAttribute("data-target") === id) {
-        a.setAttribute("aria-current", "page");
+    links.forEach(function (link) {
+      if (link.getAttribute("data-target") === id) {
+        link.setAttribute("aria-current", "page");
       } else {
-        a.removeAttribute("aria-current");
+        link.removeAttribute("aria-current");
       }
     });
+
+    var activeSection = document.getElementById(id);
+    var sectionHeading = activeSection.querySelector("h2");
+    pageTitle.textContent = "Screen Time Society: Show Watching | " + sectionHeading.textContent;
   }
 
-  links.forEach(function (a) {
-    a.addEventListener("click", function (e) {
-      e.preventDefault();
-      var id = a.getAttribute("data-target");
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var id = link.getAttribute("data-target");
       show(id);
       history.replaceState(null, "", "#" + id);
     });
@@ -378,7 +498,6 @@ footer p { margin: 0 auto 1rem; }
 })();
 </script>
 
-<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
 </body>
