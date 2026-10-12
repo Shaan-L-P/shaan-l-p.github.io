@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shaan Patel | Silly Platypus | ITIS3135 | Hobby</title>
+    <title>Shaan Patel | Silly Platypus | ITIS3135 | What: Show Watching</title>
 
     <link rel="icon" type="image/jpeg" href="../images/favicon-32x32.jpg">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --cream: #f6e7c9;
-            --coral: #b94f43;
-            --dark: #302820;
-            --card: #fff8eb;
-            --border: #d9c5a5;
-            --h1-size: 2.4rem;
+            --bg: #10265e;
+            --card: #1a3a82;
+            --text: #f6e7c9;
+            --muted: #c3d3ff;
+            --red: #ff4d5e;
+            --sky: #8fc7ff;
+            --coral: #ff8a94;
+            --page-width: 64rem;
+            --h1-size: 2.8rem;
+            --h2-size: 2rem;
+            --h3-size: 1.3rem;
         }
 
         * {
@@ -33,51 +37,74 @@
 
         body {
             margin: 0;
-            background-color: var(--cream);
-            color: var(--dark);
-            font-family: "Montserrat", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Nunito", Arial, sans-serif;
+            font-size: 1rem;
             line-height: 1.7;
             text-align: center;
         }
 
-        header {
-            padding: 2rem 1rem 1rem;
-        }
-
-        h1,
-        h2,
-        h3 {
+        /* Heading sizes use custom properties so responsive styles do not redefine heading selectors. */
+        h1 {
+            margin: 0 0 0.75rem;
+            color: var(--coral);
             font-family: "Chakra Petch", Arial, sans-serif;
+            font-size: var(--h1-size);
+            letter-spacing: 0.04em;
             line-height: 1.2;
         }
 
-        h1 {
-            margin: 0 0 1rem;
-            font-size: var(--h1-size);
-            color: var(--coral);
-            letter-spacing: 0.04em;
-        }
-
         h2 {
-            margin-top: 0;
-            color: var(--coral);
-            font-size: 1.8rem;
+            margin: 0 0 1rem;
+            color: var(--sky);
+            font-family: "Chakra Petch", Arial, sans-serif;
+            font-size: var(--h2-size);
+            line-height: 1.25;
         }
 
         h3 {
+            margin: 0 0 0.6rem;
             color: var(--coral);
+            font-family: "Chakra Petch", Arial, sans-serif;
+            font-size: var(--h3-size);
+            line-height: 1.3;
         }
 
-        header p {
+        /* Header, main, and footer share a maximum width and automatic side margins. */
+        header {
+            max-width: var(--page-width);
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 1.5rem;
+        }
+
+        .course-label {
+            margin: 0 0 0.5rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            max-width: 42rem;
+            margin: 0.75rem auto 0;
+            color: var(--muted);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        header p:not(.course-label):not(.tagline) {
             max-width: 48rem;
-            margin: 0 auto 1.5rem;
+            margin: 1rem auto;
         }
 
         nav {
             padding: 0.8rem 1rem;
+            border-top: 1px solid var(--sky);
+            border-bottom: 1px solid var(--sky);
             background-color: var(--card);
-            border-top: 2px solid var(--border);
-            border-bottom: 2px solid var(--border);
         }
 
         nav ul {
@@ -85,7 +112,7 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 0.5rem 1rem;
+            gap: 0.4rem 1rem;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -93,36 +120,34 @@
 
         nav a {
             display: inline-block;
-            padding: 0.4rem 0.55rem;
-            color: var(--coral);
-            font-weight: 700;
+            padding: 0.35rem 0.45rem;
+            color: var(--muted);
+            font-weight: 800;
             text-decoration: none;
         }
 
         nav a:hover,
-        nav a:focus {
-            text-decoration: underline;
-            color: var(--dark);
-        }
-
+        nav a:focus,
         nav a[aria-current="page"] {
+            color: var(--coral);
             text-decoration: underline;
             text-underline-offset: 0.25rem;
         }
 
+        /* The main container has no fixed width, preventing padding from overflowing it. */
         main {
-            width: 100%;
-            max-width: 62rem;
+            max-width: var(--page-width);
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 2rem 1.25rem;
         }
 
+        /* Section IDs identify each SPA-style page; the hidden class hides inactive sections. */
         section {
             margin: 0 auto 2rem;
-            padding: 1.5rem 2rem 2rem;
-            background-color: var(--card);
-            border: 2px solid var(--border);
+            padding: 2rem;
+            border: 1px solid #4167ad;
             border-radius: 1rem;
+            background-color: var(--card);
             text-align: center;
         }
 
@@ -135,7 +160,7 @@
         section ol {
             display: table;
             max-width: 42rem;
-            margin: 1rem auto;
+            margin: 1rem auto 1.5rem;
             padding-left: 1.5rem;
             text-align: left;
         }
@@ -147,81 +172,91 @@
 
         figure img {
             display: block;
-            width: 100%;
+            max-width: 100%;
             height: auto;
             margin: 0 auto;
-            border: 3px solid var(--border);
-            border-radius: 0.75rem;
+            border: 2px solid var(--sky);
+            border-radius: 0.8rem;
         }
 
         figcaption {
-            margin-top: 0.6rem;
-            font-size: 0.9rem;
+            margin: 0.7rem auto 0;
+            color: var(--muted);
+            font-size: 0.92rem;
             font-style: italic;
         }
 
-        table {
-            width: 100%;
-            max-width: 44rem;
-            margin: 1.5rem auto;
-            border-collapse: collapse;
-            background-color: var(--card);
-        }
-
-        th,
-        td {
-            padding: 0.75rem;
-            border: 1px solid var(--border);
-            text-align: center;
-        }
-
-        th {
-            background-color: var(--cream);
-            color: var(--coral);
-        }
-
-        a {
-            color: var(--coral);
-        }
-
+        /* Prompt containers group the AI prompt text with its explanation. */
         .prompt {
             max-width: 48rem;
             margin: 1rem auto;
-            padding: 1rem;
+            padding: 1rem 1.25rem;
             border-left: 4px solid var(--coral);
-            background-color: var(--cream);
+            border-radius: 0.4rem;
+            background-color: var(--bg);
             text-align: left;
         }
 
         .prompt p {
+            margin-bottom: 0;
             text-align: left;
         }
 
+        /* The hidden class is toggled by JavaScript to show one section at a time. */
         .hidden {
             display: none;
         }
 
+        a {
+            color: var(--sky);
+        }
+
+        a:visited {
+            color: var(--sky);
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--coral);
+        }
+
+        /* Footer links provide access to the course homepage and design-firm page. */
         footer {
-            padding: 1.5rem 1rem;
-            border-top: 2px solid var(--border);
-            background-color: var(--card);
+            max-width: var(--page-width);
+            margin: 0 auto;
+            padding: 1.5rem 1.25rem 2rem;
+            border-top: 1px solid var(--sky);
         }
 
         footer p {
             margin: 0.4rem auto;
         }
 
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.25rem;
+            margin: 1rem auto;
+        }
+
         @media (max-width: 600px) {
             :root {
-                --h1-size: 1.8rem;
+                --h1-size: 2rem;
+                --h2-size: 1.6rem;
+                --h3-size: 1.15rem;
+            }
+
+            header {
+                padding: 1.75rem 1rem 1.25rem;
             }
 
             main {
-                padding: 1rem 0.75rem;
+                padding: 1.25rem 0.75rem;
             }
 
             section {
-                padding: 1rem 1.1rem 1.5rem;
+                padding: 1.25rem 1rem;
             }
 
             nav ul {
@@ -230,33 +265,31 @@
 
             nav a {
                 padding: 0.3rem 0.2rem;
-                font-size: 0.8rem;
-            }
-
-            th,
-            td {
-                padding: 0.5rem 0.3rem;
+                font-size: 0.9rem;
             }
         }
     </style>
 
-    <!-- Course-required standards checker -->
+    <!-- Course-required standards checker. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js"></script>
 
-    <!-- Accumulus cloud validator: must be the last element in the head -->
+    <!-- Accumulus cloud validator must be the final element in the head. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
+        <p class="course-label">ITIS3135</p>
         <h1>Shaan Patel | Silly Platypus</h1>
+        <p class="tagline">"Exploring stories, worlds, and characters one episode at a time."</p>
         <p>
-            Welcome to my hobby page! I enjoy watching shows, discovering interesting
-            stories, and exploring the characters and worlds that make a series memorable.
+            Welcome to my hobby page about watching shows. I enjoy discovering
+            memorable characters, exploring fictional worlds, and following stories
+            that keep me thinking long after an episode ends.
         </p>
     </header>
 
-    <nav aria-label="Hobby page sections">
+    <nav aria-label="Hobby page navigation">
         <ul>
             <li><a href="#what" data-target="what">What</a></li>
             <li><a href="#who" data-target="who">Who</a></li>
@@ -265,43 +298,51 @@
             <li><a href="#how" data-target="how">How</a></li>
             <li><a href="#why" data-target="why">Why</a></li>
             <li><a href="#prompts" data-target="prompts">AI Prompts</a></li>
+            <li><a href="../index.html">ITIS3135 Home</a></li>
         </ul>
     </nav>
 
     <main>
         <section id="what">
-            <h2>What: Watching Shows</h2>
+            <h2>What: Show Watching</h2>
             <p>
                 One of my favorite hobbies is watching television shows and animated
-                series. I especially enjoy stories with interesting characters,
-                detailed worlds, intense moments, and themes that make me think.
+                series. I especially enjoy action, fantasy, science fiction, superhero
+                stories, and anime.
             </p>
             <p>
-                I like exploring different genres, including action, fantasy,
-                science fiction, superhero stories, and anime.
+                The shows that interest me most usually have memorable characters,
+                intense moments, distinctive visuals, and worlds with their own
+                histories, rules, and mythology.
             </p>
             <figure>
-                <img src="../images/what.jpg"
-                     alt="A television screen displaying a show">
-                <figcaption>Watching a good series is a great way to unwind.</figcaption>
+                <img src="../images/what.jpg" alt="A screen ready for watching a show">
+                <figcaption>
+                    Figure 1: Every good binge starts by pressing play.
+                    <br>
+                    <em>AI prompt used: Suggest an image concept representing the hobby of watching shows.</em>
+                </figcaption>
             </figure>
         </section>
 
         <section id="who" class="hidden">
             <h2>Who: Who I Watch With</h2>
             <p>
-                I usually watch shows on my own because it lets me focus on the story
-                and take everything in at my own pace. I also enjoy discussing shows
-                with friends who have similar interests.
+                I often watch shows on my own because it lets me focus on the story
+                and take everything in at my own pace. I also enjoy talking about
+                shows with friends who share similar interests.
             </p>
             <p>
-                Sharing theories, comparing favorite characters, and debating
+                Comparing favorite characters, discussing theories, and debating
                 surprising plot twists can make a series even more enjoyable.
             </p>
             <figure>
-                <img src="../images/who.jpg"
-                     alt="Friends enjoying entertainment together">
-                <figcaption>Watching together can lead to interesting conversations.</figcaption>
+                <img src="../images/who.jpg" alt="Friends enjoying entertainment together">
+                <figcaption>
+                    Figure 2: Sharing a favorite show can make it more memorable.
+                    <br>
+                    <em>AI prompt used: Suggest an image concept for people sharing their interest in television.</em>
+                </figcaption>
             </figure>
         </section>
 
@@ -309,35 +350,41 @@
             <h2>When: When I Watch Shows</h2>
             <p>
                 I usually watch shows when I have free time after classes,
-                assignments, or other responsibilities. Even a single episode
-                can be a good way to relax after a busy day.
+                assignments, or other responsibilities. An episode can be a good
+                way to relax after a busy day.
             </p>
             <p>
-                When a show really catches my attention, I sometimes watch several
-                episodes in one sitting, especially when the story ends on a cliffhanger.
+                If a story catches my attention, I sometimes watch several episodes
+                in one sitting, especially when each episode ends on a cliffhanger.
             </p>
             <figure>
-                <img src="../images/when.jpg"
-                     alt="A cozy setup for watching a show in the evening">
-                <figcaption>A relaxing evening is a good time to catch up on a series.</figcaption>
+                <img src="../images/when.jpg" alt="A cozy setup for watching shows in the evening">
+                <figcaption>
+                    Figure 3: A quiet evening is a great time to catch up on a series.
+                    <br>
+                    <em>AI prompt used: Suggest an image concept showing when someone might watch a television series.</em>
+                </figcaption>
             </figure>
         </section>
 
         <section id="where" class="hidden">
             <h2>Where: Where I Watch Shows</h2>
             <p>
-                I mostly watch shows at home or in my room, where I can get
+                I usually watch shows at home or in my room, where I can get
                 comfortable and pay attention without too many distractions.
                 Streaming services make it easy to continue a series across devices.
             </p>
             <p>
-                A comfortable place, a decent screen, and reliable internet are
-                usually all I need.
+                A comfortable place, a good screen, and reliable internet are
+                usually all I need to enjoy a show.
             </p>
             <figure>
-                <img src="../images/where.jpg"
-                     alt="A comfortable room with a screen for watching television">
-                <figcaption>A comfortable viewing space makes the experience better.</figcaption>
+                <img src="../images/where.jpg" alt="A comfortable room set up for watching a show">
+                <figcaption>
+                    Figure 4: A comfortable viewing space makes the experience better.
+                    <br>
+                    <em>AI prompt used: Suggest an image concept for a comfortable place to watch television.</em>
+                </figcaption>
             </figure>
         </section>
 
@@ -345,11 +392,10 @@
             <h2>How: How I Choose What to Watch</h2>
             <p>
                 I usually choose a show based on its premise, characters, genre,
-                animation or visual style, and recommendations from people I trust.
-                If the first few episodes grab my attention, I am more likely to
-                keep watching.
+                visual style, and recommendations from people I trust. If the first
+                few episodes grab my attention, I am more likely to keep watching.
             </p>
-            <p>Some things I look for in a show include:</p>
+            <p>Some of the things I look for in a show include:</p>
             <ul>
                 <li>Interesting and complex characters</li>
                 <li>A story that keeps me curious</li>
@@ -358,9 +404,12 @@
                 <li>Themes that give me something to think about</li>
             </ul>
             <figure>
-                <img src="../images/how.jpg"
-                     alt="A selection of entertainment options">
-                <figcaption>Finding a series that matches my interests is part of the fun.</figcaption>
+                <img src="../images/how.jpg" alt="Entertainment options to choose from">
+                <figcaption>
+                    Figure 5: Finding the right series is part of the fun.
+                    <br>
+                    <em>AI prompt used: Suggest an image concept representing how viewers choose what to watch.</em>
+                </figcaption>
             </figure>
         </section>
 
@@ -368,20 +417,22 @@
             <h2>Why: Why I Enjoy Watching Shows</h2>
             <p>
                 Watching shows lets me experience stories and perspectives that
-                are different from my own. I enjoy seeing how characters change,
-                how conflicts develop, and how a fictional world builds its own
-                history and rules.
+                differ from my own. I enjoy seeing how characters change, how
+                conflicts develop, and how fictional worlds build their own histories.
             </p>
             <p>
-                Some of my favorite stories explore identity, morality, ambition,
-                power, and human nature. I especially appreciate shows that give
-                their characters complicated motivations instead of making every
-                character simply good or evil.
+                I especially like stories that explore identity, morality, ambition,
+                power, and human nature. Characters with complicated motivations
+                are often more interesting to me than characters who are simply
+                good or evil.
             </p>
             <figure>
-                <img src="../images/why.jpg"
-                     alt="A person relaxing while watching entertainment">
-                <figcaption>Great stories can entertain while also making us think.</figcaption>
+                <img src="../images/why.jpg" alt="A viewer relaxing while watching a show">
+                <figcaption>
+                    Figure 6: Great stories entertain us and give us something to consider.
+                    <br>
+                    <em>AI prompt used: Suggest an image concept showing why people enjoy watching stories.</em>
+                </figcaption>
             </figure>
         </section>
 
@@ -389,12 +440,13 @@
             <h2>AI Prompts</h2>
             <p>
                 I used AI as a brainstorming and editing tool while organizing
-                the information for this page. The prompts helped me structure
-                my ideas and identify ways to make the page easier to navigate.
+                this page. I reviewed the suggestions and adapted them to fit
+                the website's content and design.
             </p>
 
+            <!-- Each prompt class groups a prompt with its purpose and improves readability. -->
             <div class="prompt">
-                <h3>Prompt 1</h3>
+                <h3>Prompt 1: Content Brainstorming</h3>
                 <p>
                     Help me brainstorm content for a hobby webpage about watching
                     television shows and anime. Organize the ideas around what,
@@ -403,7 +455,7 @@
             </div>
 
             <div class="prompt">
-                <h3>Prompt 2</h3>
+                <h3>Prompt 2: Accessibility and Design</h3>
                 <p>
                     Suggest ways to make an HTML hobby page accessible, responsive,
                     visually consistent, and easy to navigate.
@@ -411,7 +463,7 @@
             </div>
 
             <div class="prompt">
-                <h3>Prompt 3</h3>
+                <h3>Prompt 3: HTML and CSS Review</h3>
                 <p>
                     Help me review the CSS for a single-page hobby website, including
                     responsive typography, image sizing, centered content, and
@@ -419,19 +471,29 @@
                 </p>
             </div>
 
-            <p>
-                I reviewed the suggestions and used them to guide the page's
-                organization and styling.
-            </p>
+            <div class="prompt">
+                <h3>Prompt 4: Validation Fixes</h3>
+                <p>
+                    Review these website checker results and explain how to fix the
+                    reported issues without removing the single-page navigation.
+                </p>
+            </div>
         </section>
     </main>
 
     <footer>
+        <p class="tagline">"Simple pages, built with care."</p>
+
+        <div class="footer-links">
+            <a href="../index.html">ITIS3135 Home</a>
+            <a href="../../shaanpateldesigns.html">Shaan Patel Designs</a>
+        </div>
+
         <p>Designed by Shaan Patel | Silly Platypus</p>
-        <p>ITIS 3135 Hobby Page</p>
     </footer>
 
     <script>
+        /* Section IDs identify each page panel; data-target links select the matching panel. */
         const navigationLinks = document.querySelectorAll("nav a[data-target]");
         const pageSections = document.querySelectorAll("main section");
 
@@ -454,8 +516,16 @@
                 }
             });
 
+            const visibleHeading = targetSection.querySelector("h2");
+
+            if (visibleHeading) {
+                document.title =
+                    "Shaan Patel | Silly Platypus | ITIS3135 | " +
+                    visibleHeading.textContent;
+            }
+
             if (updateHistory) {
-                history.replaceState(null, "", `#${targetId}`);
+                history.replaceState(null, "", "#" + targetId);
             }
         }
 
@@ -464,6 +534,11 @@
                 event.preventDefault();
                 showSection(link.dataset.target);
             });
+        });
+
+        window.addEventListener("hashchange", () => {
+            const targetId = window.location.hash.slice(1);
+            showSection(targetId, false);
         });
 
         const initialSection = window.location.hash.slice(1);
