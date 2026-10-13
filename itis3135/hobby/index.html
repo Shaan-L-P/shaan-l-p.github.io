@@ -185,7 +185,7 @@
             border: 1px solid var(--border);
             border-radius: 0.5rem;
             background-color: var(--card);
-            color: var(--sky);
+            color: var(--coral);
             font-weight: 700;
             text-decoration: none;
             transition: background-color 0.2s ease, color 0.2s ease;
@@ -197,8 +197,14 @@
             color: #102044;
         }
 
+        /* Footer links use coral pink for better visibility against the background. */
         footer a:not(.validation-link) {
-            color: var(--sky);
+            color: var(--coral);
+        }
+
+        footer a:not(.validation-link):hover,
+        footer a:not(.validation-link):focus {
+            color: var(--text);
         }
 
         .footer-credit {
