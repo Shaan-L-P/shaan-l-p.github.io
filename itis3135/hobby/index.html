@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The Hobby: Show Watching</title>
+    <title>The Art of Binge-Watching | What Is My Hobby?</title>
 
     <link rel="icon" type="image/jpeg" href="../images/favicon-32x32.jpg">
 
@@ -146,6 +146,13 @@
             text-align: center;
         }
 
+        /* This styles italicized image-source notes beneath figure captions. */
+        figcaption em {
+            display: block;
+            margin-top: 0.25rem;
+            font-size: 0.9rem;
+        }
+
         .hidden {
             /* This class hides inactive SPA sections until their navigation link is selected. */
             display: none;
@@ -208,7 +215,7 @@
 
 <body>
     <header>
-        <h1>The Hobby: Show Watching</h1>
+        <h1>The Art of Binge-Watching</h1>
 
         <p class="tagline">
             <em>Exploring stories, worlds, and characters one episode at a time.</em>
@@ -259,6 +266,7 @@
                 <img src="../images/shows.jpg" alt="A collection of television shows and anime that represent my interests">
                 <figcaption>
                     Some of the shows I have watched.
+                    <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
         </section>
@@ -288,7 +296,8 @@
             <figure>
                 <img src="../images/who.jpg" alt="A group of people enjoying a television series together in a living room">
                 <figcaption>
-                    Watching shows can also be a shared experience.
+                    I usually watch shows alone, but watching with others can be fun, too.
+                    <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
         </section>
@@ -317,6 +326,7 @@
                 <img src="../images/when.jpg" alt="A relaxing evening viewing scene with a couch and soft lighting">
                 <figcaption>
                     The types of shows I watch depend on the season.
+                    <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
         </section>
@@ -353,6 +363,7 @@
                 <img src="../images/where.jpg" alt="A comfortable living room arranged for watching television">
                 <figcaption>
                     I watch shows anywhere.
+                    <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
         </section>
@@ -383,6 +394,7 @@
                 <img src="../images/how.jpg" alt="A viewing setup suggesting a person choosing among different fictional shows">
                 <figcaption>
                     Finding a good show starts with an interesting story.
+                    <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
         </section>
@@ -414,6 +426,7 @@
                 <img src="../images/why.jpg" alt="A cinematic fictional landscape representing the appeal of immersive storytelling">
                 <figcaption>
                     Immersive stories can entertain and encourage reflection.
+                    <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
         </section>
@@ -421,13 +434,22 @@
         <section id="ai-prompts" class="hidden">
             <h2>AI Prompts and Reflection</h2>
 
-            <p>I used AI in the following ways while completing this assignment:</p>
+            <p>
+                I used AI in the following ways while completing this assignment:
+            </p>
 
             <ul>
                 <li>I used AI to help me fully understand the assignment and its requirements.</li>
                 <li>I used AI to generate images for the page.</li>
                 <li>I used AI to help troubleshoot HTML and CSS errors.</li>
             </ul>
+
+            <p>
+                I reviewed the suggestions and decided which changes to
+                incorporate into my website. Using AI as a support tool
+                helped me work through development issues and better
+                understand the assignment requirements.
+            </p>
         </section>
     </main>
 
@@ -468,7 +490,7 @@
 
             if (visibleHeading) {
                 document.title =
-                    "The Hobby: Show Watching | " + visibleHeading.textContent;
+                    "The Art of Binge-Watching | " + visibleHeading.textContent;
             }
         }
 
