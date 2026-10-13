@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel | Silly Platypus | ITIS3135 | Hobby</title>
+
+    <title>Shaan Patel | Silly Platypus | ITIS3135 | What Is My Hobby?</title>
 
     <link rel="icon" type="image/jpeg" href="../images/favicon-32x32.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,6 +23,11 @@
             --sky: #8fc7ff;
             --coral: #ff8a94;
             --border: #4264a8;
+
+            /* These variables control heading sizes on desktop and mobile. */
+            --h1-size: 2.5rem;
+            --h2-size: 2rem;
+            --h3-size: 1.35rem;
         }
 
         * {
@@ -32,8 +39,8 @@
         }
 
         body {
-            margin: 0 auto;
             max-width: 1200px;
+            margin: 0 auto;
             padding: 1.5rem;
             background-color: var(--bg);
             color: var(--text);
@@ -50,28 +57,27 @@
         h1 {
             color: var(--coral);
             font-family: "Chakra Petch", sans-serif;
-            font-size: 2.5rem;
+            font-size: var(--h1-size);
             line-height: 1.2;
         }
 
         h2 {
             color: var(--sky);
             font-family: "Chakra Petch", sans-serif;
-            font-size: 2rem;
+            font-size: var(--h2-size);
             line-height: 1.3;
         }
 
         h3 {
             color: var(--coral);
             font-family: "Chakra Petch", sans-serif;
-            font-size: 1.35rem;
+            font-size: var(--h3-size);
             line-height: 1.4;
         }
 
         .tagline {
             color: var(--muted);
             font-size: 1.15rem;
-            font-style: italic;
         }
 
         nav {
@@ -179,16 +185,14 @@
         /* Black and white are not used as the page's primary colors. */
 
         @media (max-width: 600px) {
+            :root {
+                --h1-size: 2rem;
+                --h2-size: 1.65rem;
+                --h3-size: 1.2rem;
+            }
+
             body {
                 padding: 0.75rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.65rem;
             }
 
             section {
@@ -212,7 +216,7 @@
 <body>
     <header>
         <h1>Shaan Patel | Silly Platypus | ITIS3135</h1>
-        <p class="tagline">Exploring stories, worlds, and characters one episode at a time.</p>
+        <p class="tagline"><em>Exploring stories, worlds, and characters one episode at a time.</em></p>
 
         <nav aria-label="Main navigation">
             <a href="#what" data-section="what">What</a>
@@ -229,7 +233,9 @@
     <main>
         <section id="what">
             <h2>What Is My Hobby?</h2>
+
             <p>One of my favorite ways to relax is watching shows. I enjoy getting invested in interesting stories, exploring fictional worlds, and following characters as they change throughout a series.</p>
+
             <p>Shows can combine storytelling, visuals, music, and worldbuilding to create experiences that stay with me long after an episode ends.</p>
 
             <figure>
@@ -243,7 +249,9 @@
 
         <section id="who" class="hidden">
             <h2>Who Shares This Hobby?</h2>
+
             <p>People with different interests can enjoy watching shows. Some like comedy and lighthearted stories, while others prefer mysteries, action, fantasy, science fiction, or darker stories with complicated characters.</p>
+
             <p>I especially enjoy stories that give characters distinct personalities and explore themes like identity, morality, ambition, and human nature.</p>
 
             <figure>
@@ -257,7 +265,9 @@
 
         <section id="when" class="hidden">
             <h2>When Do I Enjoy Watching Shows?</h2>
+
             <p>I usually enjoy watching shows when I have free time after classes, assignments, or other responsibilities. It gives me a chance to slow down and focus on something entertaining.</p>
+
             <p>Evenings and weekends can be especially good times to watch because I can settle in and enjoy an episode without feeling rushed.</p>
 
             <figure>
@@ -271,7 +281,9 @@
 
         <section id="where" class="hidden">
             <h2>Where Do I Watch Shows?</h2>
+
             <p>I generally watch shows somewhere comfortable, such as at home or in my room. Having a comfortable place makes it easier to pay attention to the story and enjoy the experience.</p>
+
             <p>A television, laptop, or another screen can work. What matters most is being able to relax and focus on what I am watching.</p>
 
             <figure>
@@ -285,7 +297,9 @@
 
         <section id="how" class="hidden">
             <h2>How Do I Choose What to Watch?</h2>
+
             <p>I often look for shows with an interesting premise, memorable characters, and a world that feels thoughtfully developed. Recommendations, trailers, and discussions can also help me discover something new.</p>
+
             <p>Sometimes I want something easy to watch. Other times, I prefer a story that makes me think, keeps me guessing, or leaves me with a lot to discuss afterward.</p>
 
             <figure>
@@ -299,7 +313,9 @@
 
         <section id="why" class="hidden">
             <h2>Why Do I Enjoy Watching Shows?</h2>
+
             <p>I enjoy watching shows because they let me experience different perspectives and become invested in stories beyond my everyday life. A well-written character can make me question my assumptions, and an imaginative setting can make a fictional world feel real.</p>
+
             <p>I also appreciate when a story balances its entertainment with deeper ideas. The best shows can be exciting in the moment while giving me something to think about afterward.</p>
 
             <figure>
@@ -313,8 +329,12 @@
 
         <section id="ai-prompts" class="hidden">
             <h2>AI Prompts and Reflection</h2>
+
             <p>I used an AI image-generation tool to create images that represent different parts of my hobby. Each prompt was written to produce a relevant scene without relying on recognizable copyrighted characters or readable text.</p>
+
             <p>I also used AI as a learning and troubleshooting tool while developing this page. It helped me review HTML and CSS issues, understand validator feedback, and identify corrections to apply. I reviewed the suggestions and incorporated changes into the code.</p>
+
+            <p>After using AI-generated suggestions, I checked the resulting code against the page requirements and adjusted the content and styling. This process helped me understand how HTML structure, CSS rules, and JavaScript work together to create a single-page website.</p>
 
             <div class="prompt-list">
                 <!-- This div groups the image-generation prompt for the What section so it can share the prompt-list styling. -->
@@ -355,6 +375,7 @@
             <a href="../index.html">ITIS3135 Home</a> |
             <a href="../../shaanpateldesigns.html">Shaan Patel Designs</a>
         </p>
+
         <p class="footer-credit">Designed by Shaan Patel | Silly Platypus</p>
     </footer>
 
@@ -394,6 +415,7 @@
                 event.preventDefault();
 
                 const sectionId = link.dataset.section;
+
                 showSection(sectionId);
                 history.replaceState(null, "", "#" + sectionId);
             });
