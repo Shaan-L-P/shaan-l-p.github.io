@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Shaan Patel | Silly Platypus | ITIS3135 | What Is Show Watching?</title>
+    <title>Shaan Patel | Silly Platypus | ITIS3135 | Hobby</title>
 
     <link rel="icon" type="image/jpeg" href="../images/favicon-32x32.jpg">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -23,12 +21,8 @@
             --sky: #8fc7ff;
             --coral: #ff8a94;
             --border: #4264a8;
-            --h1-size: 2.7rem;
-            --h2-size: 2rem;
-            --h3-size: 1.35rem;
         }
 
-        /* Black and white are not used as the page's primary colors. */
         * {
             box-sizing: border-box;
         }
@@ -38,55 +32,45 @@
         }
 
         body {
-            margin: 0;
-            background: var(--bg);
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 1.5rem;
+            background-color: var(--bg);
             color: var(--text);
             font-family: "Nunito", sans-serif;
-            font-size: 1rem;
             line-height: 1.7;
         }
 
-        header,
-        main,
-        footer {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 1.5rem;
-        }
-
         header {
+            max-width: 1000px;
+            margin: 0 auto 2rem;
             text-align: center;
-            border-bottom: 2px solid var(--border);
         }
-
-        /* Classes organize reusable styles for taglines, prompts, hidden sections, and footer credits. IDs identify each SPA section so navigation and JavaScript can show the correct content. */
 
         h1 {
-            margin: 0.4rem 0;
-            color: var(--text);
+            color: var(--coral);
             font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h1-size);
-            line-height: 1.25;
+            font-size: 2.5rem;
+            line-height: 1.2;
         }
 
         h2 {
-            margin-top: 0;
-            color: var(--coral);
+            color: var(--sky);
             font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h2-size);
-            line-height: 1.25;
+            font-size: 2rem;
+            line-height: 1.3;
         }
 
         h3 {
-            color: var(--sky);
+            color: var(--coral);
             font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h3-size);
-            line-height: 1.25;
+            font-size: 1.35rem;
+            line-height: 1.4;
         }
 
         .tagline {
-            margin: 0.5rem 0 1rem;
             color: var(--muted);
+            font-size: 1.15rem;
             font-style: italic;
         }
 
@@ -95,143 +79,128 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.65rem;
-            margin: 1.5rem 0 0;
+            margin: 1.5rem 0;
         }
 
-        nav a,
-        .home-link,
-        footer a {
-            color: var(--text);
-            text-decoration: none;
-            border: 1px solid var(--sky);
+        nav a {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--border);
             border-radius: 999px;
-            padding: 0.45rem 0.9rem;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        nav a:visited,
-        .home-link:visited,
-        footer a:visited {
+            background-color: var(--card);
             color: var(--text);
+            font-weight: 700;
+            text-decoration: none;
         }
 
         nav a:hover,
         nav a:focus,
-        nav a[aria-current="page"],
-        .home-link:hover,
-        .home-link:focus,
-        footer a:hover,
-        footer a:focus {
-            color: var(--bg);
-            background: var(--sky);
+        nav a[aria-current="page"] {
+            background-color: var(--red);
+            color: #102044;
         }
 
         main {
-            min-height: 55vh;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         section {
-            margin: 1.5rem 0;
-            padding: 2rem;
-            background: var(--card);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
             border: 1px solid var(--border);
-            border-radius: 18px;
-            box-shadow: 0 8px 22px rgb(0 0 0 / 15%);
+            border-radius: 1rem;
+            background-color: var(--card);
         }
 
-        section p,
-        section li {
-            max-width: 75ch;
+        figure {
+            margin: 1.5rem 0;
         }
 
-        section figure {
-            margin: 1.5rem auto;
-            text-align: center;
-        }
-
-        section figure img {
+        figure img {
             display: block;
             width: 100%;
-            max-width: 680px;
+            max-width: 700px;
             height: auto;
             margin: 0 auto;
-            border: 3px solid var(--sky);
-            border-radius: 14px;
+            border: 2px solid var(--border);
+            border-radius: 0.75rem;
         }
 
         figcaption {
             margin-top: 0.75rem;
             color: var(--muted);
+            text-align: center;
         }
 
-        /* The prompt class separates each image's AI prompt from its figure caption. */
         .prompt {
             display: block;
-            margin: 0.5rem auto 0;
+            margin-top: 0.5rem;
             color: var(--coral);
             font-size: 0.95rem;
         }
 
-        .prompt em {
-            color: var(--muted);
-        }
-
-        ul,
-        ol {
-            padding-left: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* The hidden class hides inactive SPA sections until their navigation link is selected. */
         .hidden {
+            /* This class hides inactive SPA sections until their navigation link is selected. */
             display: none;
         }
 
-        .home-link {
-            display: inline-block;
-            margin-top: 1rem;
+        .prompt-list {
+            margin-top: 1.5rem;
+        }
+
+        .prompt-list .prompt {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-left: 4px solid var(--red);
+            border-radius: 0.25rem;
+            background-color: var(--bg);
+            overflow-wrap: anywhere;
         }
 
         footer {
+            max-width: 1000px;
+            margin: 2rem auto 0;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
             text-align: center;
-            border-top: 2px solid var(--border);
         }
 
-        footer p {
-            margin: 0.75rem 0;
+        footer a {
+            color: var(--sky);
         }
 
         .footer-credit {
-            color: var(--muted);
+            margin-top: 0.5rem;
             font-size: 0.9rem;
         }
 
-        @media (max-width: 650px) {
-            :root {
-                --h1-size: 2rem;
-                --h2-size: 1.65rem;
-                --h3-size: 1.2rem;
+        /* Classes organize reusable styles for taglines, prompts, hidden sections, and footer credits. IDs identify each SPA section so navigation and JavaScript can show the correct content. */
+        /* Black and white are not used as the page's primary colors. */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0.75rem;
             }
 
-            header,
-            main,
-            footer {
-                padding: 1rem;
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.65rem;
             }
 
             section {
-                padding: 1.25rem;
+                padding: 1rem;
             }
 
             nav {
-                gap: 0.5rem;
+                gap: 0.45rem;
             }
 
             nav a {
-                padding: 0.4rem 0.7rem;
+                padding: 0.45rem 0.7rem;
             }
         }
     </style>
@@ -243,347 +212,200 @@
 <body>
     <header>
         <h1>Shaan Patel | Silly Platypus | ITIS3135</h1>
+        <p class="tagline">Exploring stories, worlds, and characters one episode at a time.</p>
 
-        <p class="tagline">
-            "Exploring stories, worlds, and characters one episode at a time."
-        </p>
-
-        <nav aria-label="Hobby site navigation">
-            <a href="#what" data-target="what">What</a>
-            <a href="#who" data-target="who">Who</a>
-            <a href="#when" data-target="when">When</a>
-            <a href="#where" data-target="where">Where</a>
-            <a href="#how" data-target="how">How</a>
-            <a href="#why" data-target="why">Why</a>
-            <a href="#ai-prompts" data-target="ai-prompts">AI Prompts</a>
+        <nav aria-label="Main navigation">
+            <a href="#what" data-section="what">What</a>
+            <a href="#who" data-section="who">Who</a>
+            <a href="#when" data-section="when">When</a>
+            <a href="#where" data-section="where">Where</a>
+            <a href="#how" data-section="how">How</a>
+            <a href="#why" data-section="why">Why</a>
+            <a href="#ai-prompts" data-section="ai-prompts">AI Prompts</a>
         </nav>
     </header>
 
+    <!-- This page uses classes and ids so the navigation can switch between sections: each section has an id that its navigation link targets, the hidden class hides inactive sections, and the tagline, prompt, and footer-credit classes style repeated text. -->
     <main>
         <section id="what">
-            <h2>What Is Show Watching?</h2>
-
-            <p>
-                Show watching is a hobby that involves following television
-                series, anime, and other episodic stories. I enjoy watching
-                stories that introduce interesting characters, build immersive
-                worlds, and keep me curious about what happens next.
-            </p>
-
-            <p>
-                Different shows offer different experiences. Some focus on
-                action and suspense, while others explore relationships,
-                personal struggles, and complicated moral decisions.
-            </p>
+            <h2>What Is My Hobby?</h2>
+            <p>One of my favorite ways to relax is watching shows. I enjoy getting invested in interesting stories, exploring fictional worlds, and following characters as they change throughout a series.</p>
+            <p>Shows can combine storytelling, visuals, music, and worldbuilding to create experiences that stay with me long after an episode ends.</p>
 
             <figure>
-                <img src="../images/what.jpg" alt="A television screen displaying a show">
+                <img src="../images/what.jpg" alt="A cozy home entertainment setup with a television and warm lighting">
                 <figcaption>
-                    Figure 1: Watching a show at home.
-                    <span class="prompt">
-                        <em>AI prompt used: Generate a cozy home entertainment setup with a television displaying a fictional show, warm lighting, and no readable text.</em>
-                    </span>
+                    A comfortable setup for watching a show.
+                    <span class="prompt"><em>AI prompt used: Generate a cozy home entertainment setup with a television displaying a fictional show, warm lighting, and no readable text.</em></span>
                 </figcaption>
             </figure>
-
-            <p>
-                Show watching can be a way to relax, discover new ideas, and
-                become invested in a fictional world over time.
-            </p>
         </section>
 
         <section id="who" class="hidden">
-            <h2>Who Enjoys Show Watching?</h2>
-
-            <p>
-                People of many ages and backgrounds enjoy watching shows.
-                Some watch casually, while others follow entire franchises,
-                discuss theories, and keep up with new episodes.
-            </p>
-
-            <p>
-                I especially enjoy stories with complex characters, memorable
-                settings, and conflicts that make viewers think about identity,
-                ambition, morality, and human nature.
-            </p>
+            <h2>Who Shares This Hobby?</h2>
+            <p>People with different interests can enjoy watching shows. Some like comedy and lighthearted stories, while others prefer mysteries, action, fantasy, science fiction, or darker stories with complicated characters.</p>
+            <p>I especially enjoy stories that give characters distinct personalities and explore themes like identity, morality, ambition, and human nature.</p>
 
             <figure>
-                <img src="../images/who.jpg" alt="Friends enjoying a show together">
+                <img src="../images/who.jpg" alt="A group of people enjoying a television series together in a living room">
                 <figcaption>
-                    Figure 2: Sharing a show with other fans.
-                    <span class="prompt">
-                        <em>AI prompt used: Generate a friendly group of people enjoying a television series together in a comfortable living room, with a natural and welcoming atmosphere.</em>
-                    </span>
+                    Watching shows can also be a shared experience.
+                    <span class="prompt"><em>AI prompt used: Generate a friendly group of people enjoying a television series together in a comfortable living room, with a natural and welcoming atmosphere.</em></span>
                 </figcaption>
             </figure>
-
-            <ul>
-                <li>Casual viewers who watch to relax.</li>
-                <li>Fans who follow a series as new episodes release.</li>
-                <li>Communities that discuss characters, theories, and lore.</li>
-            </ul>
         </section>
 
         <section id="when" class="hidden">
-            <h2>When Do I Watch Shows?</h2>
-
-            <p>
-                Show watching fits best into my free time, especially after
-                classes, homework, or other responsibilities are finished.
-            </p>
-
-            <p>
-                Watching an episode can be a short break, while longer
-                stretches of free time make it easier to enjoy several episodes
-                or start a new series.
-            </p>
+            <h2>When Do I Enjoy Watching Shows?</h2>
+            <p>I usually enjoy watching shows when I have free time after classes, assignments, or other responsibilities. It gives me a chance to slow down and focus on something entertaining.</p>
+            <p>Evenings and weekends can be especially good times to watch because I can settle in and enjoy an episode without feeling rushed.</p>
 
             <figure>
-                <img src="../images/when.jpg" alt="A cozy viewing setup ready for an evening show">
+                <img src="../images/when.jpg" alt="A relaxing evening viewing scene with a couch and soft lighting">
                 <figcaption>
-                    Figure 3: Settling in for an episode.
-                    <span class="prompt">
-                        <em>AI prompt used: Generate a relaxing evening viewing scene with a couch, soft lighting, and a television, emphasizing a calm end-of-day atmosphere.</em>
-                    </span>
+                    An evening is a good time to unwind with a show.
+                    <span class="prompt"><em>AI prompt used: Generate a relaxing evening viewing scene with a couch, soft lighting, and a television, emphasizing a calm end-of-day atmosphere.</em></span>
                 </figcaption>
             </figure>
-
-            <ul>
-                <li>After finishing schoolwork and assignments.</li>
-                <li>During weekends or school breaks.</li>
-                <li>When I want to relax at the end of the day.</li>
-            </ul>
         </section>
 
         <section id="where" class="hidden">
             <h2>Where Do I Watch Shows?</h2>
-
-            <p>
-                I usually watch shows somewhere comfortable where I can focus
-                on the story without too many distractions.
-            </p>
-
-            <p>
-                Streaming services make it easy to watch on a television,
-                laptop, tablet, or phone. The device matters less than having
-                a good viewing experience.
-            </p>
+            <p>I generally watch shows somewhere comfortable, such as at home or in my room. Having a comfortable place makes it easier to pay attention to the story and enjoy the experience.</p>
+            <p>A television, laptop, or another screen can work. What matters most is being able to relax and focus on what I am watching.</p>
 
             <figure>
-                <img src="../images/where.jpg" alt="A comfortable living room with a television">
+                <img src="../images/where.jpg" alt="A comfortable living room arranged for watching television">
                 <figcaption>
-                    Figure 4: A comfortable place to watch.
-                    <span class="prompt">
-                        <em>AI prompt used: Generate a comfortable living room arranged for watching television, with a couch, a screen, and a tidy environment.</em>
-                    </span>
+                    A comfortable space makes watching more enjoyable.
+                    <span class="prompt"><em>AI prompt used: Generate a comfortable living room arranged for watching television, with a couch, a screen, and a tidy environment.</em></span>
                 </figcaption>
             </figure>
-
-            <ul>
-                <li>At home on a television or computer.</li>
-                <li>In a comfortable space where I can concentrate.</li>
-                <li>While traveling, when I have a suitable device and connection.</li>
-            </ul>
         </section>
 
         <section id="how" class="hidden">
             <h2>How Do I Choose What to Watch?</h2>
-
-            <p>
-                I usually look for shows with compelling characters, engaging
-                plots, strong visual styles, and worlds that feel distinctive.
-                Recommendations from friends and other fans can also help.
-            </p>
-
-            <p>
-                I like exploring different genres, especially action, fantasy,
-                science fiction, and stories with deeper themes.
-            </p>
+            <p>I often look for shows with an interesting premise, memorable characters, and a world that feels thoughtfully developed. Recommendations, trailers, and discussions can also help me discover something new.</p>
+            <p>Sometimes I want something easy to watch. Other times, I prefer a story that makes me think, keeps me guessing, or leaves me with a lot to discuss afterward.</p>
 
             <figure>
-                <img src="../images/how.jpg" alt="A collection of shows available to choose from">
+                <img src="../images/how.jpg" alt="A viewing setup suggesting a person choosing among different fictional shows">
                 <figcaption>
-                    Figure 5: Choosing the next show to watch.
-                    <span class="prompt">
-                        <em>AI prompt used: Generate a viewing setup suggesting a person choosing among different fictional shows, using generic screen thumbnails and no recognizable copyrighted characters.</em>
-                    </span>
+                    Choosing a show often starts with finding an interesting story.
+                    <span class="prompt"><em>AI prompt used: Generate a viewing setup suggesting a person choosing among different fictional shows, using generic screen thumbnails and no recognizable copyrighted characters.</em></span>
                 </figcaption>
             </figure>
-
-            <ol>
-                <li>Look for a premise or genre that interests me.</li>
-                <li>Check recommendations or read a short description.</li>
-                <li>Watch an episode to see whether the story holds my attention.</li>
-                <li>Continue if the characters and story keep me invested.</li>
-            </ol>
         </section>
 
         <section id="why" class="hidden">
-            <h2>Why Do I Enjoy Show Watching?</h2>
-
-            <p>
-                I enjoy getting invested in fictional worlds and seeing how
-                characters change as their stories unfold. A good series can
-                make its world feel meaningful and its characters memorable.
-            </p>
-
-            <p>
-                I am especially drawn to stories that explore difficult choices,
-                competing perspectives, and the ways that power and society
-                shape people.
-            </p>
+            <h2>Why Do I Enjoy Watching Shows?</h2>
+            <p>I enjoy watching shows because they let me experience different perspectives and become invested in stories beyond my everyday life. A well-written character can make me question my assumptions, and an imaginative setting can make a fictional world feel real.</p>
+            <p>I also appreciate when a story balances its entertainment with deeper ideas. The best shows can be exciting in the moment while giving me something to think about afterward.</p>
 
             <figure>
-                <img src="../images/why.jpg" alt="A dramatic fictional world shown on a screen">
+                <img src="../images/why.jpg" alt="A cinematic fictional landscape displayed on a screen">
                 <figcaption>
-                    Figure 6: Stories that leave an impression.
-                    <span class="prompt">
-                        <em>AI prompt used: Generate a cinematic fictional landscape displayed on a screen, with dramatic lighting and a sense of wonder, representing the appeal of immersive storytelling.</em>
-                    </span>
+                    Immersive storytelling can make fictional worlds feel memorable.
+                    <span class="prompt"><em>AI prompt used: Generate a cinematic fictional landscape displayed on a screen, with dramatic lighting and a sense of wonder, representing the appeal of immersive storytelling.</em></span>
                 </figcaption>
             </figure>
-
-            <ul>
-                <li>It gives me a way to relax and recharge.</li>
-                <li>It introduces interesting characters and fictional worlds.</li>
-                <li>It can explore meaningful questions about people and society.</li>
-            </ul>
         </section>
 
         <section id="ai-prompts" class="hidden">
-            <h2>AI Prompts</h2>
+            <h2>AI Prompts and Reflection</h2>
+            <p>I used an AI image-generation tool to create images that represent different parts of my hobby. Each prompt was written to produce a relevant scene without relying on recognizable copyrighted characters or readable text.</p>
+            <p>I also used AI as a learning and troubleshooting tool while developing this page. It helped me review HTML and CSS issues, understand validator feedback, and identify corrections to apply. I reviewed the suggestions and incorporated changes into the code.</p>
 
-            <p>
-                AI image-generation tools helped create visual assets for this
-                hobby website. The prompts below describe the intended subject
-                of each image.
-            </p>
+            <div class="prompt-list">
+                <!-- This div groups the image-generation prompt for the What section so it can share the prompt-list styling. -->
+                <div class="prompt">
+                    <strong>What:</strong> Generate a cozy home entertainment setup with a television displaying a fictional show, warm lighting, and no readable text.
+                </div>
 
-            <p>
-                In addition to generating images, I used AI as a learning and
-                troubleshooting tool while developing this website. It helped
-                me understand errors reported by the HTML and CSS validators,
-                identify potential issues in my code, and learn how to correct
-                them. I reviewed the suggestions and applied changes to improve
-                my website's structure, styling, and compliance with the
-                assignment requirements.
-            </p>
+                <!-- This div groups the image-generation prompt for the Who section so it can share the prompt-list styling. -->
+                <div class="prompt">
+                    <strong>Who:</strong> Generate a friendly group of people enjoying a television series together in a comfortable living room, with a natural and welcoming atmosphere.
+                </div>
 
-            <!-- This div groups the first image-generation prompt with its purpose, making the prompt easier to identify and style. -->
-            <div class="prompt">
-                <p>
-                    <strong>Image 1, What:</strong>
-                    <em>Generate a cozy home entertainment setup with a television displaying a fictional show, warm lighting, and no readable text.</em>
-                </p>
-            </div>
+                <!-- This div groups the image-generation prompt for the When section so it can share the prompt-list styling. -->
+                <div class="prompt">
+                    <strong>When:</strong> Generate a relaxing evening viewing scene with a couch, soft lighting, and a television, emphasizing a calm end-of-day atmosphere.
+                </div>
 
-            <!-- This div groups the second image-generation prompt with its purpose, keeping the image description separate from the surrounding explanation. -->
-            <div class="prompt">
-                <p>
-                    <strong>Image 2, Who:</strong>
-                    <em>Generate a friendly group of people enjoying a television series together in a comfortable living room, with a natural and welcoming atmosphere.</em>
-                </p>
-            </div>
+                <!-- This div groups the image-generation prompt for the Where section so it can share the prompt-list styling. -->
+                <div class="prompt">
+                    <strong>Where:</strong> Generate a comfortable living room arranged for watching television, with a couch, a screen, and a tidy environment.
+                </div>
 
-            <!-- This div groups the third image-generation prompt with its purpose, providing a consistent structure for the prompt list. -->
-            <div class="prompt">
-                <p>
-                    <strong>Image 3, When:</strong>
-                    <em>Generate a relaxing evening viewing scene with a couch, soft lighting, and a television, emphasizing a calm end-of-day atmosphere.</em>
-                </p>
-            </div>
+                <!-- This div groups the image-generation prompt for the How section so it can share the prompt-list styling. -->
+                <div class="prompt">
+                    <strong>How:</strong> Generate a viewing setup suggesting a person choosing among different fictional shows, using generic screen thumbnails and no recognizable copyrighted characters.
+                </div>
 
-            <!-- This div groups the fourth image-generation prompt with its purpose, allowing the prompt to be styled consistently with the other entries. -->
-            <div class="prompt">
-                <p>
-                    <strong>Image 4, Where:</strong>
-                    <em>Generate a comfortable living room arranged for watching television, with a couch, a screen, and a tidy environment.</em>
-                </p>
-            </div>
-
-            <!-- This div groups the fifth image-generation prompt with its purpose, separating the prompt text from the section introduction. -->
-            <div class="prompt">
-                <p>
-                    <strong>Image 5, How:</strong>
-                    <em>Generate a viewing setup suggesting a person choosing among different fictional shows, using generic screen thumbnails and no recognizable copyrighted characters.</em>
-                </p>
-            </div>
-
-            <!-- This div groups the sixth image-generation prompt with its purpose, maintaining a clear and consistent structure for the final prompt entry. -->
-            <div class="prompt">
-                <p>
-                    <strong>Image 6, Why:</strong>
-                    <em>Generate a cinematic fictional landscape displayed on a screen, with dramatic lighting and a sense of wonder, representing the appeal of immersive storytelling.</em>
-                </p>
+                <!-- This div groups the image-generation prompt for the Why section so it can share the prompt-list styling. -->
+                <div class="prompt">
+                    <strong>Why:</strong> Generate a cinematic fictional landscape displayed on a screen, with dramatic lighting and a sense of wonder, representing the appeal of immersive storytelling.
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p class="tagline">"Simple pages, built with care."</p>
-
         <p>
-            <a href="../index.html">ITIS3135 Home</a>
+            <a href="../index.html">ITIS3135 Home</a> |
             <a href="../../shaanpateldesigns.html">Shaan Patel Designs</a>
         </p>
-
         <p class="footer-credit">Designed by Shaan Patel | Silly Platypus</p>
     </footer>
 
     <script>
-        /*
-         * The hidden class hides inactive SPA sections.
-         * Section IDs let navigation links select the correct page.
-         * The prompt class groups the text associated with each AI-generated image.
-         */
-
         const sections = document.querySelectorAll("main section");
-        const navigationLinks = document.querySelectorAll("nav a[data-target]");
+        const navigationLinks = document.querySelectorAll("nav a[data-section]");
 
         function showSection(sectionId) {
-            let visibleSection = document.getElementById(sectionId);
+            const targetSection = document.getElementById(sectionId);
+            const validSection = targetSection && targetSection.matches("main section");
 
-            if (!visibleSection || !visibleSection.matches("main section")) {
+            if (!validSection) {
                 sectionId = "what";
-                visibleSection = document.getElementById(sectionId);
             }
 
-            sections.forEach((section) => {
+            sections.forEach(function (section) {
                 section.classList.toggle("hidden", section.id !== sectionId);
             });
 
-            navigationLinks.forEach((link) => {
-                if (link.dataset.target === sectionId) {
+            navigationLinks.forEach(function (link) {
+                if (link.dataset.section === sectionId) {
                     link.setAttribute("aria-current", "page");
                 } else {
                     link.removeAttribute("aria-current");
                 }
             });
 
-            const visibleHeading = visibleSection.querySelector("h2");
+            const visibleHeading = document.querySelector("#" + sectionId + " h2");
 
-            document.title =
-                "Shaan Patel | Silly Platypus | ITIS3135 | " +
-                visibleHeading.textContent;
+            if (visibleHeading) {
+                document.title = "Shaan Patel | Silly Platypus | ITIS3135 | " + visibleHeading.textContent;
+            }
         }
 
-        navigationLinks.forEach((link) => {
-            link.addEventListener("click", (event) => {
-                const sectionId = link.dataset.target;
+        navigationLinks.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
 
-                if (sectionId) {
-                    event.preventDefault();
-                    history.replaceState(null, "", "#" + sectionId);
-                    showSection(sectionId);
-                }
+                const sectionId = link.dataset.section;
+                showSection(sectionId);
+                history.replaceState(null, "", "#" + sectionId);
             });
         });
 
-        window.addEventListener("hashchange", () => {
-            showSection(window.location.hash.slice(1) || "what");
+        window.addEventListener("hashchange", function () {
+            const sectionId = window.location.hash.slice(1);
+            showSection(sectionId || "what");
         });
 
-        showSection(window.location.hash.slice(1) || "what");
+        const initialSection = window.location.hash.slice(1);
+        showSection(initialSection || "what");
     </script>
 </body>
 </html>
