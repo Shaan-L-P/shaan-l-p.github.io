@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shaan Patel | Silly Platypus | ITIS3135 | What Is My Hobby?</title>
+    <title>The Hobby: Show Watching</title>
 
     <link rel="icon" type="image/jpeg" href="../images/favicon-32x32.jpg">
 
@@ -118,6 +117,15 @@
             background-color: var(--card);
         }
 
+        /* These rules make bullet lists readable throughout the page. */
+        section ul {
+            padding-left: 1.5rem;
+        }
+
+        section li {
+            margin-bottom: 0.5rem;
+        }
+
         figure {
             margin: 1.5rem 0;
         }
@@ -138,29 +146,9 @@
             text-align: center;
         }
 
-        .prompt {
-            display: block;
-            margin-top: 0.5rem;
-            color: var(--coral);
-            font-size: 0.95rem;
-        }
-
         .hidden {
             /* This class hides inactive SPA sections until their navigation link is selected. */
             display: none;
-        }
-
-        .prompt-list {
-            margin-top: 1.5rem;
-        }
-
-        .prompt-list .prompt {
-            margin: 1rem 0;
-            padding: 1rem;
-            border-left: 4px solid var(--red);
-            border-radius: 0.25rem;
-            background-color: var(--bg);
-            overflow-wrap: anywhere;
         }
 
         footer {
@@ -181,7 +169,12 @@
             font-size: 0.9rem;
         }
 
-        /* Classes organize reusable styles for taglines, prompts, hidden sections, and footer credits. IDs identify each SPA section so navigation and JavaScript can show the correct content. */
+        /*
+            Classes organize reusable styles for the tagline, hidden sections,
+            and footer credit. IDs identify each SPA section so navigation
+            and JavaScript can display the correct content.
+        */
+
         /* Black and white are not used as the page's primary colors. */
 
         @media (max-width: 600px) {
@@ -215,8 +208,11 @@
 
 <body>
     <header>
-        <h1>Shaan Patel | Silly Platypus | ITIS3135</h1>
-        <p class="tagline"><em>Exploring stories, worlds, and characters one episode at a time.</em></p>
+        <h1>The Hobby: Show Watching</h1>
+
+        <p class="tagline">
+            <em>Exploring stories, worlds, and characters one episode at a time.</em>
+        </p>
 
         <nav aria-label="Main navigation">
             <a href="#what" data-section="what">What</a>
@@ -229,20 +225,40 @@
         </nav>
     </header>
 
-    <!-- This page uses classes and ids so the navigation can switch between sections: each section has an id that its navigation link targets, the hidden class hides inactive sections, and the tagline, prompt, and footer-credit classes style repeated text. -->
+    <!--
+        This page uses classes and IDs so the navigation can switch between
+        sections. Each section has an ID that its navigation link targets,
+        the hidden class hides inactive sections, and the tagline and
+        footer-credit classes style repeated text.
+    -->
+
     <main>
         <section id="what">
             <h2>What Is My Hobby?</h2>
 
-            <p>One of my favorite ways to relax is watching shows. I enjoy getting invested in interesting stories, exploring fictional worlds, and following characters as they change throughout a series.</p>
+            <p>
+                My hobby is watching television shows and anime, especially
+                stories with immersive settings, memorable characters, and
+                plots that reward paying attention.
+            </p>
 
-            <p>Shows can combine storytelling, visuals, music, and worldbuilding to create experiences that stay with me long after an episode ends.</p>
+            <p>
+                I enjoy exploring a wide range of genres, including:
+            </p>
+
+            <ul>
+                <li>Crime dramas with mysteries, investigations, and complicated characters.</li>
+                <li>Fantasy stories with imaginative settings, mythology, and detailed worldbuilding.</li>
+                <li>Psychological thrillers that create suspense and challenge the audience's expectations.</li>
+                <li>Action stories with exciting conflicts and intense battles.</li>
+                <li>Science fiction that explores futuristic technology and unfamiliar worlds.</li>
+                <li>Animation and anime that use distinctive visuals and creative storytelling.</li>
+            </ul>
 
             <figure>
-                <img src="../images/shows.jpg" alt = "shows that I am watching">
+                <img src="../images/shows.jpg" alt="A collection of television shows and anime that represent my interests">
                 <figcaption>
-                    A comfortable setup for watching a show.
-                    <span class="prompt"><em>AI prompt used: Generate a cozy home entertainment setup with a television displaying a fictional show, warm lighting, and no readable text.</em></span>
+                    Some of the shows I have watched.
                 </figcaption>
             </figure>
         </section>
@@ -250,15 +266,29 @@
         <section id="who" class="hidden">
             <h2>Who Shares This Hobby?</h2>
 
-            <p>People with different interests can enjoy watching shows. Some like comedy and lighthearted stories, while others prefer mysteries, action, fantasy, science fiction, or darker stories with complicated characters.</p>
+            <p>
+                Watching shows appeals to people with many different interests.
+                I am especially drawn to stories that feature:
+            </p>
 
-            <p>I especially enjoy stories that give characters distinct personalities and explore themes like identity, morality, ambition, and human nature.</p>
+            <ul>
+                <li>Morally complicated characters who are not always clearly right or wrong.</li>
+                <li>Rivalries that create tension and push characters to improve or change.</li>
+                <li>Changing loyalties that make relationships and alliances unpredictable.</li>
+                <li>Ambitious people who pursue their goals, sometimes at a serious cost.</li>
+                <li>Stories that explore identity, motivation, and human nature.</li>
+            </ul>
+
+            <p>
+                These elements make characters more interesting because their
+                decisions can be difficult to predict, and their motivations
+                are not always simple.
+            </p>
 
             <figure>
                 <img src="../images/who.jpg" alt="A group of people enjoying a television series together in a living room">
                 <figcaption>
                     Watching shows can also be a shared experience.
-                    <span class="prompt"><em>AI prompt used: Generate a friendly group of people enjoying a television series together in a comfortable living room, with a natural and welcoming atmosphere.</em></span>
                 </figcaption>
             </figure>
         </section>
@@ -266,15 +296,27 @@
         <section id="when" class="hidden">
             <h2>When Do I Enjoy Watching Shows?</h2>
 
-            <p>I usually enjoy watching shows when I have free time after classes, assignments, or other responsibilities. It gives me a chance to slow down and focus on something entertaining.</p>
+            <p>
+                I watch shows when I have enough free time to enjoy them
+                without rushing. Some of the best opportunities include:
+            </p>
 
-            <p>Evenings and weekends can be especially good times to watch because I can settle in and enjoy an episode without feeling rushed.</p>
+            <ul>
+                <li>Free time after finishing assignments and other responsibilities.</li>
+                <li>Long periods of travel when I have time to watch episodes on a device.</li>
+                <li>Long breaks from school when my schedule is more flexible.</li>
+            </ul>
+
+            <p>
+                Having enough time makes it easier to get invested in a story
+                and enjoy an episode without constantly thinking about what
+                I need to do next.
+            </p>
 
             <figure>
                 <img src="../images/when.jpg" alt="A relaxing evening viewing scene with a couch and soft lighting">
                 <figcaption>
-                    An evening is a good time to unwind with a show.
-                    <span class="prompt"><em>AI prompt used: Generate a relaxing evening viewing scene with a couch, soft lighting, and a television, emphasizing a calm end-of-day atmosphere.</em></span>
+                    The types of shows I watch depend on the season.
                 </figcaption>
             </figure>
         </section>
@@ -282,15 +324,35 @@
         <section id="where" class="hidden">
             <h2>Where Do I Watch Shows?</h2>
 
-            <p>I generally watch shows somewhere comfortable, such as at home or in my room. Having a comfortable place makes it easier to pay attention to the story and enjoy the experience.</p>
+            <p>
+                I watch shows on different devices depending on where I am
+                and what is most convenient:
+            </p>
 
-            <p>A television, laptop, or another screen can work. What matters most is being able to relax and focus on what I am watching.</p>
+            <ul>
+                <li>A television for a larger viewing experience.</li>
+                <li>A laptop for portable and convenient viewing.</li>
+                <li>A desktop computer with a monitor.</li>
+                <li>An iPad for watching on a larger portable screen.</li>
+                <li>A phone when I need something compact and easy to carry.</li>
+            </ul>
+
+            <p>
+                Comfortable seating, good headphones or speakers, a clear
+                picture, and fewer distractions make it easier to appreciate
+                dialogue, music, animation, and visual details.
+            </p>
+
+            <p>
+                I prefer watching on a television because of its larger screen.
+                However, a laptop is more convenient when I want portability
+                and the ability to resume a show in different places.
+            </p>
 
             <figure>
                 <img src="../images/where.jpg" alt="A comfortable living room arranged for watching television">
                 <figcaption>
-                    A comfortable space makes watching more enjoyable.
-                    <span class="prompt"><em>AI prompt used: Generate a comfortable living room arranged for watching television, with a couch, a screen, and a tidy environment.</em></span>
+                    I watch shows anywhere.
                 </figcaption>
             </figure>
         </section>
@@ -298,15 +360,29 @@
         <section id="how" class="hidden">
             <h2>How Do I Choose What to Watch?</h2>
 
-            <p>I often look for shows with an interesting premise, memorable characters, and a world that feels thoughtfully developed. Recommendations, trailers, and discussions can also help me discover something new.</p>
+            <p>
+                I look for shows that balance action, storytelling, and
+                character development. When deciding whether to continue
+                watching a series, I try to:
+            </p>
 
-            <p>Sometimes I want something easy to watch. Other times, I prefer a story that makes me think, keeps me guessing, or leaves me with a lot to discuss afterward.</p>
+            <ul>
+                <li>Give a show a couple of episodes to establish its characters and world.</li>
+                <li>Avoid spoilers so major moments and plot twists remain surprising.</li>
+                <li>Pay attention to how the plot develops and whether the story keeps me interested.</li>
+                <li>Look for a good balance between exciting action, meaningful storytelling, and character growth.</li>
+            </ul>
+
+            <p>
+                A show is more likely to hold my interest when its story keeps
+                developing and its characters have meaningful reasons for
+                making the decisions they do.
+            </p>
 
             <figure>
                 <img src="../images/how.jpg" alt="A viewing setup suggesting a person choosing among different fictional shows">
                 <figcaption>
-                    Choosing a show often starts with finding an interesting story.
-                    <span class="prompt"><em>AI prompt used: Generate a viewing setup suggesting a person choosing among different fictional shows, using generic screen thumbnails and no recognizable copyrighted characters.</em></span>
+                    Finding a good show starts with an interesting story.
                 </figcaption>
             </figure>
         </section>
@@ -314,15 +390,30 @@
         <section id="why" class="hidden">
             <h2>Why Do I Enjoy Watching Shows?</h2>
 
-            <p>I enjoy watching shows because they let me experience different perspectives and become invested in stories beyond my everyday life. A well-written character can make me question my assumptions, and an imaginative setting can make a fictional world feel real.</p>
+            <p>
+                I enjoy watching shows because they can be entertaining while
+                also giving me new perspectives. Stories allow me to:
+            </p>
 
-            <p>I also appreciate when a story balances its entertainment with deeper ideas. The best shows can be exciting in the moment while giving me something to think about afterward.</p>
+            <ul>
+                <li>Experience perspectives and situations outside my own life.</li>
+                <li>Explore difficult choices and consider the consequences of different decisions.</li>
+                <li>Question whether a character is right or wrong instead of viewing every situation as simple.</li>
+                <li>Discover fictional worlds that stay interesting even after an episode ends.</li>
+                <li>Relax, enjoy myself, and reduce stress.</li>
+            </ul>
+
+            <p>
+                A good show can be exciting in the moment while also giving
+                me something to think about afterward. That combination of
+                entertainment, imagination, and deeper ideas is a major
+                reason I enjoy the hobby.
+            </p>
 
             <figure>
-                <img src="../images/why.jpg" alt="A cinematic fictional landscape displayed on a screen">
+                <img src="../images/why.jpg" alt="A cinematic fictional landscape representing the appeal of immersive storytelling">
                 <figcaption>
-                    Immersive storytelling can make fictional worlds feel memorable.
-                    <span class="prompt"><em>AI prompt used: Generate a cinematic fictional landscape displayed on a screen, with dramatic lighting and a sense of wonder, representing the appeal of immersive storytelling.</em></span>
+                    Immersive stories can entertain and encourage reflection.
                 </figcaption>
             </figure>
         </section>
@@ -330,43 +421,13 @@
         <section id="ai-prompts" class="hidden">
             <h2>AI Prompts and Reflection</h2>
 
-            <p>I used an AI image-generation tool to create images that represent different parts of my hobby. Each prompt was written to produce a relevant scene without relying on recognizable copyrighted characters or readable text.</p>
+            <p>I used AI in the following ways while completing this assignment:</p>
 
-            <p>I also used AI as a learning and troubleshooting tool while developing this page. It helped me review HTML and CSS issues, understand validator feedback, and identify corrections to apply. I reviewed the suggestions and incorporated changes into the code.</p>
-
-            <p>After using AI-generated suggestions, I checked the resulting code against the page requirements and adjusted the content and styling. This process helped me understand how HTML structure, CSS rules, and JavaScript work together to create a single-page website.</p>
-
-            <div class="prompt-list">
-                <!-- This div groups the image-generation prompt for the What section so it can share the prompt-list styling. -->
-                <div class="prompt">
-                    <strong>What:</strong> Generate a cozy home entertainment setup with a television displaying a fictional show, warm lighting, and no readable text.
-                </div>
-
-                <!-- This div groups the image-generation prompt for the Who section so it can share the prompt-list styling. -->
-                <div class="prompt">
-                    <strong>Who:</strong> Generate a friendly group of people enjoying a television series together in a comfortable living room, with a natural and welcoming atmosphere.
-                </div>
-
-                <!-- This div groups the image-generation prompt for the When section so it can share the prompt-list styling. -->
-                <div class="prompt">
-                    <strong>When:</strong> Generate a relaxing evening viewing scene with a couch, soft lighting, and a television, emphasizing a calm end-of-day atmosphere.
-                </div>
-
-                <!-- This div groups the image-generation prompt for the Where section so it can share the prompt-list styling. -->
-                <div class="prompt">
-                    <strong>Where:</strong> Generate a comfortable living room arranged for watching television, with a couch, a screen, and a tidy environment.
-                </div>
-
-                <!-- This div groups the image-generation prompt for the How section so it can share the prompt-list styling. -->
-                <div class="prompt">
-                    <strong>How:</strong> Generate a viewing setup suggesting a person choosing among different fictional shows, using generic screen thumbnails and no recognizable copyrighted characters.
-                </div>
-
-                <!-- This div groups the image-generation prompt for the Why section so it can share the prompt-list styling. -->
-                <div class="prompt">
-                    <strong>Why:</strong> Generate a cinematic fictional landscape displayed on a screen, with dramatic lighting and a sense of wonder, representing the appeal of immersive storytelling.
-                </div>
-            </div>
+            <ul>
+                <li>I used AI to help me fully understand the assignment and its requirements.</li>
+                <li>I used AI to generate images for the page.</li>
+                <li>I used AI to help troubleshoot HTML and CSS errors.</li>
+            </ul>
         </section>
     </main>
 
@@ -406,7 +467,8 @@
             const visibleHeading = document.querySelector("#" + sectionId + " h2");
 
             if (visibleHeading) {
-                document.title = "Shaan Patel | Silly Platypus | ITIS3135 | " + visibleHeading.textContent;
+                document.title =
+                    "The Hobby: Show Watching | " + visibleHeading.textContent;
             }
         }
 
