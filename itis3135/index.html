@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,10 +65,44 @@
             display: inline-block;
         }
 
+        /* This separate navigation area contains links to additional course projects. */
+        nav.secondary-nav {
+            margin-top: -25px;
+            margin-bottom: 40px;
+            padding: 18px 0;
+            border-top: 3px dashed #2e3f9c;
+            border-bottom: 3px dashed #2e3f9c;
+        }
+
+        nav.secondary-nav a {
+            font-size: 1.5rem;
+            background-color: #b8c8fa;
+            border: 2px solid #2e3f9c;
+            border-radius: 999px;
+            padding: 10px 24px;
+            text-decoration: none;
+        }
+
+        nav.secondary-nav a:hover,
+        nav.secondary-nav a:focus {
+            background-color: #2e3f9c;
+            color: #b8d8fb;
+        }
+
+        /* The divider visually separates the CRAPpy page link from the Hobby Site link. */
+        .nav-divider {
+            display: inline-block;
+            margin: 0 12px;
+            color: #2e3f9c;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
         main img {
             display: block;
             box-sizing: border-box;
             max-width: 250px;
+            width: 100%;
             margin: 0 auto 30px auto;
             border-radius: 8px;
         }
@@ -113,6 +148,16 @@
                 margin-bottom: 8px;
             }
 
+            nav.secondary-nav a {
+                font-size: 1.2rem;
+                margin: 5px;
+            }
+
+            .nav-divider {
+                font-size: 1.2rem;
+                margin: 0 4px;
+            }
+
             p,
             main li a {
                 font-size: 1.2rem;
@@ -129,17 +174,23 @@
 </head>
 
 <body>
-
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
     </header>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="contract.html">Contract</a>
         <a href="introduction.html">Introduction</a>
         <a href="about.html">About</a>
         <a href="website_evaluations.html">Website Evaluations</a>
+    </nav>
+
+    <!-- This separate navigation area links to the CRAPpy page and hobby SPA. -->
+    <nav class="secondary-nav" aria-label="Additional project navigation">
+        <a href="crappy.html">CRAPpy Page</a>
+        <span class="nav-divider" aria-hidden="true">|</span>
+        <a href="hobby/index.html">Hobby Site</a>
     </nav>
 
     <main>
@@ -150,21 +201,31 @@
         <p>Welcome to my webpage for ITIS3135!</p>
 
         <ul>
-            <li><a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a></li>
-            <li><a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub.com</a></li>
-            <li><a href="https://shaan-l-p.github.io/" target="_blank" rel="noopener noreferrer">Github.io</a></li>
-            <li><a href="https://www.freecodecamp.org/shaanpateluncc" target="_blank" rel="noopener noreferrer">FreeCodeCamp</a></li>
-            <li><a href="https://www.codecademy.com/profiles/ShaanPatelUNCC" target="_blank" rel="noopener noreferrer">Codecademy</a></li>
+            <li>
+                <a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a>
+            </li>
+            <li>
+                <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub.com</a>
+            </li>
+            <li>
+                <a href="https://shaan-l-p.github.io/" target="_blank" rel="noopener noreferrer">Github.io</a>
+            </li>
+            <li>
+                <a href="https://www.freecodecamp.org/shaanpateluncc" target="_blank" rel="noopener noreferrer">FreeCodeCamp</a>
+            </li>
+            <li>
+                <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC" target="_blank" rel="noopener noreferrer">Codecademy</a>
+            </li>
         </ul>
     </main>
 
     <footer>
         <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
+
         <p>Designed by Shaan Patel</p>
         <p><em>"Silly code, serious design."</em></p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
-
 </body>
 </html>
