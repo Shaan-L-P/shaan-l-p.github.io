@@ -65,37 +65,9 @@
             display: inline-block;
         }
 
-        /* This separate navigation area contains links to additional course projects. */
-        nav.secondary-nav {
+        /* Keep the second navigation row visually consistent with the main navigation. */
+        nav + nav {
             margin-top: -25px;
-            margin-bottom: 40px;
-            padding: 18px 0;
-            border-top: 3px dashed #2e3f9c;
-            border-bottom: 3px dashed #2e3f9c;
-        }
-
-        nav.secondary-nav a {
-            font-size: 1.5rem;
-            background-color: #b8c8fa;
-            border: 2px solid #2e3f9c;
-            border-radius: 999px;
-            padding: 10px 24px;
-            text-decoration: none;
-        }
-
-        nav.secondary-nav a:hover,
-        nav.secondary-nav a:focus {
-            background-color: #2e3f9c;
-            color: #b8d8fb;
-        }
-
-        /* The divider visually separates the CRAPpy page link from the Hobby Site link. */
-        .nav-divider {
-            display: inline-block;
-            margin: 0 12px;
-            color: #2e3f9c;
-            font-size: 1.5rem;
-            font-weight: bold;
         }
 
         main img {
@@ -148,16 +120,6 @@
                 margin-bottom: 8px;
             }
 
-            nav.secondary-nav a {
-                font-size: 1.2rem;
-                margin: 5px;
-            }
-
-            .nav-divider {
-                font-size: 1.2rem;
-                margin: 0 4px;
-            }
-
             p,
             main li a {
                 font-size: 1.2rem;
@@ -186,10 +148,10 @@
         <a href="website_evaluations.html">Website Evaluations</a>
     </nav>
 
-    <!-- This separate navigation area links to the CRAPpy page and hobby SPA. -->
-    <nav class="secondary-nav" aria-label="Additional project navigation">
-        <a href="crappy.html">CRAPpy Page</a>
-        <span class="nav-divider" aria-hidden="true">|</span>
+    <!-- This second navigation area keeps links to additional course projects on their own row. -->
+    <nav aria-label="Additional project navigation">
+        <a href="crappy.htm">CRAPpy Page</a>
+        |
         <a href="hobby/index.html">Hobby Site</a>
     </nav>
 
