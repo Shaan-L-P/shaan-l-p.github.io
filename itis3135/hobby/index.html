@@ -167,7 +167,37 @@
             text-align: center;
         }
 
-        footer a {
+        /*
+            This div groups the validation links in a responsive row.
+            The validation-link class gives each link its button-like appearance.
+        */
+        .validation-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .validation-link {
+            display: inline-block;
+            padding: 0.65rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            background-color: var(--card);
+            color: var(--sky);
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .validation-link:hover,
+        .validation-link:focus {
+            background-color: var(--red);
+            color: #102044;
+        }
+
+        footer a:not(.validation-link) {
             color: var(--sky);
         }
 
@@ -178,8 +208,8 @@
 
         /*
             Classes organize reusable styles for the tagline, hidden sections,
-            and footer credit. IDs identify each SPA section so navigation
-            and JavaScript can display the correct content.
+            validation links, and footer credit. IDs identify each SPA section
+            so navigation and JavaScript can display the correct content.
         */
 
         /* Black and white are not used as the page's primary colors. */
@@ -205,6 +235,15 @@
 
             nav a {
                 padding: 0.45rem 0.7rem;
+            }
+
+            .validation-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .validation-link {
+                text-align: center;
             }
         }
     </style>
@@ -265,7 +304,7 @@
             <figure>
                 <img src="../images/shows.jpg" alt="A collection of television shows and anime that represent my interests">
                 <figcaption>
-                    A few of the shows and anime that have kept me hooked on great storytelling.
+                    Some series stay memorable long after their finales.
                     <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
@@ -287,18 +326,10 @@
                 <li>Stories that explore identity, motivation, and human nature.</li>
             </ul>
 
-            <p>
-                I usually watch shows alone, but sometimes I watch them with
-                my family. Later, I might send them Instagram Reels related
-                to the shows we watch, whether they feature memorable scenes,
-                funny moments, or characters we recognize. It is a fun way
-                to share our interest even when we are not watching together.
-            </p>
-
             <figure>
                 <img src="../images/who.jpg" alt="A group of people enjoying a television series together in a living room">
                 <figcaption>
-                    I usually watch shows on my own, but sharing a great series with family can be fun, too, especially when we share related Instagram Reels afterward.
+                    Sometimes I watch with family, then send them Instagram Reels about the shows afterward.
                     <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
@@ -327,7 +358,7 @@
             <figure>
                 <img src="../images/when.jpg" alt="A relaxing evening viewing scene with a couch and soft lighting">
                 <figcaption>
-                    Free time, school breaks, and long trips give me more opportunities to catch up on my favorite shows.
+                    A good episode can turn an ordinary day into something special.
                     <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
@@ -352,7 +383,7 @@
             <p>
                 Comfortable seating, good headphones or speakers, a clear
                 picture, and fewer distractions make it easier to appreciate
-                dialogue, music, animation, and visual details.
+                the viewing experience.
             </p>
 
             <p>
@@ -364,7 +395,7 @@
             <figure>
                 <img src="../images/where.jpg" alt="A comfortable living room arranged for watching television">
                 <figcaption>
-                    Whether I’m relaxing in front of a TV or watching on my laptop, there’s always a way to enjoy a good show.
+                    The atmosphere around me can make a familiar series feel different.
                     <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
@@ -395,7 +426,7 @@
             <figure>
                 <img src="../images/how.jpg" alt="A viewing setup suggesting a person choosing among different fictional shows">
                 <figcaption>
-                    An intriguing plot, memorable characters, and a well-developed world can turn one episode into an entire binge-watching session.
+                    Sometimes a cliffhanger makes stopping after one episode difficult.
                     <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
@@ -427,7 +458,7 @@
             <figure>
                 <img src="../images/why.jpg" alt="A cinematic fictional landscape representing the appeal of immersive storytelling">
                 <figcaption>
-                    The best stories entertain me, introduce new perspectives, and leave me thinking long after the credits roll.
+                    Some fictional moments stay with me for years.
                     <em>Image source: AI-generated illustration.</em>
                 </figcaption>
             </figure>
@@ -455,6 +486,30 @@
     </main>
 
     <footer>
+        <!-- This div groups the three external validation links within the footer. -->
+        <div class="validation-links">
+            <a
+                class="validation-link"
+                href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Fspate338%2Fitis3135%2Fhobby%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+            >Validate HTML</a>
+
+            <a
+                class="validation-link"
+                href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Fspate338%2Fitis3135%2Fhobby%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en"
+                target="_blank"
+                rel="noopener noreferrer"
+            >Validate CSS</a>
+
+            <a
+                class="validation-link"
+                href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/spate338/itis3135/hobby/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >Check Accessability</a>
+        </div>
+
         <p class="footer-credit">
             Designed by
             <a href="../../shaanpateldesigns.html">Shaan Patel Designs</a>
