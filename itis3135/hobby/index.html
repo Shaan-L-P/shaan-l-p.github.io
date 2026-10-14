@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The Art of Binge-Watching | What Is My Hobby?</title>
+    <title>The Art of Binge-Watching ✦ What Is My Hobby?</title>
 
     <!-- Streaming-service favicon for the browser tab. -->
     <link
@@ -151,11 +151,17 @@
             text-align: center;
         }
 
-        /* This styles italicized image-source notes beneath figure captions. */
-        figcaption em {
-            display: block;
-            margin-top: 0.25rem;
+        /*
+            The figure-prompt class formats the italicized AI prompt
+            explanation beneath each image caption.
+        */
+        .figure-prompt {
+            margin: 0.5rem 0 0;
             font-size: 0.9rem;
+        }
+
+        .figure-prompt em {
+            font-style: italic;
         }
 
         .hidden {
@@ -173,8 +179,8 @@
         }
 
         /*
-            This div groups the validation links in a responsive row.
-            The validation-link class gives each link its button-like appearance.
+            The validation-links div groups the external validation links.
+            The validation-link class styles those links like buttons.
         */
         .validation-links {
             display: flex;
@@ -202,7 +208,7 @@
             color: #102044;
         }
 
-        /* Footer links use coral pink for better visibility against the background. */
+        /* Footer links use coral pink for visibility against the background. */
         footer a:not(.validation-link) {
             color: var(--coral);
         }
@@ -219,8 +225,8 @@
 
         /*
             Classes organize reusable styles for the tagline, hidden sections,
-            validation links, and footer credit. IDs identify each SPA section
-            so navigation and JavaScript can display the correct content.
+            figure prompts, validation links, and footer credit. Section IDs
+            let navigation and JavaScript display the correct content.
         */
 
         /* Black and white are not used as the page's primary colors. */
@@ -283,10 +289,10 @@
     </header>
 
     <!--
-        This page uses classes and IDs so the navigation can switch between
-        sections. Each section has an ID that its navigation link targets,
-        the hidden class hides inactive sections, and the tagline and
-        footer-credit classes style repeated text.
+        This page uses classes and IDs so navigation can switch between
+        sections. Each section has an ID targeted by its navigation link.
+        The hidden class hides inactive sections, while tagline,
+        figure-prompt, validation-link, and footer-credit organize styling.
     -->
 
     <main>
@@ -313,10 +319,23 @@
             </ul>
 
             <figure>
-                <img src="../images/shows.jpg" alt="A collection of television shows and anime that represent my interests">
+                <img
+                    src="../images/shows.jpg"
+                    alt="A collage of poster covers representing popular television shows and anime"
+                >
+
                 <figcaption>
                     Some series stay memorable long after their finales.
-                    <em>Image source: AI-generated illustration.</em>
+
+                    <p class="figure-prompt">
+                        <em>
+                            AI prompt used: Give me a collage of the poster
+                            covers of popular shows and anime. Arrange the
+                            covers into an eye-catching collection that
+                            represents different genres of television and
+                            animation.
+                        </em>
+                    </p>
                 </figcaption>
             </figure>
         </section>
@@ -338,10 +357,22 @@
             </ul>
 
             <figure>
-                <img src="../images/who.jpg" alt="A group of people enjoying a television series together in a living room">
+                <img
+                    src="../images/who.jpg"
+                    alt="A college student working on code at a computer"
+                >
+
                 <figcaption>
-                    Sometimes I watch with family, then send them Instagram Reels about the shows afterward.
-                    <em>Image source: AI-generated illustration.</em>
+                    My interests extend beyond the classroom and into the stories I enjoy.
+
+                    <p class="figure-prompt">
+                        <em>
+                            AI prompt used: Generate an image of a coding
+                            student working on code. Show a college student
+                            at a computer with a code editor visible on
+                            the screen and a focused study environment.
+                        </em>
+                    </p>
                 </figcaption>
             </figure>
         </section>
@@ -367,10 +398,24 @@
             </p>
 
             <figure>
-                <img src="../images/when.jpg" alt="A relaxing evening viewing scene with a couch and soft lighting">
+                <img
+                    src="../images/when.jpg"
+                    alt="An illustration of all four seasons showing how television and anime viewing can change throughout the year"
+                >
+
                 <figcaption>
-                    A good episode can turn an ordinary day into something special.
-                    <em>Image source: AI-generated illustration.</em>
+                    My viewing choices can shift as the seasons change.
+
+                    <p class="figure-prompt">
+                        <em>
+                            AI prompt used: Generate an image with each
+                            season explaining how what I watch changes
+                            based on the seasons. Divide the image into
+                            spring, summer, autumn, and winter, using
+                            seasonal scenery and viewing moods to
+                            illustrate the changes.
+                        </em>
+                    </p>
                 </figcaption>
             </figure>
         </section>
@@ -394,7 +439,7 @@
             <p>
                 Comfortable seating, good headphones or speakers, a clear
                 picture, and fewer distractions make it easier to appreciate
-                the viewing experience.
+                dialogue, music, animation, and visual details.
             </p>
 
             <p>
@@ -404,10 +449,23 @@
             </p>
 
             <figure>
-                <img src="../images/where.jpg" alt="A comfortable living room arranged for watching television">
+                <img
+                    src="../images/where.jpg"
+                    alt="Different places where a college student might watch shows, including a bedroom, living room, study area, and travel setting"
+                >
+
                 <figcaption>
-                    The atmosphere around me can make a familiar series feel different.
-                    <em>Image source: AI-generated illustration.</em>
+                    A good episode can fit into many parts of college life.
+
+                    <p class="figure-prompt">
+                        <em>
+                            AI prompt used: Generate an image that shows
+                            different places a college student would watch
+                            shows. Include settings such as a bedroom, a
+                            living room, a study space, and a place used
+                            while traveling.
+                        </em>
+                    </p>
                 </figcaption>
             </figure>
         </section>
@@ -435,10 +493,22 @@
             </p>
 
             <figure>
-                <img src="../images/how.jpg" alt="A viewing setup suggesting a person choosing among different fictional shows">
+                <img
+                    src="../images/how.jpg"
+                    alt="A television remote resting on a table beside a bowl of popcorn"
+                >
+
                 <figcaption>
-                    Sometimes a cliffhanger makes stopping after one episode difficult.
-                    <em>Image source: AI-generated illustration.</em>
+                    Sometimes, choosing a show starts with settling in and pressing play.
+
+                    <p class="figure-prompt">
+                        <em>
+                            AI prompt used: Generate an image of a remote
+                            on a table with a bowl of popcorn. Create a
+                            comfortable viewing atmosphere with the remote
+                            and popcorn as the main focus.
+                        </em>
+                    </p>
                 </figcaption>
             </figure>
         </section>
@@ -467,10 +537,23 @@
             </p>
 
             <figure>
-                <img src="../images/why.jpg" alt="A cinematic fictional landscape representing the appeal of immersive storytelling">
+                <img
+                    src="../images/why.jpg"
+                    alt="An open laptop displaying show genres and a checklist for choosing what to watch"
+                >
+
                 <figcaption>
-                    Some fictional moments stay with me for years.
-                    <em>Image source: AI-generated illustration.</em>
+                    A good series can entertain me while giving me something to reflect on.
+
+                    <p class="figure-prompt">
+                        <em>
+                            AI prompt used: Generate an image of an open
+                            laptop, some genres, and a checklist. Show
+                            generic television and anime categories alongside
+                            a checklist representing the qualities someone
+                            might look for when choosing a show.
+                        </em>
+                    </p>
                 </figcaption>
             </figure>
         </section>
@@ -478,20 +561,106 @@
         <section id="ai-prompts" class="hidden">
             <h2>AI Prompts and Reflection</h2>
 
-            <p>Prompts I used:</p>
+            <p>
+                I used AI to understand the assignment, brainstorm ideas,
+                generate images, and troubleshoot HTML and CSS errors.
+                The prompts below reflect the tasks I used AI for during
+                the development of this website.
+            </p>
+
+            <h3>Prompts for Generating Images</h3>
 
             <ul>
-                <li>Help me understand this assignment and explain what I am required to do.</li>
-                <li>Help me brainstorm some topics that I could talk about.</li>
-                <li>Generate images for each of the sections.</li>
-                <li>Help me fix these errors in my code and understand what I did wrong.</li>
+                <li>
+                    <strong>What:</strong> Give me a collage of the poster
+                    covers of popular shows and anime. Arrange the covers
+                    into an eye-catching collection representing different
+                    television and animation genres.
+                </li>
+
+                <li>
+                    <strong>Who:</strong> Generate an image of a coding
+                    student working on code. Show a college student at a
+                    computer with a code editor on the screen and a focused
+                    study environment.
+                </li>
+
+                <li>
+                    <strong>When:</strong> Generate an image with each
+                    season explaining how what I watch changes based on
+                    the seasons. Divide the image into spring, summer,
+                    autumn, and winter, using seasonal scenery and viewing
+                    moods to illustrate the changes.
+                </li>
+
+                <li>
+                    <strong>Where:</strong> Generate an image that shows
+                    different places a college student would watch shows.
+                    Include a bedroom, living room, study area, and a
+                    setting associated with traveling.
+                </li>
+
+                <li>
+                    <strong>How:</strong> Generate an image of a remote
+                    on a table with a bowl of popcorn. Create a comfortable
+                    viewing atmosphere with the remote and popcorn as
+                    the main focus.
+                </li>
+
+                <li>
+                    <strong>Why:</strong> Generate an image of an open
+                    laptop, some genres, and a checklist. Show generic
+                    television and anime genres alongside a checklist
+                    representing the qualities someone might look for
+                    when choosing a show.
+                </li>
+            </ul>
+
+            <h3>Prompts for Understanding and Brainstorming</h3>
+
+            <ul>
+                <li>
+                    Help me understand this assignment and explain what I
+                    am required to do. Break down the instructions into
+                    the required HTML structure, sections, navigation,
+                    images, captions, footer, styling, and validation.
+                    Explain how I can organize everything into one
+                    HTML file while making the sections behave like
+                    separate pages.
+                </li>
+
+                <li>
+                    Help me brainstorm some topics that I could talk about
+                    for a hobby website about watching television shows
+                    and anime. Use my interests in immersive settings,
+                    memorable characters, morally complicated people,
+                    rivalries, and genres such as crime dramas, fantasy,
+                    psychological thrillers, action, science fiction,
+                    and animation. Organize the ideas into What, Who,
+                    When, Where, How, and Why sections.
+                </li>
+            </ul>
+
+            <h3>Prompts for Coding and Troubleshooting</h3>
+
+            <ul>
+                <li>
+                    Help me fix these errors in my code and understand
+                    what I did wrong. Identify the HTML or CSS issue,
+                    explain why it matters, and show the correction
+                    without unnecessarily changing my existing design.
+                    Make sure the page retains its embedded stylesheet,
+                    responsive layout, accessible navigation, and
+                    single-page behavior.
+                </li>
             </ul>
 
             <p>
-                I used AI to help me understand the requirements, develop
-                ideas, create images, and troubleshoot coding issues.
-                I reviewed the suggestions and decided which changes to
-                incorporate into my website.
+                I reviewed AI suggestions and incorporated changes that
+                helped meet the assignment requirements. Using AI as a
+                troubleshooting tool also helped me understand how the
+                HTML structure, CSS styling, images, and JavaScript
+                navigation work together.
             </p>
         </section>
     </main>
@@ -523,7 +692,9 @@
 
         <p class="footer-credit">
             Designed by
-            <a href="../../shaanpateldesigns.html">Shaan Patel Designs</a>
+            <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">
+                Shaan Patel Designs
+            </a>
         </p>
     </footer>
 
@@ -557,7 +728,7 @@
 
             if (visibleHeading) {
                 document.title =
-                    "The Art of Binge-Watching | " +
+                    "The Art of Binge-Watching ✦ " +
                     visibleHeading.textContent;
             }
         }

@@ -1,756 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaan Patel Designs | Home</title>
 
-    <title>The Art of Binge-Watching ✦ What Is My Hobby?</title>
+<link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
+<link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="/spate338/itis3135/images/apple-touch-icon.jpg">
 
-    <!-- Streaming-service favicon for the browser tab. -->
-    <link
-        rel="icon"
-        type="image/jpeg"
-        href="../images/hobby_favicon_32x32.jpg?v=3"
-    >
+<style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    background-color: #0D1B2A;
+    color: #E0E1DD;
+    line-height: 1.6;
+  }
 
-    <style>
-        :root {
-            --bg: #10265e;
-            --card: #1a3a82;
-            --text: #f6e7c9;
-            --muted: #c3d3ff;
-            --red: #ff4d5e;
-            --sky: #8fc7ff;
-            --coral: #ff8a94;
-            --border: #4264a8;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #1B263B;
+    padding: 30px 20px;
+    border-bottom: 6px solid #FFC300;
+    text-align: center;
+  }
 
-            /* These variables control heading sizes on desktop and mobile. */
-            --h1-size: 2.5rem;
-            --h2-size: 2rem;
-            --h3-size: 1.35rem;
-        }
+  header img {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+  }
 
-        * {
-            box-sizing: border-box;
-        }
+  h1 {
+    color: #FFC300;
+    font-size: 2.4em;
+    margin: 0;
+    letter-spacing: 1px;
+  }
 
-        html {
-            scroll-behavior: smooth;
-        }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 25px;
+  }
 
-        body {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem;
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: "Nunito", sans-serif;
-            line-height: 1.7;
-        }
+  h2 {
+    color: #FFC300;
+    border-bottom: 2px solid #415A77;
+    padding-bottom: 8px;
+  }
 
-        header {
-            max-width: 1000px;
-            margin: 0 auto 2rem;
-            text-align: center;
-        }
+  .contact-heading {
+    margin-top: 0;
+    border-bottom: none;
+  }
 
-        h1 {
-            color: var(--coral);
-            font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h1-size);
-            line-height: 1.2;
-        }
+  p {
+    margin: 18px 0;
+  }
 
-        h2 {
-            color: var(--sky);
-            font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h2-size);
-            line-height: 1.3;
-        }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 25px 0;
+  }
 
-        h3 {
-            color: var(--coral);
-            font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h3-size);
-            line-height: 1.4;
-        }
+  li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    border-bottom: 1px solid #1B263B;
+  }
 
-        .tagline {
-            color: var(--muted);
-            font-size: 1.15rem;
-        }
+  li::before {
+    content: "\25B8";
+    color: #FFC300;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+  }
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.65rem;
-            margin: 1.5rem 0;
-        }
+  section {
+    background-color: #1B263B;
+    padding: 25px 30px;
+    border-radius: 6px;
+    margin-top: 35px;
+    border-left: 5px solid #FFC300;
+  }
 
-        nav a {
-            padding: 0.55rem 0.9rem;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            background-color: var(--card);
-            color: var(--text);
-            font-weight: 700;
-            text-decoration: none;
-        }
+  footer {
+    text-align: center;
+    background-color: #1B263B;
+    color: #778DA9;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    border-top: 6px solid #FFC300;
+  }
 
-        nav a:hover,
-        nav a:focus,
-        nav a[aria-current="page"] {
-            background-color: var(--red);
-            color: #102044;
-        }
+</style>
 
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            border-radius: 1rem;
-            background-color: var(--card);
-        }
-
-        /* These rules make bullet lists readable throughout the page. */
-        section ul {
-            padding-left: 1.5rem;
-        }
-
-        section li {
-            margin-bottom: 0.5rem;
-        }
-
-        figure {
-            margin: 1.5rem 0;
-        }
-
-        figure img {
-            display: block;
-            width: 100%;
-            max-width: 700px;
-            height: auto;
-            margin: 0 auto;
-            border: 2px solid var(--border);
-            border-radius: 0.75rem;
-        }
-
-        figcaption {
-            margin-top: 0.75rem;
-            color: var(--muted);
-            text-align: center;
-        }
-
-        /*
-            The figure-prompt class formats the italicized AI prompt
-            explanation beneath each image caption.
-        */
-        .figure-prompt {
-            margin: 0.5rem 0 0;
-            font-size: 0.9rem;
-        }
-
-        .figure-prompt em {
-            font-style: italic;
-        }
-
-        .hidden {
-            /* This class hides inactive SPA sections until their navigation link is selected. */
-            display: none;
-        }
-
-        footer {
-            max-width: 1000px;
-            margin: 2rem auto 0;
-            padding: 1.5rem 0;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            text-align: center;
-        }
-
-        /*
-            The validation-links div groups the external validation links.
-            The validation-link class styles those links like buttons.
-        */
-        .validation-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .validation-link {
-            display: inline-block;
-            padding: 0.65rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 0.5rem;
-            background-color: var(--card);
-            color: var(--coral);
-            font-weight: 700;
-            text-decoration: none;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .validation-link:hover,
-        .validation-link:focus {
-            background-color: var(--red);
-            color: #102044;
-        }
-
-        /* Footer links use coral pink for visibility against the background. */
-        footer a:not(.validation-link) {
-            color: var(--coral);
-        }
-
-        footer a:not(.validation-link):hover,
-        footer a:not(.validation-link):focus {
-            color: var(--text);
-        }
-
-        .footer-credit {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        /*
-            Classes organize reusable styles for the tagline, hidden sections,
-            figure prompts, validation links, and footer credit. Section IDs
-            let navigation and JavaScript display the correct content.
-        */
-
-        /* Black and white are not used as the page's primary colors. */
-
-        @media (max-width: 600px) {
-            :root {
-                --h1-size: 2rem;
-                --h2-size: 1.65rem;
-                --h3-size: 1.2rem;
-            }
-
-            body {
-                padding: 0.75rem;
-            }
-
-            section {
-                padding: 1rem;
-            }
-
-            nav {
-                gap: 0.45rem;
-            }
-
-            nav a {
-                padding: 0.45rem 0.7rem;
-            }
-
-            .validation-links {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .validation-link {
-                text-align: center;
-            }
-        }
-    </style>
-
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js"></script>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>The Art of Binge-Watching</h1>
 
-        <p class="tagline">
-            <em>Exploring stories, worlds, and characters one episode at a time.</em>
-        </p>
+<header>
+  <img src="/spate338/itis3135/images/apple-touch-icon.jpg" alt="Shaan Patel Designs platypus logo">
+  <h1>Shaan Patel Designs</h1>
+</header>
+
+<main>
+
+  <h2>Home</h2>
+
+  <p>
+    Shaan Patel Designs is a web design and development firm built on
+    clean code and sites that actually work. Founded in 2026, the firm
+    serves small businesses and individuals who want a professional site
+    without the enterprise price tag.
+  </p>
+
+  <ul>
+    <li>Every site is hand-coded, no bloated page builders</li>
+    <li>Fast turnaround, most projects delivered in two weeks or less</li>
+    <li>Mobile-friendly layouts on every single build</li>
+    <li>Direct communication with the person actually writing your code</li>
+    <li>Backed by a Computer Science education with a cybersecurity focus</li>
+    <li>Sites built with accessibility and semantic HTML in mind</li>
+    <li>Affordable rates for students and small local businesses</li>
+    <li>Free one round of revisions on every project</li>
+  </ul>
+
+  <p>
+    Shaan Patel Designs takes a client from a rough idea to a fully
+    functioning, live website, ready for visitors.
+  </p>
+
+  <section>
+    <h2 class="contact-heading">Contact</h2>
+    <p>Phone: (336) 123-4567</p>
+    <p>Email: fake@fakeemailaddress.com</p>
+    <p>Address: 123 Niner Way, Charlotte, NC 23456</p>
+  </section>
+
+</main>
+
+<footer>
+  Page created by Shaan Patel Designs, ITIS 3135 Certified &copy; 2026
+</footer>
 
-        <nav aria-label="Main navigation">
-            <a href="#what" data-section="what">What</a>
-            <a href="#who" data-section="who">Who</a>
-            <a href="#when" data-section="when">When</a>
-            <a href="#where" data-section="where">Where</a>
-            <a href="#how" data-section="how">How</a>
-            <a href="#why" data-section="why">Why</a>
-            <a href="#ai-prompts" data-section="ai-prompts">AI Prompts</a>
-        </nav>
-    </header>
-
-    <!--
-        This page uses classes and IDs so navigation can switch between
-        sections. Each section has an ID targeted by its navigation link.
-        The hidden class hides inactive sections, while tagline,
-        figure-prompt, validation-link, and footer-credit organize styling.
-    -->
-
-    <main>
-        <section id="what">
-            <h2>What Is My Hobby?</h2>
-
-            <p>
-                My hobby is watching television shows and anime, especially
-                stories with immersive settings, memorable characters, and
-                plots that reward paying attention.
-            </p>
-
-            <p>
-                I enjoy exploring a wide range of genres, including:
-            </p>
-
-            <ul>
-                <li>Crime dramas with mysteries, investigations, and complicated characters.</li>
-                <li>Fantasy stories with imaginative settings, mythology, and detailed worldbuilding.</li>
-                <li>Psychological thrillers that create suspense and challenge the audience's expectations.</li>
-                <li>Action stories with exciting conflicts and intense battles.</li>
-                <li>Science fiction that explores futuristic technology and unfamiliar worlds.</li>
-                <li>Animation and anime that use distinctive visuals and creative storytelling.</li>
-            </ul>
-
-            <figure>
-                <img
-                    src="../images/shows.jpg"
-                    alt="A collage of poster covers representing popular television shows and anime"
-                >
-
-                <figcaption>
-                    Some series stay memorable long after their finales.
-
-                    <p class="figure-prompt">
-                        <em>
-                            AI prompt used: Give me a collage of the poster
-                            covers of popular shows and anime. Arrange the
-                            covers into an eye-catching collection that
-                            represents different genres of television and
-                            animation.
-                        </em>
-                    </p>
-                </figcaption>
-            </figure>
-        </section>
-
-        <section id="who" class="hidden">
-            <h2>Who Shares This Hobby?</h2>
-
-            <p>
-                Watching shows appeals to people with many different interests.
-                I am especially drawn to stories that feature:
-            </p>
-
-            <ul>
-                <li>Morally complicated characters who are not always clearly right or wrong.</li>
-                <li>Rivalries that create tension and push characters to improve or change.</li>
-                <li>Changing loyalties that make relationships and alliances unpredictable.</li>
-                <li>Ambitious people who pursue their goals, sometimes at a serious cost.</li>
-                <li>Stories that explore identity, motivation, and human nature.</li>
-            </ul>
-
-            <figure>
-                <img
-                    src="../images/who.jpg"
-                    alt="A college student working on code at a computer"
-                >
-
-                <figcaption>
-                    My interests extend beyond the classroom and into the stories I enjoy.
-
-                    <p class="figure-prompt">
-                        <em>
-                            AI prompt used: Generate an image of a coding
-                            student working on code. Show a college student
-                            at a computer with a code editor visible on
-                            the screen and a focused study environment.
-                        </em>
-                    </p>
-                </figcaption>
-            </figure>
-        </section>
-
-        <section id="when" class="hidden">
-            <h2>When Do I Enjoy Watching Shows?</h2>
-
-            <p>
-                I watch shows when I have enough free time to enjoy them
-                without rushing. Some of the best opportunities include:
-            </p>
-
-            <ul>
-                <li>Free time after finishing assignments and other responsibilities.</li>
-                <li>Long periods of travel when I have time to watch episodes on a device.</li>
-                <li>Long breaks from school when my schedule is more flexible.</li>
-            </ul>
-
-            <p>
-                Having enough time makes it easier to get invested in a story
-                and enjoy an episode without constantly thinking about what
-                I need to do next.
-            </p>
-
-            <figure>
-                <img
-                    src="../images/when.jpg"
-                    alt="An illustration of all four seasons showing how television and anime viewing can change throughout the year"
-                >
-
-                <figcaption>
-                    My viewing choices can shift as the seasons change.
-
-                    <p class="figure-prompt">
-                        <em>
-                            AI prompt used: Generate an image with each
-                            season explaining how what I watch changes
-                            based on the seasons. Divide the image into
-                            spring, summer, autumn, and winter, using
-                            seasonal scenery and viewing moods to
-                            illustrate the changes.
-                        </em>
-                    </p>
-                </figcaption>
-            </figure>
-        </section>
-
-        <section id="where" class="hidden">
-            <h2>Where Do I Watch Shows?</h2>
-
-            <p>
-                I watch shows on different devices depending on where I am
-                and what is most convenient:
-            </p>
-
-            <ul>
-                <li>A television for a larger viewing experience.</li>
-                <li>A laptop for portable and convenient viewing.</li>
-                <li>A desktop computer with a monitor.</li>
-                <li>An iPad for watching on a larger portable screen.</li>
-                <li>A phone when I need something compact and easy to carry.</li>
-            </ul>
-
-            <p>
-                Comfortable seating, good headphones or speakers, a clear
-                picture, and fewer distractions make it easier to appreciate
-                dialogue, music, animation, and visual details.
-            </p>
-
-            <p>
-                I prefer watching on a television because of its larger screen.
-                However, a laptop is more convenient when I want portability
-                and the ability to resume a show in different places.
-            </p>
-
-            <figure>
-                <img
-                    src="../images/where.jpg"
-                    alt="Different places where a college student might watch shows, including a bedroom, living room, study area, and travel setting"
-                >
-
-                <figcaption>
-                    A good episode can fit into many parts of college life.
-
-                    <p class="figure-prompt">
-                        <em>
-                            AI prompt used: Generate an image that shows
-                            different places a college student would watch
-                            shows. Include settings such as a bedroom, a
-                            living room, a study space, and a place used
-                            while traveling.
-                        </em>
-                    </p>
-                </figcaption>
-            </figure>
-        </section>
-
-        <section id="how" class="hidden">
-            <h2>How Do I Choose What to Watch?</h2>
-
-            <p>
-                I look for shows that balance action, storytelling, and
-                character development. When deciding whether to continue
-                watching a series, I try to:
-            </p>
-
-            <ul>
-                <li>Give a show a couple of episodes to establish its characters and world.</li>
-                <li>Avoid spoilers so major moments and plot twists remain surprising.</li>
-                <li>Pay attention to how the plot develops and whether the story keeps me interested.</li>
-                <li>Look for a good balance between exciting action, meaningful storytelling, and character growth.</li>
-            </ul>
-
-            <p>
-                A show is more likely to hold my interest when its story keeps
-                developing and its characters have meaningful reasons for
-                making the decisions they do.
-            </p>
-
-            <figure>
-                <img
-                    src="../images/how.jpg"
-                    alt="A television remote resting on a table beside a bowl of popcorn"
-                >
-
-                <figcaption>
-                    Sometimes, choosing a show starts with settling in and pressing play.
-
-                    <p class="figure-prompt">
-                        <em>
-                            AI prompt used: Generate an image of a remote
-                            on a table with a bowl of popcorn. Create a
-                            comfortable viewing atmosphere with the remote
-                            and popcorn as the main focus.
-                        </em>
-                    </p>
-                </figcaption>
-            </figure>
-        </section>
-
-        <section id="why" class="hidden">
-            <h2>Why Do I Enjoy Watching Shows?</h2>
-
-            <p>
-                I enjoy watching shows because they can be entertaining while
-                also giving me new perspectives. Stories allow me to:
-            </p>
-
-            <ul>
-                <li>Experience perspectives and situations outside my own life.</li>
-                <li>Explore difficult choices and consider the consequences of different decisions.</li>
-                <li>Question whether a character is right or wrong instead of viewing every situation as simple.</li>
-                <li>Discover fictional worlds that stay interesting even after an episode ends.</li>
-                <li>Relax, enjoy myself, and reduce stress.</li>
-            </ul>
-
-            <p>
-                A good show can be exciting in the moment while also giving
-                me something to think about afterward. That combination of
-                entertainment, imagination, and deeper ideas is a major
-                reason I enjoy the hobby.
-            </p>
-
-            <figure>
-                <img
-                    src="../images/why.jpg"
-                    alt="An open laptop displaying show genres and a checklist for choosing what to watch"
-                >
-
-                <figcaption>
-                    A good series can entertain me while giving me something to reflect on.
-
-                    <p class="figure-prompt">
-                        <em>
-                            AI prompt used: Generate an image of an open
-                            laptop, some genres, and a checklist. Show
-                            generic television and anime categories alongside
-                            a checklist representing the qualities someone
-                            might look for when choosing a show.
-                        </em>
-                    </p>
-                </figcaption>
-            </figure>
-        </section>
-
-        <section id="ai-prompts" class="hidden">
-            <h2>AI Prompts and Reflection</h2>
-
-            <p>
-                I used AI to understand the assignment, brainstorm ideas,
-                generate images, and troubleshoot HTML and CSS errors.
-                The prompts below reflect the tasks I used AI for during
-                the development of this website.
-            </p>
-
-            <h3>Prompts for Generating Images</h3>
-
-            <ul>
-                <li>
-                    <strong>What:</strong> Give me a collage of the poster
-                    covers of popular shows and anime. Arrange the covers
-                    into an eye-catching collection representing different
-                    television and animation genres.
-                </li>
-
-                <li>
-                    <strong>Who:</strong> Generate an image of a coding
-                    student working on code. Show a college student at a
-                    computer with a code editor on the screen and a focused
-                    study environment.
-                </li>
-
-                <li>
-                    <strong>When:</strong> Generate an image with each
-                    season explaining how what I watch changes based on
-                    the seasons. Divide the image into spring, summer,
-                    autumn, and winter, using seasonal scenery and viewing
-                    moods to illustrate the changes.
-                </li>
-
-                <li>
-                    <strong>Where:</strong> Generate an image that shows
-                    different places a college student would watch shows.
-                    Include a bedroom, living room, study area, and a
-                    setting associated with traveling.
-                </li>
-
-                <li>
-                    <strong>How:</strong> Generate an image of a remote
-                    on a table with a bowl of popcorn. Create a comfortable
-                    viewing atmosphere with the remote and popcorn as
-                    the main focus.
-                </li>
-
-                <li>
-                    <strong>Why:</strong> Generate an image of an open
-                    laptop, some genres, and a checklist. Show generic
-                    television and anime genres alongside a checklist
-                    representing the qualities someone might look for
-                    when choosing a show.
-                </li>
-            </ul>
-
-            <h3>Prompts for Understanding and Brainstorming</h3>
-
-            <ul>
-                <li>
-                    Help me understand this assignment and explain what I
-                    am required to do. Break down the instructions into
-                    the required HTML structure, sections, navigation,
-                    images, captions, footer, styling, and validation.
-                    Explain how I can organize everything into one
-                    HTML file while making the sections behave like
-                    separate pages.
-                </li>
-
-                <li>
-                    Help me brainstorm some topics that I could talk about
-                    for a hobby website about watching television shows
-                    and anime. Use my interests in immersive settings,
-                    memorable characters, morally complicated people,
-                    rivalries, and genres such as crime dramas, fantasy,
-                    psychological thrillers, action, science fiction,
-                    and animation. Organize the ideas into What, Who,
-                    When, Where, How, and Why sections.
-                </li>
-            </ul>
-
-            <h3>Prompts for Coding and Troubleshooting</h3>
-
-            <ul>
-                <li>
-                    Help me fix these errors in my code and understand
-                    what I did wrong. Identify the HTML or CSS issue,
-                    explain why it matters, and show the correction
-                    without unnecessarily changing my existing design.
-                    Make sure the page retains its embedded stylesheet,
-                    responsive layout, accessible navigation, and
-                    single-page behavior.
-                </li>
-            </ul>
-
-            <p>
-                I reviewed AI suggestions and incorporated changes that
-                helped meet the assignment requirements. Using AI as a
-                troubleshooting tool also helped me understand how the
-                HTML structure, CSS styling, images, and JavaScript
-                navigation work together.
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <!-- This div groups the three external validation links within the footer. -->
-        <div class="validation-links">
-            <a
-                class="validation-link"
-                href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Fspate338%2Fitis3135%2Fhobby%2F"
-                target="_blank"
-                rel="noopener noreferrer"
-            >Validate HTML</a>
-
-            <a
-                class="validation-link"
-                href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Fspate338%2Fitis3135%2Fhobby%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en"
-                target="_blank"
-                rel="noopener noreferrer"
-            >Validate CSS</a>
-
-            <a
-                class="validation-link"
-                href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/spate338/itis3135/hobby/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >Check Accessibility</a>
-        </div>
-
-        <p class="footer-credit">
-            Designed by
-            <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">
-                Shaan Patel Designs
-            </a>
-        </p>
-    </footer>
-
-    <script>
-        const sections = document.querySelectorAll("main section");
-        const navigationLinks = document.querySelectorAll("nav a[data-section]");
-
-        function showSection(sectionId) {
-            const targetSection = document.getElementById(sectionId);
-            const validSection =
-                targetSection && targetSection.matches("main section");
-
-            if (!validSection) {
-                sectionId = "what";
-            }
-
-            sections.forEach(function (section) {
-                section.classList.toggle("hidden", section.id !== sectionId);
-            });
-
-            navigationLinks.forEach(function (link) {
-                if (link.dataset.section === sectionId) {
-                    link.setAttribute("aria-current", "page");
-                } else {
-                    link.removeAttribute("aria-current");
-                }
-            });
-
-            const visibleHeading =
-                document.querySelector("#" + sectionId + " h2");
-
-            if (visibleHeading) {
-                document.title =
-                    "The Art of Binge-Watching ✦ " +
-                    visibleHeading.textContent;
-            }
-        }
-
-        navigationLinks.forEach(function (link) {
-            link.addEventListener("click", function (event) {
-                event.preventDefault();
-
-                const sectionId = link.dataset.section;
-
-                showSection(sectionId);
-                history.replaceState(null, "", "#" + sectionId);
-            });
-        });
-
-        window.addEventListener("hashchange", function () {
-            const sectionId = window.location.hash.slice(1);
-            showSection(sectionId || "what");
-        });
-
-        const initialSection = window.location.hash.slice(1);
-        showSection(initialSection || "what");
-    </script>
 </body>
 </html>
