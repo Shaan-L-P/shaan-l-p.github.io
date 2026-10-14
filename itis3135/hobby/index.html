@@ -6,9 +6,24 @@
 
     <title>The Art of Binge-Watching | What Is My Hobby?</title>
 
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="../images/hobby_favicon_32x32.jpg">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="../images/hobby_favicon_16x16.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/hobby_favicon_180x180.jpg">
+    <!-- Favicons for browser tabs and mobile devices. -->
+    <link
+        rel="icon"
+        type="image/jpeg"
+        sizes="32x32"
+        href="../images/hobby_favicon_32x32.jpg"
+    >
+    <link
+        rel="icon"
+        type="image/jpeg"
+        sizes="16x16"
+        href="../images/hobby_favicon_16x16.jpg"
+    >
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="../images/hobby_favicon_180x180.jpg"
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -515,12 +530,12 @@
                 href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/spate338/itis3135/hobby/"
                 target="_blank"
                 rel="noopener noreferrer"
-            >Check Accessability</a>
+            >Check Accessibility</a>
         </div>
 
         <p class="footer-credit">
             Designed by
-            <a href="../shaanpateldesigns.com/index.html">Shaan Patel Designs</a>
+            <a href="../../shaanpateldesigns.html">Shaan Patel Designs</a>
         </p>
     </footer>
 
@@ -530,7 +545,8 @@
 
         function showSection(sectionId) {
             const targetSection = document.getElementById(sectionId);
-            const validSection = targetSection && targetSection.matches("main section");
+            const validSection =
+                targetSection && targetSection.matches("main section");
 
             if (!validSection) {
                 sectionId = "what";
@@ -548,11 +564,13 @@
                 }
             });
 
-            const visibleHeading = document.querySelector("#" + sectionId + " h2");
+            const visibleHeading =
+                document.querySelector("#" + sectionId + " h2");
 
             if (visibleHeading) {
                 document.title =
-                    "The Art of Binge-Watching | " + visibleHeading.textContent;
+                    "The Art of Binge-Watching | " +
+                    visibleHeading.textContent;
             }
         }
 
