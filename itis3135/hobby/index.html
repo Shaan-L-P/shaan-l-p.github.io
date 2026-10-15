@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="A personal website exploring the hobby of watching television shows and anime.">
     <title>The Art of Binge-Watching ✦ What Is My Hobby?</title>
 
-    <!-- Streaming-service favicon for the browser tab. -->
-    <link
-        rel="icon"
-        type="image/jpeg"
-        href="../images/hobby_favicon_32x32.jpg?v=3"
-    >
+    <link rel="icon" type="image/jpeg" href="../images/hobby_favicon_32x32.jpg?v=3">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        /*
+            The Art of Binge-Watching
+            Hobby website created by Shaan Patel.
+
+            The page uses embedded CSS and JavaScript to keep all
+            content in one HTML file while displaying one section
+            at a time.
+
+            Section IDs connect the navigation links to their
+            corresponding content sections.
+        */
+
         :root {
-            --bg: #10265e;
-            --card: #1a3a82;
+            --background: #10265e;
+            --card-background: #1a3a82;
             --text: #f6e7c9;
             --muted: #c3d3ff;
             --red: #ff4d5e;
             --sky: #8fc7ff;
             --coral: #ff8a94;
             --border: #4264a8;
-
-            /* These variables control heading sizes on desktop and mobile. */
-            --h1-size: 2.5rem;
-            --h2-size: 2rem;
-            --h3-size: 1.35rem;
         }
 
         * {
@@ -43,45 +45,46 @@
         }
 
         body {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem;
-            background-color: var(--bg);
+            margin: 0;
+            background-color: var(--background);
             color: var(--text);
             font-family: "Nunito", sans-serif;
+            font-size: 1rem;
             line-height: 1.7;
         }
 
+        header,
+        main,
+        footer {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
         header {
-            max-width: 1000px;
-            margin: 0 auto 2rem;
+            padding: 2.5rem 0 1.5rem;
             text-align: center;
         }
 
-        h1 {
-            color: var(--coral);
-            font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h1-size);
-            line-height: 1.2;
-        }
-
-        h2 {
-            color: var(--sky);
-            font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h2-size);
-            line-height: 1.3;
-        }
-
+        h1,
+        h2,
         h3 {
-            color: var(--coral);
             font-family: "Chakra Petch", sans-serif;
-            font-size: var(--h3-size);
-            line-height: 1.4;
+            line-height: 1.25;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem;
+            color: var(--text);
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            letter-spacing: 0.04em;
         }
 
         .tagline {
+            margin: 0 auto 1.5rem;
             color: var(--muted);
-            font-size: 1.15rem;
+            font-size: 1.1rem;
+            font-style: italic;
         }
 
         nav {
@@ -89,50 +92,95 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.65rem;
-            margin: 1.5rem 0;
+            margin: 1.5rem 0 0;
         }
 
         nav a {
-            padding: 0.55rem 0.9rem;
-            border: 1px solid var(--border);
+            display: inline-block;
+            padding: 0.6rem 1.1rem;
+            border: 2px solid var(--border);
             border-radius: 999px;
-            background-color: var(--card);
+            background-color: var(--card-background);
             color: var(--text);
-            font-weight: 700;
+            font-weight: 800;
             text-decoration: none;
+            transition: background-color 0.2s ease,
+                        color 0.2s ease,
+                        border-color 0.2s ease,
+                        transform 0.2s ease;
         }
 
         nav a:hover,
-        nav a:focus,
+        nav a:focus-visible {
+            border-color: var(--sky);
+            background-color: var(--sky);
+            color: var(--background);
+            transform: translateY(-2px);
+        }
+
         nav a[aria-current="page"] {
+            border-color: var(--red);
             background-color: var(--red);
-            color: #102044;
+            color: #ffffff;
+        }
+
+        nav a[aria-current="page"]:hover,
+        nav a[aria-current="page"]:focus-visible {
+            border-color: var(--coral);
+            background-color: var(--coral);
+            color: var(--background);
         }
 
         main {
-            max-width: 900px;
-            margin: 0 auto;
+            min-height: 60vh;
+            margin-bottom: 2.5rem;
         }
 
         section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
+            padding: clamp(1.25rem, 4vw, 2.5rem);
             border: 1px solid var(--border);
-            border-radius: 1rem;
-            background-color: var(--card);
+            border-radius: 18px;
+            background-color: var(--card-background);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
         }
 
-        /* These rules make bullet lists readable throughout the page. */
-        section ul {
+        section h2 {
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.7rem;
+            border-bottom: 3px solid var(--red);
+            color: var(--text);
+            font-size: clamp(1.7rem, 4vw, 2.3rem);
+        }
+
+        section h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--sky);
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul,
+        ol {
             padding-left: 1.5rem;
         }
 
-        section li {
-            margin-bottom: 0.5rem;
+        li {
+            margin-bottom: 0.55rem;
+        }
+
+        strong {
+            color: var(--text);
         }
 
         figure {
-            margin: 1.5rem 0;
+            margin: 2rem auto;
+            text-align: center;
         }
 
         figure img {
@@ -141,126 +189,141 @@
             max-width: 700px;
             height: auto;
             margin: 0 auto;
-            border: 2px solid var(--border);
-            border-radius: 0.75rem;
+            border: 3px solid var(--border);
+            border-radius: 14px;
         }
 
         figcaption {
-            margin-top: 0.75rem;
+            max-width: 800px;
+            margin: 0.8rem auto 0;
             color: var(--muted);
-            text-align: center;
+            font-size: 0.98rem;
         }
 
-        /*
-            The figure-prompt class formats the italicized AI prompt
-            explanation beneath each image caption.
-        */
+        .figure-caption {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-weight: 800;
+        }
+
         .figure-prompt {
-            margin: 0.5rem 0 0;
+            margin-top: 0.5rem;
+            color: var(--muted);
             font-size: 0.9rem;
-        }
-
-        .figure-prompt em {
-            font-style: italic;
+            line-height: 1.6;
         }
 
         .hidden {
-            /* This class hides inactive SPA sections until their navigation link is selected. */
             display: none;
         }
 
+        .ai-list li {
+            margin-bottom: 1.2rem;
+        }
+
+        .ai-list strong {
+            color: var(--sky);
+        }
+
         footer {
-            max-width: 1000px;
-            margin: 2rem auto 0;
-            padding: 1.5rem 0;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
+            padding: 1.5rem 0 2.5rem;
+            border-top: 2px solid var(--border);
             text-align: center;
         }
 
-        /*
-            The validation-links div groups the external validation links.
-            The validation-link class styles those links like buttons.
-        */
         .validation-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
         }
 
         .validation-link {
             display: inline-block;
-            padding: 0.65rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 0.5rem;
-            background-color: var(--card);
-            color: var(--coral);
-            font-weight: 700;
+            padding: 0.55rem 1rem;
+            border: 2px solid var(--coral);
+            border-radius: 999px;
+            background-color: var(--coral);
+            color: var(--background);
+            font-weight: 800;
             text-decoration: none;
-            transition: background-color 0.2s ease, color 0.2s ease;
+            transition: background-color 0.2s ease,
+                        color 0.2s ease,
+                        border-color 0.2s ease;
         }
 
         .validation-link:hover,
-        .validation-link:focus {
-            background-color: var(--red);
-            color: #102044;
-        }
-
-        /* Footer links use coral pink for visibility against the background. */
-        footer a:not(.validation-link) {
-            color: var(--coral);
-        }
-
-        footer a:not(.validation-link):hover,
-        footer a:not(.validation-link):focus {
-            color: var(--text);
+        .validation-link:focus-visible {
+            border-color: var(--sky);
+            background-color: var(--sky);
+            color: var(--background);
         }
 
         .footer-credit {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
+            margin: 0;
+            color: var(--muted);
         }
 
-        /*
-            Classes organize reusable styles for the tagline, hidden sections,
-            figure prompts, validation links, and footer credit. Section IDs
-            let navigation and JavaScript display the correct content.
-        */
+        .footer-credit a {
+            color: var(--sky);
+            font-weight: 800;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+        }
 
-        /* Black and white are not used as the page's primary colors. */
+        .footer-credit a:hover,
+        .footer-credit a:focus-visible {
+            color: var(--coral);
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--text);
+            outline-offset: 4px;
+        }
 
         @media (max-width: 600px) {
-            :root {
-                --h1-size: 2rem;
-                --h2-size: 1.65rem;
-                --h3-size: 1.2rem;
+            header,
+            main,
+            footer {
+                width: 92%;
             }
 
-            body {
-                padding: 0.75rem;
-            }
-
-            section {
-                padding: 1rem;
+            header {
+                padding-top: 1.8rem;
             }
 
             nav {
-                gap: 0.45rem;
+                gap: 0.5rem;
             }
 
             nav a {
-                padding: 0.45rem 0.7rem;
+                padding: 0.5rem 0.85rem;
+                font-size: 0.95rem;
+            }
+
+            section {
+                padding: 1.1rem;
+                border-radius: 12px;
+            }
+
+            section h2 {
+                font-size: 1.7rem;
+            }
+
+            section h3 {
+                font-size: 1.2rem;
             }
 
             .validation-links {
                 flex-direction: column;
-                align-items: stretch;
+                align-items: center;
             }
 
             .validation-link {
-                text-align: center;
+                width: min(100%, 240px);
             }
         }
     </style>
@@ -274,11 +337,11 @@
         <h1>The Art of Binge-Watching</h1>
 
         <p class="tagline">
-            <em>Exploring stories, worlds, and characters one episode at a time.</em>
+            Exploring stories, worlds, and characters one episode at a time.
         </p>
 
-        <nav aria-label="Main navigation">
-            <a href="#what" data-section="what">What</a>
+        <nav aria-label="Hobby website navigation">
+            <a href="#what" data-section="what" aria-current="page">What</a>
             <a href="#who" data-section="who">Who</a>
             <a href="#when" data-section="when">When</a>
             <a href="#where" data-section="where">Where</a>
@@ -288,374 +351,640 @@
         </nav>
     </header>
 
-    <!--
-        This page uses classes and IDs so navigation can switch between
-        sections. Each section has an ID targeted by its navigation link.
-        The hidden class hides inactive sections, while tagline,
-        figure-prompt, validation-link, and footer-credit organize styling.
-    -->
-
     <main>
+        <!-- WHAT SECTION -->
+
         <section id="what">
             <h2>What Is My Hobby?</h2>
 
             <p>
-                My hobby is watching television shows and anime, especially
-                stories with immersive settings, memorable characters, and
-                plots that reward paying attention.
+                My hobby is watching television shows and anime.
+                I enjoy getting invested in stories that create
+                immersive settings, memorable characters, and plots
+                that keep me interested from one episode to the next.
+                A great series can make me curious about what will
+                happen, surprised by a major reveal, or interested
+                in thinking about its characters long after an
+                episode ends.
             </p>
 
             <p>
-                I enjoy exploring a wide range of genres, including:
+                I am especially interested in stories that develop
+                their worlds and characters over time. Rather than
+                relying only on action or excitement, my favorite
+                series often explore identity, ambition, power,
+                morality, and human nature.
+            </p>
+
+            <p>
+                Some of the genres I enjoy include:
             </p>
 
             <ul>
-                <li>Crime dramas with mysteries, investigations, and complicated characters.</li>
-                <li>Fantasy stories with imaginative settings, mythology, and detailed worldbuilding.</li>
-                <li>Psychological thrillers that create suspense and challenge the audience's expectations.</li>
-                <li>Action stories with exciting conflicts and intense battles.</li>
-                <li>Science fiction that explores futuristic technology and unfamiliar worlds.</li>
-                <li>Animation and anime that use distinctive visuals and creative storytelling.</li>
+                <li>Crime dramas and suspenseful mysteries</li>
+                <li>Fantasy stories with detailed fictional worlds</li>
+                <li>Psychological thrillers and morally complicated stories</li>
+                <li>Action series with intense battles and rivalries</li>
+                <li>Science fiction that explores unfamiliar ideas</li>
+                <li>Anime and animation with distinctive art and storytelling</li>
             </ul>
 
             <figure>
                 <img
                     src="../images/shows.jpg"
-                    alt="A colorful collage of poster covers for popular television shows and anime across several genres"
-                >
+                    alt="A collage representing television shows and anime across several genres">
 
                 <figcaption>
-                    Some series stay memorable long after their finales.
+                    <span class="figure-caption">
+                        Some series stay memorable long after their finales.
+                    </span>
 
                     <p class="figure-prompt">
-                        <em>AI prompt used: Create a colorful collage of popular television and anime poster covers, including titles such as Breaking Bad, Game of Thrones, House of the Dragon, A Knight of the Seven Kingdoms, Arcane, Death Note, Jujutsu Kaisen, Chainsaw Man, Cyberpunk: Edgerunners, Solo Leveling, Stranger Things, Cobra Kai, Invincible, Silo, The Boys, Severance, and The Pitt.</em>
+                        <em>
+                            Image generation tools: ChatGPT and Gemini.
+                            Prompt development tools: Claude and ChatGPT.
+                            Prompt: Create a colorful collage of popular
+                            television and anime poster covers, including
+                            titles such as Breaking Bad, Game of Thrones,
+                            House of the Dragon, A Knight of the Seven
+                            Kingdoms, Arcane, Death Note, Jujutsu Kaisen,
+                            Chainsaw Man, Cyberpunk: Edgerunners,
+                            Solo Leveling, Stranger Things, Cobra Kai,
+                            Invincible, Silo, The Boys, Severance, and
+                            The Pitt.
+                        </em>
                     </p>
                 </figcaption>
             </figure>
         </section>
 
+        <!-- WHO SECTION -->
+
         <section id="who" class="hidden">
-            <h2>Who Shares This Hobby?</h2>
+            <h2>Who Enjoys This Hobby?</h2>
 
             <p>
-                Watching shows appeals to people with many different interests.
-                I am especially drawn to stories that feature:
+                I am a college student who enjoys exploring different
+                interests outside the classroom. Watching shows gives
+                me a way to relax while also discovering stories that
+                challenge how I think about people, decisions, and
+                the world around me.
             </p>
 
-            <ul>
-                <li>Morally complicated characters who are not always clearly right or wrong.</li>
-                <li>Rivalries that create tension and push characters to improve or change.</li>
-                <li>Changing loyalties that make relationships and alliances unpredictable.</li>
-                <li>Ambitious people who pursue their goals, sometimes at a serious cost.</li>
-                <li>Stories that explore identity, motivation, and human nature.</li>
-            </ul>
+            <p>
+                I am particularly interested in characters who are
+                complicated rather than completely good or evil.
+                Characters with conflicting motivations, difficult
+                decisions, and changing beliefs make a story feel
+                more realistic and interesting to me.
+            </p>
+
+            <p>
+                I also enjoy rivalries, unexpected alliances, shifting
+                loyalties, and the way a character can change over
+                the course of a series. Seeing how those relationships
+                develop is one of the reasons I become invested in a
+                show's story.
+            </p>
 
             <figure>
                 <img
                     src="../images/who.jpeg"
-                    alt="A student wearing headphones at a computer in a colorful room with television and anime posters, collectibles, plants, and blue-purple lighting"
-                >
+                    alt="A student wearing headphones at a computer in a colorful room decorated with television and anime posters and collectibles">
 
                 <figcaption>
-                    My interests extend beyond the classroom and into the stories I enjoy.
+                    <span class="figure-caption">
+                        My interests extend beyond the classroom and into the stories I enjoy.
+                    </span>
 
                     <p class="figure-prompt">
-                        <em>AI prompt used: Generate a student watching a show at a computer in a colorful room decorated with television and anime posters, headphones, and collectibles. Include the heading "Who?" and the sentence "Just a student with a lot of interests, a curious mind, and a love for great stories."</em>
+                        <em>
+                            Image generation tools: ChatGPT and Gemini.
+                            Prompt development tools: Claude and ChatGPT.
+                            Prompt: Generate a student watching a show at
+                            a computer in a colorful room decorated with
+                            television and anime posters, headphones, and
+                            collectibles. Include the heading "Who?" and
+                            the sentence "Just a student with a lot of
+                            interests, a curious mind, and a love for
+                            great stories."
+                        </em>
                     </p>
                 </figcaption>
             </figure>
         </section>
 
+        <!-- WHEN SECTION -->
+
         <section id="when" class="hidden">
-            <h2>When Do I Enjoy Watching Shows?</h2>
+            <h2>When Do I Enjoy This Hobby?</h2>
 
             <p>
-                I watch shows when I have enough free time to enjoy them
-                without rushing. Some of the best opportunities include:
+                I usually watch shows when I have free time outside
+                my schoolwork and other responsibilities. It is a
+                good way to take a break after finishing assignments
+                or to unwind when I want to step away from a busy
+                schedule.
             </p>
 
-            <ul>
-                <li>Free time after finishing assignments and other responsibilities.</li>
-                <li>Long periods of travel when I have time to watch episodes on a device.</li>
-                <li>Long breaks from school when my schedule is more flexible.</li>
-            </ul>
+            <p>
+                Longer breaks from school are also a great opportunity
+                to catch up on a series. When I have more time
+                available, it is easier to watch several episodes
+                without feeling like I need to stop immediately to
+                move on to something else.
+            </p>
 
             <p>
-                Having enough time makes it easier to get invested in a story
-                and enjoy an episode without constantly thinking about what
-                I need to do next.
+                The time of year can affect the experience, too.
+                A relaxing evening during colder weather feels
+                different from watching an episode on a long summer
+                day, but either can be a good time to enjoy a show.
             </p>
 
             <figure>
                 <img
                     src="../images/when.jpg"
-                    alt="A four-panel seasonal infographic with spring, summer, fall, and winter scenes and captions about watching shows"
-                >
+                    alt="A four-panel seasonal infographic showing spring blossoms, a summer sunset, autumn leaves, and snowy mountains">
 
                 <figcaption>
-                    My viewing choices can shift as the seasons change.
+                    <span class="figure-caption">
+                        My viewing choices can shift as the seasons change.
+                    </span>
 
                     <p class="figure-prompt">
-                        <em>AI prompt used: Create a four-panel seasonal infographic titled "When?" with the subtitle "Any time is a good time, but some seasons just hit different." Label Spring "Fresh starts. New shows.", Summer "Long days. Binge sessions.", Fall "Cozy vibes. Great stories.", and Winter "Cold nights. Perfect for marathons." Show spring blossoms, a summer sunset, autumn leaves, and snowy mountains.</em>
+                        <em>
+                            Image generation tools: ChatGPT and Gemini.
+                            Prompt development tools: Claude and ChatGPT.
+                            Prompt: Create a four-panel seasonal infographic
+                            titled "When?" with the subtitle "Any time is
+                            a good time, but some seasons just hit
+                            different." Label Spring "Fresh starts.
+                            New shows.", Summer "Long days. Binge
+                            sessions.", Fall "Cozy vibes. Great stories.",
+                            and Winter "Cold nights. Perfect for
+                            marathons." Show spring blossoms, a summer
+                            sunset, autumn leaves, and snowy mountains.
+                        </em>
                     </p>
                 </figcaption>
             </figure>
         </section>
 
+        <!-- WHERE SECTION -->
+
         <section id="where" class="hidden">
-            <h2>Where Do I Watch Shows?</h2>
+            <h2>Where Do I Enjoy This Hobby?</h2>
 
             <p>
-                I watch shows on different devices depending on where I am
-                and what is most convenient:
-            </p>
-
-            <ul>
-                <li>A television for a larger viewing experience.</li>
-                <li>A laptop for portable and convenient viewing.</li>
-                <li>A desktop computer with a monitor.</li>
-                <li>An iPad for watching on a larger portable screen.</li>
-                <li>A phone when I need something compact and easy to carry.</li>
-            </ul>
-
-            <p>
-                Comfortable seating, good headphones or speakers, a clear
-                picture, and fewer distractions make it easier to appreciate
-                dialogue, music, animation, and visual details.
+                I can enjoy a show anywhere I have a screen and a
+                comfortable place to watch. At home, a television
+                or computer monitor can create a more immersive
+                experience, especially when I want to focus on the
+                details of a series.
             </p>
 
             <p>
-                I prefer watching on a television because of its larger screen.
-                However, a laptop is more convenient when I want portability
-                and the ability to resume a show in different places.
+                A laptop, tablet, or phone also makes watching more
+                convenient. Portable devices are useful when I am
+                traveling or want to watch something without needing
+                to sit in front of a television.
+            </p>
+
+            <p>
+                The ideal viewing environment depends on the situation.
+                Good sound, a clear picture, comfortable seating, and
+                fewer distractions can make it easier to become
+                absorbed in a story.
             </p>
 
             <figure>
                 <img
                     src="../images/where.jpg"
-                    alt="An infographic showing four places to watch shows: home, campus, nature, and anywhere while traveling"
-                >
+                    alt="A collage-style infographic showing a home viewing space, a campus study area, a cabin beside a lake, and a city or travel scene">
 
                 <figcaption>
-                    A good episode can fit into many parts of college life.
+                    <span class="figure-caption">
+                        A good episode can fit into many parts of college life.
+                    </span>
 
                     <p class="figure-prompt">
-                        <em>AI prompt used: Create a collage-style infographic titled "Where I Do It" with the subtitle "Home, travel, or anywhere with a screen." Show four scenes labeled Home (a cozy bedroom with a TV), Campus (a study area), Nature (a cabin beside a lake), and Anywhere (a city or travel scene). Connect the scenes with arrows around a central location pin.</em>
+                        <em>
+                            Image generation tools: ChatGPT and Gemini.
+                            Prompt development tools: Claude and ChatGPT.
+                            Prompt: Create a collage-style infographic
+                            titled "Where I Do It" with the subtitle
+                            "Home, travel, or anywhere with a screen."
+                            Show four scenes labeled Home, Campus, Nature,
+                            and Anywhere: a cozy home viewing space, a
+                            campus study area, a cabin beside a lake, and
+                            a city or travel scene. Connect the scenes
+                            with arrows around a central location pin.
+                        </em>
                     </p>
                 </figcaption>
             </figure>
         </section>
 
+        <!-- HOW SECTION -->
+
         <section id="how" class="hidden">
-            <h2>How Do I Choose What to Watch?</h2>
+            <h2>How Do I Enjoy This Hobby?</h2>
 
             <p>
-                I look for shows that balance action, storytelling, and
-                character development. When deciding whether to continue
-                watching a series, I try to:
+                Watching a new series often starts with finding
+                something that catches my attention. It could be a
+                recommendation, an interesting premise, a trailer,
+                or a story with characters I want to learn more about.
             </p>
-
-            <ul>
-                <li>Give a show a couple of episodes to establish its characters and world.</li>
-                <li>Avoid spoilers so major moments and plot twists remain surprising.</li>
-                <li>Pay attention to how the plot develops and whether the story keeps me interested.</li>
-                <li>Look for a good balance between exciting action, meaningful storytelling, and character growth.</li>
-            </ul>
 
             <p>
-                A show is more likely to hold my interest when its story keeps
-                developing and its characters have meaningful reasons for
-                making the decisions they do.
+                Once I find a show that interests me, I usually give
+                it a few episodes to establish its characters and
+                story. Some series take time to develop, so I like
+                giving them an opportunity to build momentum before
+                deciding whether they are worth continuing.
             </p>
+
+            <p>
+                I also try to avoid spoilers whenever possible.
+                Unexpected reveals, important character moments, and
+                major plot developments are often part of what makes
+                a show enjoyable. Discovering those moments naturally
+                can make the overall experience more rewarding.
+            </p>
+
+            <h3>My Simple Viewing Routine</h3>
+
+            <ol>
+                <li>Find something interesting to watch.</li>
+                <li>Get comfortable and grab some snacks.</li>
+                <li>Settle in and focus on the episode.</li>
+                <li>Enjoy the action, story, and character development.</li>
+                <li>Decide whether the next episode is worth watching.</li>
+            </ol>
 
             <figure>
                 <img
                     src="../images/how.jpg"
-                    alt="A step-by-step infographic showing how to choose a show, get snacks, find a comfortable spot, press play, and repeat"
-                >
+                    alt="A five-step infographic showing how to choose a show, get snacks, find a comfortable spot, press play, and repeat">
 
                 <figcaption>
-                    Sometimes, choosing a show starts with settling in and pressing play.
+                    <span class="figure-caption">
+                        Sometimes, choosing a show starts with settling in and pressing play.
+                    </span>
 
                     <p class="figure-prompt">
-                        <em>AI prompt used: Create a cozy step-by-step infographic titled "How I Do It" with the subtitle "A few simple steps." Show a remote and popcorn, with five numbered steps: "Find something good to watch," "Get snacks (essential)," "Find a comfy spot," "Press play and enjoy," and "Repeat." Use simple white icons and arrows to connect the steps.</em>
+                        <em>
+                            Image generation tools: ChatGPT and Gemini.
+                            Prompt development tools: Claude and ChatGPT.
+                            Prompt: Create a cozy step-by-step infographic
+                            titled "How I Do It" with the subtitle "A few
+                            simple steps." Show a remote and popcorn, with
+                            five numbered steps: "Find something good to
+                            watch," "Get snacks (essential)," "Find a
+                            comfy spot," "Press play and enjoy," and
+                            "Repeat." Use simple white icons and arrows
+                            to connect the steps.
+                        </em>
                     </p>
                 </figcaption>
             </figure>
         </section>
 
+        <!-- WHY SECTION -->
+
         <section id="why" class="hidden">
-            <h2>Why Do I Enjoy Watching Shows?</h2>
+            <h2>Why Do I Enjoy This Hobby?</h2>
 
             <p>
-                I enjoy watching shows because they can be entertaining while
-                also giving me new perspectives. Stories allow me to:
+                One reason I enjoy watching shows is that good
+                storytelling gives me a chance to experience
+                perspectives and situations different from my own.
+                A story can introduce unfamiliar ideas, challenge
+                assumptions, or encourage me to think about a
+                difficult decision from another point of view.
             </p>
 
-            <ul>
-                <li>Experience perspectives and situations outside my own life.</li>
-                <li>Explore difficult choices and consider the consequences of different decisions.</li>
-                <li>Question whether a character is right or wrong instead of viewing every situation as simple.</li>
-                <li>Discover fictional worlds that stay interesting even after an episode ends.</li>
-                <li>Relax, enjoy myself, and reduce stress.</li>
-            </ul>
+            <p>
+                I also appreciate stories that explore moral
+                ambiguity. Characters do not always make the right
+                decisions, and their motivations are not always
+                simple. Seeing how ambition, fear, loyalty, and
+                personal beliefs affect their choices can make
+                a story more meaningful.
+            </p>
 
             <p>
-                A good show can be exciting in the moment while also giving
-                me something to think about afterward. That combination of
-                entertainment, imagination, and deeper ideas is a major
-                reason I enjoy the hobby.
+                Of course, watching shows is also a source of
+                entertainment and relaxation. I enjoy becoming
+                immersed in fictional worlds, following interesting
+                characters, and taking a break from everyday stress.
+                Sometimes, a series is simply fun to watch, and
+                that is reason enough.
             </p>
 
             <figure>
                 <img
                     src="../images/why.jpg"
-                    alt="A cozy bedroom scene with an open laptop, stacked books of television genres, and a checklist explaining why watching shows is enjoyable"
-                >
+                    alt="A cozy bedroom infographic with an open laptop, a checklist of reasons to watch shows, stacked genre books, a sunset window, and a plant">
 
                 <figcaption>
-                    A good series can entertain me while giving me something to reflect on.
+                    <span class="figure-caption">
+                        A good series can entertain me while giving me something to reflect on.
+                    </span>
 
                     <p class="figure-prompt">
-                        <em>AI prompt used: Create a cozy bedroom infographic titled "Why I Do It" with the subtitle "Because it makes life better." Show an open laptop beside a checklist with "Great stories," "Amazing characters," "Escapes reality," "Builds perspective," "Brings people together," and "It's just fun." Include stacked books labeled Drama, Action, Fantasy, Sci-Fi, Thriller, and Comedy, with a sunset window and a plant.</em>
+                        <em>
+                            Image generation tools: ChatGPT and Gemini.
+                            Prompt development tools: Claude and ChatGPT.
+                            Prompt: Create a cozy bedroom infographic
+                            titled "Why I Do It" with the subtitle
+                            "Because it makes life better." Show an open
+                            laptop beside a checklist with "Great stories,"
+                            "Amazing characters," "Escapes reality,"
+                            "Builds perspective," "Brings people together,"
+                            and "It's just fun." Include stacked books
+                            labeled Drama, Action, Fantasy, Sci-Fi,
+                            Thriller, and Comedy, with a sunset window
+                            and a plant.
+                        </em>
                     </p>
                 </figcaption>
             </figure>
         </section>
 
+        <!-- AI PROMPTS SECTION -->
+
         <section id="ai-prompts" class="hidden">
             <h2>AI Prompts and Reflection</h2>
 
             <p>
-                I used AI to understand the assignment, brainstorm ideas,
-                generate images, and troubleshoot HTML and CSS errors.
-                The prompts below reflect the tasks I used AI for during
-                the development of this website.
+                I used AI tools during different parts of creating
+                this website. ChatGPT and Gemini were used for image
+                generation, while Claude and ChatGPT helped develop
+                prompts, brainstorm ideas, understand the assignment,
+                and troubleshoot code. The following examples
+                describe the prompts and tasks involved in the process.
             </p>
 
             <h3>Prompts for Generating Images</h3>
 
-            <ul>
+            <p>
+                The images for the What, Who, When, Where, How, and
+                Why sections were generated using ChatGPT and Gemini.
+                Claude and ChatGPT helped develop the prompts used
+                to describe the desired images.
+            </p>
+
+            <ul class="ai-list">
                 <li>
-                    <strong>What:</strong> Create a colorful collage of popular television and anime poster covers, including titles such as Breaking Bad, Game of Thrones, House of the Dragon, A Knight of the Seven Kingdoms, Arcane, Death Note, Jujutsu Kaisen, Chainsaw Man, Cyberpunk: Edgerunners, Solo Leveling, Stranger Things, Cobra Kai, Invincible, Silo, The Boys, Severance, and The Pitt.
+                    <strong>What:</strong>
+                    <strong>Image generation tools:</strong> ChatGPT
+                    and Gemini.
+                    <strong>Prompt development tools:</strong> Claude
+                    and ChatGPT.
+                    Create a colorful collage of popular television
+                    and anime poster covers, including titles such as
+                    Breaking Bad, Game of Thrones, House of the Dragon,
+                    A Knight of the Seven Kingdoms, Arcane, Death Note,
+                    Jujutsu Kaisen, Chainsaw Man, Cyberpunk:
+                    Edgerunners, Solo Leveling, Stranger Things,
+                    Cobra Kai, Invincible, Silo, The Boys, Severance,
+                    and The Pitt.
                 </li>
 
                 <li>
-                    <strong>Who:</strong> Generate a student watching a show at a computer in a colorful room decorated with television and anime posters, headphones, and collectibles. Include the heading "Who?" and the sentence "Just a student with a lot of interests, a curious mind, and a love for great stories."
+                    <strong>Who:</strong>
+                    <strong>Image generation tools:</strong> ChatGPT
+                    and Gemini.
+                    <strong>Prompt development tools:</strong> Claude
+                    and ChatGPT.
+                    Generate a student watching a show at a computer
+                    in a colorful room decorated with television and
+                    anime posters, headphones, and collectibles.
+                    Include the heading "Who?" and the sentence
+                    "Just a student with a lot of interests, a curious
+                    mind, and a love for great stories."
                 </li>
 
                 <li>
-                    <strong>When:</strong> Create a four-panel seasonal infographic titled "When?" with the subtitle "Any time is a good time, but some seasons just hit different." Label Spring "Fresh starts. New shows.", Summer "Long days. Binge sessions.", Fall "Cozy vibes. Great stories.", and Winter "Cold nights. Perfect for marathons." Show spring blossoms, a summer sunset, autumn leaves, and snowy mountains.
+                    <strong>When:</strong>
+                    <strong>Image generation tools:</strong> ChatGPT
+                    and Gemini.
+                    <strong>Prompt development tools:</strong> Claude
+                    and ChatGPT.
+                    Create a four-panel seasonal infographic titled
+                    "When?" with the subtitle "Any time is a good time,
+                    but some seasons just hit different." Label Spring
+                    "Fresh starts. New shows.", Summer "Long days.
+                    Binge sessions.", Fall "Cozy vibes. Great stories.",
+                    and Winter "Cold nights. Perfect for marathons."
+                    Show spring blossoms, a summer sunset, autumn
+                    leaves, and snowy mountains.
                 </li>
 
                 <li>
-                    <strong>Where:</strong> Create a collage-style infographic titled "Where I Do It" with the subtitle "Home, travel, or anywhere with a screen." Show four scenes labeled Home (a cozy bedroom with a TV), Campus (a study area), Nature (a cabin beside a lake), and Anywhere (a city or travel scene). Connect the scenes with arrows around a central location pin.
+                    <strong>Where:</strong>
+                    <strong>Image generation tools:</strong> ChatGPT
+                    and Gemini.
+                    <strong>Prompt development tools:</strong> Claude
+                    and ChatGPT.
+                    Create a collage-style infographic titled
+                    "Where I Do It" with the subtitle "Home, travel,
+                    or anywhere with a screen." Show four scenes
+                    labeled Home, Campus, Nature, and Anywhere:
+                    a cozy home viewing space, a campus study area,
+                    a cabin beside a lake, and a city or travel scene.
+                    Connect the scenes with arrows around a central
+                    location pin.
                 </li>
 
                 <li>
-                    <strong>How:</strong> Create a cozy step-by-step infographic titled "How I Do It" with the subtitle "A few simple steps." Show a remote and popcorn, with five numbered steps: "Find something good to watch," "Get snacks (essential)," "Find a comfy spot," "Press play and enjoy," and "Repeat." Use simple white icons and arrows to connect the steps.
+                    <strong>How:</strong>
+                    <strong>Image generation tools:</strong> ChatGPT
+                    and Gemini.
+                    <strong>Prompt development tools:</strong> Claude
+                    and ChatGPT.
+                    Create a cozy step-by-step infographic titled
+                    "How I Do It" with the subtitle "A few simple
+                    steps." Show a remote and popcorn, with five
+                    numbered steps: "Find something good to watch,"
+                    "Get snacks (essential)," "Find a comfy spot,"
+                    "Press play and enjoy," and "Repeat." Use simple
+                    white icons and arrows to connect the steps.
                 </li>
 
                 <li>
-                    <strong>Why:</strong> Create a cozy bedroom infographic titled "Why I Do It" with the subtitle "Because it makes life better." Show an open laptop beside a checklist with "Great stories," "Amazing characters," "Escapes reality," "Builds perspective," "Brings people together," and "It's just fun." Include stacked books labeled Drama, Action, Fantasy, Sci-Fi, Thriller, and Comedy, with a sunset window and a plant.
+                    <strong>Why:</strong>
+                    <strong>Image generation tools:</strong> ChatGPT
+                    and Gemini.
+                    <strong>Prompt development tools:</strong> Claude
+                    and ChatGPT.
+                    Create a cozy bedroom infographic titled
+                    "Why I Do It" with the subtitle "Because it makes
+                    life better." Show an open laptop beside a
+                    checklist with "Great stories," "Amazing
+                    characters," "Escapes reality," "Builds
+                    perspective," "Brings people together," and
+                    "It's just fun." Include stacked books labeled
+                    Drama, Action, Fantasy, Sci-Fi, Thriller, and
+                    Comedy, with a sunset window and a plant.
                 </li>
             </ul>
 
             <h3>Prompts for Understanding and Brainstorming</h3>
 
-            <ul>
+            <ul class="ai-list">
                 <li>
-                    Help me understand this assignment and explain what I
-                    am required to do. Break down the instructions into
-                    the required HTML structure, sections, navigation,
-                    images, captions, footer, styling, and validation.
-                    Explain how I can organize everything into one
-                    HTML file while making the sections behave like
-                    separate pages.
+                    <strong>AI tools used:</strong> Claude and ChatGPT.
+
+                    <p>
+                        Help me understand this assignment and explain
+                        what I am required to do. Break down the
+                        instructions into the required HTML structure,
+                        sections, navigation, images, captions, footer,
+                        styling, and validation. Explain how I can
+                        organize everything into one HTML file while
+                        making the sections behave like separate pages.
+                    </p>
                 </li>
 
                 <li>
-                    Help me brainstorm some topics that I could talk about
-                    for a hobby website about watching television shows
-                    and anime. Use my interests in immersive settings,
-                    memorable characters, morally complicated people,
-                    rivalries, and genres such as crime dramas, fantasy,
-                    psychological thrillers, action, science fiction,
-                    and animation. Organize the ideas into What, Who,
-                    When, Where, How, and Why sections.
+                    <strong>AI tools used:</strong> Claude and ChatGPT.
+
+                    <p>
+                        Help me brainstorm topics for a hobby website
+                        about watching television shows and anime.
+                        Use my interests in immersive settings,
+                        memorable characters, morally complicated
+                        people, rivalries, crime dramas, fantasy,
+                        psychological thrillers, action, science
+                        fiction, and animation. Organize the ideas
+                        into What, Who, When, Where, How, and Why
+                        sections.
+                    </p>
                 </li>
             </ul>
 
             <h3>Prompts for Coding and Troubleshooting</h3>
 
-            <ul>
+            <ul class="ai-list">
                 <li>
-                    Help me fix these errors in my code and understand
-                    what I did wrong. Identify the HTML or CSS issue,
-                    explain why it matters, and show the correction
-                    without unnecessarily changing my existing design.
-                    Make sure the page retains its embedded stylesheet,
-                    responsive layout, accessible navigation, and
-                    single-page behavior.
+                    <strong>AI tools used:</strong> Claude and ChatGPT.
+
+                    <p>
+                        Help me fix these errors in my code and
+                        understand what I did wrong. Identify the
+                        HTML or CSS issue, explain why it matters,
+                        and show the correction without unnecessarily
+                        changing my existing design. Make sure the
+                        page retains its embedded stylesheet,
+                        responsive layout, accessible navigation,
+                        and single-page behavior.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>AI tools used:</strong> Claude and ChatGPT.
+
+                    <p>
+                        Review my HTML and CSS against the assignment
+                        requirements. Identify missing requirements,
+                        accessibility problems, styling issues, and
+                        standards-checker errors. Explain what needs
+                        to change, and provide corrected code while
+                        preserving the organization and design of my
+                        existing page.
+                    </p>
                 </li>
             </ul>
 
+            <h3>Reflection on Using AI</h3>
+
             <p>
-                I reviewed AI suggestions and incorporated changes that
-                helped meet the assignment requirements. Using AI as a
-                troubleshooting tool also helped me understand how the
-                HTML structure, CSS styling, images, and JavaScript
-                navigation work together.
+                AI tools helped me brainstorm ideas, create visual
+                assets, and troubleshoot issues while developing
+                this website. Using ChatGPT and Gemini for image
+                generation allowed me to create visuals that matched
+                the theme of each section. Claude and ChatGPT helped
+                me develop image prompts and work through the
+                assignment requirements.
+            </p>
+
+            <p>
+                I reviewed the suggestions provided by AI tools and
+                decided which changes were useful for my website.
+                I also used their explanations to better understand
+                HTML structure, CSS styling, responsive design, and
+                JavaScript navigation. AI was useful as a tool for
+                support and problem-solving, but I still needed to
+                review the resulting code and check it against the
+                assignment requirements.
             </p>
         </section>
     </main>
 
     <footer>
-        <!-- This div groups the three external validation links within the footer. -->
         <div class="validation-links">
             <a
                 class="validation-link"
                 href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Fspate338%2Fitis3135%2Fhobby%2F"
                 target="_blank"
-                rel="noopener noreferrer"
-            >Validate HTML</a>
+                rel="noopener noreferrer">
+                Validate HTML
+            </a>
 
             <a
                 class="validation-link"
                 href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Fspate338%2Fitis3135%2Fhobby%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en"
                 target="_blank"
-                rel="noopener noreferrer"
-            >Validate CSS</a>
+                rel="noopener noreferrer">
+                Validate CSS
+            </a>
 
             <a
                 class="validation-link"
                 href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/spate338/itis3135/hobby/"
                 target="_blank"
-                rel="noopener noreferrer"
-            >Check Accessibility</a>
+                rel="noopener noreferrer">
+                Check Accessibility
+            </a>
         </div>
 
         <p class="footer-credit">
             Designed by
-            <a href="../shaanpateldesigns.com/index.html">Shaan Patel Designs</a>
+            <a href="../shaanpateldesigns.com/index.html">
+                Shaan Patel Designs
+            </a>
         </p>
     </footer>
 
     <script>
-        const sections = document.querySelectorAll("main section");
+        /*
+            Single-page navigation:
+            - Displays the selected section.
+            - Hides the other sections.
+            - Updates the active navigation link.
+            - Updates the browser title and URL hash.
+            - Supports direct links and browser back/forward navigation.
+        */
+
         const navigationLinks = document.querySelectorAll("nav a[data-section]");
+        const sections = document.querySelectorAll("main section");
 
-        function showSection(sectionId) {
-            const targetSection = document.getElementById(sectionId);
-            const validSection =
-                targetSection && targetSection.matches("main section");
+        const pageTitle = "The Art of Binge-Watching ✦ ";
 
-            if (!validSection) {
+        function showSection(sectionId, updateHistory = true) {
+            const selectedSection = document.getElementById(sectionId);
+
+            if (!selectedSection || !selectedSection.matches("main section")) {
                 sectionId = "what";
             }
 
             sections.forEach(function (section) {
-                section.classList.toggle("hidden", section.id !== sectionId);
+                const isSelected = section.id === sectionId;
+                section.classList.toggle("hidden", !isSelected);
             });
 
             navigationLinks.forEach(function (link) {
@@ -666,34 +995,31 @@
                 }
             });
 
-            const visibleHeading =
-                document.querySelector("#" + sectionId + " h2");
+            const heading = document.querySelector("#" + sectionId + " h2");
 
-            if (visibleHeading) {
-                document.title =
-                    "The Art of Binge-Watching ✦ " +
-                    visibleHeading.textContent;
+            if (heading) {
+                document.title = pageTitle + heading.textContent.trim();
+            }
+
+            if (updateHistory) {
+                history.replaceState(null, "", "#" + sectionId);
             }
         }
 
         navigationLinks.forEach(function (link) {
             link.addEventListener("click", function (event) {
                 event.preventDefault();
-
-                const sectionId = link.dataset.section;
-
-                showSection(sectionId);
-                history.replaceState(null, "", "#" + sectionId);
+                showSection(link.dataset.section);
             });
         });
 
         window.addEventListener("hashchange", function () {
-            const sectionId = window.location.hash.slice(1);
-            showSection(sectionId || "what");
+            const sectionId = window.location.hash.substring(1);
+            showSection(sectionId || "what", false);
         });
 
-        const initialSection = window.location.hash.slice(1);
-        showSection(initialSection || "what");
+        const initialSection = window.location.hash.substring(1);
+        showSection(initialSection || "what", false);
     </script>
 </body>
 </html>
