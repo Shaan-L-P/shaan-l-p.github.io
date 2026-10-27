@@ -16,20 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --page-bg: #b8d8fb;
-            --card-bg: #ffffff; /* White cards contrast with the blue page background and improve readability. */
-            --nav-bg: #b8c8fa;
-            --nav-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --text: #2a2a3a;
-        }
-
-        /* Classes provide reusable styling for the card grid, cards, images, and text. */
+        /* Classes are used to reuse styles for the card grid, cards, images, and text. IDs are reserved for unique elements when needed. */
         body {
             margin: 0;
-            background-color: var(--page-bg);
-            color: var(--text);
+            background-color: #b8d8fb;
+            color: #2a2a3a;
             font-family: 'Montserrat', 'Inter', sans-serif;
             line-height: 1.6;
         }
@@ -50,7 +41,7 @@
         h1,
         h2,
         h3 {
-            color: var(--heading);
+            color: #2f6f9f;
         }
 
         nav {
@@ -65,15 +56,15 @@
             display: inline-block;
             padding: 0.5rem 0.8rem;
             border-radius: 1rem;
-            background-color: var(--nav-bg);
-            color: var(--nav-text);
+            background-color: #b8c8fa;
+            color: #2e3f9c;
             text-decoration: none;
             font-weight: 600;
         }
 
         nav a:hover,
         nav a:focus {
-            background-color: var(--nav-text);
+            background-color: #2e3f9c;
             color: #ffffff; /* White text contrasts with the dark-blue navigation background. */
         }
 
@@ -81,7 +72,7 @@
             margin: 1rem 0;
             padding: 1.5rem;
             border-radius: 1rem;
-            background-color: var(--card-bg);
+            background-color: #ffffff; /* White cards contrast with the blue page background and improve readability. */
             text-align: center;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
         }
@@ -96,7 +87,7 @@
             padding: 1rem;
             border: 2px solid #8b9bb8;
             border-radius: 1rem;
-            background-color: var(--card-bg);
+            background-color: #ffffff; /* White card backgrounds improve text readability. */
             text-align: center;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
         }
@@ -110,7 +101,7 @@
             border-radius: 0.75rem;
         }
 
-        /* The agent-name class styles each article's heading without defining another h3 selector. */
+        /* The agent-name class styles card headings without adding a second h3 selector. */
         .agent-name {
             margin: 0.5rem 0;
             font-size: 1.2rem;
@@ -126,20 +117,20 @@
         }
 
         footer a {
-            color: var(--nav-text);
+            color: #2e3f9c;
         }
 
         footer p {
             margin: 0.5rem 0;
         }
 
-        @media (max-width: 800px) {
+        @media screen and (max-width: 800px) {
             .card-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 520px) {
+        @media screen and (max-width: 520px) {
             header,
             main,
             footer {
@@ -177,8 +168,7 @@
         </nav>
 
         <nav aria-label="Additional navigation">
-            <!-- Update this destination if your poorly designed page uses a different filename. -->
-            <a href="crappy.html">Crappy Page</a>
+            <a href="crappy.htm">Crappy Page</a>
             <a href="hobby/index.html">Hobby Site</a>
         </nav>
     </header>
