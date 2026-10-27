@@ -1,262 +1,239 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Documentation</title>
-
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="images/favicon-32x32.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* The page uses a blue and purple palette; black and white are not its primary design colors. */
+        :root {
+            --background: #b8d8fb;
+            --heading: #b8c8fa;
+            --primary: #2e3f9c;
+            --accent: #2f6f9f;
+            --text: #2a2a3a;
+            --panel: #e6f0fd;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
         body {
-            background-color: #b8d8fb;
-            color: #2a2a3a;
-            font-family: Helvetica, Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px 15px;
+            margin: 0;
+            padding: 0 1rem;
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
         }
+
+        header, main, footer {
+            max-width: 1000px;
+            margin: 1.5rem auto;
+            background: var(--panel);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        header, footer {
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+
         h1 {
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: clamp(2rem, 6vw, 3.2rem);
-            margin: 0 0 35px 0;
-            color: #2e3f9c;
-            background-color: #b8c8fa;
-            border-radius: 999px;
-            padding: 20px 30px;
-            text-align: center;
+            margin-top: 0;
         }
-        h2 {
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            margin-bottom: 35px;
-            color: #2f6f9f;
-            border-bottom: 4px dashed #2e3f9c;
-            padding-bottom: 10px;
+
+        a {
+            color: var(--primary);
         }
-        a,
-        a:visited {
-            color: #2e3f9c;
-            font-weight: bold;
+
+        a:hover, a:focus {
+            color: var(--accent);
         }
-        a:hover,
-        a:focus {
-            color: #2e1f66;
-        }
+
         nav {
-            margin-bottom: 40px;
-            text-align: center;
+            margin: 1rem 0;
         }
+
         nav a {
-            font-size: 1.8rem;
-            margin: 0 12px;
             display: inline-block;
+            margin: 0.25rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 20px;
+            background: var(--heading);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
         }
-        nav + nav {
-            margin-top: -25px;
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
         }
-        main img {
+
+        .doc-layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 1.25rem;
+        }
+
+        .doc-nav, .doc-section {
+            background: white;
+            border: 1px solid #c3d4ef;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .doc-nav a {
             display: block;
-            box-sizing: border-box;
-            max-width: 250px;
-            width: 100%;
-            margin: 0 auto 30px auto;
-            border-radius: 8px;
+            margin: 0.5rem 0;
         }
-        p {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: #2f6f9f;
+
+        code, pre {
+            background: #edf1fb;
+            padding: 0.25rem;
+            border-radius: 4px;
+            overflow-wrap: anywhere;
         }
-        main ul {
-            list-style: none;
-            margin: 0 0 30px 0;
-            padding: 0;
+
+        pre {
+            padding: 1rem;
+            white-space: pre-wrap;
         }
-        main li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-        main li a {
-            font-size: 1.8rem;
-        }
-        footer {
-            font-size: 1.5rem;
-            margin-top: 35px;
-            color: #2a2a3a;
-            border-top: 4px dashed #2e3f9c;
-            padding-top: 20px;
-        }
+
         footer p {
-            font-size: 1.3rem;
-            margin: 15px 0 0 0;
-            color: #2a2a3a;
+            margin: 0.4rem;
         }
-        @media (max-width: 600px) {
+
+        @media (max-width: 700px) {
+            body {
+                padding: 0 0.4rem;
+            }
+
+            header, main, footer {
+                padding: 1rem;
+            }
+
+            .doc-layout {
+                grid-template-columns: 1fr;
+            }
+
             nav a {
-                font-size: 1.2rem;
-                margin-bottom: 8px;
+                font-size: 0.8rem;
             }
-            p,
-            main li a {
-                font-size: 1.2rem;
-            }
-            footer,
-            footer p {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Extra styles for the freeCodeCamp project pages, same blue and purple palette */
-        main p { color: #1f5578; }
-        main h3 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.6rem; color: #2e3f9c; margin: 25px 0 15px 0; }
-        main h4 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.3rem; color: #2e3f9c; margin: 5px 0; }
-        :focus-visible { outline: 3px solid #2e1f66; outline-offset: 2px; }
-        form { background-color: #e6f0fd; border: 3px solid #2e3f9c; border-radius: 20px; padding: 20px; max-width: 40rem; }
-        label, legend { font-weight: bold; font-size: 1.2rem; }
-        .field { margin-bottom: 18px; }
-        input[type=text], input[type=email], input[type=number], select, textarea { display: block; width: 100%; padding: 8px; margin-top: 4px; border: 2px solid #2e3f9c; border-radius: 8px; font: inherit; font-size: 1.1rem; background-color: #ffffff; color: #2a2a3a; }
-        fieldset { border: 2px solid #2f6f9f; border-radius: 10px; margin-bottom: 18px; }
-        fieldset label { display: block; font-weight: normal; }
-        button, a.btn, a.btn:visited { background-color: #2e3f9c; color: #ffffff; border: 0; border-radius: 999px; padding: 12px 28px; font: inherit; font-weight: bold; font-size: 1.2rem; cursor: pointer; text-decoration: none; display: inline-block; }
-        button:hover, button:focus, a.btn:hover, a.btn:focus { background-color: #2e1f66; color: #ffffff; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 20px; }
-        .card { background-color: #e6f0fd; border: 3px solid #2e3f9c; border-radius: 20px; padding: 15px 20px; }
-        .card p { font-size: 1.1rem; color: #2a2a3a; margin-bottom: 10px; }
-        .card .role { color: #5b2a8c; font-weight: bold; }
-        .card dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 15px; margin: 10px 0 0 0; font-size: 1.1rem; }
-        .card dd { margin: 0; text-align: right; font-weight: bold; }
-        .tablewrap { overflow-x: auto; }
-        table { border-collapse: collapse; width: 100%; background-color: #e6f0fd; font-size: 1.1rem; color: #2a2a3a; }
-        caption { text-align: left; font-weight: bold; font-size: 1.3rem; padding: 8px 0; color: #1f5578; }
-        th, td { border: 1px solid #2e3f9c; padding: 8px 12px; text-align: left; }
-        thead th { background-color: #2e3f9c; color: #ffffff; }
-        .low { color: #5b2a8c; font-weight: bold; }
-        .doc { display: grid; grid-template-columns: 14rem 1fr; gap: 30px; }
-        nav.side { text-align: left; margin: 0; }
-        nav.side ul { list-style: none; margin: 0; padding: 0; }
-        nav.side li { display: block; margin: 0 0 10px 0; }
-        nav.side a { font-size: 1.1rem; margin: 0; display: block; }
-        .doc p { font-size: 1.2rem; }
-        .doc article ul { list-style: disc; padding-left: 24px; margin-bottom: 20px; }
-        .doc article li { display: list-item; margin: 0 0 6px 0; font-size: 1.2rem; color: #1f5578; }
-        pre { background-color: #2e1f66; color: #ffffff; padding: 15px; border-radius: 10px; overflow-x: auto; font-size: 1rem; }
-        p code, li code { background-color: #d6e4fa; color: #2a2a3a; padding: 2px 5px; border-radius: 4px; }
-        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; align-items: center; margin-bottom: 30px; }
-        .hero img { max-width: 100%; margin: 0; }
-        .tiers .pick { background-color: #d6e4fa; border-color: #5b2a8c; }
-        @media (max-width: 700px) { .doc, .hero { grid-template-columns: 1fr; } }
-
-        /* Main nav: smaller text so all ten links fit on one line on wide screens */
-        nav.main-nav { white-space: nowrap; }
-        nav.main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
-        @media (max-width: 600px) {
-            nav.main-nav { white-space: normal; }
-            nav.main-nav a { font-size: 1rem; margin-bottom: 8px; }
         }
     </style>
-
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="contract.html">Contract</a>
+            <a href="survey.html">Survey</a>
+            <a href="cards.html">Cards</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="product.html">Product</a>
+            <a href="introduction.html">Introduction</a>
+            <a href="about.html">About</a>
+            <a href="website_evaluations.html">Website Evaluations</a>
+        </nav>
+
+        <nav aria-label="Additional project navigation">
+            <a href="crappy.htm">CRAPpy Page</a> |
+            <a href="hobby/index.html">Hobby Site</a>
+        </nav>
     </header>
-
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="contract.html">Contract</a>
-        <a href="survey.html">Survey</a>
-        <a href="cards.html">Cards</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="documentation.html">Documentation</a>
-        <a href="product.html">Product</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="about.html">About</a>
-        <a href="website_evaluations.html">Website Evaluations</a>
-    </nav>
-
-    <nav aria-label="Additional project navigation">
-        <a href="crappy.htm">CRAPpy Page</a>
-        |
-        <a href="hobby/index.html">Hobby Site</a>
-    </nav>
 
     <main>
         <h2>BillGuard Documentation</h2>
-        <div class="doc">
-            <nav class="side" aria-label="Documentation sections">
-                <ul>
-                    <li><a href="#Introduction">Introduction</a></li>
-                    <li><a href="#What_You_Need">What You Need</a></li>
-                    <li><a href="#Installation">Installation</a></li>
-                    <li><a href="#Quick_Start">Quick Start</a></li>
-                    <li><a href="#Scan_Modes">Scan Modes</a></li>
-                    <li><a href="#Troubleshooting">Troubleshooting</a></li>
-                    <li><a href="#Reference">Reference</a></li>
-                </ul>
-            </nav>
-            <article>
-                <section id="Introduction">
+        <p>BillGuard is a fictional command-line tool for helping the Pond Patrol review security alerts and identify potential issues.</p>
+
+        <div class="doc-layout">
+            <aside class="doc-nav" aria-label="Documentation sections">
+                <h3>On This Page</h3>
+                <a href="#introduction">Introduction</a>
+                <a href="#requirements">What You Need</a>
+                <a href="#installation">Installation</a>
+                <a href="#quick-start">Quick Start</a>
+                <a href="#scan-modes">Scan Modes</a>
+                <a href="#troubleshooting">Troubleshooting</a>
+                <a href="#reference">Reference</a>
+            </aside>
+
+            <div class="doc-content">
+                <section class="doc-section" id="introduction">
                     <h3>Introduction</h3>
-                    <p>BillGuard is a small home network scanner made by Pond Provisions. It looks at the devices on your network and tells you which ones need attention.</p>
+                    <p>BillGuard organizes security checks into simple commands. It is intended as a fictional example for learning about documentation and command-line interfaces.</p>
                 </section>
-                <section id="What_You_Need">
+
+                <section class="doc-section" id="requirements">
                     <h3>What You Need</h3>
-                    <p>Before you start, make sure you have:</p>
                     <ul>
-                        <li>A computer running Linux, macOS, or Windows</li>
-                        <li>Python 3.10 or newer</li>
-                        <li>Permission to scan the network you are on</li>
+                        <li>A computer with a command-line terminal.</li>
+                        <li>Basic familiarity with folders and files.</li>
+                        <li>A sample configuration file to review.</li>
                     </ul>
                 </section>
-                <section id="Installation">
+
+                <section class="doc-section" id="installation">
                     <h3>Installation</h3>
-                    <p>Install BillGuard with pip:</p>
-                    <pre><code>pip install billguard</code></pre>
-                    <p>Check that it worked:</p>
-                    <pre><code>billguard --version</code></pre>
+                    <p>In this fictional example, the tool is installed from a local package:</p>
+                    <pre><code>billguard install</code></pre>
+                    <p>Follow the instructions displayed by the installer and confirm that the configuration file is available.</p>
                 </section>
-                <section id="Quick_Start">
+
+                <section class="doc-section" id="quick-start">
                     <h3>Quick Start</h3>
-                    <p>Run your first scan on the default pond:</p>
-                    <pre><code>billguard scan --pond home</code></pre>
-                    <p>BillGuard prints each device it finds, along with a status of <code>ok</code>, <code>warn</code>, or <code>splash</code>.</p>
+                    <p>Run a basic check against a sample project:</p>
+                    <pre><code>billguard scan --target ./sample-project</code></pre>
+                    <p>The tool displays a summary of the checks it would perform and lists any findings for review.</p>
                 </section>
-                <section id="Scan_Modes">
+
+                <section class="doc-section" id="scan-modes">
                     <h3>Scan Modes</h3>
-                    <p>Use <code>--mode</code> to choose how deep a scan goes.</p>
                     <ul>
-                        <li><code>shallow</code>: lists devices only. Takes seconds.</li>
-                        <li><code>normal</code>: adds open ports. This is the default.</li>
-                        <li><code>deep</code>: adds weak password checks on devices you own.</li>
+                        <li><strong>Quick:</strong> Checks a small set of common configuration issues.</li>
+                        <li><strong>Standard:</strong> Runs a broader review of the selected target.</li>
+                        <li><strong>Detailed:</strong> Produces an expanded report for manual review.</li>
                     </ul>
+                    <pre><code>billguard scan --mode standard</code></pre>
                 </section>
-                <section id="Troubleshooting">
+
+                <section class="doc-section" id="troubleshooting">
                     <h3>Troubleshooting</h3>
-                    <p>If BillGuard finds no devices, confirm you are connected to the network and that your firewall allows local scans. If a device shows <code>splash</code>, change its default password first.</p>
+                    <p>If a scan does not run as expected, check the target path, verify that the configuration file exists, and review the command for spelling errors.</p>
+                    <p>Only run security checks on systems and files you are authorized to examine.</p>
                 </section>
-                <section id="Reference">
+
+                <section class="doc-section" id="reference">
                     <h3>Reference</h3>
-                    <p>Commands: <code>scan</code>, <code>report</code>, <code>pond list</code>. Run <code>billguard --help</code> for every option.</p>
+                    <p>Example commands for this fictional tool:</p>
+                    <ul>
+                        <li><code>billguard help</code> displays command information.</li>
+                        <li><code>billguard status</code> displays the current configuration status.</li>
+                        <li><code>billguard report</code> displays the latest sample report.</li>
+                    </ul>
+                    <p>BillGuard is a fictional demonstration tool, not an actual security product.</p>
                 </section>
-            </article>
+            </div>
         </div>
     </main>
 
     <footer>
-        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
-        |
-        <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
-
+        <p><a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy; 2026</p>
+        <p><a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a></p>
         <p>Designed by Shaan Patel</p>
         <p><em>"Silly code, serious design."</em></p>
     </footer>

@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Product</title>
+    <link rel="icon" href="images/favicon-32x32.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #b8d8fb;
+            --heading: #b8c8fa;
+            --primary: #2e3f9c;
+            --accent: #2f6f9f;
+            --text: #2a2a3a;
+            --panel: #e6f0fd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0 1rem;
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        header, main, footer {
+            max-width: 1000px;
+            margin: 1.5rem auto;
+            background: var(--panel);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        header, footer {
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        a:hover, a:focus {
+            color: var(--accent);
+        }
+
+        nav {
+            margin: 1rem 0;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0.25rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 20px;
+            background: var(--heading);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+        }
+
+        .hero, .feature, .plan {
+            background: white;
+            border: 1px solid #c3d4ef;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .hero img {
+            width: 200px;
+            max-width: 40%;
+            height: auto;
+        }
+
+        .feature-grid, .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .plan h3, .feature h3 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 0.8rem;
+            font-weight: 600;
+        }
+
+        input, button {
+            max-width: 100%;
+            padding: 0.6rem;
+            font: inherit;
+        }
+
+        input[type="email"] {
+            width: 100%;
+        }
+
+        button {
+            margin-top: 1rem;
+            background: var(--primary);
+            color: white;
+            border: 0;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        footer p {
+            margin: 0.4rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0 0.4rem;
+            }
+
+            header, main, footer {
+                padding: 1rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img {
+                max-width: 80%;
+            }
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="contract.html">Contract</a>
+            <a href="survey.html">Survey</a>
+            <a href="cards.html">Cards</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="product.html">Product</a>
+            <a href="introduction.html">Introduction</a>
+            <a href="about.html">About</a>
+            <a href="website_evaluations.html">Website Evaluations</a>
+        </nav>
+
+        <nav aria-label="Additional project navigation">
+            <a href="crappy.htm">CRAPpy Page</a> |
+            <a href="hobby/index.html">Hobby Site</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Meet the Electro-Sense Router</h2>
+
+        <section class="hero">
+            <img src="images/silly-platypus-logo.jpg" alt="Silly Platypus logo">
+            <div>
+                <h3>Smarter Connections for a Safer Pond</h3>
+                <p>The Electro-Sense Router is a fictional networking product designed for the Silly Platypus Pond Patrol. It represents the idea of monitoring network activity and keeping connected devices organized.</p>
+                <p><strong>Simple setup. Clear insights. Pond-level protection.</strong></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+
+            <div class="feature-grid">
+                <article class="feature">
+                    <h3>Connection Monitoring</h3>
+                    <p>Review connected devices and spot unfamiliar connections in the fictional pond network.</p>
+                </article>
+
+                <article class="feature">
+                    <h3>Security Alerts</h3>
+                    <p>Organize alerts so the Pond Patrol can investigate unusual activity.</p>
+                </article>
+
+                <article class="feature">
+                    <h3>Easy Management</h3>
+                    <p>Use a straightforward dashboard concept to keep network information easy to understand.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Choose Your Pond Plan</h2>
+
+            <div class="plan-grid">
+                <article class="plan">
+                    <h3>Puddle</h3>
+                    <p><strong>$9.99/month</strong></p>
+                    <p>For a small setup with basic connection monitoring.</p>
+                </article>
+
+                <article class="plan">
+                    <h3>Pond</h3>
+                    <p><strong>$19.99/month</strong></p>
+                    <p>For a larger setup with additional monitoring and alert features.</p>
+                </article>
+
+                <article class="plan">
+                    <h3>Lake</h3>
+                    <p><strong>$29.99/month</strong></p>
+                    <p>For a large fictional network requiring more detailed oversight.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2>Get Product Updates</h2>
+            <p>Enter your email to sign up for fictional Electro-Sense Router news.</p>
+
+            <form action="#" method="post">
+                <label for="product-email">Email Address</label>
+                <input type="email" id="product-email" name="email" autocomplete="email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <p><em>Note: The Electro-Sense Router, plans, and sign-up form are fictional examples for this website project.</em></p>
+    </main>
+
+    <footer>
+        <p><a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy; 2026</p>
+        <p><a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a></p>
+        <p>Designed by Shaan Patel</p>
+        <p><em>"Silly code, serious design."</em></p>
+    </footer>
+
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
