@@ -7,7 +7,7 @@
 
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
 
-    <!-- Favicon images -->
+    <!-- Favicon files -->
     <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
     <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
@@ -25,7 +25,7 @@
             --text: #2a2a3a;
         }
 
-        /* Classes group reusable card and layout styles. IDs can identify unique sections or form fields when needed. */
+        /* Classes provide reusable styling for the card grid, cards, images, and text. */
         body {
             margin: 0;
             background-color: var(--page-bg);
@@ -74,7 +74,7 @@
         nav a:hover,
         nav a:focus {
             background-color: var(--nav-text);
-            color: #ffffff; /* White navigation text contrasts with the dark-blue hover background. */
+            color: #ffffff; /* White text contrasts with the dark-blue navigation background. */
         }
 
         .intro-card {
@@ -110,7 +110,8 @@
             border-radius: 0.75rem;
         }
 
-        .agent-card h3 {
+        /* The agent-name class styles each article's heading without defining another h3 selector. */
+        .agent-name {
             margin: 0.5rem 0;
             font-size: 1.2rem;
         }
@@ -190,42 +191,42 @@
 
         <section class="card-grid" aria-label="Platypus agent trading cards">
             <article class="agent-card">
-                <h3>Agent P</h3>
+                <h3 class="agent-name">Agent P</h3>
                 <img class="agent-image" src="images/agent-p.png" alt="Agent P, a platypus agent wearing sunglasses">
                 <p class="agent-role">The Secret Agent</p>
                 <p class="agent-description">Stealth, strategy, and platypus-level confidence.</p>
             </article>
 
             <article class="agent-card">
-                <h3>Detective Platypus</h3>
+                <h3 class="agent-name">Detective Platypus</h3>
                 <img class="agent-image" src="images/detective-platypus.png" alt="Detective Platypus investigating clues with a magnifying glass">
                 <p class="agent-role">The Investigator</p>
                 <p class="agent-description">Finds the clues everyone else misses.</p>
             </article>
 
             <article class="agent-card">
-                <h3>Turbo Platypus</h3>
+                <h3 class="agent-name">Turbo Platypus</h3>
                 <img class="agent-image" src="images/turbo-platypus.png" alt="Turbo Platypus speeding through water">
                 <p class="agent-role">The Speedster</p>
                 <p class="agent-description">Moves fast and dives into every challenge.</p>
             </article>
 
             <article class="agent-card">
-                <h3>Wizard Platypus</h3>
+                <h3 class="agent-name">Wizard Platypus</h3>
                 <img class="agent-image" src="images/wizard-platypus.png" alt="Wizard Platypus wearing a magical purple robe and hat">
                 <p class="agent-role">The Spellcaster</p>
                 <p class="agent-description">Uses imagination and magic to solve problems.</p>
             </article>
 
             <article class="agent-card">
-                <h3>Super Platypus</h3>
+                <h3 class="agent-name">Super Platypus</h3>
                 <img class="agent-image" src="images/super-platypus.png" alt="Super Platypus wearing a red superhero cape">
                 <p class="agent-role">The Protector</p>
                 <p class="agent-description">Brings courage and strength to every mission.</p>
             </article>
 
             <article class="agent-card">
-                <h3>Explorer Platypus</h3>
+                <h3 class="agent-name">Explorer Platypus</h3>
                 <img class="agent-image" src="images/explorer-platypus.png" alt="Explorer Platypus carrying a backpack in the mountains">
                 <p class="agent-role">The Adventurer</p>
                 <p class="agent-description">Explores new places and discovers hidden wonders.</p>
