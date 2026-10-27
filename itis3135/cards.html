@@ -7,16 +7,18 @@
 
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
 
-    <!-- Favicon files -->
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="spate388/itis3135/images/favicon-16x16.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="spate388/itis3135/images/favicon-32x32.jpg">
+    <link rel="apple-touch-icon" href="spate388/itis3135/images/apple-touch-icon.jpg">
 
-    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Classes are used to reuse styles for the card grid, cards, images, and text. IDs are reserved for unique elements when needed. */
+        /* Classes organize reusable styles for the card grid, cards, images, and text. */
+        /* IDs should be used only for unique page elements. */
+
         body {
             margin: 0;
             background-color: #b8d8fb;
@@ -29,8 +31,9 @@
         main,
         footer {
             max-width: 1100px;
-            margin: 0 auto;
-            padding: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 16px;
         }
 
         header,
@@ -48,14 +51,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.5rem;
-            margin: 1rem 0;
+            gap: 8px;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
 
         nav a {
             display: inline-block;
-            padding: 0.5rem 0.8rem;
-            border-radius: 1rem;
+            padding: 8px 13px;
+            border-radius: 16px;
             background-color: #b8c8fa;
             color: #2e3f9c;
             text-decoration: none;
@@ -65,31 +69,32 @@
         nav a:hover,
         nav a:focus {
             background-color: #2e3f9c;
-            color: #ffffff; /* White text contrasts with the dark-blue navigation background. */
+            color: #ffffff;
         }
 
         .intro-card {
-            margin: 1rem 0;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            background-color: #ffffff; /* White cards contrast with the blue page background and improve readability. */
+            margin-top: 16px;
+            margin-bottom: 16px;
+            padding: 24px;
+            border-radius: 16px;
+            background-color: #ffffff;
             text-align: center;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
         }
 
         .card-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
+            gap: 16px;
         }
 
         .agent-card {
-            padding: 1rem;
+            padding: 16px;
             border: 2px solid #8b9bb8;
-            border-radius: 1rem;
-            background-color: #ffffff; /* White card backgrounds improve text readability. */
+            border-radius: 16px;
+            background-color: #ffffff;
             text-align: center;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
         }
 
         .agent-image {
@@ -97,13 +102,13 @@
             width: 100%;
             max-width: 250px;
             height: auto;
-            margin: 0 auto 0.75rem;
-            border-radius: 0.75rem;
+            margin: 0 auto 12px;
+            border-radius: 12px;
         }
 
-        /* The agent-name class styles card headings without adding a second h3 selector. */
         .agent-name {
-            margin: 0.5rem 0;
+            margin-top: 8px;
+            margin-bottom: 8px;
             font-size: 1.2rem;
         }
 
@@ -113,7 +118,7 @@
         }
 
         .agent-description {
-            margin-bottom: 0.25rem;
+            margin-bottom: 4px;
         }
 
         footer a {
@@ -121,7 +126,8 @@
         }
 
         footer p {
-            margin: 0.5rem 0;
+            margin-top: 8px;
+            margin-bottom: 8px;
         }
 
         @media screen and (max-width: 800px) {
@@ -134,7 +140,7 @@
             header,
             main,
             footer {
-                padding: 0.75rem;
+                padding: 12px;
             }
 
             .card-grid {
@@ -142,7 +148,7 @@
             }
 
             .agent-card {
-                padding: 0.75rem;
+                padding: 12px;
             }
         }
     </style>
@@ -164,71 +170,113 @@
             <a href="product.html">Product</a>
             <a href="introduction.html">Introduction</a>
             <a href="about.html">About</a>
-            <a href="website_evaluations.html">Website Evaluations</a>
+            <a href="website-evaluations.html">Website Evaluations</a>
         </nav>
 
         <nav aria-label="Additional navigation">
-            <a href="crappy.htm">Crappy Page</a>
-            <a href="hobby/index.html">Hobby Site</a>
+            <a href="My%20BAD%20pAgE.htm">My BAD pAgE</a>
+            <a href="hobby/index.html">Hobby Website</a>
         </nav>
     </header>
 
     <main>
         <section class="intro-card">
             <h2>Platypus Agent Trading Cards</h2>
-            <p>Meet the Silly Platypus agents! Each character has a unique personality, specialty, and mission.</p>
+            <p>
+                Meet a team of extraordinary platypus agents! Each agent has a unique
+                personality, special skills, and a mission to make every adventure memorable.
+            </p>
         </section>
 
-        <section class="card-grid" aria-label="Platypus agent trading cards">
+        <section class="card-grid" aria-label="Platypus agent cards">
             <article class="agent-card">
+                <img
+                    class="agent-image"
+                    src="spate388/itis3135/images/agent-p.png"
+                    alt="Agent P, a platypus secret agent">
                 <h3 class="agent-name">Agent P</h3>
-                <img class="agent-image" src="images/agent-p.png" alt="Agent P, a platypus agent wearing sunglasses">
-                <p class="agent-role">The Secret Agent</p>
-                <p class="agent-description">Stealth, strategy, and platypus-level confidence.</p>
+                <p class="agent-role">Secret Agent</p>
+                <p class="agent-description">
+                    A mysterious and resourceful agent who always finds a way to save the day.
+                </p>
             </article>
 
             <article class="agent-card">
+                <img
+                    class="agent-image"
+                    src="spate388/itis3135/images/detective-platypus.png"
+                    alt="Detective Platypus investigating a mystery">
                 <h3 class="agent-name">Detective Platypus</h3>
-                <img class="agent-image" src="images/detective-platypus.png" alt="Detective Platypus investigating clues with a magnifying glass">
-                <p class="agent-role">The Investigator</p>
-                <p class="agent-description">Finds the clues everyone else misses.</p>
+                <p class="agent-role">Master Detective</p>
+                <p class="agent-description">
+                    Uses sharp observation and clever reasoning to solve the toughest cases.
+                </p>
             </article>
 
             <article class="agent-card">
+                <img
+                    class="agent-image"
+                    src="spate388/itis3135/images/turbo-platypus.png"
+                    alt="Turbo Platypus speeding into action">
                 <h3 class="agent-name">Turbo Platypus</h3>
-                <img class="agent-image" src="images/turbo-platypus.png" alt="Turbo Platypus speeding through water">
-                <p class="agent-role">The Speedster</p>
-                <p class="agent-description">Moves fast and dives into every challenge.</p>
+                <p class="agent-role">Speed Specialist</p>
+                <p class="agent-description">
+                    Moves faster than anyone else and races into action when trouble strikes.
+                </p>
             </article>
 
             <article class="agent-card">
+                <img
+                    class="agent-image"
+                    src="spate388/itis3135/images/wizard-platypus.png"
+                    alt="Wizard Platypus using magical powers">
                 <h3 class="agent-name">Wizard Platypus</h3>
-                <img class="agent-image" src="images/wizard-platypus.png" alt="Wizard Platypus wearing a magical purple robe and hat">
-                <p class="agent-role">The Spellcaster</p>
-                <p class="agent-description">Uses imagination and magic to solve problems.</p>
+                <p class="agent-role">Master of Magic</p>
+                <p class="agent-description">
+                    Uses mysterious spells and magical knowledge to overcome unusual challenges.
+                </p>
             </article>
 
             <article class="agent-card">
+                <img
+                    class="agent-image"
+                    src="spate388/itis3135/images/super-platypus.png"
+                    alt="Super Platypus showing off superhero powers">
                 <h3 class="agent-name">Super Platypus</h3>
-                <img class="agent-image" src="images/super-platypus.png" alt="Super Platypus wearing a red superhero cape">
-                <p class="agent-role">The Protector</p>
-                <p class="agent-description">Brings courage and strength to every mission.</p>
+                <p class="agent-role">Heroic Protector</p>
+                <p class="agent-description">
+                    Protects the innocent with incredible strength, courage, and determination.
+                </p>
             </article>
 
             <article class="agent-card">
+                <img
+                    class="agent-image"
+                    src="spate388/itis3135/images/explorer-platypus.png"
+                    alt="Explorer Platypus ready for an adventure">
                 <h3 class="agent-name">Explorer Platypus</h3>
-                <img class="agent-image" src="images/explorer-platypus.png" alt="Explorer Platypus carrying a backpack in the mountains">
-                <p class="agent-role">The Adventurer</p>
-                <p class="agent-description">Explores new places and discovers hidden wonders.</p>
+                <p class="agent-role">Adventure Seeker</p>
+                <p class="agent-description">
+                    Travels to unfamiliar places and discovers secrets hidden around the world.
+                </p>
             </article>
         </section>
     </main>
 
     <footer>
-        <p>Page designed by <a href="shaanpateldesigns.html">Shaan Patel Designs</a></p>
-        <p>Certified in <a href="https://www.freecodecamp.org/certification/">Responsive Web Design by freeCodeCamp</a></p>
+        <p>
+            Page designed by
+            <a href="shaanpateldesigns.html">Shaan Patel Designs</a>
+        </p>
+
+        <p>
+            Certified in
+            <a href="https://www.freecodecamp.org/certification/">Responsive Web Design by freeCodeCamp</a>
+        </p>
+
         <p><em>"Small platypus. Big adventures."</em></p>
-        <p>Shaan Patel Designs ©2026</p>
+
+        <p>Shaan Patel Designs &copy; 2026</p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
