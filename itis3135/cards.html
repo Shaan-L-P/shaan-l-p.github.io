@@ -4,40 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel's Silly Platypus | Platypus Agent Trading Cards</title>
-    <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
+
+    <!-- Favicon images -->
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --page-bg: #b8d8fb;
-            --card-bg: #ffffff;
+            --card-bg: #ffffff; /* White cards contrast with the blue page background and improve readability. */
             --nav-bg: #b8c8fa;
             --nav-text: #2e3f9c;
             --heading: #2f6f9f;
             --text: #2a2a3a;
         }
 
-        /* Classes organize the reusable trading-card layout and individual card content. */
-        /* White cards contrast with the blue page background for readable card details. */
+        /* Classes group reusable card and layout styles. IDs can identify unique sections or form fields when needed. */
         body {
             margin: 0;
             background-color: var(--page-bg);
             color: var(--text);
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', 'Inter', sans-serif;
             line-height: 1.6;
         }
 
-        header, main, footer {
+        header,
+        main,
+        footer {
             max-width: 1100px;
             margin: 0 auto;
             padding: 1rem;
         }
 
-        header, footer {
+        header,
+        footer {
             text-align: center;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             color: var(--heading);
         }
 
@@ -50,6 +62,7 @@
         }
 
         nav a {
+            display: inline-block;
             padding: 0.5rem 0.8rem;
             border-radius: 1rem;
             background-color: var(--nav-bg);
@@ -58,9 +71,10 @@
             font-weight: 600;
         }
 
-        nav a:hover, nav a:focus {
+        nav a:hover,
+        nav a:focus {
             background-color: var(--nav-text);
-            color: #ffffff; /* White link text contrasts with the dark-blue hover background. */
+            color: #ffffff; /* White navigation text contrasts with the dark-blue hover background. */
         }
 
         .intro-card {
@@ -88,26 +102,34 @@
         }
 
         .agent-image {
+            display: block;
             width: 100%;
-            max-width: 240px;
+            max-width: 250px;
             height: auto;
+            margin: 0 auto 0.75rem;
             border-radius: 0.75rem;
         }
 
-        .agent-name {
-            margin-bottom: 0.25rem;
-            color: var(--heading);
+        .agent-card h3 {
+            margin: 0.5rem 0;
             font-size: 1.2rem;
-            font-weight: 700;
         }
 
         .agent-role {
             margin-top: 0;
-            font-weight: 600;
+            font-weight: 700;
+        }
+
+        .agent-description {
+            margin-bottom: 0.25rem;
         }
 
         footer a {
             color: var(--nav-text);
+        }
+
+        footer p {
+            margin: 0.5rem 0;
         }
 
         @media (max-width: 800px) {
@@ -117,6 +139,12 @@
         }
 
         @media (max-width: 520px) {
+            header,
+            main,
+            footer {
+                padding: 0.75rem;
+            }
+
             .card-grid {
                 grid-template-columns: 1fr;
             }
@@ -126,11 +154,14 @@
             }
         }
     </style>
+
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
+
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="contract.html">Contract</a>
@@ -143,8 +174,10 @@
             <a href="about.html">About</a>
             <a href="website_evaluations.html">Website Evaluations</a>
         </nav>
+
         <nav aria-label="Additional navigation">
-            <a href="crappy.htm">Crappy Page</a>
+            <!-- Update this destination if your poorly designed page uses a different filename. -->
+            <a href="crappy.html">Crappy Page</a>
             <a href="hobby/index.html">Hobby Site</a>
         </nav>
     </header>
@@ -152,58 +185,58 @@
     <main>
         <section class="intro-card">
             <h2>Platypus Agent Trading Cards</h2>
-            <p>Meet the members of the Silly Platypus team. Each agent brings a different skill to the pond.</p>
+            <p>Meet the Silly Platypus agents! Each character has a unique personality, specialty, and mission.</p>
         </section>
 
-        <section class="card-grid" aria-label="Platypus agent cards">
+        <section class="card-grid" aria-label="Platypus agent trading cards">
             <article class="agent-card">
-                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Ripple">
-                <p class="agent-name">Agent Ripple</p>
+                <h3>Agent P</h3>
+                <img class="agent-image" src="images/agent-p.png" alt="Agent P, a platypus agent wearing sunglasses">
+                <p class="agent-role">The Secret Agent</p>
+                <p class="agent-description">Stealth, strategy, and platypus-level confidence.</p>
+            </article>
+
+            <article class="agent-card">
+                <h3>Detective Platypus</h3>
+                <img class="agent-image" src="images/detective-platypus.png" alt="Detective Platypus investigating clues with a magnifying glass">
                 <p class="agent-role">The Investigator</p>
-                <p>Notices the smallest details and uncovers hidden clues.</p>
+                <p class="agent-description">Finds the clues everyone else misses.</p>
             </article>
 
             <article class="agent-card">
-                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Current">
-                <p class="agent-name">Agent Current</p>
-                <p class="agent-role">The Strategist</p>
-                <p>Creates plans and keeps every mission moving forward.</p>
+                <h3>Turbo Platypus</h3>
+                <img class="agent-image" src="images/turbo-platypus.png" alt="Turbo Platypus speeding through water">
+                <p class="agent-role">The Speedster</p>
+                <p class="agent-description">Moves fast and dives into every challenge.</p>
             </article>
 
             <article class="agent-card">
-                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Pebble">
-                <p class="agent-name">Agent Pebble</p>
-                <p class="agent-role">The Defender</p>
-                <p>Protects the team and keeps the pond safe.</p>
+                <h3>Wizard Platypus</h3>
+                <img class="agent-image" src="images/wizard-platypus.png" alt="Wizard Platypus wearing a magical purple robe and hat">
+                <p class="agent-role">The Spellcaster</p>
+                <p class="agent-description">Uses imagination and magic to solve problems.</p>
             </article>
 
             <article class="agent-card">
-                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Drift">
-                <p class="agent-name">Agent Drift</p>
-                <p class="agent-role">The Scout</p>
-                <p>Explores unfamiliar places and reports back to the team.</p>
+                <h3>Super Platypus</h3>
+                <img class="agent-image" src="images/super-platypus.png" alt="Super Platypus wearing a red superhero cape">
+                <p class="agent-role">The Protector</p>
+                <p class="agent-description">Brings courage and strength to every mission.</p>
             </article>
 
             <article class="agent-card">
-                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Splash">
-                <p class="agent-name">Agent Splash</p>
-                <p class="agent-role">The Specialist</p>
-                <p>Finds creative solutions when a mission gets complicated.</p>
-            </article>
-
-            <article class="agent-card">
-                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Marsh">
-                <p class="agent-name">Agent Marsh</p>
-                <p class="agent-role">The Technician</p>
-                <p>Keeps the team's equipment ready for the next assignment.</p>
+                <h3>Explorer Platypus</h3>
+                <img class="agent-image" src="images/explorer-platypus.png" alt="Explorer Platypus carrying a backpack in the mountains">
+                <p class="agent-role">The Adventurer</p>
+                <p class="agent-description">Explores new places and discovers hidden wonders.</p>
             </article>
         </section>
     </main>
 
     <footer>
         <p>Page designed by <a href="shaanpateldesigns.html">Shaan Patel Designs</a></p>
-        <p><a href="https://www.freecodecamp.org/certification/">freeCodeCamp Responsive Web Design Certification</a></p>
-        <p>Silly code, serious design.</p>
+        <p>Certified in <a href="https://www.freecodecamp.org/certification/">Responsive Web Design by freeCodeCamp</a></p>
+        <p><em>"Small platypus. Big adventures."</em></p>
         <p>Shaan Patel Designs ©2026</p>
     </footer>
 
