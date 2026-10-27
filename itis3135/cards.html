@@ -7,175 +7,127 @@
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
 
     <link rel="icon" type="image/jpeg" href="images/favicon-32x32.jpg">
-    <link rel="icon" type="image/jpeg" href="images/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-color: #2f6f9f;
-            --secondary-color: #b8d8fb;
-            --accent-color: #b8c8fa;
-            --text-color: #263238;
-            --card-background: #ffffff;
-            --page-background: #eef5fc;
-            --border-color: #c5d9ec;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            margin: 0 auto;
             max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: var(--page-background);
-            color: var(--text-color);
+            background-color: #eef5fc;
+            color: #263238;
             font-family: "Inter", sans-serif;
             line-height: 1.6;
         }
 
         header {
-            text-align: center;
-            padding: 25px 15px;
-            background-color: var(--secondary-color);
-            border-radius: 16px;
+            background-color: #b8d8fb;
+            padding: 20px;
             margin-bottom: 20px;
+            text-align: center;
+            border-radius: 10px;
         }
 
         h1 {
-            margin: 0 0 10px;
-            color: var(--primary-color);
+            color: #2f6f9f;
             font-family: "Montserrat", sans-serif;
-            font-size: 2.2rem;
-        }
-
-        header p {
-            margin: 0;
         }
 
         nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0 30px;
+            margin: 20px 0;
+            text-align: center;
         }
 
         nav a {
             display: inline-block;
-            padding: 9px 16px;
-            border-radius: 24px;
-            background-color: var(--accent-color);
+            margin: 5px;
+            padding: 8px 12px;
+            background-color: #b8c8fa;
             color: #2e3f9c;
             text-decoration: none;
-            font-weight: 600;
+            border-radius: 5px;
         }
 
         nav a:visited {
             color: #2e3f9c;
         }
 
-        nav a:hover,
-        nav a:focus {
-            background-color: var(--primary-color);
+        nav a:hover {
+            background-color: #2f6f9f;
             color: #ffffff;
-            text-decoration: underline;
         }
 
         main {
-            margin: 0 auto;
             max-width: 1100px;
+            margin: 0 auto;
         }
 
         h2 {
-            margin-bottom: 10px;
-            color: var(--primary-color);
+            color: #2f6f9f;
             font-family: "Montserrat", sans-serif;
             text-align: center;
         }
 
         .intro {
-            margin: 0 auto 25px;
             max-width: 800px;
+            margin: 0 auto 25px;
             text-align: center;
         }
 
         .card-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 24px;
-            margin: 25px 0;
+            text-align: center;
         }
 
         .trading-card {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background-color: var(--card-background);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            box-shadow: 0 4px 10px rgba(35, 65, 95, 0.12);
+            display: inline-block;
+            vertical-align: top;
+            width: 29%;
+            margin: 1%;
+            background-color: #ffffff;
+            border: 1px solid #c5d9ec;
+            border-radius: 10px;
+            text-align: left;
         }
 
         .trading-card img {
             display: block;
-            width: 100%;
-            height: 250px;
+            width: 90%;
+            height: 220px;
+            margin: 10px auto;
             object-fit: contain;
-            padding: 12px;
-            background-color: #ffffff; /* White background helps the card images stand out. */
+            background-color: #ffffff; /* White helps the images stand out. */
         }
 
         .card-content {
-            flex: 1;
-            padding: 18px;
+            padding: 15px;
         }
 
         h3 {
-            margin: 0 0 10px;
-            color: var(--primary-color);
+            color: #2f6f9f;
             font-family: "Montserrat", sans-serif;
-            font-size: 1.25rem;
-        }
-
-        .card-content p {
-            margin: 0 0 12px;
-        }
-
-        .card-content p:last-child {
-            margin-bottom: 0;
         }
 
         .card-label {
-            font-weight: 700;
+            font-weight: bold;
         }
 
         footer {
-            margin-top: 35px;
+            margin-top: 30px;
             padding: 20px;
-            border-top: 2px solid var(--border-color);
+            border-top: 2px solid #c5d9ec;
             text-align: center;
         }
 
-        footer p {
-            margin: 8px 0;
-        }
-
         footer a {
-            color: var(--primary-color);
+            color: #2f6f9f;
         }
 
         footer a:visited {
-            color: var(--primary-color);
+            color: #2f6f9f;
         }
 
-        footer a:hover,
-        footer a:focus {
+        footer a:hover {
             color: #17466b;
         }
 
@@ -183,40 +135,25 @@
             font-style: italic;
         }
 
-        @media (max-width: 800px) {
-            .card-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            h1 {
-                font-size: 1.9rem;
+        @media screen and (max-width: 800px) {
+            .trading-card {
+                width: 44%;
             }
         }
 
-        @media (max-width: 520px) {
+        @media screen and (max-width: 550px) {
             body {
-                padding: 12px;
+                padding: 10px;
             }
 
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                flex-direction: column;
-                align-items: stretch;
+            .trading-card {
+                display: block;
+                width: 95%;
+                margin: 15px auto;
             }
 
             nav a {
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 1.6rem;
-            }
-
-            .trading-card img {
-                height: 230px;
+                margin: 3px;
             }
         }
     </style>
@@ -250,7 +187,7 @@
         </p>
 
         <div class="card-grid">
-            <article class="trading-card">
+            <div class="trading-card">
                 <img src="spate338/itis3135/images/agent-p.png" alt="Agent P, a platypus secret agent">
                 <div class="card-content">
                     <h3>Agent P</h3>
@@ -258,9 +195,9 @@
                     <p><span class="card-label">Special Ability:</span> Stealth and undercover operations</p>
                     <p>Cool, calm, and mysterious, Agent P is always ready to stop a villain's plan without revealing his identity.</p>
                 </div>
-            </article>
+            </div>
 
-            <article class="trading-card">
+            <div class="trading-card">
                 <img src="spate338/itis3135/images/detective-platypus.png" alt="Detective Platypus investigating a mystery">
                 <div class="card-content">
                     <h3>Detective Platypus</h3>
@@ -268,9 +205,9 @@
                     <p><span class="card-label">Special Ability:</span> Observation and deduction</p>
                     <p>With a sharp eye for detail, Detective Platypus solves difficult mysteries and uncovers clues that others overlook.</p>
                 </div>
-            </article>
+            </div>
 
-            <article class="trading-card">
+            <div class="trading-card">
                 <img src="spate338/itis3135/images/turbo-platypus.png" alt="Turbo Platypus speeding into action">
                 <div class="card-content">
                     <h3>Turbo Platypus</h3>
@@ -278,9 +215,9 @@
                     <p><span class="card-label">Special Ability:</span> Super speed and quick reactions</p>
                     <p>Turbo Platypus moves faster than anyone else and can reach a destination in the blink of an eye.</p>
                 </div>
-            </article>
+            </div>
 
-            <article class="trading-card">
+            <div class="trading-card">
                 <img src="spate338/itis3135/images/wizard-platypus.png" alt="Wizard Platypus using magical powers">
                 <div class="card-content">
                     <h3>Wizard Platypus</h3>
@@ -288,9 +225,9 @@
                     <p><span class="card-label">Special Ability:</span> Spells and enchantments</p>
                     <p>Wizard Platypus uses magical knowledge to protect friends, solve problems, and overcome supernatural threats.</p>
                 </div>
-            </article>
+            </div>
 
-            <article class="trading-card">
+            <div class="trading-card">
                 <img src="spate338/itis3135/images/super-platypus.png" alt="Super Platypus showing off superhero powers">
                 <div class="card-content">
                     <h3>Super Platypus</h3>
@@ -298,9 +235,9 @@
                     <p><span class="card-label">Special Ability:</span> Super strength and heroic courage</p>
                     <p>Super Platypus stands up for others and uses incredible strength to protect the city from danger.</p>
                 </div>
-            </article>
+            </div>
 
-            <article class="trading-card">
+            <div class="trading-card">
                 <img src="spate338/itis3135/images/explorer-platypus.png" alt="Explorer Platypus ready for an adventure">
                 <div class="card-content">
                     <h3>Explorer Platypus</h3>
@@ -308,7 +245,7 @@
                     <p><span class="card-label">Special Ability:</span> Navigation and survival</p>
                     <p>Explorer Platypus loves discovering new places, exploring unfamiliar environments, and finding hidden treasures.</p>
                 </div>
-            </article>
+            </div>
         </div>
     </main>
 
