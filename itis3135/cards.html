@@ -3,76 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
 
-    <link rel="icon" type="image/jpeg" href="images/favicon-32x32.jpg">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
     <style>
         body {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #eef5fc;
+            background-color: #b8d8fb;
             color: #263238;
-            font-family: "Inter", sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
         }
 
         header {
-            background-color: #b8d8fb;
-            padding: 20px;
-            margin-bottom: 20px;
+            background-color: #b8c8fa;
+            padding: 15px;
             text-align: center;
-            border-radius: 10px;
+            border: 2px solid #2f6f9f;
         }
 
-        h1 {
+        h1, h2, h3 {
             color: #2f6f9f;
-            font-family: "Montserrat", sans-serif;
         }
 
         nav {
-            margin: 20px 0;
+            background-color: #b8c8fa;
+            padding: 12px;
             text-align: center;
+            margin-top: 10px;
+            border: 1px solid #2f6f9f;
         }
 
         nav a {
-            display: inline-block;
-            margin: 5px;
-            padding: 8px 12px;
-            background-color: #b8c8fa;
             color: #2e3f9c;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        nav a:visited {
-            color: #2e3f9c;
-        }
-
-        nav a:hover {
-            background-color: #2f6f9f;
-            color: #ffffff;
+            font-weight: bold;
+            margin: 0 8px;
         }
 
         main {
-            max-width: 1100px;
-            margin: 0 auto;
+            padding: 20px 0;
         }
 
         h2 {
-            color: #2f6f9f;
-            font-family: "Montserrat", sans-serif;
             text-align: center;
         }
 
         .intro {
-            max-width: 800px;
-            margin: 0 auto 25px;
             text-align: center;
+            margin-bottom: 25px;
         }
 
         .card-grid {
@@ -82,53 +63,42 @@
         .trading-card {
             display: inline-block;
             vertical-align: top;
-            width: 29%;
+            width: 28%;
             margin: 1%;
-            background-color: #ffffff;
-            border: 1px solid #c5d9ec;
-            border-radius: 10px;
-            text-align: left;
+            padding: 10px;
+            background-color: #ffffff; /* White background helps the images stand out. */
+            border: 2px solid #2f6f9f;
+            text-align: center;
         }
 
         .trading-card img {
-            display: block;
-            width: 90%;
-            height: 220px;
-            margin: 10px auto;
-            object-fit: contain;
-            background-color: #ffffff; /* White helps the images stand out. */
+            width: 95%;
+            height: 200px;
         }
 
         .card-content {
-            padding: 15px;
+            padding: 5px;
         }
 
-        h3 {
-            color: #2f6f9f;
-            font-family: "Montserrat", sans-serif;
+        .trading-card h3 {
+            margin-bottom: 5px;
         }
 
         .card-label {
+            color: #2e3f9c;
             font-weight: bold;
         }
 
         footer {
-            margin-top: 30px;
-            padding: 20px;
-            border-top: 2px solid #c5d9ec;
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #b8c8fa;
+            border: 1px solid #2f6f9f;
             text-align: center;
         }
 
         footer a {
-            color: #2f6f9f;
-        }
-
-        footer a:visited {
-            color: #2f6f9f;
-        }
-
-        footer a:hover {
-            color: #17466b;
+            color: #2e3f9c;
         }
 
         .tagline {
@@ -137,34 +107,27 @@
 
         @media screen and (max-width: 800px) {
             .trading-card {
-                width: 44%;
+                width: 42%;
             }
         }
 
         @media screen and (max-width: 550px) {
-            body {
-                padding: 10px;
-            }
-
             .trading-card {
-                display: block;
-                width: 95%;
-                margin: 15px auto;
+                width: 90%;
+                margin: 10px 0;
             }
 
             nav a {
-                margin: 3px;
+                display: block;
+                margin: 8px;
             }
         }
     </style>
-
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-        <p>Welcome to the world of platypus agents!</p>
     </header>
 
     <nav aria-label="Main navigation">
@@ -181,71 +144,71 @@
         <h2>Platypus Agent Trading Cards</h2>
 
         <p class="intro">
-            Meet the extraordinary platypus agents! Each character has unique
-            abilities, a distinct personality, and a special role. Explore the
-            collection and discover what makes each platypus special.
+            Welcome to the Platypus Agent Trading Card Collection! Meet a team
+            of unique platypus characters, each with special abilities,
+            personalities, and skills.
         </p>
 
         <div class="card-grid">
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/agent-p.png" alt="Agent P, a platypus secret agent">
+            <section class="trading-card">
+                <img src="images/agent-p.png" alt="Agent P, the secret agent platypus">
                 <div class="card-content">
                     <h3>Agent P</h3>
-                    <p><span class="card-label">Role:</span> Secret Agent</p>
-                    <p><span class="card-label">Special Ability:</span> Stealth and undercover operations</p>
-                    <p>Cool, calm, and mysterious, Agent P is always ready to stop a villain's plan without revealing his identity.</p>
+                    <p class="card-label">Role: Secret Agent</p>
+                    <p>Uses clever disguises and quick thinking to stop villains.</p>
+                    <p><strong>Special Skill:</strong> Stealth and espionage</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/detective-platypus.png" alt="Detective Platypus investigating a mystery">
+            <section class="trading-card">
+                <img src="images/detective-platypus.png" alt="Detective Platypus investigating a mystery">
                 <div class="card-content">
                     <h3>Detective Platypus</h3>
-                    <p><span class="card-label">Role:</span> Investigator</p>
-                    <p><span class="card-label">Special Ability:</span> Observation and deduction</p>
-                    <p>With a sharp eye for detail, Detective Platypus solves difficult mysteries and uncovers clues that others overlook.</p>
+                    <p class="card-label">Role: Investigator</p>
+                    <p>Finds clues and solves mysteries that stump everyone else.</p>
+                    <p><strong>Special Skill:</strong> Deduction</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/turbo-platypus.png" alt="Turbo Platypus speeding into action">
+            <section class="trading-card">
+                <img src="images/turbo-platypus.png" alt="Turbo Platypus moving at high speed">
                 <div class="card-content">
                     <h3>Turbo Platypus</h3>
-                    <p><span class="card-label">Role:</span> Speed Specialist</p>
-                    <p><span class="card-label">Special Ability:</span> Super speed and quick reactions</p>
-                    <p>Turbo Platypus moves faster than anyone else and can reach a destination in the blink of an eye.</p>
+                    <p class="card-label">Role: Speed Specialist</p>
+                    <p>Moves quickly to reach places before trouble can begin.</p>
+                    <p><strong>Special Skill:</strong> Super speed</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/wizard-platypus.png" alt="Wizard Platypus using magical powers">
+            <section class="trading-card">
+                <img src="images/wizard-platypus.png" alt="Wizard Platypus using magical powers">
                 <div class="card-content">
                     <h3>Wizard Platypus</h3>
-                    <p><span class="card-label">Role:</span> Magical Specialist</p>
-                    <p><span class="card-label">Special Ability:</span> Spells and enchantments</p>
-                    <p>Wizard Platypus uses magical knowledge to protect friends, solve problems, and overcome supernatural threats.</p>
+                    <p class="card-label">Role: Magical Expert</p>
+                    <p>Uses powerful spells to help the team overcome challenges.</p>
+                    <p><strong>Special Skill:</strong> Spellcasting</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/super-platypus.png" alt="Super Platypus showing off superhero powers">
+            <section class="trading-card">
+                <img src="images/super-platypus.png" alt="Super Platypus ready to protect the city">
                 <div class="card-content">
                     <h3>Super Platypus</h3>
-                    <p><span class="card-label">Role:</span> Superhero</p>
-                    <p><span class="card-label">Special Ability:</span> Super strength and heroic courage</p>
-                    <p>Super Platypus stands up for others and uses incredible strength to protect the city from danger.</p>
+                    <p class="card-label">Role: Hero</p>
+                    <p>Protects the city and helps anyone who needs assistance.</p>
+                    <p><strong>Special Skill:</strong> Super strength</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/explorer-platypus.png" alt="Explorer Platypus ready for an adventure">
+            <section class="trading-card">
+                <img src="images/explorer-platypus.png" alt="Explorer Platypus ready for an adventure">
                 <div class="card-content">
                     <h3>Explorer Platypus</h3>
-                    <p><span class="card-label">Role:</span> Adventurer</p>
-                    <p><span class="card-label">Special Ability:</span> Navigation and survival</p>
-                    <p>Explorer Platypus loves discovering new places, exploring unfamiliar environments, and finding hidden treasures.</p>
+                    <p class="card-label">Role: Adventurer</p>
+                    <p>Explores unfamiliar places and discovers hidden secrets.</p>
+                    <p><strong>Special Skill:</strong> Navigation and survival</p>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
@@ -261,5 +224,7 @@
         </p>
         <p class="tagline">Curiosity, creativity, and platypus-powered adventures!</p>
     </footer>
+
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
