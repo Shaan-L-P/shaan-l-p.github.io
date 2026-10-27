@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +6,17 @@
 
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
 
-    <!-- The favicon images belong to the site's images directory. -->
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="spate338/itis3135/images/favicon-16x16.jpg">
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="spate338/itis3135/images/favicon-32x32.jpg">
-    <link rel="apple-touch-icon" href="spate338/itis3135/images/apple-touch-icon.jpg">
+    <!-- Favicon files are stored in the course website's images directory. -->
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/spate338/itis3135/images/apple-touch-icon.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Classes are avoided where possible. The card layout uses semantic article elements. */
+        /* Semantic HTML elements are used instead of classes and IDs to keep the page simple. */
 
         body {
             max-width: 1100px;
@@ -34,10 +33,16 @@
             text-align: center;
         }
 
+        /* Shared heading styles keep heading colors consistent across the page. */
         h1,
         h2,
         h3 {
             color: #2f6f9f;
+        }
+
+        h3 {
+            margin: 8px 0;
+            font-size: 1.2rem;
         }
 
         nav {
@@ -65,7 +70,7 @@
         nav a:hover,
         nav a:focus {
             background-color: #2e3f9c;
-            /* White text is used for contrast on the dark-blue navigation background. */
+            /* White text provides contrast against the dark-blue navigation background. */
             color: #ffffff;
         }
 
@@ -73,7 +78,7 @@
             margin: 16px 0;
             padding: 24px;
             border-radius: 16px;
-            /* White is used for the introductory panel to separate it from the blue page background. */
+            /* White separates the introductory panel from the blue page background. */
             background-color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
@@ -89,7 +94,7 @@
             padding: 16px;
             border: 2px solid #8b9bb8;
             border-radius: 16px;
-            /* White is used for card backgrounds to keep the text and images easy to read. */
+            /* White card backgrounds improve readability and distinguish each card. */
             background-color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
@@ -102,11 +107,6 @@
             height: auto;
             margin: 0 auto 12px;
             border-radius: 12px;
-        }
-
-        article h3 {
-            margin: 8px 0;
-            font-size: 1.2rem;
         }
 
         article p:first-of-type {
@@ -139,7 +139,7 @@
         }
     </style>
 
-    <!-- Accumulus script remains last in the head. -->
+    <!-- Accumulus is the last script in the head, as required. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -157,11 +157,11 @@
             <a href="product.html">Product</a>
             <a href="introduction.html">Introduction</a>
             <a href="about.html">About</a>
-            <a href="website-evaluations.htm">Website Evaluations</a>
+            <a href="website-evaluations.html">Website Evaluations</a>
         </nav>
 
         <nav aria-label="Additional navigation">
-            <a href="my-bad-page.htm">My Bad Page</a>
+            <a href="my-bad-page.html">My Bad Page</a>
             <a href="hobby/index.html">Hobby Website</a>
         </nav>
     </header>
@@ -177,42 +177,48 @@
 
         <section aria-label="Platypus agent trading cards">
             <article>
-                <img src="spate338/itis3135/images/agent-p.png" alt="Agent P, a platypus secret agent">
+                <img src="spate338/itis3135/images/agent-p.png"
+                     alt="Agent P, a platypus secret agent">
                 <h3>Agent P</h3>
                 <p>Secret Agent</p>
                 <p>A mysterious and resourceful agent who always finds a way to save the day.</p>
             </article>
 
             <article>
-                <img src="spate338/itis3135/images/detective-platypus.png" alt="Detective Platypus investigating a mystery">
+                <img src="spate338/itis3135/images/detective-platypus.png"
+                     alt="Detective Platypus investigating a mystery">
                 <h3>Detective Platypus</h3>
                 <p>Master Detective</p>
                 <p>Uses sharp observation and clever reasoning to solve the toughest cases.</p>
             </article>
 
             <article>
-                <img src="spate338/itis3135/images/turbo-platypus.png" alt="Turbo Platypus speeding into action">
+                <img src="spate338/itis3135/images/turbo-platypus.png"
+                     alt="Turbo Platypus speeding into action">
                 <h3>Turbo Platypus</h3>
                 <p>Speed Specialist</p>
                 <p>Moves faster than anyone else and races into action when trouble strikes.</p>
             </article>
 
             <article>
-                <img src="spate338/itis3135/images/wizard-platypus.png" alt="Wizard Platypus using magical powers">
+                <img src="spate338/itis3135/images/wizard-platypus.png"
+                     alt="Wizard Platypus using magical powers">
                 <h3>Wizard Platypus</h3>
                 <p>Master of Magic</p>
                 <p>Uses mysterious spells and magical knowledge to overcome unusual challenges.</p>
             </article>
 
             <article>
-                <img src="spate338/itis3135/images/super-platypus.png" alt="Super Platypus showing off superhero powers">
+                <img src="spate338/itis3135/images/super-platypus.png"
+                     alt="Super Platypus showing off superhero powers">
                 <h3>Super Platypus</h3>
                 <p>Heroic Protector</p>
                 <p>Protects the innocent with incredible strength, courage, and determination.</p>
             </article>
 
             <article>
-                <img src="spate338/itis3135/images/explorer-platypus.png" alt="Explorer Platypus ready for an adventure">
+                <img src="spate338/itis3135/images/explorer-platypus.png"
+                     alt="Explorer Platypus ready for an adventure">
                 <h3>Explorer Platypus</h3>
                 <p>Adventure Seeker</p>
                 <p>Travels to unfamiliar places and discovers secrets hidden around the world.</p>
@@ -222,7 +228,10 @@
 
     <footer>
         <p>Page designed by <a href="shaanpateldesigns.html">Shaan Patel Designs</a></p>
-        <p>Certified in <a href="https://www.freecodecamp.org/certification/">Responsive Web Design by freeCodeCamp</a></p>
+        <p>
+            Certified in
+            <a href="https://www.freecodecamp.org/certification/">Responsive Web Design by freeCodeCamp</a>
+        </p>
         <p><em>"Small platypus. Big adventures."</em></p>
         <p>Shaan Patel Designs ©2026</p>
     </footer>
