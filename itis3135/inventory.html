@@ -4,27 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel's Silly Platypus | ITIS3135 | Inventory</title>
-    <link rel="icon" href="images/favicon-32x32.jpg">
+    <title>Shaan Patel's Silly Platypus | Pond Provisions Inventory</title>
+    <link rel="icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --background: #b8d8fb;
-            --heading: #b8c8fa;
-            --primary: #2e3f9c;
-            --accent: #2f6f9f;
+            --page-bg: #b8d8fb;
+            --card-bg: #ffffff;
+            --nav-bg: #b8c8fa;
+            --nav-text: #2e3f9c;
+            --heading: #2f6f9f;
             --text: #2a2a3a;
-            --panel: #e6f0fd;
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
+        /* Classes style reusable sections; IDs identify specific page elements. */
+        /* White content cards stand out against the blue page background. */
         body {
             margin: 0;
-            padding: 0 1rem;
-            background: var(--background);
+            background-color: var(--page-bg);
             color: var(--text);
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
@@ -32,10 +29,8 @@
 
         header, main, footer {
             max-width: 1000px;
-            margin: 1.5rem auto;
-            background: var(--panel);
-            padding: 1.5rem;
-            border-radius: 12px;
+            margin: 0 auto;
+            padding: 1rem;
         }
 
         header, footer {
@@ -43,82 +38,85 @@
         }
 
         h1, h2, h3 {
-            color: var(--primary);
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-
-        a {
-            color: var(--primary);
-        }
-
-        a:hover, a:focus {
-            color: var(--accent);
+            color: var(--heading);
         }
 
         nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
             margin: 1rem 0;
         }
 
         nav a {
-            display: inline-block;
-            margin: 0.25rem;
-            padding: 0.35rem 0.6rem;
-            border-radius: 20px;
-            background: var(--heading);
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 0.5rem 0.8rem;
+            border-radius: 1rem;
+            background-color: var(--nav-bg);
+            color: var(--nav-text);
             text-decoration: none;
+            font-weight: 600;
         }
 
         nav a:hover, nav a:focus {
-            text-decoration: underline;
+            background-color: var(--nav-text);
+            color: #ffffff; /* White text contrasts with the dark-blue navigation background. */
         }
 
-        .table-wrap {
-            overflow-x: auto;
+        .content-card {
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background-color: var(--card-bg);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .page-image {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            margin: 1rem auto;
+            border-radius: 0.75rem;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
+            margin: 1rem 0;
         }
 
         th, td {
-            border: 1px solid #9aafd0;
-            padding: 0.7rem;
+            border: 1px solid #8b9bb8;
+            padding: 0.75rem;
             text-align: left;
         }
 
         th {
-            background: var(--heading);
-            color: var(--primary);
+            background-color: var(--nav-bg);
+            color: var(--nav-text);
         }
 
-        .low-stock {
-            font-weight: 700;
-            color: #8a2c2c;
+        tbody tr:nth-child(even) {
+            background-color: #e6f0fd;
         }
 
-        footer p {
-            margin: 0.4rem;
+        footer a {
+            color: var(--nav-text);
         }
 
         @media (max-width: 600px) {
-            body {
-                padding: 0 0.4rem;
+            header, main, footer {
+                padding: 0.75rem;
             }
 
-            header, main, footer {
+            .content-card {
                 padding: 1rem;
             }
 
-            nav a {
-                font-size: 0.8rem;
+            th, td {
+                padding: 0.45rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -127,8 +125,7 @@
 <body>
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-
-        <nav class="main-nav" aria-label="Main navigation">
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="contract.html">Contract</a>
             <a href="survey.html">Survey</a>
@@ -140,84 +137,66 @@
             <a href="about.html">About</a>
             <a href="website_evaluations.html">Website Evaluations</a>
         </nav>
-
-        <nav aria-label="Additional project navigation">
-            <a href="crappy.htm">CRAPpy Page</a> |
+        <nav aria-label="Additional navigation">
+            <a href="crappy.htm">Crappy Page</a>
             <a href="hobby/index.html">Hobby Site</a>
         </nav>
     </header>
 
     <main>
-        <h2>Pond Provisions Inventory</h2>
-        <p>Check the current stock of supplies used by the Silly Platypus Pond Patrol.</p>
+        <section class="content-card">
+            <h2>Pond Provisions Inventory</h2>
+            <p>Welcome to the Silly Platypus inventory. Review our supplies and current stock below.</p>
+            <img class="page-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus logo">
+        </section>
 
-        <div class="table-wrap">
+        <section class="content-card">
+            <h3>Current Stock</h3>
             <table>
-                <caption>Fictional Pond Patrol supply inventory</caption>
+                <caption>Available Pond Provisions</caption>
                 <thead>
                     <tr>
                         <th scope="col">Item</th>
                         <th scope="col">Category</th>
                         <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Stock Status</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Practice Lock Set</td>
-                        <td>Training</td>
-                        <td>4</td>
-                        <td>$19.99</td>
-                        <td class="low-stock">Low stock</td>
-                    </tr>
-                    <tr>
-                        <td>Pond Sonar Scanner</td>
-                        <td>Network tools</td>
-                        <td>3</td>
-                        <td>$49.99</td>
-                        <td class="low-stock">Low stock</td>
-                    </tr>
-                    <tr>
-                        <td>Security Field Notebook</td>
-                        <td>Stationery</td>
-                        <td>28</td>
-                        <td>$5.99</td>
-                        <td>In stock</td>
-                    </tr>
-                    <tr>
-                        <td>Waterproof Patrol Pack</td>
+                        <td>Platypus Field Notebook</td>
                         <td>Equipment</td>
-                        <td>15</td>
-                        <td>$24.99</td>
-                        <td>In stock</td>
+                        <td>24</td>
+                        <td>In Stock</td>
                     </tr>
                     <tr>
-                        <td>Encrypted Egg Case</td>
-                        <td>Secure storage</td>
+                        <td>Waterproof Satchel</td>
+                        <td>Storage</td>
                         <td>12</td>
-                        <td>$14.99</td>
-                        <td>In stock</td>
+                        <td>In Stock</td>
                     </tr>
                     <tr>
-                        <td>Electro-Sense Router</td>
-                        <td>Networking</td>
-                        <td>10</td>
-                        <td>$89.99</td>
-                        <td>In stock</td>
+                        <td>Pond Patrol Badge</td>
+                        <td>Accessories</td>
+                        <td>38</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>Emergency Snack Kit</td>
+                        <td>Supplies</td>
+                        <td>4</td>
+                        <td>Low Stock</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-
-        <p>Items marked as low stock should be reordered soon to keep the Pond Patrol ready for its next mission.</p>
+        </section>
     </main>
 
     <footer>
-        <p><a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy; 2026</p>
-        <p><a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a></p>
-        <p>Designed by Shaan Patel</p>
-        <p><em>"Silly code, serious design."</em></p>
+        <p>Page designed by <a href="shaanpateldesigns.html">Shaan Patel Designs</a></p>
+        <p><a href="https://www.freecodecamp.org/certification/">freeCodeCamp Responsive Web Design Certification</a></p>
+        <p>Silly code, serious design.</p>
+        <p>Shaan Patel Designs ©2026</p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>

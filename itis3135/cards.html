@@ -4,38 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel's Silly Platypus | ITIS3135 | Cards</title>
-    <link rel="icon" href="images/favicon-32x32.jpg">
+    <title>Shaan Patel's Silly Platypus | Platypus Agent Trading Cards</title>
+    <link rel="icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --background: #b8d8fb;
-            --heading: #b8c8fa;
-            --primary: #2e3f9c;
-            --accent: #2f6f9f;
+            --page-bg: #b8d8fb;
+            --card-bg: #ffffff;
+            --nav-bg: #b8c8fa;
+            --nav-text: #2e3f9c;
+            --heading: #2f6f9f;
             --text: #2a2a3a;
-            --panel: #e6f0fd;
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
+        /* Classes organize the reusable trading-card layout and individual card content. */
+        /* White cards contrast with the blue page background for readable card details. */
         body {
             margin: 0;
-            padding: 0 1rem;
-            background: var(--background);
+            background-color: var(--page-bg);
             color: var(--text);
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
         }
 
         header, main, footer {
-            max-width: 1000px;
-            margin: 1.5rem auto;
-            background: var(--panel);
-            padding: 1.5rem;
-            border-radius: 12px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem;
         }
 
         header, footer {
@@ -43,77 +38,91 @@
         }
 
         h1, h2, h3 {
-            color: var(--primary);
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-
-        a {
-            color: var(--primary);
-        }
-
-        a:hover, a:focus {
-            color: var(--accent);
+            color: var(--heading);
         }
 
         nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
             margin: 1rem 0;
         }
 
         nav a {
-            display: inline-block;
-            margin: 0.25rem;
-            padding: 0.35rem 0.6rem;
-            border-radius: 20px;
-            background: var(--heading);
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 0.5rem 0.8rem;
+            border-radius: 1rem;
+            background-color: var(--nav-bg);
+            color: var(--nav-text);
             text-decoration: none;
+            font-weight: 600;
         }
 
         nav a:hover, nav a:focus {
-            text-decoration: underline;
+            background-color: var(--nav-text);
+            color: #ffffff; /* White link text contrasts with the dark-blue hover background. */
+        }
+
+        .intro-card {
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background-color: var(--card-bg);
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
         }
 
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 1rem;
         }
 
-        .card {
-            background: white;
-            border: 1px solid #c3d4ef;
-            border-radius: 10px;
+        .agent-card {
             padding: 1rem;
+            border: 2px solid #8b9bb8;
+            border-radius: 1rem;
+            background-color: var(--card-bg);
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
         }
 
-        .card h3 {
+        .agent-image {
+            width: 100%;
+            max-width: 240px;
+            height: auto;
+            border-radius: 0.75rem;
+        }
+
+        .agent-name {
+            margin-bottom: 0.25rem;
+            color: var(--heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .agent-role {
             margin-top: 0;
+            font-weight: 600;
         }
 
-        .rating {
-            margin: 0.35rem 0;
+        footer a {
+            color: var(--nav-text);
         }
 
-        footer p {
-            margin: 0.4rem;
+        @media (max-width: 800px) {
+            .card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
 
-        @media (max-width: 600px) {
-            body {
-                padding: 0 0.4rem;
+        @media (max-width: 520px) {
+            .card-grid {
+                grid-template-columns: 1fr;
             }
 
-            header, main, footer {
-                padding: 1rem;
-            }
-
-            nav a {
-                font-size: 0.8rem;
+            .agent-card {
+                padding: 0.75rem;
             }
         }
     </style>
@@ -122,8 +131,7 @@
 <body>
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-
-        <nav class="main-nav" aria-label="Main navigation">
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="contract.html">Contract</a>
             <a href="survey.html">Survey</a>
@@ -135,79 +143,68 @@
             <a href="about.html">About</a>
             <a href="website_evaluations.html">Website Evaluations</a>
         </nav>
-
-        <nav aria-label="Additional project navigation">
-            <a href="crappy.htm">CRAPpy Page</a> |
+        <nav aria-label="Additional navigation">
+            <a href="crappy.htm">Crappy Page</a>
             <a href="hobby/index.html">Hobby Site</a>
         </nav>
     </header>
 
     <main>
-        <h2>Platypus Agent Trading Cards</h2>
-        <p>Meet the specialist agents of the Silly Platypus team. Each agent brings a unique skill set to pond security.</p>
+        <section class="intro-card">
+            <h2>Platypus Agent Trading Cards</h2>
+            <p>Meet the members of the Silly Platypus team. Each agent brings a different skill to the pond.</p>
+        </section>
 
         <section class="card-grid" aria-label="Platypus agent cards">
-            <article class="card">
-                <h3>Spur</h3>
-                <p><strong>Role:</strong> Security Analyst</p>
-                <p>Spur looks for suspicious activity and helps the team understand potential threats.</p>
-                <p class="rating"><strong>Detection:</strong> 9/10</p>
-                <p class="rating"><strong>Speed:</strong> 7/10</p>
-                <p class="rating"><strong>Teamwork:</strong> 8/10</p>
+            <article class="agent-card">
+                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Ripple">
+                <p class="agent-name">Agent Ripple</p>
+                <p class="agent-role">The Investigator</p>
+                <p>Notices the smallest details and uncovers hidden clues.</p>
             </article>
 
-            <article class="card">
-                <h3>Sonar</h3>
-                <p><strong>Role:</strong> Network Scout</p>
-                <p>Sonar maps the pond's digital network and searches for unusual connections.</p>
-                <p class="rating"><strong>Detection:</strong> 8/10</p>
-                <p class="rating"><strong>Speed:</strong> 9/10</p>
-                <p class="rating"><strong>Teamwork:</strong> 7/10</p>
+            <article class="agent-card">
+                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Current">
+                <p class="agent-name">Agent Current</p>
+                <p class="agent-role">The Strategist</p>
+                <p>Creates plans and keeps every mission moving forward.</p>
             </article>
 
-            <article class="card">
-                <h3>Burrow</h3>
-                <p><strong>Role:</strong> System Defender</p>
-                <p>Burrow protects important systems and reinforces weak spots before trouble starts.</p>
-                <p class="rating"><strong>Detection:</strong> 7/10</p>
-                <p class="rating"><strong>Speed:</strong> 6/10</p>
-                <p class="rating"><strong>Teamwork:</strong> 9/10</p>
+            <article class="agent-card">
+                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Pebble">
+                <p class="agent-name">Agent Pebble</p>
+                <p class="agent-role">The Defender</p>
+                <p>Protects the team and keeps the pond safe.</p>
             </article>
 
-            <article class="card">
-                <h3>Egg-ncrypt</h3>
-                <p><strong>Role:</strong> Encryption Expert</p>
-                <p>Egg-ncrypt keeps sensitive pond information protected with strong encryption.</p>
-                <p class="rating"><strong>Detection:</strong> 8/10</p>
-                <p class="rating"><strong>Speed:</strong> 7/10</p>
-                <p class="rating"><strong>Teamwork:</strong> 8/10</p>
+            <article class="agent-card">
+                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Drift">
+                <p class="agent-name">Agent Drift</p>
+                <p class="agent-role">The Scout</p>
+                <p>Explores unfamiliar places and reports back to the team.</p>
             </article>
 
-            <article class="card">
-                <h3>Paddle</h3>
-                <p><strong>Role:</strong> Incident Responder</p>
-                <p>Paddle moves quickly when an alert appears and helps the team recover from incidents.</p>
-                <p class="rating"><strong>Detection:</strong> 7/10</p>
-                <p class="rating"><strong>Speed:</strong> 10/10</p>
-                <p class="rating"><strong>Teamwork:</strong> 8/10</p>
+            <article class="agent-card">
+                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Splash">
+                <p class="agent-name">Agent Splash</p>
+                <p class="agent-role">The Specialist</p>
+                <p>Finds creative solutions when a mission gets complicated.</p>
             </article>
 
-            <article class="card">
-                <h3>Silly</h3>
-                <p><strong>Role:</strong> Team Coordinator</p>
-                <p>Silly keeps everyone focused, connects the agents' findings, and makes sure no one forgets to have fun.</p>
-                <p class="rating"><strong>Detection:</strong> 8/10</p>
-                <p class="rating"><strong>Speed:</strong> 8/10</p>
-                <p class="rating"><strong>Teamwork:</strong> 10/10</p>
+            <article class="agent-card">
+                <img class="agent-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus agent card for Agent Marsh">
+                <p class="agent-name">Agent Marsh</p>
+                <p class="agent-role">The Technician</p>
+                <p>Keeps the team's equipment ready for the next assignment.</p>
             </article>
         </section>
     </main>
 
     <footer>
-        <p><a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy; 2026</p>
-        <p><a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a></p>
-        <p>Designed by Shaan Patel</p>
-        <p><em>"Silly code, serious design."</em></p>
+        <p>Page designed by <a href="shaanpateldesigns.html">Shaan Patel Designs</a></p>
+        <p><a href="https://www.freecodecamp.org/certification/">freeCodeCamp Responsive Web Design Certification</a></p>
+        <p>Silly code, serious design.</p>
+        <p>Shaan Patel Designs ©2026</p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
