@@ -1,180 +1,220 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel's Silly Platypus | Meet the Electro-Sense Router</title>
-    <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | The Electro-Sense Router</title>
+
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --page-bg: #b8d8fb;
-            --card-bg: #ffffff;
-            --nav-bg: #b8c8fa;
-            --nav-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --text: #2a2a3a;
-        }
+        /* The page uses a blue and purple palette; black and white are not its primary design colors. */
 
-        /* Classes are reused for product sections and features; IDs identify page sections. */
-        /* White cards make product information easy to distinguish from the blue background. */
         body {
-            margin: 0;
-            background-color: var(--page-bg);
-            color: var(--text);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-        }
-
-        header, main, footer {
-            max-width: 1000px;
+            background-color: #b8d8fb;
+            color: #2a2a3a;
+            font-family: Helvetica, Arial, sans-serif;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 1rem;
+            padding: 20px 15px;
         }
-
-        header, footer {
+        h1 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: #b8c8fa;
+            border-radius: 999px;
+            padding: 20px 30px;
             text-align: center;
         }
-
-        h1, h2, h3 {
-            color: var(--heading);
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
+            color: #2f6f9f;
+            border-bottom: 4px dashed #2e3f9c;
+            padding-bottom: 10px;
         }
-
+        a,
+        a:visited {
+            color: #2e3f9c;
+            font-weight: bold;
+        }
+        a:hover,
+        a:focus {
+            color: #2e1f66;
+        }
         nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1rem 0;
+            margin-bottom: 40px;
+            text-align: center;
         }
-
         nav a {
-            padding: 0.5rem 0.8rem;
-            border-radius: 1rem;
-            background-color: var(--nav-bg);
-            color: var(--nav-text);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        nav a:hover, nav a:focus {
-            background-color: var(--nav-text);
-            color: #ffffff; /* White text contrasts with the dark-blue navigation background. */
-        }
-
-        .content-card {
-            margin: 1rem 0;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            background-color: var(--card-bg);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-        }
-
-        .page-image {
-            display: block;
-            width: 100%;
-            max-width: 460px;
-            height: auto;
-            margin: 1rem auto;
-            border-radius: 0.75rem;
-        }
-
-        .feature-list {
-            padding-left: 1.5rem;
-        }
-
-        .call-to-action {
+            font-size: 1.8rem;
+            margin: 0 12px;
             display: inline-block;
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
-            background-color: var(--nav-text);
-            color: #ffffff; /* White button text contrasts with the dark-blue button background. */
-            text-decoration: none;
-            font-weight: 700;
         }
-
-        .call-to-action:hover, .call-to-action:focus {
-            background-color: var(--heading);
+        nav + nav {
+            margin-top: -25px;
         }
-
-        footer a {
-            color: var(--nav-text);
+        main img {
+            display: block;
+            box-sizing: border-box;
+            max-width: 250px;
+            width: 100%;
+            margin: 0 auto 30px auto;
+            border-radius: 8px;
         }
-
+        p {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #2f6f9f;
+        }
+        main ul {
+            list-style: none;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+        main li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        main li a {
+            font-size: 1.8rem;
+        }
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: #2a2a3a;
+            border-top: 4px dashed #2e3f9c;
+            padding-top: 20px;
+        }
+        footer p {
+            font-size: 1.3rem;
+            margin: 15px 0 0 0;
+            color: #2a2a3a;
+        }
         @media (max-width: 600px) {
-            header, main, footer {
-                padding: 0.75rem;
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
             }
+            p,
+            main li a {
+                font-size: 1.2rem;
+            }
+            footer,
+            footer p {
+                font-size: 1.1rem;
+            }
+        }
 
-            .content-card {
-                padding: 1rem;
-            }
+        /* Extra styles for the project pages. Class names style groups of content, each div groups related items so they can be laid out together, a span marks small inline text, and an id gives a heading or form a name to link to. */
+        main p { color: #1f5578; }
+        h3 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.6rem; color: #2e3f9c; margin: 25px 0 15px 0; }
+        a:focus, button:focus, input:focus, select:focus, textarea:focus { outline: 3px solid #2e1f66; outline-offset: 2px; }
+        h4 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.3rem; color: #2e3f9c; margin: 5px 0; }
+        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; align-items: center; margin-bottom: 30px; }
+        .hero img { max-width: 100%; margin: 0; }
+        .tiers .pick { background-color: #d6e4fa; border-color: #5b2a8c; }
+        @media (max-width: 700px) { .hero { grid-template-columns: 1fr; } }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 20px; }
+        .card { background-color: #e6f0fd; border: 3px solid #2e3f9c; border-radius: 20px; padding: 15px 20px; }
+        .card p { font-size: 1.1rem; color: #2a2a3a; margin-bottom: 10px; }
+        form { background-color: #e6f0fd; border: 3px solid #2e3f9c; border-radius: 20px; padding: 20px; margin-bottom: 30px; }
+        label, legend { font-weight: bold; font-size: 1.2rem; }
+        .field { margin-bottom: 18px; }
+        input[type=text], input[type=email], input[type=number], select, textarea { display: block; width: 100%; margin-top: 4px; }
+        input[type=text], input[type=email], input[type=number], select, textarea { padding: 8px; border: 2px solid #2e3f9c; border-radius: 8px; font: inherit; font-size: 1.1rem; background-color: #f8faff; color: #2a2a3a; }
+        fieldset { border: 2px solid #2f6f9f; border-radius: 10px; margin-bottom: 18px; }
+        fieldset label { display: block; font-weight: normal; }
+        button, a.btn, a.btn:visited { background-color: #2e3f9c; color: #f8faff; border: 0; border-radius: 999px; padding: 12px 28px; font: inherit; font-weight: bold; font-size: 1.2rem; cursor: pointer; text-decoration: none; display: inline-block; }
+        button:hover, button:focus, a.btn:hover, a.btn:focus { background-color: #2e1f66; color: #f8faff; }
+
+        /* Main nav: smaller text so all ten links fit on one line on wide screens */
+        nav.main-nav { white-space: nowrap; }
+        nav.main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
+        @media (max-width: 600px) {
+            nav.main-nav { white-space: normal; }
+            nav.main-nav a { font-size: 1rem; margin-bottom: 8px; }
         }
     </style>
+
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="contract.html">Contract</a>
-            <a href="survey.html">Survey</a>
-            <a href="cards.html">Cards</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="documentation.html">Documentation</a>
-            <a href="product.html">Product</a>
-            <a href="introduction.html">Introduction</a>
-            <a href="about.html">About</a>
-            <a href="website_evaluations.html">Website Evaluations</a>
-        </nav>
-        <nav aria-label="Additional navigation">
-            <a href="crappy.htm">Crappy Page</a>
-            <a href="hobby/index.html">Hobby Site</a>
-        </nav>
     </header>
 
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="contract.html">Contract</a>
+        <a href="survey.html">Survey</a>
+        <a href="cards.html">Cards</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="product.html">Product</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="about.html">About</a>
+        <a href="website_evaluations.html">Website Evaluations</a>
+    </nav>
+
+    <nav aria-label="Additional project navigation">
+        <a href="crappy.htm">CRAPpy Page</a>
+        |
+        <a href="hobby/index.html">Hobby Site</a>
+    </nav>
+
     <main>
-        <section class="content-card" id="overview">
-            <h2>Meet the Electro-Sense Router</h2>
-            <p>The Electro-Sense Router is a fictional smart networking device designed to make everyday connectivity easier to understand and manage.</p>
-            <img class="page-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus brand logo">
-            <p>Designed with simplicity in mind, the concept focuses on clear status information and accessible controls.</p>
-            <a class="call-to-action" href="survey.html">Share Your Feedback</a>
+        <h2>The Electro-Sense Router</h2>
+        <!-- Each div below groups related content: hero holds the image and pitch, grid lines up cards, and the signup id is the target of the early access link. -->
+        <div class="hero">
+            <img src="images/silly-platypus-logo.jpg" alt="Cartoon drawing of a brown platypus with a gray bill">
+            <div>
+                <p>A home router that senses trouble in the water before it reaches your devices.</p>
+                <p><strong>$89</strong> with free shipping across the pond.</p>
+                <a class="btn" href="#signup">Get early access</a>
+            </div>
+        </div>
+        <section>
+            <h3>Why People Love It</h3>
+            <div class="grid">
+                <div class="card"><h4>Senses Odd Traffic</h4><p>Learns what normal looks like at home and flags anything unusual.</p></div>
+                <div class="card"><h4>One Front Door</h4><p>Blocks unwanted connections by default, like a burrow with a single entrance.</p></div>
+                <div class="card"><h4>Set Up in Ten Minutes</h4><p>Plug it in, scan the code, and you are done.</p></div>
+            </div>
         </section>
-
-        <section class="content-card" id="features">
-            <h3>Product Features</h3>
-            <ul class="feature-list">
-                <li>Easy-to-read connection status.</li>
-                <li>Simple setup and configuration concept.</li>
-                <li>Clear indicators for network activity.</li>
-                <li>Designed with everyday users in mind.</li>
-            </ul>
+        <section class="tiers">
+            <h3>Pick a Plan</h3>
+            <div class="grid">
+                <div class="card"><h4>Puddle</h4><p><strong>$0 a month</strong></p><p>Basic alerts for up to 5 devices.</p></div>
+                <div class="card pick"><h4>Pond</h4><p><strong>$4 a month</strong></p><p>Unlimited devices and weekly reports.</p></div>
+                <div class="card"><h4>Lake</h4><p><strong>$9 a month</strong></p><p>Everything in Pond, plus a guest network.</p></div>
+            </div>
         </section>
-
-        <section class="content-card" id="benefits">
-            <h3>Why Choose Electro-Sense?</h3>
-            <p>The product concept emphasizes clarity and convenience. Instead of overwhelming users with technical details, it presents useful information in a straightforward format.</p>
-        </section>
-
-        <section class="content-card" id="specifications">
-            <h3>Specifications</h3>
-            <ul>
-                <li><strong>Product type:</strong> Home networking router concept</li>
-                <li><strong>Interface:</strong> Simple status display</li>
-                <li><strong>Primary goal:</strong> Accessible network management</li>
-                <li><strong>Availability:</strong> Fictional educational project</li>
-            </ul>
+        <section id="signup">
+            <h3>Get Early Access</h3>
+            <form action="#" method="post">
+                <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="Enter your email" required></div>
+                <button type="submit">Save my spot</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>Page designed by <a href="shaanpateldesigns.html">Shaan Patel Designs</a></p>
-        <p><a href="https://www.freecodecamp.org/certification/">freeCodeCamp Responsive Web Design Certification</a></p>
-        <p>Silly code, serious design.</p>
-        <p>Shaan Patel Designs ©2026</p>
+        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
+        |
+        <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
+
+        <p>Designed by Shaan Patel</p>
+        <p><em>"Silly code, serious design."</em></p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>

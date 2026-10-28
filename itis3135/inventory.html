@@ -1,202 +1,198 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaan Patel's Silly Platypus | Pond Provisions Inventory</title>
-    <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Pond Provisions Inventory</title>
+
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --page-bg: #b8d8fb;
-            --card-bg: #ffffff;
-            --nav-bg: #b8c8fa;
-            --nav-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --text: #2a2a3a;
-        }
+        /* The page uses a blue and purple palette; black and white are not its primary design colors. */
 
-        /* Classes style reusable sections; IDs identify specific page elements. */
-        /* White content cards stand out against the blue page background. */
         body {
-            margin: 0;
-            background-color: var(--page-bg);
-            color: var(--text);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-        }
-
-        header, main, footer {
-            max-width: 1000px;
+            background-color: #b8d8fb;
+            color: #2a2a3a;
+            font-family: Helvetica, Arial, sans-serif;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 1rem;
+            padding: 20px 15px;
         }
-
-        header, footer {
+        h1 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: #b8c8fa;
+            border-radius: 999px;
+            padding: 20px 30px;
             text-align: center;
         }
-
-        h1, h2, h3 {
-            color: var(--heading);
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
+            color: #2f6f9f;
+            border-bottom: 4px dashed #2e3f9c;
+            padding-bottom: 10px;
         }
-
+        a,
+        a:visited {
+            color: #2e3f9c;
+            font-weight: bold;
+        }
+        a:hover,
+        a:focus {
+            color: #2e1f66;
+        }
         nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1rem 0;
+            margin-bottom: 40px;
+            text-align: center;
         }
-
         nav a {
-            padding: 0.5rem 0.8rem;
-            border-radius: 1rem;
-            background-color: var(--nav-bg);
-            color: var(--nav-text);
-            text-decoration: none;
-            font-weight: 600;
+            font-size: 1.8rem;
+            margin: 0 12px;
+            display: inline-block;
         }
-
-        nav a:hover, nav a:focus {
-            background-color: var(--nav-text);
-            color: #ffffff; /* White text contrasts with the dark-blue navigation background. */
+        nav + nav {
+            margin-top: -25px;
         }
-
-        .content-card {
-            margin: 1rem 0;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            background-color: var(--card-bg);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-        }
-
-        .page-image {
+        main img {
             display: block;
+            box-sizing: border-box;
+            max-width: 250px;
             width: 100%;
-            max-width: 420px;
-            height: auto;
-            margin: 1rem auto;
-            border-radius: 0.75rem;
+            margin: 0 auto 30px auto;
+            border-radius: 8px;
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
+        p {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #2f6f9f;
         }
-
-        th, td {
-            border: 1px solid #8b9bb8;
-            padding: 0.75rem;
-            text-align: left;
+        main ul {
+            list-style: none;
+            margin: 0 0 30px 0;
+            padding: 0;
         }
-
-        th {
-            background-color: var(--nav-bg);
-            color: var(--nav-text);
+        main li {
+            display: inline-block;
+            margin-right: 20px;
         }
-
-        tbody tr:nth-child(even) {
-            background-color: #e6f0fd;
+        main li a {
+            font-size: 1.8rem;
         }
-
-        footer a {
-            color: var(--nav-text);
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: #2a2a3a;
+            border-top: 4px dashed #2e3f9c;
+            padding-top: 20px;
         }
-
+        footer p {
+            font-size: 1.3rem;
+            margin: 15px 0 0 0;
+            color: #2a2a3a;
+        }
         @media (max-width: 600px) {
-            header, main, footer {
-                padding: 0.75rem;
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
             }
+            p,
+            main li a {
+                font-size: 1.2rem;
+            }
+            footer,
+            footer p {
+                font-size: 1.1rem;
+            }
+        }
 
-            .content-card {
-                padding: 1rem;
-            }
+        /* Extra styles for the project pages. Class names style groups of content, each div groups related items so they can be laid out together, a span marks small inline text, and an id gives a heading or form a name to link to. */
+        main p { color: #1f5578; }
+        h3 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.6rem; color: #2e3f9c; margin: 25px 0 15px 0; }
+        a:focus, button:focus, input:focus, select:focus, textarea:focus { outline: 3px solid #2e1f66; outline-offset: 2px; }
+        .tablewrap { overflow-x: auto; }
+        table { border-collapse: collapse; width: 100%; background-color: #e6f0fd; font-size: 1.1rem; color: #2a2a3a; }
+        caption { text-align: left; font-weight: bold; font-size: 1.3rem; padding: 8px 0; color: #1f5578; }
+        th, td { border: 1px solid #2e3f9c; padding: 8px 12px; text-align: left; }
+        thead th { background-color: #2e3f9c; color: #f8faff; }
+        .low { color: #5b2a8c; font-weight: bold; }
 
-            th, td {
-                padding: 0.45rem;
-                font-size: 0.9rem;
-            }
+        /* Main nav: smaller text so all ten links fit on one line on wide screens */
+        nav.main-nav { white-space: nowrap; }
+        nav.main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
+        @media (max-width: 600px) {
+            nav.main-nav { white-space: normal; }
+            nav.main-nav a { font-size: 1rem; margin-bottom: 8px; }
         }
     </style>
+
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="contract.html">Contract</a>
-            <a href="survey.html">Survey</a>
-            <a href="cards.html">Cards</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="documentation.html">Documentation</a>
-            <a href="product.html">Product</a>
-            <a href="introduction.html">Introduction</a>
-            <a href="about.html">About</a>
-            <a href="website_evaluations.html">Website Evaluations</a>
-        </nav>
-        <nav aria-label="Additional navigation">
-            <a href="crappy.htm">Crappy Page</a>
-            <a href="hobby/index.html">Hobby Site</a>
-        </nav>
     </header>
 
-    <main>
-        <section class="content-card">
-            <h2>Pond Provisions Inventory</h2>
-            <p>Welcome to the Silly Platypus inventory. Review our supplies and current stock below.</p>
-            <img class="page-image" src="images/silly-platypus-logo.jpg" alt="Silly Platypus logo">
-        </section>
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="contract.html">Contract</a>
+        <a href="survey.html">Survey</a>
+        <a href="cards.html">Cards</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="product.html">Product</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="about.html">About</a>
+        <a href="website_evaluations.html">Website Evaluations</a>
+    </nav>
 
-        <section class="content-card">
-            <h3>Current Stock</h3>
+    <nav aria-label="Additional project navigation">
+        <a href="crappy.htm">CRAPpy Page</a>
+        |
+        <a href="hobby/index.html">Hobby Site</a>
+    </nav>
+
+    <main>
+        <h2>Pond Provisions Inventory</h2>
+        <img src="images/silly-platypus-logo.jpg" alt="Cartoon drawing of a brown platypus with a gray bill">
+        <p>Everything currently on the shelf. Items with fewer than five left are flagged.</p>
+        <!-- The div with the tablewrap class lets the table scroll sideways on small screens, and the span with the low class marks low-stock items. -->
+        <div class="tablewrap">
             <table>
-                <caption>Available Pond Provisions</caption>
+                <caption>Current stock and prices</caption>
                 <thead>
-                    <tr>
-                        <th scope="col">Item</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Status</th>
-                    </tr>
+                    <tr><th scope="col">Item</th><th scope="col">Category</th><th scope="col">In stock</th><th scope="col">Price</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Platypus Field Notebook</td>
-                        <td>Equipment</td>
-                        <td>24</td>
-                        <td>In Stock</td>
-                    </tr>
-                    <tr>
-                        <td>Waterproof Satchel</td>
-                        <td>Storage</td>
-                        <td>12</td>
-                        <td>In Stock</td>
-                    </tr>
-                    <tr>
-                        <td>Pond Patrol Badge</td>
-                        <td>Accessories</td>
-                        <td>38</td>
-                        <td>In Stock</td>
-                    </tr>
-                    <tr>
-                        <td>Emergency Snack Kit</td>
-                        <td>Supplies</td>
-                        <td>4</td>
-                        <td>Low Stock</td>
-                    </tr>
+                    <tr><th scope="row">Bill-Shaped USB Drive, 16 GB</th><td>Storage</td><td>42</td><td>$12.99</td></tr>
+                    <tr><th scope="row">Electroreception Goggles</th><td>Wearables</td><td>8</td><td>$34.50</td></tr>
+                    <tr><th scope="row">Tiny Waders</th><td>Apparel</td><td>25</td><td>$19.00</td></tr>
+                    <tr><th scope="row">Practice Lock Set (clear, for learning)</th><td>Training</td><td>3 <span class="low">(low stock)</span></td><td>$24.00</td></tr>
+                    <tr><th scope="row">Burrow Firewall Router</th><td>Networking</td><td>11</td><td>$89.00</td></tr>
+                    <tr><th scope="row">Egg-ncryption Flash Key</th><td>Storage</td><td>30</td><td>$15.50</td></tr>
+                    <tr><th scope="row">Pond Sonar Scanner</th><td>Networking</td><td>2 <span class="low">(low stock)</span></td><td>$59.00</td></tr>
+                    <tr><th scope="row">Silly Platypus Plush</th><td>Gifts</td><td>60</td><td>$18.00</td></tr>
                 </tbody>
             </table>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>Page designed by <a href="shaanpateldesigns.html">Shaan Patel Designs</a></p>
-        <p><a href="https://www.freecodecamp.org/certification/">freeCodeCamp Responsive Web Design Certification</a></p>
-        <p>Silly code, serious design.</p>
-        <p>Shaan Patel Designs ©2026</p>
+        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
+        |
+        <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
+
+        <p>Designed by Shaan Patel</p>
+        <p><em>"Silly code, serious design."</em></p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>

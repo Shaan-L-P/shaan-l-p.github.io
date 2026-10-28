@@ -6,140 +6,132 @@
 
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
 
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
     <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* The body class and other classes below organize the page layout and appearance. */
+        /* The page uses a blue and purple palette; black and white are not its primary design colors. */
+
         body {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
             background-color: #b8d8fb;
-            color: #263238;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
+            color: #2a2a3a;
+            font-family: Helvetica, Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 15px;
         }
-
-        header {
-            padding: 15px;
-            background-color: #b8c8fa;
-            text-align: center;
-        }
-
         h1 {
-            color: #2f6f9f;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: #b8c8fa;
+            border-radius: 999px;
+            padding: 20px 30px;
             text-align: center;
         }
-
         h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
             color: #2f6f9f;
-            text-align: center;
+            border-bottom: 4px dashed #2e3f9c;
+            padding-bottom: 10px;
         }
-
-        h3 {
-            color: #2f6f9f;
+        a,
+        a:visited {
+            color: #2e3f9c;
+            font-weight: bold;
         }
-
+        a:hover,
+        a:focus {
+            color: #2e1f66;
+        }
         nav {
-            margin: 15px 0;
-            padding: 12px;
-            background-color: #b8c8fa;
+            margin-bottom: 40px;
             text-align: center;
         }
-
         nav a {
+            font-size: 1.8rem;
+            margin: 0 12px;
             display: inline-block;
-            margin: 5px 8px;
-            color: #2e3f9c;
-            font-weight: bold;
-            text-decoration: none;
         }
-
-        nav a:hover {
-            text-decoration: underline;
+        nav + nav {
+            margin-top: -25px;
         }
-
-        main {
-            margin: 20px auto;
-        }
-
-        .intro {
-            text-align: center;
-        }
-
-        /* The card-grid class groups the trading cards, while each trading-card class
-           creates an individual card. These div elements separate page content. */
-        .card-grid {
-            text-align: center;
-        }
-
-        .trading-card {
-            display: inline-block;
-            width: 300px;
-            margin: 12px;
-            vertical-align: top;
-            background-color: #ffffff;
-            border: 2px solid #2f6f9f;
-            text-align: left;
-        }
-
-        .trading-card img {
+        main img {
             display: block;
+            box-sizing: border-box;
+            max-width: 250px;
             width: 100%;
-            height: 220px;
+            margin: 0 auto 30px auto;
+            border-radius: 8px;
         }
-
-        .card-content {
-            padding: 15px;
-        }
-
-        .card-title {
-            margin-top: 0;
-        }
-
-        .card-label {
-            color: #2e3f9c;
-            font-weight: bold;
-        }
-
-        footer {
-            margin-top: 25px;
-            padding: 15px;
-            background-color: #b8c8fa;
-            text-align: center;
-        }
-
-        footer a {
-            color: #2e3f9c;
-        }
-
-        .tagline {
+        p {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
             color: #2f6f9f;
         }
-
-        @media screen and (max-width: 800px) {
-            .trading-card {
-                width: 40%;
+        main ul {
+            list-style: none;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+        main li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        main li a {
+            font-size: 1.8rem;
+        }
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: #2a2a3a;
+            border-top: 4px dashed #2e3f9c;
+            padding-top: 20px;
+        }
+        footer p {
+            font-size: 1.3rem;
+            margin: 15px 0 0 0;
+            color: #2a2a3a;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+            }
+            p,
+            main li a {
+                font-size: 1.2rem;
+            }
+            footer,
+            footer p {
+                font-size: 1.1rem;
             }
         }
 
-        @media screen and (max-width: 550px) {
-            body {
-                padding: 10px;
-            }
+        /* Extra styles for the project pages. Class names style groups of content, each div groups related items so they can be laid out together, a span marks small inline text, and an id gives a heading or form a name to link to. */
+        main p { color: #1f5578; }
+        h3 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.6rem; color: #2e3f9c; margin: 25px 0 15px 0; }
+        a:focus, button:focus, input:focus, select:focus, textarea:focus { outline: 3px solid #2e1f66; outline-offset: 2px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 20px; }
+        .card { background-color: #e6f0fd; border: 3px solid #2e3f9c; border-radius: 20px; padding: 15px 20px; }
+        .card p { font-size: 1.1rem; color: #2a2a3a; margin-bottom: 10px; }
+        .card .role { color: #5b2a8c; font-weight: bold; }
+        .card dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 15px; margin: 10px 0 0 0; font-size: 1.1rem; }
+        .card dd { margin: 0; text-align: right; font-weight: bold; }
+        .card img { margin-bottom: 15px; }
 
-            .trading-card {
-                display: block;
-                width: auto;
-                margin: 15px auto;
-            }
-
-            nav a {
-                display: block;
-                margin: 8px;
-            }
+        /* Main nav: smaller text so all ten links fit on one line on wide screens */
+        nav.main-nav { white-space: nowrap; }
+        nav.main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
+        @media (max-width: 600px) {
+            nav.main-nav { white-space: normal; }
+            nav.main-nav a { font-size: 1rem; margin-bottom: 8px; }
         }
     </style>
 
@@ -151,145 +143,82 @@
         <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
     </header>
 
-    <nav aria-label="Main navigation">
+    <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="introduction.html">Introduction</a>
         <a href="contract.html">Contract</a>
+        <a href="survey.html">Survey</a>
+        <a href="cards.html">Cards</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="product.html">Product</a>
+        <a href="introduction.html">Introduction</a>
         <a href="about.html">About</a>
         <a href="website_evaluations.html">Website Evaluations</a>
-        <a href="my-bad-page.htm">My Bad Page</a>
     </nav>
 
-    <nav aria-label="Additional navigation">
-        <a href="hobby/index.html">Hobby</a>
+    <nav aria-label="Additional project navigation">
+        <a href="crappy.htm">CRAPpy Page</a>
+        |
+        <a href="hobby/index.html">Hobby Site</a>
     </nav>
 
     <main>
         <h2>Platypus Agent Trading Cards</h2>
-
-        <p class="intro">
-            Meet a team of unusual platypus agents! Each agent has a unique personality,
-            special abilities, and an important mission. Collect them all and discover
-            what makes each one special.
-        </p>
-
-        <!-- The card-grid class groups all six trading cards together. -->
-        <div class="card-grid">
-
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/agent-p.png"
-                     alt="Agent P, a platypus secret agent">
-                <div class="card-content">
-                    <h3 class="card-title">Agent P</h3>
-                    <p class="card-label">Codename: The Silent Operative</p>
-                    <p>
-                        Agent P is a highly skilled secret agent who completes dangerous
-                        missions without saying a word. His calm attitude and clever
-                        strategies make him a reliable member of the team.
-                    </p>
-                    <p><strong>Special Ability:</strong> Stealth and infiltration</p>
-                    <p><strong>Agent Rank:</strong> Elite</p>
-                </div>
-            </div>
-
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/detective-platypus.png"
-                     alt="Detective Platypus investigating a mystery">
-                <div class="card-content">
-                    <h3 class="card-title">Detective Platypus</h3>
-                    <p class="card-label">Codename: The Truth Seeker</p>
-                    <p>
-                        Detective Platypus specializes in solving difficult mysteries.
-                        With sharp instincts and an eye for detail, no clue is too small
-                        and no case is too complicated.
-                    </p>
-                    <p><strong>Special Ability:</strong> Investigation and deduction</p>
-                    <p><strong>Agent Rank:</strong> Master Detective</p>
-                </div>
-            </div>
-
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/turbo-platypus.png"
-                     alt="Turbo Platypus, a fast-moving platypus agent">
-                <div class="card-content">
-                    <h3 class="card-title">Turbo Platypus</h3>
-                    <p class="card-label">Codename: The Speedster</p>
-                    <p>
-                        Turbo Platypus moves faster than almost anyone can follow.
-                        Whether racing against time or escaping a dangerous situation,
-                        this agent always knows how to make a quick getaway.
-                    </p>
-                    <p><strong>Special Ability:</strong> Super speed</p>
-                    <p><strong>Agent Rank:</strong> Advanced</p>
-                </div>
-            </div>
-
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/wizard-platypus.png"
-                     alt="Wizard Platypus using magical abilities">
-                <div class="card-content">
-                    <h3 class="card-title">Wizard Platypus</h3>
-                    <p class="card-label">Codename: The Arcane Expert</p>
-                    <p>
-                        Wizard Platypus uses mysterious magic to protect the team and
-                        overcome impossible challenges. His knowledge of spells makes
-                        him especially useful when ordinary strategies fail.
-                    </p>
-                    <p><strong>Special Ability:</strong> Spellcasting and enchantments</p>
-                    <p><strong>Agent Rank:</strong> Arcane Master</p>
-                </div>
-            </div>
-
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/super-platypus.png"
-                     alt="Super Platypus showing off heroic powers">
-                <div class="card-content">
-                    <h3 class="card-title">Super Platypus</h3>
-                    <p class="card-label">Codename: The Mighty Protector</p>
-                    <p>
-                        Super Platypus uses incredible strength and courage to defend
-                        others. When the team faces its toughest challenge, this hero
-                        steps forward and refuses to give up.
-                    </p>
-                    <p><strong>Special Ability:</strong> Super strength</p>
-                    <p><strong>Agent Rank:</strong> Hero Class</p>
-                </div>
-            </div>
-
-            <div class="trading-card">
-                <img src="spate338/itis3135/images/explorer-platypus.png"
-                     alt="Explorer Platypus preparing for an adventure">
-                <div class="card-content">
-                    <h3 class="card-title">Explorer Platypus</h3>
-                    <p class="card-label">Codename: The Trailblazer</p>
-                    <p>
-                        Explorer Platypus travels into unfamiliar places to discover
-                        hidden secrets. His resourcefulness and adventurous spirit help
-                        the team navigate strange environments and find new paths.
-                    </p>
-                    <p><strong>Special Ability:</strong> Exploration and survival</p>
-                    <p><strong>Agent Rank:</strong> Pathfinder</p>
-                </div>
-            </div>
-
+        <p>Meet the Pond Patrol. Each agent has a cyber specialty and three ratings out of ten.</p>
+        <!-- The div with the grid class lines the cards up, and each article with the card class holds one agent. -->
+        <div class="grid">
+            <article class="card">
+                <img src="images/agent-spur.png" alt="Agent Spur, a platypus wearing dark sunglasses">
+                <h3>Agent Spur</h3>
+                <p class="role">Penetration tester</p>
+                <p>Finds the weak spot in any burrow door. Politely.</p>
+                <dl><dt>Stealth</dt><dd>7/10</dd><dt>Venom</dt><dd>10/10</dd><dt>Bill</dt><dd>6/10</dd></dl>
+            </article>
+            <article class="card">
+                <img src="images/agent-sonar.png" alt="Agent Sonar, a platypus sending out sonar rings from its bill">
+                <h3>Agent Sonar</h3>
+                <p class="role">Threat hunter</p>
+                <p>Senses electric signals in the water, which is handy when hunting suspicious traffic.</p>
+                <dl><dt>Stealth</dt><dd>8/10</dd><dt>Venom</dt><dd>3/10</dd><dt>Bill</dt><dd>9/10</dd></dl>
+            </article>
+            <article class="card">
+                <img src="images/agent-burrow.png" alt="Agent Burrow, a platypus standing in front of a brick firewall">
+                <h3>Agent Burrow</h3>
+                <p class="role">Firewall engineer</p>
+                <p>Builds tunnels with exactly one entrance and a very grumpy guard.</p>
+                <dl><dt>Stealth</dt><dd>5/10</dd><dt>Venom</dt><dd>2/10</dd><dt>Bill</dt><dd>7/10</dd></dl>
+            </article>
+            <article class="card">
+                <img src="images/agent-eggcrypt.png" alt="Agent Eggcrypt, a platypus next to a locked egg">
+                <h3>Agent Eggcrypt</h3>
+                <p class="role">Cryptographer</p>
+                <p>Keeps every secret safely inside a shell.</p>
+                <dl><dt>Stealth</dt><dd>9/10</dd><dt>Venom</dt><dd>1/10</dd><dt>Bill</dt><dd>8/10</dd></dl>
+            </article>
+            <article class="card">
+                <img src="images/agent-paddle.png" alt="Agent Paddle, a platypus holding a purple paddle">
+                <h3>Agent Paddle</h3>
+                <p class="role">Incident responder</p>
+                <p>First one in the water when an alarm goes off.</p>
+                <dl><dt>Stealth</dt><dd>4/10</dd><dt>Venom</dt><dd>5/10</dd><dt>Bill</dt><dd>10/10</dd></dl>
+            </article>
+            <article class="card">
+                <img src="images/agent-silly.png" alt="Agent Silly, a platypus wearing a purple party hat">
+                <h3>Agent Silly</h3>
+                <p class="role">Chief morale officer</p>
+                <p>Does not know what a firewall is but has never lost a staring contest.</p>
+                <dl><dt>Stealth</dt><dd>2/10</dd><dt>Venom</dt><dd>4/10</dd><dt>Bill</dt><dd>5/10</dd></dl>
+            </article>
         </div>
     </main>
 
     <footer>
-        <p>Page designed by Shaan Patel</p>
+        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
+        |
+        <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
 
-        <p>
-            Certified in
-            <a href="https://www.freecodecamp.org/certification/">freeCodeCamp</a>
-            |
-            <a href="https://validator.w3.org/">HTML Validator</a>
-            |
-            <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a>
-        </p>
-
-        <p class="tagline">
-            <em>Curiosity, creativity, and platypus-powered adventures!</em>
-        </p>
+        <p>Designed by Shaan Patel</p>
+        <p><em>"Silly code, serious design."</em></p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
