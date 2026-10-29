@@ -23,6 +23,7 @@
             margin: 0 auto;
             padding: 20px 15px;
         }
+
         h1 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(2rem, 6vw, 3.2rem);
@@ -33,6 +34,7 @@
             padding: 20px 30px;
             text-align: center;
         }
+
         h2 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -41,27 +43,41 @@
             border-bottom: 4px dashed #2e3f9c;
             padding-bottom: 10px;
         }
+
+        h3,
+        h4 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.6rem;
+            color: #2e3f9c;
+            margin: 25px 0 15px 0;
+        }
+
         a,
         a:visited {
             color: #2e3f9c;
             font-weight: bold;
         }
+
         a:hover,
         a:focus {
             color: #2e1f66;
         }
+
         nav {
             margin-bottom: 40px;
             text-align: center;
         }
+
         nav a {
             font-size: 1.8rem;
             margin: 0 12px;
             display: inline-block;
         }
+
         nav + nav {
             margin-top: -25px;
         }
+
         main img {
             display: block;
             box-sizing: border-box;
@@ -70,23 +86,32 @@
             margin: 0 auto 30px auto;
             border-radius: 8px;
         }
+
         p {
             font-size: 1.8rem;
             margin-bottom: 30px;
             color: #2f6f9f;
         }
+
+        main p {
+            color: #1f5578;
+        }
+
         main ul {
             list-style: none;
             margin: 0 0 30px 0;
             padding: 0;
         }
+
         main li {
             display: inline-block;
             margin-right: 20px;
         }
+
         main li a {
             font-size: 1.8rem;
         }
+
         footer {
             font-size: 1.5rem;
             margin-top: 35px;
@@ -94,48 +119,129 @@
             border-top: 4px dashed #2e3f9c;
             padding-top: 20px;
         }
+
         footer p {
             font-size: 1.3rem;
             margin: 15px 0 0 0;
             color: #2a2a3a;
         }
+
         @media (max-width: 600px) {
             nav a {
                 font-size: 1.2rem;
                 margin-bottom: 8px;
             }
+
             p,
             main li a {
                 font-size: 1.2rem;
             }
+
             footer,
             footer p {
                 font-size: 1.1rem;
             }
         }
 
-        /* Extra styles for the project pages. Class names style groups of content, each div groups related items so they can be laid out together, a span marks small inline text, and an id gives a heading or form a name to link to. */
-        main p { color: #1f5578; }
-        h3 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.6rem; color: #2e3f9c; margin: 25px 0 15px 0; }
-        a:focus, button:focus, input:focus, select:focus, textarea:focus { outline: 3px solid #2e1f66; outline-offset: 2px; }
-        .doc { display: grid; grid-template-columns: 14rem 1fr; gap: 30px; }
-        nav.side { text-align: left; margin: 0; }
-        nav.side ul { list-style: none; margin: 0; padding: 0; }
-        nav.side li { display: block; margin: 0 0 10px 0; }
-        nav.side a { font-size: 1.1rem; margin: 0; display: block; }
-        .doc p { font-size: 1.2rem; }
-        .doc article ul { list-style: disc; padding-left: 24px; margin-bottom: 20px; }
-        .doc article li { display: list-item; margin: 0 0 6px 0; font-size: 1.2rem; color: #1f5578; }
-        pre { background-color: #2e1f66; color: #f8faff; padding: 15px; border-radius: 10px; overflow-x: auto; font-size: 1rem; }
-        p code, li code { background-color: #d6e4fa; color: #2a2a3a; padding: 2px 5px; border-radius: 4px; }
-        @media (max-width: 700px) { .doc { grid-template-columns: 1fr; } }
+        /* The doc class positions the documentation menu beside the article.
+           The side class styles that menu separately from the main navigation. */
+        .doc {
+            display: grid;
+            grid-template-columns: 14rem 1fr;
+            gap: 30px;
+        }
 
-        /* Main nav: smaller text so all ten links fit on one line on wide screens */
-        nav.main-nav { white-space: nowrap; }
-        nav.main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
+        nav.side {
+            text-align: left;
+            margin: 0;
+        }
+
+        nav.side ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.side li {
+            display: block;
+            margin: 0 0 10px 0;
+        }
+
+        nav.side a {
+            font-size: 1.1rem;
+            margin: 0;
+            display: block;
+        }
+
+        .doc p {
+            font-size: 1.2rem;
+        }
+
+        .doc article ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        .doc article li {
+            display: list-item;
+            margin: 0 0 6px 0;
+            font-size: 1.2rem;
+            color: #1f5578;
+        }
+
+        pre {
+            background-color: #2e1f66;
+            color: #f8faff;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        p code,
+        li code {
+            background-color: #d6e4fa;
+            color: #2a2a3a;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid #2e1f66;
+            outline-offset: 2px;
+        }
+
+        /* The main-nav class keeps the primary navigation compact on wide screens. */
+        nav.main-nav {
+            white-space: nowrap;
+        }
+
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 700px) {
+            .doc {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 600px) {
-            nav.main-nav { white-space: normal; }
-            nav.main-nav a { font-size: 1rem; margin-bottom: 8px; }
+            nav.main-nav {
+                white-space: normal;
+            }
+
+            nav.main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
         }
     </style>
 
@@ -161,15 +267,20 @@
     </nav>
 
     <nav aria-label="Additional project navigation">
-        <a href="crappy.htm">CRAPpy Page</a>
+        <a href="stuff/My%20BAD%20pAgE%20🤡.htm">CRAPpy Page</a>
         |
         <a href="hobby/index.html">Hobby Site</a>
     </nav>
 
     <main>
         <h2>BillGuard Documentation</h2>
-        <img src="images/silly-platypus-logo.jpg" alt="Cartoon drawing of a brown platypus with a gray bill">
-        <!-- The div with the doc class places the side menu next to the article. Each section id matches a link in the side menu. -->
+
+        <img src="images/silly-platypus-logo.jpg"
+             alt="Cartoon drawing of a brown platypus with a gray bill">
+
+        <!-- The doc div places the section menu beside the article.
+             Each section ID connects its heading section to the matching menu link.
+             The side class styles the section menu independently from the main navigation. -->
         <div class="doc">
             <nav class="side" aria-label="Documentation sections">
                 <ul>
@@ -182,13 +293,17 @@
                     <li><a href="#Reference">Reference</a></li>
                 </ul>
             </nav>
+
             <article>
+                <h3>BillGuard User Guide</h3>
+
                 <section id="Introduction">
-                    <h3>Introduction</h3>
+                    <h4>Introduction</h4>
                     <p>BillGuard is a small home network scanner made by Pond Provisions. It looks at the devices on your network and tells you which ones need attention.</p>
                 </section>
+
                 <section id="What_You_Need">
-                    <h3>What You Need</h3>
+                    <h4>What You Need</h4>
                     <p>Before you start, make sure you have:</p>
                     <ul>
                         <li>A computer running Linux, macOS, or Windows</li>
@@ -196,21 +311,24 @@
                         <li>Permission to scan the network you are on</li>
                     </ul>
                 </section>
+
                 <section id="Installation">
-                    <h3>Installation</h3>
+                    <h4>Installation</h4>
                     <p>Install BillGuard with pip:</p>
                     <pre><code>pip install billguard</code></pre>
                     <p>Check that it worked:</p>
                     <pre><code>billguard --version</code></pre>
                 </section>
+
                 <section id="Quick_Start">
-                    <h3>Quick Start</h3>
+                    <h4>Quick Start</h4>
                     <p>Run your first scan on the default pond:</p>
                     <pre><code>billguard scan --pond home</code></pre>
                     <p>BillGuard prints each device it finds, along with a status of <code>ok</code>, <code>warn</code>, or <code>splash</code>.</p>
                 </section>
+
                 <section id="Scan_Modes">
-                    <h3>Scan Modes</h3>
+                    <h4>Scan Modes</h4>
                     <p>Use <code>--mode</code> to choose how deep a scan goes.</p>
                     <ul>
                         <li><code>shallow</code>: lists devices only. Takes seconds.</li>
@@ -218,12 +336,14 @@
                         <li><code>deep</code>: adds weak password checks on devices you own.</li>
                     </ul>
                 </section>
+
                 <section id="Troubleshooting">
-                    <h3>Troubleshooting</h3>
+                    <h4>Troubleshooting</h4>
                     <p>If BillGuard finds no devices, confirm you are connected to the network and that your firewall allows local scans. If a device shows <code>splash</code>, change its default password first.</p>
                 </section>
+
                 <section id="Reference">
-                    <h3>Reference</h3>
+                    <h4>Reference</h4>
                     <p>Commands: <code>scan</code>, <code>report</code>, <code>pond list</code>. Run <code>billguard --help</code> for every option.</p>
                 </section>
             </article>
