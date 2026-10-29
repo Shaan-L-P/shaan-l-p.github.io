@@ -220,10 +220,6 @@
                 grid-template-columns: 1fr;
             }
         }
-
-        /* ID justification: this page does not need any id attributes because
-           no individual element needs a unique CSS target, form-label connection,
-           or fragment link. Classes are sufficient for styling the repeated cards. */
     </style>
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -261,8 +257,8 @@
         <!-- This div uses the grid class to arrange the trading cards in responsive columns.
              Each article uses the card class to group one agent's image, name, specialty,
              description, and ratings into a consistently styled card. The role class
-             highlights each agent's specialty. Div and class elements are used here
-             because the cards need a shared layout and reusable styles. -->
+             highlights each agent's specialty. These elements and classes provide a
+             reusable layout for the six cards. -->
         <div class="grid">
             <article class="card">
                 <img src="images/agent-spur.png" alt="Agent Spur, a platypus wearing dark sunglasses">
