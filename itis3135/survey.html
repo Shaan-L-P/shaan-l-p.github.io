@@ -44,6 +44,13 @@
             padding-bottom: 10px;
         }
 
+        h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.6rem;
+            color: #2e3f9c;
+            margin: 25px 0 15px 0;
+        }
+
         a,
         a:visited {
             color: #2e3f9c;
@@ -70,6 +77,18 @@
             margin-top: -25px;
         }
 
+        /* The main-nav class gives the main navigation its own compact layout
+           so its many project links fit together without changing other nav links. */
+        nav.main-nav {
+            white-space: nowrap;
+        }
+
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+
         main img {
             display: block;
             box-sizing: border-box;
@@ -83,6 +102,10 @@
             font-size: 1.8rem;
             margin-bottom: 30px;
             color: #2f6f9f;
+        }
+
+        main p {
+            color: #1f5578;
         }
 
         main ul {
@@ -100,59 +123,10 @@
             font-size: 1.8rem;
         }
 
-        footer {
-            font-size: 1.5rem;
-            margin-top: 35px;
-            color: #2a2a3a;
-            border-top: 4px dashed #2e3f9c;
-            padding-top: 20px;
-        }
-
-        footer p {
-            font-size: 1.3rem;
-            margin: 15px 0 0 0;
-            color: #2a2a3a;
-        }
-
-        @media (max-width: 600px) {
-            nav a {
-                font-size: 1.2rem;
-                margin-bottom: 8px;
-            }
-
-            p,
-            main li a {
-                font-size: 1.2rem;
-            }
-
-            footer,
-            footer p {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Class names style groups of content. Each div groups related form items,
-           a span marks small inline text, and each id names a heading or form field
-           so labels can connect to inputs and page sections can be identified. */
-
-        main p {
-            color: #1f5578;
-        }
-
-        h3 {
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 1.6rem;
-            color: #2e3f9c;
-            margin: 25px 0 15px 0;
-        }
-
-        a:focus,
-        button:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 3px solid #2e1f66;
-            outline-offset: 2px;
+        /* The field class groups each form label and its input together.
+           Reusing this class gives the form fields consistent spacing. */
+        .field {
+            margin-bottom: 18px;
         }
 
         form {
@@ -169,16 +143,13 @@
             font-size: 1.2rem;
         }
 
-        .field {
-            margin-bottom: 18px;
-        }
-
         input[type="text"],
         input[type="email"],
         input[type="number"],
         select,
         textarea {
             display: block;
+            box-sizing: border-box;
             width: 100%;
             margin-top: 4px;
             padding: 8px;
@@ -225,18 +196,35 @@
             color: #f8faff;
         }
 
-        /* The main-nav class keeps the project navigation links compact on wide screens. */
-        nav.main-nav {
-            white-space: nowrap;
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid #2e1f66;
+            outline-offset: 2px;
         }
 
-        nav.main-nav a {
-            font-size: 0.85rem;
-            margin: 0 6px;
-            white-space: nowrap;
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: #2a2a3a;
+            border-top: 4px dashed #2e3f9c;
+            padding-top: 20px;
+        }
+
+        footer p {
+            font-size: 1.3rem;
+            margin: 15px 0 0 0;
+            color: #2a2a3a;
         }
 
         @media (max-width: 600px) {
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+            }
+
             nav.main-nav {
                 white-space: normal;
             }
@@ -245,9 +233,20 @@
                 font-size: 1rem;
                 margin-bottom: 8px;
             }
+
+            p,
+            main li a {
+                font-size: 1.2rem;
+            }
+
+            footer,
+            footer p {
+                font-size: 1.1rem;
+            }
         }
     </style>
 
+    <!-- Accumulus is placed last in the head, as required by the course rules. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -270,12 +269,16 @@
     </nav>
 
     <nav aria-label="Additional project navigation">
-        <a href="stuff/My BAD pAgE 🤡.htm">CRAPpy Page</a>
+        <a href="stuff/My%20BAD%20pAgE%20🤡.htm">CRAPpy Page</a>
         |
         <a href="hobby/index.html">Hobby Site</a>
     </nav>
 
     <main>
+        <!-- These IDs identify the page title, description, form, and its controls.
+             The title and description IDs identify the corresponding page content.
+             Each input ID lets its label use the matching for attribute, improving
+             usability and accessibility. The submit ID uniquely identifies the button. -->
         <h2 id="title">Join the Pond Patrol</h2>
 
         <img src="images/silly-platypus-logo.jpg"
@@ -286,7 +289,9 @@
             secret pond maps, and the occasional bad pun.
         </p>
 
-        <!-- The div elements group related form items to keep the form organized. -->
+        <!-- The form's div elements use the field class to group each label and
+             its related control, keeping the layout consistent and readable.
+             IDs uniquely identify controls so their labels can point to them. -->
         <form id="survey-form" action="#" method="post">
             <div class="field">
                 <label for="name">Name</label>
@@ -319,14 +324,17 @@
 
             <fieldset>
                 <legend>Would you recommend Pond Provisions?</legend>
+
                 <label>
                     <input type="radio" name="recommend" value="definitely" checked>
                     Definitely
                 </label>
+
                 <label>
                     <input type="radio" name="recommend" value="maybe">
                     Maybe
                 </label>
+
                 <label>
                     <input type="radio" name="recommend" value="not-sure">
                     Not sure yet
@@ -335,18 +343,22 @@
 
             <fieldset>
                 <legend>Which gear interests you? (pick any)</legend>
+
                 <label>
                     <input type="checkbox" name="gear" value="goggles">
                     Electroreception goggles
                 </label>
+
                 <label>
                     <input type="checkbox" name="gear" value="router">
                     Burrow firewall router
                 </label>
+
                 <label>
                     <input type="checkbox" name="gear" value="usb">
                     Bill-shaped USB drives
                 </label>
+
                 <label>
                     <input type="checkbox" name="gear" value="plush">
                     Silly Platypus plush
