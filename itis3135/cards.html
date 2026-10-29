@@ -23,6 +23,7 @@
             margin: 0 auto;
             padding: 20px 15px;
         }
+
         h1 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(2rem, 6vw, 3.2rem);
@@ -33,6 +34,7 @@
             padding: 20px 30px;
             text-align: center;
         }
+
         h2 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -41,52 +43,140 @@
             border-bottom: 4px dashed #2e3f9c;
             padding-bottom: 10px;
         }
+
+        h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.6rem;
+            color: #2e3f9c;
+            margin: 25px 0 15px 0;
+        }
+
         a,
         a:visited {
             color: #2e3f9c;
             font-weight: bold;
         }
+
         a:hover,
         a:focus {
             color: #2e1f66;
         }
+
         nav {
             margin-bottom: 40px;
             text-align: center;
         }
+
         nav a {
             font-size: 1.8rem;
             margin: 0 12px;
             display: inline-block;
         }
+
         nav + nav {
             margin-top: -25px;
         }
+
+        /* The main-nav class gives the primary navigation its own compact layout.
+           This keeps its ten links organized without changing the secondary nav. */
+        nav.main-nav {
+            white-space: nowrap;
+        }
+
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+
         main img {
             display: block;
             box-sizing: border-box;
-            max-width: 250px;
-            width: 100%;
+            max-width: min(100%, 250px);
             margin: 0 auto 30px auto;
             border-radius: 8px;
         }
+
         p {
             font-size: 1.8rem;
             margin-bottom: 30px;
             color: #2f6f9f;
         }
+
+        main p {
+            color: #1f5578;
+        }
+
         main ul {
             list-style: none;
             margin: 0 0 30px 0;
             padding: 0;
         }
+
         main li {
             display: inline-block;
             margin-right: 20px;
         }
+
         main li a {
             font-size: 1.8rem;
         }
+
+        /* The grid class arranges all trading cards in responsive columns.
+           Each card class styles one individual agent's content.
+           The role class distinguishes each agent's cybersecurity specialty.
+           These classes avoid repeating the same CSS for every card. */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #e6f0fd;
+            border: 3px solid #2e3f9c;
+            border-radius: 20px;
+            padding: 15px 20px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #2a2a3a;
+            margin-bottom: 10px;
+        }
+
+        .card .role {
+            color: #5b2a8c;
+            font-weight: bold;
+        }
+
+        .card dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2px 15px;
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+        }
+
+        .card dd {
+            margin: 0;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .card img {
+            margin-bottom: 15px;
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid #2e1f66;
+            outline-offset: 2px;
+        }
+
         footer {
             font-size: 1.5rem;
             margin-top: 35px;
@@ -94,45 +184,46 @@
             border-top: 4px dashed #2e3f9c;
             padding-top: 20px;
         }
+
         footer p {
             font-size: 1.3rem;
             margin: 15px 0 0 0;
             color: #2a2a3a;
         }
+
         @media (max-width: 600px) {
             nav a {
                 font-size: 1.2rem;
                 margin-bottom: 8px;
             }
+
+            nav.main-nav {
+                white-space: normal;
+            }
+
+            nav.main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
             p,
             main li a {
                 font-size: 1.2rem;
             }
+
             footer,
             footer p {
                 font-size: 1.1rem;
             }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* Extra styles for the project pages. Class names style groups of content, each div groups related items so they can be laid out together, a span marks small inline text, and an id gives a heading or form a name to link to. */
-        main p { color: #1f5578; }
-        h3 { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 1.6rem; color: #2e3f9c; margin: 25px 0 15px 0; }
-        a:focus, button:focus, input:focus, select:focus, textarea:focus { outline: 3px solid #2e1f66; outline-offset: 2px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 20px; }
-        .card { background-color: #e6f0fd; border: 3px solid #2e3f9c; border-radius: 20px; padding: 15px 20px; }
-        .card p { font-size: 1.1rem; color: #2a2a3a; margin-bottom: 10px; }
-        .card .role { color: #5b2a8c; font-weight: bold; }
-        .card dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 15px; margin: 10px 0 0 0; font-size: 1.1rem; }
-        .card dd { margin: 0; text-align: right; font-weight: bold; }
-        .card img { margin-bottom: 15px; }
-
-        /* Main nav: smaller text so all ten links fit on one line on wide screens */
-        nav.main-nav { white-space: nowrap; }
-        nav.main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
-        @media (max-width: 600px) {
-            nav.main-nav { white-space: normal; }
-            nav.main-nav a { font-size: 1rem; margin-bottom: 8px; }
-        }
+        /* ID justification: this page does not need any id attributes because
+           no individual element needs a unique CSS target, form-label connection,
+           or fragment link. Classes are sufficient for styling the repeated cards. */
     </style>
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -157,63 +248,99 @@
     </nav>
 
     <nav aria-label="Additional project navigation">
-        <a href="crappy.htm">CRAPpy Page</a>
+        <a href="stuff/My%20BAD%20pAgE%20🤡.htm">CRAPpy Page</a>
         |
         <a href="hobby/index.html">Hobby Site</a>
     </nav>
 
     <main>
         <h2>Platypus Agent Trading Cards</h2>
+
         <p>Meet the Pond Patrol. Each agent has a cyber specialty and three ratings out of ten.</p>
-        <!-- The div with the grid class lines the cards up, and each article with the card class holds one agent. -->
+
+        <!-- This div uses the grid class to arrange the trading cards in responsive columns.
+             Each article uses the card class to group one agent's image, name, specialty,
+             description, and ratings into a consistently styled card. The role class
+             highlights each agent's specialty. Div and class elements are used here
+             because the cards need a shared layout and reusable styles. -->
         <div class="grid">
             <article class="card">
                 <img src="images/agent-spur.png" alt="Agent Spur, a platypus wearing dark sunglasses">
                 <h3>Agent Spur</h3>
                 <p class="role">Penetration tester</p>
                 <p>Finds the weak spot in any burrow door. Politely.</p>
-                <dl><dt>Stealth</dt><dd>7/10</dd><dt>Venom</dt><dd>10/10</dd><dt>Bill</dt><dd>6/10</dd></dl>
+                <dl>
+                    <dt>Stealth</dt><dd>7/10</dd>
+                    <dt>Venom</dt><dd>10/10</dd>
+                    <dt>Bill</dt><dd>6/10</dd>
+                </dl>
             </article>
+
             <article class="card">
                 <img src="images/agent-sonar.png" alt="Agent Sonar, a platypus sending out sonar rings from its bill">
                 <h3>Agent Sonar</h3>
                 <p class="role">Threat hunter</p>
                 <p>Senses electric signals in the water, which is handy when hunting suspicious traffic.</p>
-                <dl><dt>Stealth</dt><dd>8/10</dd><dt>Venom</dt><dd>3/10</dd><dt>Bill</dt><dd>9/10</dd></dl>
+                <dl>
+                    <dt>Stealth</dt><dd>8/10</dd>
+                    <dt>Venom</dt><dd>3/10</dd>
+                    <dt>Bill</dt><dd>9/10</dd>
+                </dl>
             </article>
+
             <article class="card">
                 <img src="images/agent-burrow.png" alt="Agent Burrow, a platypus standing in front of a brick firewall">
                 <h3>Agent Burrow</h3>
                 <p class="role">Firewall engineer</p>
                 <p>Builds tunnels with exactly one entrance and a very grumpy guard.</p>
-                <dl><dt>Stealth</dt><dd>5/10</dd><dt>Venom</dt><dd>2/10</dd><dt>Bill</dt><dd>7/10</dd></dl>
+                <dl>
+                    <dt>Stealth</dt><dd>5/10</dd>
+                    <dt>Venom</dt><dd>2/10</dd>
+                    <dt>Bill</dt><dd>7/10</dd>
+                </dl>
             </article>
+
             <article class="card">
                 <img src="images/agent-eggcrypt.png" alt="Agent Eggcrypt, a platypus next to a locked egg">
                 <h3>Agent Eggcrypt</h3>
                 <p class="role">Cryptographer</p>
                 <p>Keeps every secret safely inside a shell.</p>
-                <dl><dt>Stealth</dt><dd>9/10</dd><dt>Venom</dt><dd>1/10</dd><dt>Bill</dt><dd>8/10</dd></dl>
+                <dl>
+                    <dt>Stealth</dt><dd>9/10</dd>
+                    <dt>Venom</dt><dd>1/10</dd>
+                    <dt>Bill</dt><dd>8/10</dd>
+                </dl>
             </article>
+
             <article class="card">
                 <img src="images/agent-paddle.png" alt="Agent Paddle, a platypus holding a purple paddle">
                 <h3>Agent Paddle</h3>
                 <p class="role">Incident responder</p>
                 <p>First one in the water when an alarm goes off.</p>
-                <dl><dt>Stealth</dt><dd>4/10</dd><dt>Venom</dt><dd>5/10</dd><dt>Bill</dt><dd>10/10</dd></dl>
+                <dl>
+                    <dt>Stealth</dt><dd>4/10</dd>
+                    <dt>Venom</dt><dd>5/10</dd>
+                    <dt>Bill</dt><dd>10/10</dd>
+                </dl>
             </article>
+
             <article class="card">
                 <img src="images/agent-silly.png" alt="Agent Silly, a platypus wearing a purple party hat">
                 <h3>Agent Silly</h3>
                 <p class="role">Chief morale officer</p>
                 <p>Does not know what a firewall is but has never lost a staring contest.</p>
-                <dl><dt>Stealth</dt><dd>2/10</dd><dt>Venom</dt><dd>4/10</dd><dt>Bill</dt><dd>5/10</dd></dl>
+                <dl>
+                    <dt>Stealth</dt><dd>2/10</dd>
+                    <dt>Venom</dt><dd>4/10</dd>
+                    <dt>Bill</dt><dd>5/10</dd>
+                </dl>
             </article>
         </div>
     </main>
 
     <footer>
-        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
+        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a>
+        &copy;2026
         |
         <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
 
