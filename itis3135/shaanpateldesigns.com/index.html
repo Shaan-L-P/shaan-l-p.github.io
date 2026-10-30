@@ -7,9 +7,9 @@
 
     <title>Shaan Patel Designs | Home</title>
 
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="../itis3135/images/favicon-32x32.jpg">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="../itis3135/images/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="../itis3135/images/apple-touch-icon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +17,11 @@
 
     <style>
         :root {
-            --background: #0d1b2a;
-            --panel-background: #1b263b;
-            --text-color: #e0e1dd;
-            --muted-color: #a9b7c6;
-            --gold: #ffc300;
-            --border-color: #415a77;
-            --link-color: #ffd34e;
+            --page-background: #b8d8fb;
+            --text-color: #2a2a3a;
+            --heading-color: #244f73;
+            --link-color: #2e3f9c;
+            --accent-color: #b8c8fa;
         }
 
         * {
@@ -31,106 +29,83 @@
         }
 
         body {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
-            background-color: var(--background);
+            padding: 20px 15px;
+            background-color: var(--page-background);
             color: var(--text-color);
-            font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+            font-family: Helvetica, Arial, sans-serif;
             line-height: 1.6;
         }
 
         /*
-         * The h1 selector styles the design firm's name in the page header.
+         * The h1 selector styles the design firm's name in the shared header.
          */
         h1 {
-            color: var(--gold);
             font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: clamp(1.8rem, 5vw, 2.6rem);
-            font-weight: bold;
+            font-size: clamp(2rem, 6vw, 3.2rem);
             margin: 0;
-            letter-spacing: 1px;
-        }
-
-        h2 {
-            color: var(--gold);
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: clamp(1.7rem, 4vw, 2.2rem);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 25px;
-        }
-
-        h3 {
-            color: var(--gold);
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 1.5rem;
-            margin-top: 0;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            background-color: var(--panel-background);
-            padding: 30px 20px;
-            border-bottom: 6px solid var(--gold);
+            color: var(--link-color);
+            background-color: var(--accent-color);
+            border-radius: 999px;
+            padding: 20px 30px;
             text-align: center;
         }
 
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
+            color: var(--heading-color);
+            border-bottom: 4px dashed var(--link-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: var(--heading-color);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
         header img {
-            flex-shrink: 0;
-            width: 70px;
-            height: 70px;
+            display: block;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin: 0 auto 15px;
             border-radius: 12px;
         }
 
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 25px;
-        }
-
-        p {
-            margin: 18px 0;
-            font-size: 1.1rem;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 25px 0;
-            font-size: 1.1rem;
-        }
-
-        li {
-            padding: 8px 0 8px 30px;
-            position: relative;
-            border-bottom: 1px solid var(--panel-background);
-        }
-
-        li::before {
-            content: "\25B8";
-            color: var(--gold);
-            position: absolute;
-            left: 0;
-            font-size: 1.2em;
-        }
-
-        section {
-            background-color: var(--panel-background);
-            padding: 25px 30px;
-            border-radius: 6px;
-            margin-top: 35px;
-            border-left: 5px solid var(--gold);
-        }
-
         /*
-         * Links use gold and light text colors to remain visible
-         * against the dark navy page and panel backgrounds.
+         * The main navigation connects the page's Home, Services, and Contact
+         * sections using their corresponding IDs.
          */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+            padding: 15px;
+            background-color: var(--accent-color);
+            border-radius: 999px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 999px;
+            text-decoration: none;
+        }
+
         a,
         a:visited {
             color: var(--link-color);
@@ -139,62 +114,97 @@
 
         a:hover,
         a:focus {
-            color: var(--text-color);
+            color: #2e1f66;
         }
 
         a:focus {
-            outline: 2px solid var(--gold);
+            outline: 2px solid var(--link-color);
             outline-offset: 3px;
         }
 
-        footer {
-            text-align: center;
-            background-color: var(--panel-background);
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            color: var(--heading-color);
+        }
+
+        ul {
+            font-size: 1.2rem;
+            padding-left: 30px;
             color: var(--text-color);
-            padding: 25px 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 5px;
+        }
+
+        li::marker {
+            color: var(--link-color);
+            font-size: 1.1em;
+        }
+
+        section {
+            background-color: var(--accent-color);
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-top: 35px;
+        }
+
+        section p {
+            color: var(--text-color);
+        }
+
+        footer {
+            font-size: 1.2rem;
             margin-top: 40px;
-            font-size: 0.95rem;
-            border-top: 6px solid var(--gold);
+            color: var(--text-color);
+            border-top: 4px dashed var(--link-color);
+            padding-top: 20px;
+            text-align: center;
         }
 
         footer p {
+            font-size: 1.1rem;
             margin: 15px 0;
-            font-size: 0.95rem;
-        }
-
-        footer a,
-        footer a:visited {
-            color: var(--link-color);
-        }
-
-        footer .footer-tagline {
-            color: var(--muted-color);
+            color: var(--text-color);
         }
 
         @media (max-width: 600px) {
             body {
-                padding: 0 12px;
+                padding: 15px 12px;
             }
 
-            header {
-                padding: 22px 15px;
+            h1 {
+                padding: 18px 15px;
             }
 
-            header img {
-                width: 55px;
-                height: 55px;
+            nav {
+                border-radius: 15px;
+                gap: 5px;
             }
 
-            main {
-                padding: 25px 10px;
+            nav a {
+                padding: 7px 10px;
+            }
+
+            p,
+            ul {
+                font-size: 1.1rem;
             }
 
             section {
                 padding: 20px 18px;
             }
 
-            footer {
-                padding: 20px 12px;
+            footer,
+            footer p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -205,41 +215,58 @@
 
 <body>
 
-    <header>
-        <img
-            src="../itis3135/images/apple-touch-icon.jpg"
-            alt="Shaan Patel Designs platypus logo"
-        >
-        <h1>Shaan Patel Designs</h1>
-    </header>
+    <!-- This placeholder loads the reusable design-firm header.
+         Its fallback heading remains available to accessibility checkers. -->
+    <div data-include="components/header.html">
+        <header>
+            <img src="images/silly-platypus-logo.jpg"
+                 alt="Shaan Patel Designs platypus logo">
+            <h1>Shaan Patel Designs</h1>
+        </header>
 
-    <main>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            |
+            <a href="#services">Services</a>
+            |
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- These IDs identify the sections linked by the shared navigation. -->
+    <main id="home">
         <h2>Home</h2>
 
         <p>
             Shaan Patel Designs is a web design and development firm built on
-            clean code and sites that actually work. Founded in 2026, the firm
-            serves small businesses and individuals who want a professional site
-            without the enterprise price tag.
+            clean code and websites that actually work. Founded in 2026, the
+            firm serves small businesses and individuals who want a professional
+            website without the enterprise price tag.
         </p>
 
-        <ul>
-            <li>Every site is hand-coded, with no bloated page builders.</li>
-            <li>Fast turnaround, with most projects delivered in two weeks or less.</li>
-            <li>Mobile-friendly layouts on every single build.</li>
-            <li>Direct communication with the person actually writing your code.</li>
-            <li>Backed by a Computer Science education with a cybersecurity focus.</li>
-            <li>Sites built with accessibility and semantic HTML in mind.</li>
-            <li>Affordable rates for students and small local businesses.</li>
-            <li>One free round of revisions on every project.</li>
-        </ul>
+        <section id="services">
+            <h3>What Sets Us Apart</h3>
+
+            <ul>
+                <li>Every site is hand-coded, with no bloated page builders.</li>
+                <li>Fast turnaround, with most projects delivered in two weeks or less.</li>
+                <li>Mobile-friendly layouts on every single build.</li>
+                <li>Direct communication with the person actually writing your code.</li>
+                <li>Backed by a Computer Science education with a cybersecurity focus.</li>
+                <li>Sites built with accessibility and semantic HTML in mind.</li>
+                <li>Affordable rates for students and small local businesses.</li>
+                <li>One free round of revisions on every project.</li>
+            </ul>
+        </section>
 
         <p>
             Shaan Patel Designs takes a client from a rough idea to a fully
-            functioning, live website, ready for visitors.
+            functioning, live website, ready for visitors. Each project focuses
+            on creating a professional experience that is easy to navigate,
+            accessible, and designed around the client's needs.
         </p>
 
-        <section>
+        <section id="contact">
             <h3>Contact</h3>
 
             <p>Phone: (336) 123-4567</p>
@@ -248,44 +275,42 @@
         </section>
     </main>
 
-    <footer>
-        <p>
-            <a href="https://webpages.charlotte.edu/spate338/"
-               target="_blank" rel="noopener noreferrer">CLT Web</a>
-            |
-            <a href="https://shaan-l-p.github.io/"
-               target="_blank" rel="noopener noreferrer">GitHub.io</a>
-            |
-            <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
-               target="_blank" rel="noopener noreferrer">GitHub</a>
-            |
-            <a href="https://www.freecodecamp.org/shaanpateluncc"
-               target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
-            |
-            <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
-               target="_blank" rel="noopener noreferrer">Codecademy</a>
-            |
-            <a href="https://www.linkedin.com/"
-               target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
+    <!-- This placeholder loads the reusable design-firm footer. -->
+    <div data-include="components/footer.html">
+        <footer>
+            <p>
+                <a href="https://webpages.charlotte.edu/spate338/"
+                   target="_blank" rel="noopener noreferrer">CLT Web</a>
+                |
+                <a href="https://shaan-l-p.github.io/"
+                   target="_blank" rel="noopener noreferrer">GitHub.io</a>
+                |
+                <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
+                   target="_blank" rel="noopener noreferrer">GitHub</a>
+                |
+                <a href="https://www.freecodecamp.org/shaanpateluncc"
+                   target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+                |
+                <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
+                   target="_blank" rel="noopener noreferrer">Codecademy</a>
+                |
+                <a href="https://www.linkedin.com/"
+                   target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </p>
 
-        <p>
-            <a href="index.html">Shaan Patel Designs</a> &copy;2026
-            |
-            <a href="../itis3135/index.html">ITIS 3135 Course Site</a>
-            |
-            <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9"
-               target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
-        </p>
+            <p>
+                Page created by Shaan Patel Designs &copy;2026
+                |
+                <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9"
+                   target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
+            </p>
 
-        <p>
-            <a href="index.html">Designed by Shaan Patel</a>
-        </p>
+            <p><em>"Silly code, serious design."</em></p>
+        </footer>
+    </div>
 
-        <p class="footer-tagline">
-            <em>"Silly code, serious design."</em>
-        </p>
-    </footer>
+    <!-- Load the shared header and footer components. -->
+    <script src="scripts/include_components.js"></script>
 
     <!-- Vicunadator must be at the end of the body. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
