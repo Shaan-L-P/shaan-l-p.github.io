@@ -56,7 +56,7 @@
         h2 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             color: var(--heading-color);
             border-bottom: 4px dashed var(--link-color);
             padding-bottom: 10px;
@@ -92,8 +92,9 @@
          * Class explanations:
          * main-nav styles the primary course navigation separately
          * from the secondary project navigation.
+         * page-logo controls the size and positioning of the page image.
          * contract-text adds consistent spacing between contract paragraphs.
-         * signature emphasizes the signed statement.
+         * signature styles the final signed statement.
          * The data-include div placeholders load the shared header and footer.
          * No IDs are used on this page.
          */
@@ -111,6 +112,15 @@
         main {
             max-width: 900px;
             margin: 0 auto;
+        }
+
+        .page-logo {
+            display: block;
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin: 20px auto 30px;
+            border-radius: 8px;
         }
 
         p {
@@ -183,31 +193,41 @@
     <main>
         <h2>Course Contract</h2>
 
+        <img
+            class="page-logo"
+            src="images/silly-platypus-logo.jpg"
+            alt="Silly Platypus logo"
+        >
+
         <p class="contract-text">
             I, Shaan Patel, agree to abide by the terms of the course contract
             in my Fall 2026, ITIS 3135, Web-Based Application Design and
-            Development class with my instructor, Professor [Instructor's Name].
+            Development class with my instructor, Professor von Briesen.
         </p>
 
         <p class="contract-text">
             I understand that all work that I do on publicly available online
             tools will be available to the world and will not put information
             there that is inappropriate for schoolwork, or that I wish to keep
-            private. I also understand that it is my work that counts for
-            attendance, not logins or showing up for class.
+            private.
         </p>
 
         <p class="contract-text">
-            As such, failure to turn in assignments may show as absences. I also
-            understand that given the structure and content of this class it's
-            possible to find many examples online or even view my classmates'
-            code directly. I swear that I will only use these resources to learn
-            and will not cut and paste code except where I have properly given
-            credit and never from my classmates.
+            I also understand that it is my work that counts for attendance,
+            not logins or simply showing up for class. As such, failure to turn
+            in assignments may show as absences.
+        </p>
+
+        <p class="contract-text">
+            I understand that given the structure and content of this class,
+            it is possible to find many examples online or even view my
+            classmates' code directly. I swear that I will only use these
+            resources to learn and will not copy and paste code except where
+            I have properly given credit, and never from my classmates.
         </p>
 
         <p class="signature">
-            Signed: Shaan Patel, September 5, 2026
+            <em>Signed: Shaan Patel, September 5, 2026</em>
         </p>
     </main>
 
