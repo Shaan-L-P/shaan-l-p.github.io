@@ -64,11 +64,11 @@
 
         /*
          * The display-name class styles the required student name.
-         * It uses responsive sizing to keep the heading on one line.
+         * Its smaller font keeps it from competing with the main page heading.
          */
         .display-name {
             font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+            font-size: 1.1rem;
             font-weight: bold;
             text-align: center;
             white-space: nowrap;
@@ -241,6 +241,7 @@
     <!-- This div is a placeholder that include_components.js replaces with the shared header, avoiding repeated header markup. -->
     <div data-include="components/header.html"></div>
 
+    <!-- This is the single required student display name for the introduction page. -->
     <h6 class="display-name">Shaan Patel | Silly Platypus</h6>
 
     <main>
