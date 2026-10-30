@@ -23,6 +23,7 @@
             margin: 0 auto;
             padding: 20px 15px;
         }
+
         h1 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(2rem, 6vw, 3.2rem);
@@ -33,6 +34,7 @@
             padding: 20px 30px;
             text-align: center;
         }
+
         h2 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -41,27 +43,33 @@
             border-bottom: 4px dashed #2e3f9c;
             padding-bottom: 10px;
         }
+
         a,
         a:visited {
             color: #2e3f9c;
             font-weight: bold;
         }
+
         a:hover,
         a:focus {
             color: #2e1f66;
         }
+
         nav {
             margin-bottom: 40px;
             text-align: center;
         }
+
         nav a {
             font-size: 1.8rem;
             margin: 0 12px;
             display: inline-block;
         }
+
         nav + nav {
             margin-top: -25px;
         }
+
         main img {
             display: block;
             box-sizing: border-box;
@@ -70,23 +78,28 @@
             margin: 0 auto 30px auto;
             border-radius: 8px;
         }
+
         p {
             font-size: 1.8rem;
             margin-bottom: 30px;
             color: #2f6f9f;
         }
+
         main ul {
             list-style: none;
             margin: 0 0 30px 0;
             padding: 0;
         }
+
         main li {
             display: inline-block;
             margin-right: 20px;
         }
+
         main li a {
             font-size: 1.8rem;
         }
+
         footer {
             font-size: 1.5rem;
             margin-top: 35px;
@@ -94,32 +107,48 @@
             border-top: 4px dashed #2e3f9c;
             padding-top: 20px;
         }
+
         footer p {
             font-size: 1.3rem;
             margin: 15px 0 0 0;
             color: #2a2a3a;
         }
+
+        /* Main nav: smaller text so all ten links fit on one line on wide screens. */
+        nav.main-nav {
+            white-space: nowrap;
+        }
+
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+
         @media (max-width: 600px) {
             nav a {
                 font-size: 1.2rem;
                 margin-bottom: 8px;
             }
+
             p,
             main li a {
                 font-size: 1.2rem;
             }
+
             footer,
             footer p {
                 font-size: 1.1rem;
             }
-        }
 
-        /* Main nav: smaller text so all ten links fit on one line on wide screens */
-        nav.main-nav { white-space: nowrap; }
-        nav.main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
-        @media (max-width: 600px) {
-            nav.main-nav { white-space: normal; }
-            nav.main-nav a { font-size: 1rem; margin-bottom: 8px; }
+            nav.main-nav {
+                white-space: normal;
+            }
+
+            nav.main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
         }
     </style>
 
@@ -127,64 +156,43 @@
 </head>
 
 <body>
-    <header>
-        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-    </header>
-
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="contract.html">Contract</a>
-        <a href="survey.html">Survey</a>
-        <a href="cards.html">Cards</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="documentation.html">Documentation</a>
-        <a href="product.html">Product</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="about.html">About</a>
-        <a href="website_evaluations.html">Website Evaluations</a>
-    </nav>
-
-    <nav aria-label="Additional project navigation">
-        <a href="crappy.htm">CRAPpy Page</a>
-        |
-        <a href="hobby/index.html">Hobby Site</a>
-    </nav>
+    <div data-include="components/header.html"></div>
 
     <main>
         <h2>Home</h2>
 
-        <img src="images/silly-platypus-logo.jpg" alt="Cartoon drawing of a brown platypus with a gray bill">
+        <img src="images/silly-platypus-logo.jpg"
+             alt="Cartoon drawing of a brown platypus with a gray bill">
 
         <p>Welcome to my webpage for ITIS3135!</p>
 
         <ul>
             <li>
-                <a href="https://webpages.charlotte.edu/spate338/" target="_blank" rel="noopener noreferrer">Webspace</a>
+                <a href="https://webpages.charlotte.edu/spate338/"
+                   target="_blank" rel="noopener noreferrer">Webspace</a>
             </li>
             <li>
-                <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io" target="_blank" rel="noopener noreferrer">GitHub.com</a>
+                <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
+                   target="_blank" rel="noopener noreferrer">GitHub.com</a>
             </li>
             <li>
-                <a href="https://shaan-l-p.github.io/" target="_blank" rel="noopener noreferrer">Github.io</a>
+                <a href="https://shaan-l-p.github.io/"
+                   target="_blank" rel="noopener noreferrer">Github.io</a>
             </li>
             <li>
-                <a href="https://www.freecodecamp.org/shaanpateluncc" target="_blank" rel="noopener noreferrer">FreeCodeCamp</a>
+                <a href="https://www.freecodecamp.org/shaanpateluncc"
+                   target="_blank" rel="noopener noreferrer">FreeCodeCamp</a>
             </li>
             <li>
-                <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC" target="_blank" rel="noopener noreferrer">Codecademy</a>
+                <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
+                   target="_blank" rel="noopener noreferrer">Codecademy</a>
             </li>
         </ul>
     </main>
 
-    <footer>
-        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
-        |
-        <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
+    <div data-include="components/footer.html"></div>
 
-        <p>Designed by Shaan Patel</p>
-        <p><em>"Silly code, serious design."</em></p>
-    </footer>
-
+    <script src="scripts/include_components.js"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
