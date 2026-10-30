@@ -62,8 +62,8 @@
             color: var(--heading-color);
         }
 
-        /* Styles the required display name beneath the shared site header. */
-        h6.display-name {
+        /* Styles the required student display name beneath the shared site header. */
+        .display-name {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: 1.5rem;
             font-weight: bold;
@@ -109,11 +109,11 @@
          * No IDs are used on this page.
          */
 
-        nav.main-nav {
+        .main-nav {
             white-space: nowrap;
         }
 
-        nav.main-nav a {
+        .main-nav a {
             font-size: 0.85rem;
             margin: 0 6px;
             white-space: nowrap;
@@ -201,11 +201,16 @@
                 margin-bottom: 8px;
             }
 
-            nav.main-nav {
+            .display-name {
+                font-size: 1.1rem;
                 white-space: normal;
             }
 
-            nav.main-nav a {
+            .main-nav {
+                white-space: normal;
+            }
+
+            .main-nav a {
                 font-size: 1rem;
                 margin-bottom: 8px;
             }
