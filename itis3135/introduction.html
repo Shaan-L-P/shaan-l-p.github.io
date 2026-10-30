@@ -63,9 +63,9 @@
         }
 
         /* Styles the required student display name beneath the shared site header. */
-        .display-name {
+        h6 {
             font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: bold;
             text-align: center;
             white-space: nowrap;
@@ -102,7 +102,6 @@
         /*
          * Class explanations:
          * main-nav is used by the shared header to style primary course links.
-         * display-name styles the required student display name.
          * profile-figure centers the profile photo and its caption.
          * profile-image controls the photo's size and positioning.
          * quote-credit separates the quotation attribution for independent styling.
@@ -201,8 +200,9 @@
                 margin-bottom: 8px;
             }
 
-            .display-name {
-                font-size: 1.5rem;
+            h6 {
+                font-size: 1.1rem;
+                white-space: nowrap;
             }
 
             .main-nav {
@@ -242,7 +242,7 @@
     <!-- This div is a placeholder that include_components.js replaces with the shared header, avoiding repeated header markup. -->
     <div data-include="components/header.html"></div>
 
-    <h6 class="display-name">Shaan Patel | Silly Platypus</h6>
+    <h6>Shaan Patel | Silly Platypus</h6>
 
     <main>
         <h2>Introduction</h2>
