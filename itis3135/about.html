@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +11,17 @@
     <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #b8d8fb;
-            --pill-bg: #b8c8fa;
-            --pill-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --divider: #2e3f9c;
-            --link: #2e3f9c;
-            --text: #2a2a3a;
+            --page-background: #b8d8fb;
+            --text-color: #2a2a3a;
+            --heading-color: #244f73;
+            --link-color: #2e3f9c;
+            --accent-color: #b8c8fa;
         }
 
         * {
@@ -28,63 +29,89 @@
         }
 
         body {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 1.5rem 3rem;
-            background-color: var(--bg);
-            font-family: "Courier New", Courier, monospace;
-            color: var(--text);
+            padding: 20px 15px;
+            background-color: var(--page-background);
+            color: var(--text-color);
+            font-family: Helvetica, Arial, sans-serif;
             line-height: 1.6;
         }
 
-        header h1 {
-            background-color: var(--pill-bg);
-            border-radius: 999px;
-            margin: 1.5rem 0;
-            padding: 1.2rem 1.5rem;
-            text-align: center;
-            color: var(--pill-text);
+        /*
+         * The h1 selector styles the site name from the shared header.
+         * The clamp function adjusts its size for smaller screens.
+         */
+        h1 {
             font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 2.2rem;
-            font-weight: bold;
-        }
-
-        nav {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: var(--link-color);
+            background-color: var(--accent-color);
+            border-radius: 999px;
+            padding: 20px 30px;
             text-align: center;
-            margin: 1.5rem 0;
         }
 
-        nav a,
-        nav a:visited {
-            color: var(--link);
-            text-decoration: underline;
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
+            color: var(--heading-color);
+            border-bottom: 4px dashed var(--link-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--heading-color);
+        }
+
+        a,
+        a:visited {
+            color: var(--link-color);
             font-weight: bold;
-            margin: 0 1rem;
         }
 
-        nav a:hover,
-        nav a:focus {
+        a:hover,
+        a:focus {
             color: #2e1f66;
         }
 
-        /* The main-nav class keeps the ten course links compact on wide screens. */
-        nav.main-nav {
-            white-space: nowrap;
+        nav {
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        nav.main-nav a {
-            font-size: 0.85rem;
-            margin: 0 6px;
+        nav a {
+            font-size: 1.8rem;
+            margin: 0 12px;
+            display: inline-block;
         }
 
         nav + nav {
-            margin-top: -0.5rem;
+            margin-top: -25px;
         }
 
-        .divider {
-            border: none;
-            border-top: 4px dashed var(--divider);
-            margin: 1.5rem 0;
+        /*
+         * Class explanations:
+         * main-nav styles the primary course navigation separately
+         * from the secondary project navigation.
+         * about-logo controls the size and positioning of the page logo.
+         * No IDs are used on this page.
+         */
+
+        .main-nav {
+            white-space: nowrap;
+        }
+
+        .main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
         }
 
         main {
@@ -92,75 +119,77 @@
             margin: 0 auto;
         }
 
-        h2 {
-            color: var(--heading);
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h3 {
-            color: var(--heading);
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 1.6rem;
-            margin-top: 2rem;
+        .about-logo {
+            display: block;
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            margin: 20px auto 30px;
+            border-radius: 8px;
         }
 
         p {
-            font-size: 1.1rem;
-            color: var(--heading);
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            color: var(--heading-color);
         }
 
         ul {
-            font-size: 1.1rem;
-            color: var(--heading);
+            font-size: 1.2rem;
+            padding-left: 30px;
+            color: var(--text-color);
         }
 
         li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 15px;
         }
 
-        a:focus {
-            outline: 2px solid var(--divider);
-            outline-offset: 2px;
+        code {
+            color: var(--heading-color);
+            font-family: "Courier New", Courier, monospace;
         }
 
         footer {
-            margin-top: 2.5rem;
-            font-size: 0.9rem;
-            color: var(--text);
-            border-top: 4px dashed var(--divider);
-            padding-top: 1.5rem;
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: var(--text-color);
+            border-top: 4px dashed var(--link-color);
+            padding-top: 20px;
         }
 
-        footer a,
-        footer a:visited {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
+        footer p {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: var(--text-color);
         }
 
-        @media (max-width: 700px) {
-            nav.main-nav {
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 12px;
+            }
+
+            .main-nav {
                 white-space: normal;
             }
 
-            nav.main-nav a {
-                display: inline-block;
-                margin-bottom: 8px;
+            .main-nav a {
                 font-size: 1rem;
+                margin-bottom: 8px;
             }
 
             nav a {
-                margin: 0 0.4rem;
+                font-size: 1.2rem;
+                margin-bottom: 8px;
             }
 
-            body {
-                padding: 0 1rem 2rem;
+            p,
+            ul {
+                font-size: 1.1rem;
             }
 
-            header h1 {
-                font-size: 1.7rem;
+            footer,
+            footer p {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -170,19 +199,22 @@
 </head>
 
 <body>
-
-    <!-- The header-placeholder div loads the shared header from components/header.html. -->
+    <!-- This div is a placeholder that include_components.js replaces with the shared header, avoiding repeated header markup. -->
     <div data-include="components/header.html"></div>
 
     <main>
         <h2>About</h2>
 
-        <hr class="divider">
+        <img
+            class="about-logo"
+            src="images/silly-platypus-logo.jpg"
+            alt="Silly Platypus logo"
+        >
 
         <h3>Where This Is All Headed</h3>
 
         <p>
-            By this point in the semester I've built out three separate but
+            By this point in the semester I've built out several separate but
             connected corners of the web, each one serving a different purpose
             but all tied back together through links. Rather than cramming
             everything into one page, the goal has been to keep personal,
@@ -193,8 +225,28 @@
         <p>
             This course site in particular exists to document that process. It's
             where my coursework, assignments, and reflections for ITIS 3135
-            live, and it links out to the other two pieces of the puzzle so
-            anyone visiting can see how the whole structure fits together.
+            live, and it links out to my other projects so anyone visiting can
+            see how the whole structure fits together.
+        </p>
+
+        <h3>Tools and Resources</h3>
+
+        <p>
+            Throughout the development process, I've used Visual Studio Code
+            (VS Code) as my primary code editor and Emmet to speed up writing
+            HTML and CSS. These tools make it easier to organize code and build
+            pages more efficiently. I also use
+            <a href="https://divonbriesen.github.io/teaching/"
+               target="_blank"
+               rel="noopener noreferrer">Professor von Briesen's teaching site</a>
+            as a resource for course materials, examples, and assignment guidance.
+        </p>
+
+        <h3>My Websites and Projects</h3>
+
+        <p>
+            The following sites and projects make up the different parts of my
+            web presence and coursework:
         </p>
 
         <ul>
@@ -205,30 +257,47 @@
             </li>
 
             <li>
-                <strong>Course Site:</strong> Lives inside the <code>itis3135</code>
-                folder (the site you're looking at right now) and holds everything
-                built specifically for this class, from my introduction to this
-                about page.
+                <strong>Course Site:</strong> Lives inside the
+                <code>itis3135</code> folder and holds everything built
+                specifically for this class, including my introduction,
+                assignments, and reflections.
             </li>
 
             <li>
-                <strong>Design Firm Site:</strong> A separate site inside its own
-                folder, built to look and feel like a real freelance design
+                <strong>Design Firm Site:</strong> A separate site inside its
+                own folder, built to look and feel like a real freelance design
                 business rather than a class assignment, with its own distinct
                 branding and layout.
+            </li>
+
+            <li>
+                <strong>CRAPpy Page:</strong> A deliberately poorly designed
+                page that demonstrates common design problems and provides
+                examples of what to avoid when building a website.
+            </li>
+
+            <li>
+                <strong>Whimsical Product Company Site:</strong> A creative
+                website concept for a fictional product company, giving me
+                an opportunity to experiment with branding and a more playful
+                design.
+            </li>
+
+            <li>
+                <strong>Client Project Site:</strong> A website project focused
+                on meeting a client's needs and presenting information in a
+                useful and professional way.
             </li>
         </ul>
     </main>
 
-    <hr class="divider">
-
-    <!-- The footer-placeholder div loads the shared footer from components/footer.html. -->
+    <!-- This div is a placeholder that include_components.js replaces with the shared footer, keeping footer markup consistent across pages. -->
     <div data-include="components/footer.html"></div>
 
     <!-- Load the shared header and footer components. -->
     <script src="scripts/include_components.js"></script>
 
-    <!-- Vicunadator must be immediately before the closing body tag. -->
+    <!-- Vicunadator must be at the end of the body. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
