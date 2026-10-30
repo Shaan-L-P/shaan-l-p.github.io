@@ -51,6 +51,13 @@
             margin: 25px 0 15px 0;
         }
 
+        h4 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.3rem;
+            color: #2e3f9c;
+            margin: 5px 0;
+        }
+
         a,
         a:visited {
             color: #2e3f9c;
@@ -77,8 +84,6 @@
             margin-top: -25px;
         }
 
-        /* The main-nav class gives the primary navigation its own compact layout.
-           This keeps its ten links organized without changing the secondary nav. */
         nav.main-nav {
             white-space: nowrap;
         }
@@ -92,7 +97,8 @@
         main img {
             display: block;
             box-sizing: border-box;
-            max-width: min(100%, 250px);
+            max-width: 250px;
+            width: 100%;
             margin: 0 auto 30px auto;
             border-radius: 8px;
         }
@@ -120,52 +126,6 @@
 
         main li a {
             font-size: 1.8rem;
-        }
-
-        /* The grid class arranges all trading cards in responsive columns.
-           Each card class styles one individual agent's content.
-           The role class distinguishes each agent's cybersecurity specialty.
-           These classes avoid repeating the same CSS for every card. */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: #e6f0fd;
-            border: 3px solid #2e3f9c;
-            border-radius: 20px;
-            padding: 15px 20px;
-        }
-
-        .card p {
-            font-size: 1.1rem;
-            color: #2a2a3a;
-            margin-bottom: 10px;
-        }
-
-        .card .role {
-            color: #5b2a8c;
-            font-weight: bold;
-        }
-
-        .card dl {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 2px 15px;
-            margin: 10px 0 0 0;
-            font-size: 1.1rem;
-        }
-
-        .card dd {
-            margin: 0;
-            text-align: right;
-            font-weight: bold;
-        }
-
-        .card img {
-            margin-bottom: 15px;
         }
 
         a:focus,
@@ -215,50 +175,74 @@
             footer p {
                 font-size: 1.1rem;
             }
+        }
 
+        /* The grid class arranges the cards in responsive columns.
+           The card class styles each agent card, and role highlights each specialty. */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #e6f0fd;
+            border: 3px solid #2e3f9c;
+            border-radius: 20px;
+            padding: 15px 20px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #2a2a3a;
+            margin-bottom: 10px;
+        }
+
+        .card .role {
+            color: #5b2a8c;
+            font-weight: bold;
+        }
+
+        .card dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2px 15px;
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+        }
+
+        .card dd {
+            margin: 0;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .card img {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 600px) {
             .grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 
+    <!-- Accumulus must be the last script in the head. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-    </header>
-
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="contract.html">Contract</a>
-        <a href="survey.html">Survey</a>
-        <a href="cards.html">Cards</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="documentation.html">Documentation</a>
-        <a href="product.html">Product</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="about.html">About</a>
-        <a href="website_evaluations.html">Website Evaluations</a>
-    </nav>
-
-    <nav aria-label="Additional project navigation">
-        <a href="stuff/My%20BAD%20pAgE%20🤡.htm">CRAPpy Page</a>
-        |
-        <a href="hobby/index.html">Hobby Site</a>
-    </nav>
+    <!-- The header-placeholder div loads the shared header from components/header.html. -->
+    <div data-include="components/header.html"></div>
 
     <main>
         <h2>Platypus Agent Trading Cards</h2>
 
         <p>Meet the Pond Patrol. Each agent has a cyber specialty and three ratings out of ten.</p>
 
-        <!-- This div uses the grid class to arrange the trading cards in responsive columns.
-             Each article uses the card class to group one agent's image, name, specialty,
-             description, and ratings into a consistently styled card. The role class
-             highlights each agent's specialty. These elements and classes provide a
-             reusable layout for the six cards. -->
+        <!-- This div uses the grid class to arrange the cards in responsive columns.
+             Each article uses card to group one agent's information, while role identifies the agent's specialty. -->
         <div class="grid">
             <article class="card">
                 <img src="images/agent-spur.png" alt="Agent Spur, a platypus wearing dark sunglasses">
@@ -266,9 +250,12 @@
                 <p class="role">Penetration tester</p>
                 <p>Finds the weak spot in any burrow door. Politely.</p>
                 <dl>
-                    <dt>Stealth</dt><dd>7/10</dd>
-                    <dt>Venom</dt><dd>10/10</dd>
-                    <dt>Bill</dt><dd>6/10</dd>
+                    <dt>Stealth</dt>
+                    <dd>7/10</dd>
+                    <dt>Venom</dt>
+                    <dd>10/10</dd>
+                    <dt>Bill</dt>
+                    <dd>6/10</dd>
                 </dl>
             </article>
 
@@ -278,9 +265,12 @@
                 <p class="role">Threat hunter</p>
                 <p>Senses electric signals in the water, which is handy when hunting suspicious traffic.</p>
                 <dl>
-                    <dt>Stealth</dt><dd>8/10</dd>
-                    <dt>Venom</dt><dd>3/10</dd>
-                    <dt>Bill</dt><dd>9/10</dd>
+                    <dt>Stealth</dt>
+                    <dd>8/10</dd>
+                    <dt>Venom</dt>
+                    <dd>3/10</dd>
+                    <dt>Bill</dt>
+                    <dd>9/10</dd>
                 </dl>
             </article>
 
@@ -290,9 +280,12 @@
                 <p class="role">Firewall engineer</p>
                 <p>Builds tunnels with exactly one entrance and a very grumpy guard.</p>
                 <dl>
-                    <dt>Stealth</dt><dd>5/10</dd>
-                    <dt>Venom</dt><dd>2/10</dd>
-                    <dt>Bill</dt><dd>7/10</dd>
+                    <dt>Stealth</dt>
+                    <dd>5/10</dd>
+                    <dt>Venom</dt>
+                    <dd>2/10</dd>
+                    <dt>Bill</dt>
+                    <dd>7/10</dd>
                 </dl>
             </article>
 
@@ -302,9 +295,12 @@
                 <p class="role">Cryptographer</p>
                 <p>Keeps every secret safely inside a shell.</p>
                 <dl>
-                    <dt>Stealth</dt><dd>9/10</dd>
-                    <dt>Venom</dt><dd>1/10</dd>
-                    <dt>Bill</dt><dd>8/10</dd>
+                    <dt>Stealth</dt>
+                    <dd>9/10</dd>
+                    <dt>Venom</dt>
+                    <dd>1/10</dd>
+                    <dt>Bill</dt>
+                    <dd>8/10</dd>
                 </dl>
             </article>
 
@@ -314,9 +310,12 @@
                 <p class="role">Incident responder</p>
                 <p>First one in the water when an alarm goes off.</p>
                 <dl>
-                    <dt>Stealth</dt><dd>4/10</dd>
-                    <dt>Venom</dt><dd>5/10</dd>
-                    <dt>Bill</dt><dd>10/10</dd>
+                    <dt>Stealth</dt>
+                    <dd>4/10</dd>
+                    <dt>Venom</dt>
+                    <dd>5/10</dd>
+                    <dt>Bill</dt>
+                    <dd>10/10</dd>
                 </dl>
             </article>
 
@@ -326,24 +325,24 @@
                 <p class="role">Chief morale officer</p>
                 <p>Does not know what a firewall is but has never lost a staring contest.</p>
                 <dl>
-                    <dt>Stealth</dt><dd>2/10</dd>
-                    <dt>Venom</dt><dd>4/10</dd>
-                    <dt>Bill</dt><dd>5/10</dd>
+                    <dt>Stealth</dt>
+                    <dd>2/10</dd>
+                    <dt>Venom</dt>
+                    <dd>4/10</dd>
+                    <dt>Bill</dt>
+                    <dd>5/10</dd>
                 </dl>
             </article>
         </div>
     </main>
 
-    <footer>
-        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a>
-        &copy;2026
-        |
-        <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
+    <!-- The footer-placeholder div loads the shared footer from components/footer.html. -->
+    <div data-include="components/footer.html"></div>
 
-        <p>Designed by Shaan Patel</p>
-        <p><em>"Silly code, serious design."</em></p>
-    </footer>
+    <!-- Load the shared header and footer components. -->
+    <script src="scripts/include_components.js"></script>
 
+    <!-- Vicunadator must be immediately before the closing body tag. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>

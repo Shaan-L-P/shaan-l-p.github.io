@@ -44,6 +44,20 @@
             padding-bottom: 10px;
         }
 
+        h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.6rem;
+            color: #2e3f9c;
+            margin: 25px 0 15px 0;
+        }
+
+        h4 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.3rem;
+            color: #2e3f9c;
+            margin: 5px 0;
+        }
+
         a,
         a:visited {
             color: #2e3f9c;
@@ -70,6 +84,16 @@
             margin-top: -25px;
         }
 
+        nav.main-nav {
+            white-space: nowrap;
+        }
+
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+
         main img {
             display: block;
             box-sizing: border-box;
@@ -85,6 +109,10 @@
             color: #2f6f9f;
         }
 
+        main p {
+            color: #1f5578;
+        }
+
         main ul {
             list-style: none;
             margin: 0 0 30px 0;
@@ -98,6 +126,15 @@
 
         main li a {
             font-size: 1.8rem;
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid #2e1f66;
+            outline-offset: 2px;
         }
 
         footer {
@@ -120,6 +157,15 @@
                 margin-bottom: 8px;
             }
 
+            nav.main-nav {
+                white-space: normal;
+            }
+
+            nav.main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
             p,
             main li a {
                 font-size: 1.2rem;
@@ -131,41 +177,9 @@
             }
         }
 
-        /* Extra styles for the project pages. Class names style groups of content,
-           each div groups related items so they can be laid out together, a span
-           marks small inline text, and an id identifies a heading, section, or
-           form so it can be linked to or targeted. */
-
-        main p {
-            color: #1f5578;
-        }
-
-        h3 {
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 1.6rem;
-            color: #2e3f9c;
-            margin: 25px 0 15px 0;
-        }
-
-        a:focus,
-        button:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 3px solid #2e1f66;
-            outline-offset: 2px;
-        }
-
-        h4 {
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 1.3rem;
-            color: #2e3f9c;
-            margin: 5px 0;
-        }
-
-        /* The hero class groups the product image and pitch in a two-column layout.
-           The grid class arranges cards in columns, while card styles each item.
-           The pick class highlights the recommended plan. */
+        /* hero groups the product image and pitch.
+           grid arranges feature and plan cards.
+           card and pick style those cards. */
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -223,7 +237,7 @@
             font-size: 1.2rem;
         }
 
-        /* The field class groups each form label and its input to apply consistent spacing. */
+        /* field groups the email label and input so they receive consistent spacing. */
         .field {
             margin-bottom: 18px;
         }
@@ -286,64 +300,22 @@
             background-color: #2e1f66;
             color: #f8faff;
         }
-
-        /* Main nav uses smaller text so all ten links fit on wide screens. */
-        nav.main-nav {
-            white-space: nowrap;
-        }
-
-        nav.main-nav a {
-            font-size: 0.85rem;
-            margin: 0 6px;
-            white-space: nowrap;
-        }
-
-        @media (max-width: 600px) {
-            nav.main-nav {
-                white-space: normal;
-            }
-
-            nav.main-nav a {
-                font-size: 1rem;
-                margin-bottom: 8px;
-            }
-        }
     </style>
 
+    <!-- Accumulus must be the last script in the head. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-    </header>
-
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="contract.html">Contract</a>
-        <a href="survey.html">Survey</a>
-        <a href="cards.html">Cards</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="documentation.html">Documentation</a>
-        <a href="product.html">Product</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="about.html">About</a>
-        <a href="website_evaluations.html">Website Evaluations</a>
-    </nav>
-
-    <nav aria-label="Additional project navigation">
-        <a href="stuff/My%20BAD%20pAgE%20🤡.htm">CRAPpy Page</a>
-        |
-        <a href="hobby/index.html">Hobby Site</a>
-    </nav>
+    <!-- The header-placeholder div loads the shared header from components/header.html. -->
+    <div data-include="components/header.html"></div>
 
     <main>
         <h2>The Electro-Sense Router</h2>
 
         <!-- The hero div groups the product image and pitch.
-             The grid divs arrange plan and feature cards.
-             The signup section ID is the target of the early-access link.
-             The field div groups the email label and input for consistent spacing. -->
+             The grid divs arrange the feature and plan cards.
+             The signup section ID is the target of the early-access link. -->
         <div class="hero">
             <img src="images/silly-platypus-logo.jpg"
                  alt="Cartoon drawing of a brown platypus with a gray bill">
@@ -415,16 +387,13 @@
         </section>
     </main>
 
-    <footer>
-        <a href="https://webpages.charlotte.edu/spate338/itis3135/shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy;2026
-        |
-        <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9"
-           target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
+    <!-- The footer-placeholder div loads the shared footer from components/footer.html. -->
+    <div data-include="components/footer.html"></div>
 
-        <p>Designed by Shaan Patel</p>
-        <p><em>"Silly code, serious design."</em></p>
-    </footer>
+    <!-- Load the shared header and footer components. -->
+    <script src="scripts/include_components.js"></script>
 
+    <!-- Vicunadator must be immediately before the closing body tag. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
