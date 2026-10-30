@@ -1,214 +1,152 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shaan Patel's Silly Platypus | ITIS3135 | Platypus Agent Trading Cards</title>
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Website Evaluations</title>
 
-    <link rel="icon" type="image/jpeg" href="images/favicon-32x32.jpg">
-    <link rel="icon" type="image/jpeg" href="images/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-color: #2f6f9f;
-            --secondary-color: #b8d8fb;
-            --accent-color: #b8c8fa;
-            --text-color: #263238;
-            --card-background: #ffffff;
-            --page-background: #eef5fc;
-            --border-color: #c5d9ec;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
+            background-color: #b8d8fb;
+            color: #2a2a3a;
+            font-family: Helvetica, Arial, sans-serif;
+            max-width: 900px;
             margin: 0 auto;
-            max-width: 1200px;
-            padding: 20px;
-            background-color: var(--page-background);
-            color: var(--text-color);
-            font-family: "Inter", sans-serif;
-            line-height: 1.6;
-        }
-
-        header {
-            text-align: center;
-            padding: 25px 15px;
-            background-color: var(--secondary-color);
-            border-radius: 16px;
-            margin-bottom: 20px;
+            padding: 20px 15px;
         }
 
         h1 {
-            margin: 0 0 10px;
-            color: var(--primary-color);
-            font-family: "Montserrat", sans-serif;
-            font-size: 2.2rem;
-        }
-
-        header p {
-            margin: 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0 30px;
-        }
-
-        nav a {
-            display: inline-block;
-            padding: 9px 16px;
-            border-radius: 24px;
-            background-color: var(--accent-color);
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
             color: #2e3f9c;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        nav a:hover,
-        nav a:focus {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            text-decoration: underline;
-        }
-
-        main {
-            margin: 0 auto;
-            max-width: 1100px;
+            background-color: #b8c8fa;
+            border-radius: 999px;
+            padding: 20px 30px;
+            text-align: center;
         }
 
         h2 {
-            margin-bottom: 10px;
-            color: var(--primary-color);
-            font-family: "Montserrat", sans-serif;
-            text-align: center;
-        }
-
-        .intro {
-            margin: 0 auto 25px;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 24px;
-            margin: 25px 0;
-        }
-
-        .trading-card {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background-color: var(--card-background);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            box-shadow: 0 4px 10px rgba(35, 65, 95, 0.12);
-        }
-
-        .trading-card img {
-            display: block;
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-            padding: 12px;
-            background-color: #ffffff;
-        }
-
-        .card-content {
-            flex: 1;
-            padding: 18px;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
+            color: #2f6f9f;
+            border-bottom: 4px dashed #2e3f9c;
+            padding-bottom: 10px;
         }
 
         h3 {
-            margin: 0 0 10px;
-            color: var(--primary-color);
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.25rem;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin: 0 0 15px 0;
+            color: #2e3f9c;
         }
 
-        .card-content p {
-            margin: 0 0 12px;
+        a,
+        a:visited {
+            color: #2e3f9c;
+            font-weight: bold;
         }
 
-        .card-content p:last-child {
-            margin-bottom: 0;
+        a:hover,
+        a:focus {
+            color: #2e1f66;
         }
 
-        .card-label {
-            font-weight: 700;
-        }
-
-        footer {
-            margin-top: 35px;
-            padding: 20px;
-            border-top: 2px solid var(--border-color);
+        nav {
+            margin-bottom: 40px;
             text-align: center;
         }
 
+        nav a {
+            font-size: 1.8rem;
+            margin: 0 12px;
+            display: inline-block;
+        }
+
+        nav + nav {
+            margin-top: -25px;
+        }
+
+        p {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #2f6f9f;
+        }
+
+        section {
+            background-color: #b8c8fa;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            padding: 20px 25px;
+        }
+
+        ul {
+            font-size: 1.8rem;
+            margin: 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: #2a2a3a;
+            border-top: 4px dashed #2e3f9c;
+            padding-top: 20px;
+        }
+
         footer p {
-            margin: 8px 0;
+            font-size: 1.3rem;
+            margin: 15px 0 0 0;
+            color: #2a2a3a;
         }
 
-        footer a {
-            color: var(--primary-color);
+        /* Main nav: smaller text so the course links fit on wide screens. */
+        nav.main-nav {
+            white-space: nowrap;
         }
 
-        footer a:hover,
-        footer a:focus {
-            color: #17466b;
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
         }
 
-        .tagline {
-            font-style: italic;
-        }
-
-        @media (max-width: 800px) {
-            .card-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            h1 {
-                font-size: 1.9rem;
-            }
-        }
-
-        @media (max-width: 520px) {
-            body {
-                padding: 12px;
-            }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
+        @media (max-width: 600px) {
             nav a {
-                text-align: center;
+                font-size: 1.2rem;
+                margin-bottom: 8px;
             }
 
-            h1 {
-                font-size: 1.6rem;
+            p,
+            ul {
+                font-size: 1.2rem;
             }
 
-            .trading-card img {
-                height: 230px;
+            footer,
+            footer p {
+                font-size: 1.1rem;
+            }
+
+            nav.main-nav {
+                white-space: normal;
+            }
+
+            nav.main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
             }
         }
     </style>
@@ -217,103 +155,76 @@
 </head>
 
 <body>
-    <header>
-        <h1>Shaan Patel's Silly Platypus</h1>
-        <p>Welcome to the world of platypus agents!</p>
-    </header>
-
-    <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="contract.html">Contract</a>
-        <a href="about.html">About</a>
-        <a href="website_evaluations.html">Website Evaluations</a>
-        <a href="my-bad-page.htm">My Bad Page</a>
-        <a href="hobby/index.html">Hobby</a>
-    </nav>
+    <div data-include="components/header.html"></div>
 
     <main>
-        <h2>Platypus Agent Trading Cards</h2>
+        <h2>Website Evaluations</h2>
 
-        <p class="intro">
-            Meet the extraordinary platypus agents! Each character has unique
-            abilities, a distinct personality, and a special role. Explore the
-            collection and discover what makes each platypus special.
+        <p>
+            For this assignment, I chose two websites to evaluate using the CRAP principles:
+            Contrast, Repetition, Alignment, and Proximity. One website is well-designed and easy
+            to navigate, while the other is poorly designed and difficult to use. By comparing the
+            two, I examined how each website uses these four principles and how its design choices
+            affect the overall user experience.
         </p>
 
-        <div class="card-grid">
-            <article class="trading-card">
-                <img src="spate338/itis3135/images/agent-p.png" alt="Agent P, a platypus secret agent">
-                <div class="card-content">
-                    <h3>Agent P</h3>
-                    <p><span class="card-label">Role:</span> Secret Agent</p>
-                    <p><span class="card-label">Special Ability:</span> Stealth and undercover operations</p>
-                    <p>Cool, calm, and mysterious, Agent P is always ready to stop a villain's plan without revealing his identity.</p>
-                </div>
-            </article>
+        <section>
+            <h3>
+                <a href="https://www.gov.uk" target="_blank" rel="noopener noreferrer">GOV.UK</a>
+            </h3>
 
-            <article class="trading-card">
-                <img src="spate338/itis3135/images/detective-platypus.png" alt="Detective Platypus investigating a mystery">
-                <div class="card-content">
-                    <h3>Detective Platypus</h3>
-                    <p><span class="card-label">Role:</span> Investigator</p>
-                    <p><span class="card-label">Special Ability:</span> Observation and deduction</p>
-                    <p>With a sharp eye for detail, Detective Platypus solves difficult mysteries and uncovers clues that others overlook.</p>
-                </div>
-            </article>
+            <ul>
+                <li>
+                    <strong>Contrast:</strong> Dark text sits on a plain white background, so everything is easy to read.
+                    Links are a clear blue and the main buttons are a bright green or black, so you always know what to click.
+                </li>
+                <li>
+                    <strong>Repetition:</strong> The same font, spacing, link style, and button style show up on every page.
+                    Once you have used one page, the rest feel familiar right away.
+                </li>
+                <li>
+                    <strong>Alignment:</strong> Almost everything lines up along a strong left edge, with a simple
+                    grid behind it. Headings, paragraphs, and lists all follow it, which keeps the page calm and easy to scan.
+                </li>
+                <li>
+                    <strong>Proximity:</strong> Related items are grouped together with plenty of white space between
+                    groups. A heading sits close to the text it introduces, so it is obvious what belongs with what.
+                </li>
+            </ul>
+        </section>
 
-            <article class="trading-card">
-                <img src="spate338/itis3135/images/turbo-platypus.png" alt="Turbo Platypus speeding into action">
-                <div class="card-content">
-                    <h3>Turbo Platypus</h3>
-                    <p><span class="card-label">Role:</span> Speed Specialist</p>
-                    <p><span class="card-label">Special Ability:</span> Super speed and quick reactions</p>
-                    <p>Turbo Platypus moves faster than anyone else and can reach a destination in the blink of an eye.</p>
-                </div>
-            </article>
+        <section>
+            <h3>
+                <a href="https://www.lingscars.com" target="_blank" rel="noopener noreferrer">Ling's Cars</a>
+            </h3>
 
-            <article class="trading-card">
-                <img src="spate338/itis3135/images/wizard-platypus.png" alt="Wizard Platypus using magical powers">
-                <div class="card-content">
-                    <h3>Wizard Platypus</h3>
-                    <p><span class="card-label">Role:</span> Magical Specialist</p>
-                    <p><span class="card-label">Special Ability:</span> Spells and enchantments</p>
-                    <p>Wizard Platypus uses magical knowledge to protect friends, solve problems, and overcome supernatural threats.</p>
-                </div>
-            </article>
-
-            <article class="trading-card">
-                <img src="spate338/itis3135/images/super-platypus.png" alt="Super Platypus showing off superhero powers">
-                <div class="card-content">
-                    <h3>Super Platypus</h3>
-                    <p><span class="card-label">Role:</span> Superhero</p>
-                    <p><span class="card-label">Special Ability:</span> Super strength and heroic courage</p>
-                    <p>Super Platypus stands up for others and uses incredible strength to protect the city from danger.</p>
-                </div>
-            </article>
-
-            <article class="trading-card">
-                <img src="spate338/itis3135/images/explorer-platypus.png" alt="Explorer Platypus ready for an adventure">
-                <div class="card-content">
-                    <h3>Explorer Platypus</h3>
-                    <p><span class="card-label">Role:</span> Adventurer</p>
-                    <p><span class="card-label">Special Ability:</span> Navigation and survival</p>
-                    <p>Explorer Platypus loves discovering new places, exploring unfamiliar environments, and finding hidden treasures.</p>
-                </div>
-            </article>
-        </div>
+            <ul>
+                <li>
+                    <strong>Contrast:</strong> There is a lot of contrast, but it is the wrong kind. Neon colors,
+                    flashing text, and loud backgrounds all fight each other, so nothing stands out as the most
+                    important thing and some of the text is hard to read.
+                </li>
+                <li>
+                    <strong>Repetition:</strong> There is repetition in the sense that everything is loud, but there is no
+                    consistent system. Fonts, colors, and sizes change constantly, so the page has no real visual identity
+                    tying it together.
+                </li>
+                <li>
+                    <strong>Alignment:</strong> Elements look scattered across the page with no clear grid or edge to follow.
+                    Text and images sit at random spots and sizes, which makes it hard for your eyes to know where to go next.
+                </li>
+                <li>
+                    <strong>Proximity:</strong> The page is crammed full, so related things are not clearly grouped and
+                    unrelated things end up right next to each other. Links, ads, and information blur together, and it
+                    is tough to find what you came for.
+                </li>
+            </ul>
+        </section>
     </main>
 
-    <footer>
-        <p>Page designed by Shaan Patel</p>
-        <p>
-            <a href="https://www.freecodecamp.org/certification/">freeCodeCamp</a> |
-            <a href="https://validator.w3.org/">HTML Validator</a> |
-            <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a>
-        </p>
-        <p class="tagline">Curiosity, creativity, and platypus-powered adventures!</p>
-    </footer>
+    <div data-include="components/footer.html"></div>
 
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/include_components.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
