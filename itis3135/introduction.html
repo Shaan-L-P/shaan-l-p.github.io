@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,89 +7,110 @@
 
     <title>Shaan Patel's Silly Platypus | ITIS3135 | Introduction</title>
 
-    <link rel="icon" type="image/jpeg" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --page-background: #b8d8fb;
-            --text-color: #172033;
-            --heading-color: #173f68;
-            --link-color: #182d80;
+            --text-color: #2a2a3a;
+            --heading-color: #2f6f9f;
+            --link-color: #2e3f9c;
+            --accent-color: #b8c8fa;
         }
 
         body {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 15px;
             background-color: var(--page-background);
             color: var(--text-color);
-            font-family: "Courier Prime", "Courier New", monospace;
+            font-family: Helvetica, Arial, sans-serif;
             line-height: 1.6;
         }
 
         h1 {
-            font-family: "Montserrat", Helvetica, sans-serif;
-            font-size: 1.8rem;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: var(--accent-color);
+            border-radius: 999px;
+            padding: 20px 30px;
             text-align: center;
-            color: var(--heading-color);
         }
 
         h2 {
-            font-family: "Montserrat", Helvetica, sans-serif;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
             color: var(--heading-color);
-            border-bottom: 2px solid var(--heading-color);
-            padding-bottom: 5px;
+            border-bottom: 4px dashed var(--link-color);
+            padding-bottom: 10px;
         }
 
         h3 {
-            font-family: "Montserrat", Helvetica, sans-serif;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            margin-top: 35px;
+            margin-bottom: 15px;
             color: var(--heading-color);
-            margin-top: 1.5rem;
         }
 
-        h6.display-name {
-            font-family: "Montserrat", Helvetica, sans-serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            white-space: nowrap;
-            color: var(--heading-color);
-            margin: 10px 0;
-        }
-
-        a:link,
+        a,
         a:visited {
             color: var(--link-color);
+            font-weight: bold;
         }
 
         a:hover,
         a:focus {
-            color: var(--heading-color);
+            color: #2e1f66;
         }
 
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0;
+        nav {
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        .nav-link,
-        .footer-link {
-            text-decoration: underline;
-            padding: 3px;
+        nav a {
+            font-size: 1.8rem;
+            margin: 0 12px;
+            display: inline-block;
+        }
+
+        nav + nav {
+            margin-top: -25px;
+        }
+
+        /*
+         * The main-nav class comes from the shared header component.
+         * It keeps the primary course navigation compact on wider screens.
+         *
+         * The profile-figure class centers the profile photo and caption.
+         * The profile-image class controls the photo's size and positioning.
+         * The quote-credit class separates the quotation attribution.
+         * No IDs are used on this page.
+         */
+
+        nav.main-nav {
+            white-space: nowrap;
+        }
+
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
         }
 
         .profile-figure {
             text-align: center;
-            margin: 20px auto;
+            margin: 20px auto 35px;
         }
 
         .profile-image {
@@ -96,76 +118,113 @@
             width: 100%;
             max-width: 300px;
             height: auto;
-            margin: auto;
+            margin: 0 auto;
+            border-radius: 8px;
         }
 
         figcaption {
             margin-top: 8px;
             font-style: italic;
+            color: var(--heading-color);
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 15px 0;
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            color: var(--heading-color);
         }
 
-        .footer-tagline {
-            text-align: center;
-            font-style: italic;
+        ol {
+            font-size: 1.2rem;
+            padding-left: 30px;
+            color: var(--text-color);
+        }
+
+        ol li {
+            margin-bottom: 15px;
+        }
+
+        ol ol {
+            margin-top: 8px;
+            font-size: 1.05rem;
+        }
+
+        blockquote {
+            margin: 30px 20px;
+            padding: 20px 25px;
+            border-left: 5px solid var(--link-color);
+            border-radius: 8px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            font-size: 1.2rem;
         }
 
         .quote-credit {
             display: block;
-            margin-top: 8px;
+            margin-top: 10px;
+            font-style: italic;
+            text-align: right;
         }
 
-        /*
-         * Classes and IDs are used when needed to organize and style page elements.
-         * The display-name class styles the student's display name.
-         * The main-nav and nav-link classes organize the navigation links.
-         * The profile-figure and profile-image classes position and size the photo.
-         * The footer-links and footer-link classes organize profile links.
-         * The footer-tagline class styles the footer tagline.
-         * The quote-credit class separates the quotation attribution.
-         */
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: var(--text-color);
+            border-top: 4px dashed var(--link-color);
+            padding-top: 20px;
+        }
 
-        @media screen and (max-width: 600px) {
+        footer p {
+            font-size: 1.3rem;
+            margin: 15px 0 0 0;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 600px) {
             body {
-                padding: 12px;
+                padding: 15px 12px;
             }
 
-            h6.display-name {
-                font-size: 1.1rem;
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+            }
+
+            nav.main-nav {
                 white-space: normal;
             }
 
-            .main-nav,
-            .footer-links {
-                gap: 8px;
+            nav.main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
+            p,
+            ol {
+                font-size: 1.1rem;
+            }
+
+            ol ol {
+                font-size: 1rem;
+            }
+
+            blockquote {
+                margin: 20px 5px;
+                padding: 15px;
+            }
+
+            footer,
+            footer p {
+                font-size: 1.1rem;
             }
         }
     </style>
 
-    <script src="https://lint.page/accumulus/accumulus.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-
-        <h6 class="display-name">Shaan Patel | Silly Platypus</h6>
-
-        <nav class="main-nav" aria-label="Main navigation">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="introduction.html">Introduction</a>
-            <a class="nav-link" href="contract.html">Contract</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="website_evaluations.html">Website Evaluations</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
         <h2>Introduction</h2>
@@ -174,24 +233,36 @@
             <img
                 class="profile-image"
                 src="images/brooklyn-bridge.jpg"
-                alt="Brooklyn Bridge in New York City"
+                alt="Shaan Patel standing on the Brooklyn Bridge in New York City"
             >
-            <figcaption>Brooklyn Bridge Summer 2025</figcaption>
+            <figcaption>Brooklyn Bridge, NYC Summer 2025</figcaption>
         </figure>
 
-        <p><strong>Personal Background:</strong> I am Shaan Patel, a student at UNC Charlotte studying Computer Science with a concentration in Cybersecurity.</p>
+        <p>
+            <strong>Personal Background:</strong> I am Shaan Patel, a student at UNC Charlotte studying Computer Science with a concentration in Cybersecurity.
+        </p>
 
-        <p><strong>Professional Background:</strong> I am interested in cybersecurity, ethical hacking, and learning how technology can be used to protect people and organizations. I have experience working with children as a Youth Development Leader at the YMCA, where I helped supervise groups and maintain a safe environment.</p>
+        <p>
+            <strong>Professional Background:</strong> I am interested in cybersecurity, ethical hacking, and learning how technology can be used to protect people and organizations. I have experience working with children as a Youth Development Leader at the YMCA, where I helped supervise groups and maintain a safe environment.
+        </p>
 
-        <p><strong>Academic Background:</strong> I am studying Computer Science at UNC Charlotte and focusing on cybersecurity. My coursework has helped me build skills in programming, databases, and technology.</p>
+        <p>
+            <strong>Academic Background:</strong> I am studying Computer Science at UNC Charlotte and focusing on cybersecurity. My coursework has helped me build skills in programming, databases, and technology.
+        </p>
 
         <h3>Computer and Work Information</h3>
 
-        <p><strong>Primary Work Computer:</strong> MacBook</p>
+        <p>
+            <strong>Primary Work Computer:</strong> MacBook Pro.
+        </p>
 
-        <p><strong>Primary Work Location:</strong> Home or campus, depending on the assignment.</p>
+        <p>
+            <strong>Primary Work Location:</strong> Home or campus, depending on the assignment.
+        </p>
 
-        <p><strong>Alternate Computer:</strong> Campus computers when needed.</p>
+        <p>
+            <strong>Alternate Computer:</strong> Campus computers when needed.
+        </p>
 
         <h3>Courses</h3>
 
@@ -199,65 +270,56 @@
 
         <ol>
             <li>
-                ITIS 3135: Front-End Web Application Development
+                ITIS 3135: Web Application
                 <ol>
-                    <li>Learning to create and style websites using HTML and CSS.</li>
+                    <li>Learning to create and develop websites using HTML, CSS, and other web technologies.</li>
                 </ol>
             </li>
+
             <li>
                 ITSC 2181: Introduction to Computer Systems
                 <ol>
-                    <li>Learning about computer systems and how hardware and software work together.</li>
+                    <li>Learning about computer systems, hardware, software, and how computers operate.</li>
                 </ol>
             </li>
+
             <li>
-                ITSC 3688: Computers and Their Impact on Society
+                ITSC 3688: CS and AI: Ethics, Society, Communication
                 <ol>
-                    <li>Exploring the social and ethical impacts of computing and technology.</li>
+                    <li>Exploring the ethical, social, and communication challenges connected to computing and artificial intelligence.</li>
                 </ol>
             </li>
+
             <li>
                 MATH 2164: Matrices and Linear Algebra
                 <ol>
-                    <li>Studying matrices, linear equations, and related mathematical concepts.</li>
+                    <li>Studying matrices, linear equations, and mathematical concepts used in computing and other fields.</li>
                 </ol>
             </li>
+
             <li>
-                ENGL 3081: Technical Writing
+                ENGL 3081: Authors, Pop Culture, and Genre Studies
                 <ol>
-                    <li>Developing clear and effective writing for professional and technical audiences.</li>
+                    <li>Exploring literature, popular culture, and different genres through reading, discussion, and writing.</li>
                 </ol>
             </li>
         </ol>
 
         <h3>Interests</h3>
 
-        <p>I enjoy cybersecurity, technology, gaming, drawing, and electronic music. I also enjoy watching animated shows, including <em>Invincible</em>, and listening to artists such as Bunii.</p>
+        <p>
+            I enjoy cybersecurity, technology, drawing, and electronic music. I also enjoy watching animated shows, including <em>Invincible</em>, and listening to artists such as Bunii.
+        </p>
 
         <blockquote>
             “You will face many defeats in life, but never let yourself be defeated.”
             <span class="quote-credit">- Maya Angelou</span>
         </blockquote>
-        <!-- The span separates the quote attribution so it can be styled independently. -->
     </main>
 
-    <footer>
-        <p class="footer-tagline"><em>Simple pages, built with care.</em></p>
+    <div data-include="components/footer.html"></div>
 
-        <nav class="footer-links" aria-label="Profile links">
-            <a class="footer-link" href="https://webpages.charlotte.edu/">CLT Web</a>
-            <a class="footer-link" href="https://github.io/">GitHub.io</a>
-            <a class="footer-link" href="https://github.com/">GitHub</a>
-            <a class="footer-link" href="https://www.freecodecamp.org/">freeCodeCamp</a>
-            <a class="footer-link" href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">Certified in Responsive Web Development</a>
-            <a class="footer-link" href="https://www.codecademy.com/">Codecademy</a>
-            <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-        </nav>
-
-        <p>Shaan Patel Designs ©2026 Shaan Patel</p>
-        <p>Designed by Shaan Patel</p>
-    </footer>
-
+    <script src="scripts/include_components.js"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
