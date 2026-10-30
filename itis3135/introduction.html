@@ -62,6 +62,17 @@
             color: var(--heading-color);
         }
 
+        /* Styles the required display name beneath the shared site header. */
+        h6.display-name {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            color: var(--heading-color);
+            margin: 10px 0 25px 0;
+        }
+
         a,
         a:visited {
             color: var(--link-color);
@@ -89,12 +100,12 @@
         }
 
         /*
-         * The main-nav class comes from the shared header component.
-         * It keeps the primary course navigation compact on wider screens.
-         *
-         * The profile-figure class centers the profile photo and caption.
-         * The profile-image class controls the photo's size and positioning.
-         * The quote-credit class separates the quotation attribution.
+         * Class explanations:
+         * main-nav is used by the shared header to style primary course links.
+         * display-name styles the required student display name.
+         * profile-figure centers the profile photo and its caption.
+         * profile-image controls the photo's size and positioning.
+         * quote-credit separates the quotation attribution for independent styling.
          * No IDs are used on this page.
          */
 
@@ -175,8 +186,8 @@
         }
 
         footer p {
-            font-size: 1.3rem;
-            margin: 15px 0 0 0;
+            font-size: 1.1rem;
+            margin: 15px 0;
             color: var(--text-color);
         }
 
@@ -224,7 +235,10 @@
 </head>
 
 <body>
+    <!-- This div is a placeholder that include_components.js replaces with the shared header, avoiding repeated header markup. -->
     <div data-include="components/header.html"></div>
+
+    <h6 class="display-name">Shaan Patel | Silly Platypus</h6>
 
     <main>
         <h2>Introduction</h2>
@@ -233,7 +247,7 @@
             <img
                 class="profile-image"
                 src="images/brooklyn-bridge.jpg"
-                alt="Shaan Patel standing on the Brooklyn Bridge in New York City"
+                alt="Shaan Patel on the Brooklyn Bridge in New York City"
             >
             <figcaption>Brooklyn Bridge, NYC Summer 2025</figcaption>
         </figure>
@@ -277,7 +291,7 @@
             </li>
 
             <li>
-                ITSC 2181: Introduction to Computer Systems
+                ITSC 2181: Intro to Computer Systems
                 <ol>
                     <li>Learning about computer systems, hardware, software, and how computers operate.</li>
                 </ol>
@@ -313,10 +327,12 @@
 
         <blockquote>
             “You will face many defeats in life, but never let yourself be defeated.”
+            <!-- This span isolates the quote attribution so it can be styled independently from the quotation. -->
             <span class="quote-credit">- Maya Angelou</span>
         </blockquote>
     </main>
 
+    <!-- This div is a placeholder that include_components.js replaces with the shared footer, keeping footer markup consistent across pages. -->
     <div data-include="components/footer.html"></div>
 
     <script src="scripts/include_components.js"></script>
