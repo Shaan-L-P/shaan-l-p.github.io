@@ -40,20 +40,37 @@
         }
 
         /*
-         * The site-name class styles the firm's h1 without using
-         * a qualified heading selector. Responsive sizing keeps the
-         * business name readable on smaller screens.
+         * The site-name class creates the pill-shaped heading containing
+         * the business logo and firm name together.
          */
         .site-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 15px 30px;
             font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: clamp(2rem, 6vw, 3.2rem);
+            font-size: clamp(1.6rem, 5vw, 3rem);
             font-weight: bold;
-            margin: 0;
             color: var(--link-color);
             background-color: var(--accent-color);
             border-radius: 999px;
-            padding: 20px 30px;
             text-align: center;
+        }
+
+        /*
+         * The logo image is displayed directly beside the business name
+         * inside the pill-shaped heading.
+         */
+        .site-name img {
+            display: block;
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            flex-shrink: 0;
         }
 
         h2 {
@@ -74,20 +91,11 @@
         }
 
         /*
-         * The header contains the business logo and firm name.
+         * The header contains the business name and logo together.
          */
         header {
             text-align: center;
             margin-bottom: 25px;
-        }
-
-        header img {
-            display: block;
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            margin: 0 auto 15px;
-            border-radius: 12px;
         }
 
         /*
@@ -188,7 +196,14 @@
             }
 
             .site-name {
-                padding: 18px 15px;
+                gap: 8px;
+                padding: 12px 15px;
+                font-size: clamp(1.15rem, 5vw, 1.6rem);
+            }
+
+            .site-name img {
+                width: 44px;
+                height: 44px;
             }
 
             nav {
@@ -222,13 +237,15 @@
 
 <body>
 
-    <!-- Common-style header with the business logo and firm name. -->
     <header>
-        <img
-            src="../images/silly-platypus-logo.jpg"
-            alt="Shaan Patel Designs platypus logo"
-        >
-        <h1 class="site-name">Shaan Patel Designs</h1>
+        <h1 class="site-name">
+            <img
+                src="../images/silly-platypus-logo.jpg"
+                alt=""
+                aria-hidden="true"
+            >
+            Shaan Patel Designs
+        </h1>
     </header>
 
     <nav aria-label="Main navigation">
