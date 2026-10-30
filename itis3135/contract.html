@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +11,17 @@
     <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #b8d8fb;
-            --pill-bg: #b8c8fa;
-            --pill-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --divider: #2e3f9c;
-            --link: #2e3f9c;
-            --text: #2a2a3a;
+            --page-background: #b8d8fb;
+            --text-color: #2a2a3a;
+            --heading-color: #244f73;
+            --link-color: #2e3f9c;
+            --accent-color: #b8c8fa;
         }
 
         * {
@@ -28,64 +29,83 @@
         }
 
         body {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 1.5rem 3rem;
-            background-color: var(--bg);
-            font-family: "Courier New", Courier, monospace;
-            color: var(--text);
+            padding: 20px 15px;
+            background-color: var(--page-background);
+            color: var(--text-color);
+            font-family: Helvetica, Arial, sans-serif;
             line-height: 1.6;
         }
 
-        header h1 {
-            background-color: var(--pill-bg);
-            border-radius: 999px;
-            margin: 1.5rem 0;
-            padding: 1.2rem 1.5rem;
-            text-align: center;
-            color: var(--pill-text);
+        /*
+         * The h1 selector styles the site name from the shared header.
+         * The clamp function adjusts its size for smaller screens.
+         */
+        h1 {
             font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 2.2rem;
-            font-weight: bold;
-        }
-
-        nav {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: var(--link-color);
+            background-color: var(--accent-color);
+            border-radius: 999px;
+            padding: 20px 30px;
             text-align: center;
-            margin: 1.5rem 0;
         }
 
-        nav a,
-        nav a:visited {
-            color: var(--link);
-            text-decoration: underline;
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
+            color: var(--heading-color);
+            border-bottom: 4px dashed var(--link-color);
+            padding-bottom: 10px;
+        }
+
+        a,
+        a:visited {
+            color: var(--link-color);
             font-weight: bold;
-            margin: 0 1rem;
         }
 
-        nav a:hover,
-        nav a:focus {
+        a:hover,
+        a:focus {
             color: #2e1f66;
         }
 
-        /* The main-nav class keeps the ten course links compact on wide screens. */
-        nav.main-nav {
-            white-space: nowrap;
+        nav {
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        nav.main-nav a {
-            font-size: 0.85rem;
-            margin: 0 6px;
+        nav a {
+            font-size: 1.8rem;
+            margin: 0 12px;
+            display: inline-block;
         }
 
         nav + nav {
-            margin-top: -0.5rem;
+            margin-top: -25px;
         }
 
-        /* The divider class creates the dashed horizontal lines separating page sections. */
-        .divider {
-            border: none;
-            border-top: 4px dashed var(--divider);
-            margin: 1.5rem 0;
+        /*
+         * Class explanations:
+         * main-nav styles the primary course navigation separately
+         * from the secondary project navigation.
+         * contract-text adds consistent spacing between contract paragraphs.
+         * signature emphasizes the signed statement.
+         * The data-include div placeholders load the shared header and footer.
+         * No IDs are used on this page.
+         */
+
+        .main-nav {
+            white-space: nowrap;
+        }
+
+        .main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
         }
 
         main {
@@ -93,69 +113,61 @@
             margin: 0 auto;
         }
 
-        h2 {
-            color: var(--heading);
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            font-size: 2rem;
-        }
-
         p {
-            font-size: 1.1rem;
-            color: var(--heading);
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            color: var(--heading-color);
         }
 
-        /* The contract-text class adds consistent spacing between contract paragraphs.
-           The signature class separates and emphasizes the signed statement. */
         .contract-text {
-            margin-bottom: 1.5rem;
+            margin-bottom: 25px;
         }
 
         .signature {
-            margin-top: 2rem;
+            margin-top: 35px;
             font-weight: bold;
-        }
-
-        a:focus {
-            outline: 2px solid var(--divider);
-            outline-offset: 2px;
         }
 
         footer {
-            margin-top: 2.5rem;
-            font-size: 0.9rem;
-            color: var(--text);
-            border-top: 4px dashed var(--divider);
-            padding-top: 1.5rem;
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: var(--text-color);
+            border-top: 4px dashed var(--link-color);
+            padding-top: 20px;
         }
 
-        footer a,
-        footer a:visited {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
+        footer p {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: var(--text-color);
         }
 
-        @media (max-width: 700px) {
-            nav.main-nav {
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 12px;
+            }
+
+            .main-nav {
                 white-space: normal;
             }
 
-            nav.main-nav a {
-                display: inline-block;
-                margin-bottom: 8px;
+            .main-nav a {
                 font-size: 1rem;
+                margin-bottom: 8px;
             }
 
             nav a {
-                margin: 0 0.4rem;
+                font-size: 1.2rem;
+                margin-bottom: 8px;
             }
 
-            body {
-                padding: 0 1rem 2rem;
+            p {
+                font-size: 1.1rem;
             }
 
-            header h1 {
-                font-size: 1.7rem;
+            footer,
+            footer p {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -165,11 +177,8 @@
 </head>
 
 <body>
-
-    <!-- The header-placeholder div loads the shared header from components/header.html. -->
+    <!-- This div is a placeholder that include_components.js replaces with the shared header, avoiding repeated header markup. -->
     <div data-include="components/header.html"></div>
-
-    <hr class="divider">
 
     <main>
         <h2>Course Contract</h2>
@@ -202,15 +211,13 @@
         </p>
     </main>
 
-    <hr class="divider">
-
-    <!-- The footer-placeholder div loads the shared footer from components/footer.html. -->
+    <!-- This div is a placeholder that include_components.js replaces with the shared footer, keeping footer markup consistent across pages. -->
     <div data-include="components/footer.html"></div>
 
     <!-- Load the shared header and footer components. -->
     <script src="scripts/include_components.js"></script>
 
-    <!-- Vicunadator must be immediately before the closing body tag. -->
+    <!-- Vicunadator must be at the end of the body. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
