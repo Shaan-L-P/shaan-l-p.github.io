@@ -1,180 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shaan's Contract</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/jpeg" sizes="32x32" href="/spate338/itis3135/images/favicon-32x32.jpg">
-<link rel="icon" type="image/jpeg" sizes="16x16" href="/spate338/itis3135/images/favicon-16x16.jpg">
-<link rel="apple-touch-icon" sizes="180x180" href="/spate338/itis3135/images/apple-touch-icon.jpg">
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Course Contract</title>
 
-<style>
-  :root {
-    --bg: #b8d8fb;
-    --pill-bg: #b8c8fa;
-    --pill-text: #2e3f9c;
-    --heading: #2f6f9f;
-    --divider: #2e3f9c;
-    --link: #2e3f9c;
-    --text: #2a2a3a;
-  }
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 
-  * {
-    box-sizing: border-box;
-  }
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  body {
-    margin: 0;
-    padding: 0 1.5rem 3rem;
-    background-color: var(--bg);
-    font-family: "Courier New", Courier, monospace;
-    color: var(--text);
-    line-height: 1.6;
-  }
+    <style>
+        :root {
+            --bg: #b8d8fb;
+            --pill-bg: #b8c8fa;
+            --pill-text: #2e3f9c;
+            --heading: #2f6f9f;
+            --divider: #2e3f9c;
+            --link: #2e3f9c;
+            --text: #2a2a3a;
+        }
 
-  .pill {
-    background-color: var(--pill-bg);
-    border-radius: 999px;
-    margin: 1.5rem 0;
-    padding: 1.2rem 1.5rem;
-    text-align: center;
-  }
+        * {
+            box-sizing: border-box;
+        }
 
-  h1 {
-    margin: 0;
-    color: var(--pill-text);
-    font-size: 2.2rem;
-    font-weight: bold;
-  }
+        body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+            background-color: var(--bg);
+            font-family: "Courier New", Courier, monospace;
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-  nav {
-    text-align: center;
-    margin: 1.5rem 0;
-  }
+        header h1 {
+            background-color: var(--pill-bg);
+            border-radius: 999px;
+            margin: 1.5rem 0;
+            padding: 1.2rem 1.5rem;
+            text-align: center;
+            color: var(--pill-text);
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
 
-  nav a {
-    color: var(--link);
-    text-decoration: underline;
-    font-weight: bold;
-    margin: 0 1rem;
-  }
+        nav {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
 
-  nav a:hover,
-  nav a:focus {
-    color: #2e1f66;
-  }
+        nav a,
+        nav a:visited {
+            color: var(--link);
+            text-decoration: underline;
+            font-weight: bold;
+            margin: 0 1rem;
+        }
 
-  .divider {
-    border: none;
-    border-top: 4px dashed var(--divider);
-    margin: 1.5rem 0;
-  }
+        nav a:hover,
+        nav a:focus {
+            color: #2e1f66;
+        }
 
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-  }
+        /* The main-nav class keeps the ten course links compact on wide screens. */
+        nav.main-nav {
+            white-space: nowrap;
+        }
 
-  h2 {
-    color: var(--heading);
-    font-size: 1.6rem;
-  }
+        nav.main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+        }
 
-  p {
-    font-size: 1.1rem;
-    color: var(--heading);
-  }
+        nav + nav {
+            margin-top: -0.5rem;
+        }
 
-  .contract-text {
-    margin-bottom: 1.5rem;
-  }
+        /* The divider class creates the dashed horizontal lines separating page sections. */
+        .divider {
+            border: none;
+            border-top: 4px dashed var(--divider);
+            margin: 1.5rem 0;
+        }
 
-  .signature {
-    margin-top: 2rem;
-    font-weight: bold;
-  }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-  a:focus {
-    outline: 2px solid var(--divider);
-    outline-offset: 2px;
-  }
+        h2 {
+            color: var(--heading);
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 2rem;
+        }
 
-  footer {
-    margin-top: 2.5rem;
-    font-size: 0.9rem;
-    color: var(--text);
-  }
+        p {
+            font-size: 1.1rem;
+            color: var(--heading);
+        }
 
-  footer a {
-    color: var(--link);
-    text-decoration: underline;
-    font-weight: bold;
-  }
-</style>
+        /* The contract-text class adds consistent spacing between contract paragraphs.
+           The signature class separates and emphasizes the signed statement. */
+        .contract-text {
+            margin-bottom: 1.5rem;
+        }
 
-<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        .signature {
+            margin-top: 2rem;
+            font-weight: bold;
+        }
+
+        a:focus {
+            outline: 2px solid var(--divider);
+            outline-offset: 2px;
+        }
+
+        footer {
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-top: 4px dashed var(--divider);
+            padding-top: 1.5rem;
+        }
+
+        footer a,
+        footer a:visited {
+            color: var(--link);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            nav.main-nav {
+                white-space: normal;
+            }
+
+            nav.main-nav a {
+                display: inline-block;
+                margin-bottom: 8px;
+                font-size: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.4rem;
+            }
+
+            body {
+                padding: 0 1rem 2rem;
+            }
+
+            header h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+
+    <!-- Accumulus must be the last script in the head. -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<header class="pill">
-  <h1>Shaan's Contract</h1>
-</header>
+    <!-- The header-placeholder div loads the shared header from components/header.html. -->
+    <div data-include="components/header.html"></div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="contract.html">Contract</a>
-  <a href="introduction.html">Introduction</a>
-  <a href="about.html">About</a>
-  <a href="website_evaluations.html">Website Evaluations</a>
-</nav>
+    <hr class="divider">
 
-<hr class="divider">
+    <main>
+        <h2>Course Contract</h2>
 
-<main>
+        <p class="contract-text">
+            I, Shaan Patel, agree to abide by the terms of the course contract
+            in my Fall 2026, ITIS 3135, Web-Based Application Design and
+            Development class with my instructor, Professor [Instructor's Name].
+        </p>
 
-  <h2>Course Contract</h2>
+        <p class="contract-text">
+            I understand that all work that I do on publicly available online
+            tools will be available to the world and will not put information
+            there that is inappropriate for schoolwork, or that I wish to keep
+            private. I also understand that it is my work that counts for
+            attendance, not logins or showing up for class.
+        </p>
 
-  <p class="contract-text">
-    I, Shaan Patel, agree to abide by the terms of the course contract
-    in my Fall 2026, ITIS 3135, Web-Based Application Design and
-    Development class with my instructor, Professor [Instructor's Name].
-  </p>
+        <p class="contract-text">
+            As such, failure to turn in assignments may show as absences. I also
+            understand that given the structure and content of this class it's
+            possible to find many examples online or even view my classmates'
+            code directly. I swear that I will only use these resources to learn
+            and will not cut and paste code except where I have properly given
+            credit and never from my classmates.
+        </p>
 
-  <p class="contract-text">
-    I understand that all work that I do on publicly available online
-    tools will be available to the world and will not put information
-    there that is inappropriate for schoolwork, or that I wish to keep
-    private. I also understand that it is my work that counts for
-    attendance, not logins or showing up for class.
-  </p>
+        <p class="signature">
+            Signed: Shaan Patel, September 5, 2026
+        </p>
+    </main>
 
-  <p class="contract-text">
-    As such, failure to turn in assignments may show as absences. I also
-    understand that given the structure and content of this class it’s
-    possible to find many examples online or even view my classmates’
-    code directly. I swear that I will only use these resources to learn
-    and will not cut and paste code except where I have properly given
-    credit and never from my classmates.
-  </p>
+    <hr class="divider">
 
-  <p class="signature">
-    Signed: Shaan Patel, September 5, 2026
-  </p>
+    <!-- The footer-placeholder div loads the shared footer from components/footer.html. -->
+    <div data-include="components/footer.html"></div>
 
-</main>
+    <!-- Load the shared header and footer components. -->
+    <script src="scripts/include_components.js"></script>
 
-<hr class="divider">
-
-<footer>
-  <a href="shaanpateldesigns.com/index.html">Shaan Patel Designs</a> &copy; 2026
-  |
-  <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9"
-     target="_blank" rel="noopener">freeCodeCamp Responsive Web Design Certification</a>
-</footer>
-
-
-<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <!-- Vicunadator must be immediately before the closing body tag. -->
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
