@@ -7,9 +7,10 @@
 
     <title>Shaan Patel Designs | Home</title>
 
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+    <!-- These images are stored in the parent itis3135/images directory. -->
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="../images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="../images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,11 +40,14 @@
         }
 
         /*
-         * The h1 selector styles the design firm's name in the shared header.
+         * The site-name class styles the firm's h1 without using
+         * a qualified heading selector. Responsive sizing keeps the
+         * business name readable on smaller screens.
          */
-        h1 {
+        .site-name {
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(2rem, 6vw, 3.2rem);
+            font-weight: bold;
             margin: 0;
             color: var(--link-color);
             background-color: var(--accent-color);
@@ -69,6 +73,9 @@
             color: var(--heading-color);
         }
 
+        /*
+         * The header contains the business logo and firm name.
+         */
         header {
             text-align: center;
             margin-bottom: 25px;
@@ -84,8 +91,8 @@
         }
 
         /*
-         * The main navigation connects the page's Home, Services, and Contact
-         * sections using their corresponding IDs.
+         * Navigation connects the Home, Services, and Contact sections.
+         * The corresponding IDs identify the navigation destinations.
          */
         nav {
             display: flex;
@@ -180,7 +187,7 @@
                 padding: 15px 12px;
             }
 
-            h1 {
+            .site-name {
                 padding: 18px 15px;
             }
 
@@ -215,25 +222,24 @@
 
 <body>
 
-    <!-- This placeholder loads the reusable design-firm header.
-         Its fallback heading remains available to accessibility checkers. -->
-    <div data-include="components/header.html">
-        <header>
-            <img src="images/silly-platypus-logo.jpg"
-                 alt="Shaan Patel Designs platypus logo">
-            <h1>Shaan Patel Designs</h1>
-        </header>
+    <!-- Common-style header with the business logo and firm name. -->
+    <header>
+        <img
+            src="../images/silly-platypus-logo.jpg"
+            alt="Shaan Patel Designs platypus logo"
+        >
+        <h1 class="site-name">Shaan Patel Designs</h1>
+    </header>
 
-        <nav aria-label="Main navigation">
-            <a href="#home">Home</a>
-            |
-            <a href="#services">Services</a>
-            |
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        |
+        <a href="#services">Services</a>
+        |
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <!-- These IDs identify the sections linked by the shared navigation. -->
+    <!-- These IDs identify the page sections connected to the navigation links. -->
     <main id="home">
         <h2>Home</h2>
 
@@ -275,42 +281,43 @@
         </section>
     </main>
 
-    <!-- This placeholder loads the reusable design-firm footer. -->
-    <div data-include="components/footer.html">
-        <footer>
-            <p>
-                <a href="https://webpages.charlotte.edu/spate338/"
-                   target="_blank" rel="noopener noreferrer">CLT Web</a>
-                |
-                <a href="https://shaan-l-p.github.io/"
-                   target="_blank" rel="noopener noreferrer">GitHub.io</a>
-                |
-                <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
-                   target="_blank" rel="noopener noreferrer">GitHub</a>
-                |
-                <a href="https://www.freecodecamp.org/shaanpateluncc"
-                   target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
-                |
-                <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
-                   target="_blank" rel="noopener noreferrer">Codecademy</a>
-                |
-                <a href="https://www.linkedin.com/"
-                   target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </p>
+    <!-- Common footer with profile links, certification, designer credit, and tagline. -->
+    <footer>
+        <p>
+            <a href="https://webpages.charlotte.edu/spate338/"
+               target="_blank" rel="noopener noreferrer">CLT Web</a>
+            |
+            <a href="https://shaan-l-p.github.io/"
+               target="_blank" rel="noopener noreferrer">GitHub.io</a>
+            |
+            <a href="https://github.com/Shaan-L-P/shaan-l-p.github.io"
+               target="_blank" rel="noopener noreferrer">GitHub</a>
+            |
+            <a href="https://www.freecodecamp.org/shaanpateluncc"
+               target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+            |
+            <a href="https://www.codecademy.com/profiles/ShaanPatelUNCC"
+               target="_blank" rel="noopener noreferrer">Codecademy</a>
+            |
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
 
-            <p>
-                Page created by Shaan Patel Designs &copy;2026
-                |
-                <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9"
-                   target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
-            </p>
+        <p>
+            Page created by Shaan Patel Designs &copy;2026
+            |
+            <a href="https://www.freecodecamp.org/certification/shaanpateluncc/responsive-web-design-v9"
+               target="_blank" rel="noopener noreferrer">Certified in Responsive Web Design</a>
+        </p>
 
-            <p><em>"Silly code, serious design."</em></p>
-        </footer>
-    </div>
+        <p>
+            <a href="index.html">Designed by Shaan Patel</a>
+        </p>
 
-    <!-- Load the shared header and footer components. -->
-    <script src="scripts/include_components.js"></script>
+        <p>
+            <em>"Silly code, serious design."</em>
+        </p>
+    </footer>
 
     <!-- Vicunadator must be at the end of the body. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
