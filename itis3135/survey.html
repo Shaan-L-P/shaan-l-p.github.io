@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,19 @@
     <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* The page uses a blue and purple palette; black and white are not its primary design colors. */
+        /*
+         * The page uses a blue and purple palette.
+         * Black and white are not its primary design colors.
+         */
+
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             background-color: #b8d8fb;
@@ -39,7 +49,7 @@
             font-family: 'Montserrat', Helvetica, sans-serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             margin-bottom: 35px;
-            color: #2f6f9f;
+            color: #244f73;
             border-bottom: 4px dashed #2e3f9c;
             padding-bottom: 10px;
         }
@@ -96,7 +106,6 @@
 
         main img {
             display: block;
-            box-sizing: border-box;
             max-width: 250px;
             width: 100%;
             margin: 0 auto 30px auto;
@@ -106,11 +115,11 @@
         p {
             font-size: 1.8rem;
             margin-bottom: 30px;
-            color: #2f6f9f;
+            color: #244f73;
         }
 
         main p {
-            color: #1f5578;
+            color: #244f73;
         }
 
         main ul {
@@ -151,33 +160,14 @@
             color: #2a2a3a;
         }
 
-        @media (max-width: 600px) {
-            nav a {
-                font-size: 1.2rem;
-                margin-bottom: 8px;
-            }
+        /*
+         * The field class groups each form label and its related control.
+         * This keeps the form fields consistently spaced.
+         *
+         * The survey-form ID identifies the form.
+         * The other input IDs connect labels to their corresponding controls.
+         */
 
-            nav.main-nav {
-                white-space: normal;
-            }
-
-            nav.main-nav a {
-                font-size: 1rem;
-                margin-bottom: 8px;
-            }
-
-            p,
-            main li a {
-                font-size: 1.2rem;
-            }
-
-            footer,
-            footer p {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* The field class groups each form label and its related control for consistent spacing. */
         form {
             background-color: #e6f0fd;
             border: 3px solid #2e3f9c;
@@ -196,13 +186,20 @@
             margin-bottom: 18px;
         }
 
+        /*
+         * Inline-size provides full-width form controls.
+         * Border-box sizing includes padding and borders within that size,
+         * preventing the controls from overflowing their containers.
+         */
         input[type="text"],
         input[type="email"],
         input[type="number"],
         select,
         textarea {
             display: block;
-            width: 100%;
+            inline-size: 100%;
+            min-inline-size: 0;
+            box-sizing: border-box;
             margin-top: 4px;
             padding: 8px;
             border: 2px solid #2e3f9c;
@@ -241,6 +238,36 @@
             background-color: #2e1f66;
             color: #f8faff;
         }
+
+        @media (max-width: 600px) {
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+            }
+
+            nav.main-nav {
+                white-space: normal;
+            }
+
+            nav.main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
+            p,
+            main li a {
+                font-size: 1.2rem;
+            }
+
+            footer,
+            footer p {
+                font-size: 1.1rem;
+            }
+
+            form {
+                padding: 15px;
+            }
+        }
     </style>
 
     <!-- Accumulus must be the last script in the head. -->
@@ -248,39 +275,60 @@
 </head>
 
 <body>
-    <!-- The header-placeholder div loads the shared header from components/header.html. -->
+
+    <!-- This div is a placeholder that include_components.js replaces with the shared header. -->
     <div data-include="components/header.html"></div>
 
     <main>
         <h2 id="title">Join the Pond Patrol</h2>
 
-        <img src="images/silly-platypus-logo.jpg"
-             alt="Cartoon drawing of a brown platypus with a gray bill">
+        <img
+            src="images/silly-platypus-logo.jpg"
+            alt="Cartoon drawing of a brown platypus with a gray bill"
+        >
 
         <p id="description">
             Tell us a little about yourself and we will send you early word on new gear,
             secret pond maps, and the occasional bad pun.
         </p>
 
-        <!-- The form ID identifies the survey as a whole. The field divs group each
-             label and its related control. Input IDs connect labels to the correct controls. -->
+        <!-- The form ID identifies the survey as a whole.
+             The field divs group each label and its related control.
+             Input IDs connect labels to the correct controls. -->
         <form id="survey-form" action="#" method="post">
+
             <div class="field">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name"
-                       placeholder="Enter your name" required>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
             </div>
 
             <div class="field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email"
-                       placeholder="Enter your email" required>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
             </div>
 
             <div class="field">
                 <label for="number">Age (optional)</label>
-                <input type="number" id="number" name="age"
-                       min="13" max="120" placeholder="Enter your age">
+                <input
+                    type="number"
+                    id="number"
+                    name="age"
+                    min="13"
+                    max="120"
+                    placeholder="Enter your age"
+                >
             </div>
 
             <div class="field">
@@ -298,17 +346,30 @@
                 <legend>Would you recommend Pond Provisions?</legend>
 
                 <label>
-                    <input type="radio" name="recommend" value="definitely" checked>
+                    <input
+                        type="radio"
+                        name="recommend"
+                        value="definitely"
+                        checked
+                    >
                     Definitely
                 </label>
 
                 <label>
-                    <input type="radio" name="recommend" value="maybe">
+                    <input
+                        type="radio"
+                        name="recommend"
+                        value="maybe"
+                    >
                     Maybe
                 </label>
 
                 <label>
-                    <input type="radio" name="recommend" value="not-sure">
+                    <input
+                        type="radio"
+                        name="recommend"
+                        value="not-sure"
+                    >
                     Not sure yet
                 </label>
             </fieldset>
@@ -317,37 +378,57 @@
                 <legend>Which gear interests you? (pick any)</legend>
 
                 <label>
-                    <input type="checkbox" name="gear" value="goggles">
+                    <input
+                        type="checkbox"
+                        name="gear"
+                        value="goggles"
+                    >
                     Electroreception goggles
                 </label>
 
                 <label>
-                    <input type="checkbox" name="gear" value="router">
+                    <input
+                        type="checkbox"
+                        name="gear"
+                        value="router"
+                    >
                     Burrow firewall router
                 </label>
 
                 <label>
-                    <input type="checkbox" name="gear" value="usb">
+                    <input
+                        type="checkbox"
+                        name="gear"
+                        value="usb"
+                    >
                     Bill-shaped USB drives
                 </label>
 
                 <label>
-                    <input type="checkbox" name="gear" value="plush">
+                    <input
+                        type="checkbox"
+                        name="gear"
+                        value="plush"
+                    >
                     Silly Platypus plush
                 </label>
             </fieldset>
 
             <div class="field">
                 <label for="comments">Anything else for the patrol?</label>
-                <textarea id="comments" name="comments" rows="4"
-                          placeholder="Share an idea, a question, or a pun"></textarea>
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="4"
+                    placeholder="Share an idea, a question, or a pun"
+                ></textarea>
             </div>
 
             <button type="submit" id="submit">Join the patrol</button>
         </form>
     </main>
 
-    <!-- The footer-placeholder div loads the shared footer from components/footer.html. -->
+    <!-- This div is a placeholder that include_components.js replaces with the shared footer. -->
     <div data-include="components/footer.html"></div>
 
     <!-- Load the shared header and footer components. -->
@@ -355,5 +436,6 @@
 
     <!-- Vicunadator must be immediately before the closing body tag. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+
 </body>
 </html>
