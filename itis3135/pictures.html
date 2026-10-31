@@ -229,8 +229,11 @@
 </head>
 
 <body>
-    <!-- This placeholder loads the shared course header and primary navigation from components/header.html. -->
-    <div data-include="components/header.html"></div>
+    <!-- This placeholder loads the shared course header and primary navigation. -->
+    <div data-include="components/header.html">
+        <!-- This fallback h1 allows accessibility checkers to detect the site heading before the shared header loads. The component loader replaces this entire placeholder with the common header. -->
+        <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
+    </div>
 
     <main>
         <h2>Everything Pictures</h2>
@@ -261,7 +264,8 @@
 
                 <p>
                     The original photograph is a JPEG file. Photographer credit:
-                    <a href="https://www.pexels.com/@alex-the-photographer/" target="_blank" rel="noopener noreferrer">Alexandr Ivanov on Pexels</a>.
+                    <a href="https://www.pexels.com/@alex-the-photographer/"
+                       target="_blank" rel="noopener noreferrer">Alexandr Ivanov on Pexels</a>.
                     The original measures 1365 x 2048 pixels and uses 515,317 bytes (0.4914 MiB).
                     The GIF, grayscale, and black-and-white versions let me compare how changing
                     formats and color representation affects image detail and file size.
@@ -269,35 +273,56 @@
 
                 <!-- This div groups the four format links and lets them wrap on narrow screens. -->
                 <div class="format-links">
-                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg">Original JPEG</a>
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg"
+                       target="_blank" rel="noopener noreferrer">Original JPEG</a>
+
                     <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.gif">Original converted to GIF</a>
+
                     <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-grayscale.jpg">Grayscale JPEG</a>
+
                     <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-black-and-white.jpg">Black-and-white JPEG</a>
                 </div>
 
                 <figure class="sample-figure">
-                    <a href="https://www.pexels.com/@alex-the-photographer/" target="_blank" rel="noopener noreferrer">
-                        <img class="sample-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg" alt="Original red Toyota Supra MK4 photograph in color; image links to the Pexels photographer profile">
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg"
+                       target="_blank" rel="noopener noreferrer">
+                        <img class="sample-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg"
+                             alt="Original red Toyota Supra MK4 photograph in color">
                     </a>
                     <figcaption>
                         Original color photograph. 1365 x 2048 pixels, 515,317 bytes (0.4914 MiB).
-                        Photo credit: Alexandr Ivanov on Pexels. Click the image to visit the photographer's profile.
+                        Photo credit: Alexandr Ivanov on Pexels. Click the image to open the original JPEG in a new tab.
                     </figcaption>
                 </figure>
 
                 <!-- This div arranges the GIF, grayscale, and black-and-white previews for visual comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.gif" alt="Red Toyota Supra MK4 converted to GIF">
-                        <figcaption>GIF: 1365 x 2048 pixels, 1,290,730 bytes (1.2309 MiB).</figcaption>
+                        <img class="example-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.gif"
+                             alt="Red Toyota Supra MK4 converted to GIF">
+                        <figcaption>
+                            GIF: 1365 x 2048 pixels, 1,290,730 bytes (1.2309 MiB).
+                        </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-grayscale.jpg" alt="Red Toyota Supra MK4 converted to grayscale">
-                        <figcaption>Grayscale JPEG: 1365 x 2048 pixels, 455,574 bytes (0.4345 MiB).</figcaption>
+                        <img class="example-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-grayscale.jpg"
+                             alt="Red Toyota Supra MK4 converted to grayscale">
+                        <figcaption>
+                            Grayscale JPEG: 1365 x 2048 pixels, 455,574 bytes (0.4345 MiB).
+                        </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-black-and-white.jpg" alt="Red Toyota Supra MK4 converted to black and white">
-                        <figcaption>Black-and-white JPEG: 1365 x 2048 pixels, 305,020 bytes (0.2909 MiB).</figcaption>
+                        <img class="example-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-black-and-white.jpg"
+                             alt="Red Toyota Supra MK4 converted to black and white">
+                        <figcaption>
+                            Black-and-white JPEG: 1365 x 2048 pixels, 305,020 bytes (0.2909 MiB).
+                        </figcaption>
                     </figure>
                 </div>
             </article>
@@ -361,28 +386,39 @@
                 <!-- This div places four separate distorted-image figures side by side for comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x603-wrong-height-1.jpg" alt="Supra image with height reduced once while width remains 600 pixels">
+                        <img class="example-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x603-wrong-height-1.jpg"
+                             alt="Supra image with height reduced once while width remains 600 pixels">
                         <figcaption>
                             <strong>Height reduced once</strong><br>
                             600 x 603 pixels, 89,771 bytes (0.0856 MiB). Width remains fixed.
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x404-wrong-height-2.jpg" alt="Supra image with height reduced twice while width remains 600 pixels">
+                        <img class="example-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x404-wrong-height-2.jpg"
+                             alt="Supra image with height reduced twice while width remains 600 pixels">
                         <figcaption>
                             <strong>Height reduced twice</strong><br>
                             600 x 404 pixels, 63,449 bytes (0.0605 MiB). Width remains fixed.
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-402x900-wrong-width-1.jpg" alt="Supra image with width reduced once while height remains 900 pixels">
+                        <img class="example-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-402x900-wrong-width-1.jpg"
+                             alt="Supra image with width reduced once while height remains 900 pixels">
                         <figcaption>
                             <strong>Width reduced once</strong><br>
                             402 x 900 pixels, 91,256 bytes (0.0870 MiB). Height remains fixed.
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-269x900-wrong-width-2.jpg" alt="Supra image with width reduced twice while height remains 900 pixels">
+                        <img class="example-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-269x900-wrong-width-2.jpg"
+                             alt="Supra image with width reduced twice while height remains 900 pixels">
                         <figcaption>
                             <strong>Width reduced twice</strong><br>
                             269 x 900 pixels, 64,675 bytes (0.0617 MiB). Height remains fixed.
@@ -405,14 +441,19 @@
                 <!-- This div places the high-resolution and reduced-resolution sources side by side at the same display width. -->
                 <div class="comparison-row quality-row">
                     <figure class="comparison-figure">
-                        <img class="quality-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x900.jpg" alt="Higher-resolution Toyota Supra image enlarged to the comparison display size">
+                        <img class="quality-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x900.jpg"
+                             alt="Higher-resolution Toyota Supra image enlarged to the comparison display size">
                         <figcaption>
                             <strong>Higher-resolution source</strong><br>
                             600 x 900 pixels, 124,780 bytes (0.1190 MiB).
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="quality-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-150x225-25-percent.jpg" alt="Toyota Supra image reduced to 25 percent and enlarged with CSS">
+                        <img class="quality-image"
+                             src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-150x225-25-percent.jpg"
+                             alt="Toyota Supra image reduced to 25 percent and enlarged with CSS">
                         <figcaption>
                             <strong>25% source enlarged</strong><br>
                             150 x 225 pixels, 10,347 bytes (0.0099 MiB). Enlarging this smaller source reduces visible detail.
@@ -449,14 +490,19 @@
 
                 <!-- This div groups the four personal-photo format links and allows them to wrap on smaller screens. -->
                 <div class="format-links">
-                    <a href="images/wireless-charger-next-to-face.jpeg">Original JPEG</a>
+                    <a href="images/wireless-charger-next-to-face.jpeg"
+                       target="_blank" rel="noopener noreferrer">Original JPEG</a>
+
                     <a href="images/wireless-charger-next-to-face.gif">Original converted to GIF</a>
+
                     <a href="images/wireless-charger-next-to-face-grayscale.jpg">Grayscale JPEG</a>
+
                     <a href="images/wireless-charger-next-to-face-black-and-white.jpg">Black-and-white JPEG</a>
                 </div>
 
                 <figure class="sample-figure">
-                    <a href="images/wireless-charger-next-to-face.jpeg">
+                    <a href="images/wireless-charger-next-to-face.jpeg"
+                       target="_blank" rel="noopener noreferrer">
                         <img class="sample-image"
                              src="images/wireless-charger-next-to-face.jpeg"
                              alt="Shaan holding a round wireless charger beside his face, original full-color JPEG">
@@ -469,19 +515,27 @@
                 <!-- This div arranges the personal photo's GIF, grayscale, and black-and-white versions for comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/wireless-charger-next-to-face.gif" alt="Personal charger photograph converted to GIF">
+                        <img class="example-image"
+                             src="images/wireless-charger-next-to-face.gif"
+                             alt="Personal charger photograph converted to GIF">
                         <figcaption>
                             GIF: 1152 x 2048 pixels, 1,367,124 bytes (1.3038 MiB).
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/wireless-charger-next-to-face-grayscale.jpg" alt="Personal charger photograph converted to grayscale">
+                        <img class="example-image"
+                             src="images/wireless-charger-next-to-face-grayscale.jpg"
+                             alt="Personal charger photograph converted to grayscale">
                         <figcaption>
                             Grayscale JPEG: 1152 x 2048 pixels, 509,132 bytes (0.4855 MiB).
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/wireless-charger-next-to-face-black-and-white.jpg" alt="Personal charger photograph converted to black and white">
+                        <img class="example-image"
+                             src="images/wireless-charger-next-to-face-black-and-white.jpg"
+                             alt="Personal charger photograph converted to black and white">
                         <figcaption>
                             Black-and-white JPEG: 1152 x 2048 pixels, 207,482 bytes (0.1979 MiB).
                         </figcaption>
@@ -548,28 +602,39 @@
                 <!-- This div places the four distorted personal photographs side by side for comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/wireless-charger-next-to-face-600x715-wrong-height-1.jpg" alt="Personal charger photograph with height reduced once while width remains fixed">
+                        <img class="example-image"
+                             src="images/wireless-charger-next-to-face-600x715-wrong-height-1.jpg"
+                             alt="Personal charger photograph with height reduced once while width remains fixed">
                         <figcaption>
                             <strong>Height reduced once</strong><br>
                             600 x 715 pixels, 103,761 bytes (0.0990 MiB). Width remains fixed.
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/wireless-charger-next-to-face-600x479-wrong-height-2.jpg" alt="Personal charger photograph with height reduced twice while width remains fixed">
+                        <img class="example-image"
+                             src="images/wireless-charger-next-to-face-600x479-wrong-height-2.jpg"
+                             alt="Personal charger photograph with height reduced twice while width remains fixed">
                         <figcaption>
                             <strong>Height reduced twice</strong><br>
                             600 x 479 pixels, 70,415 bytes (0.0672 MiB). Width remains fixed.
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/wireless-charger-next-to-face-402x1067-wrong-width-1.jpg" alt="Personal charger photograph with width reduced once while height remains fixed">
+                        <img class="example-image"
+                             src="images/wireless-charger-next-to-face-402x1067-wrong-width-1.jpg"
+                             alt="Personal charger photograph with width reduced once while height remains fixed">
                         <figcaption>
                             <strong>Width reduced once</strong><br>
                             402 x 1067 pixels, 105,279 bytes (0.1004 MiB). Height remains fixed.
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="example-image" src="images/wireless-charger-next-to-face-269x1067-wrong-width-2.jpg" alt="Personal charger photograph with width reduced twice while height remains fixed">
+                        <img class="example-image"
+                             src="images/wireless-charger-next-to-face-269x1067-wrong-width-2.jpg"
+                             alt="Personal charger photograph with width reduced twice while height remains fixed">
                         <figcaption>
                             <strong>Width reduced twice</strong><br>
                             269 x 1067 pixels, 71,338 bytes (0.0680 MiB). Height remains fixed.
@@ -592,14 +657,19 @@
                 <!-- This div places both personal-photo sources side by side at the same display width. -->
                 <div class="comparison-row quality-row">
                     <figure class="comparison-figure">
-                        <img class="quality-image" src="images/wireless-charger-next-to-face-600x1067.jpg" alt="Higher-resolution personal photograph enlarged to the comparison display size">
+                        <img class="quality-image"
+                             src="images/wireless-charger-next-to-face-600x1067.jpg"
+                             alt="Higher-resolution personal photograph enlarged to the comparison display size">
                         <figcaption>
                             <strong>Higher-resolution source</strong><br>
                             600 x 1067 pixels, 149,992 bytes (0.1430 MiB).
                         </figcaption>
                     </figure>
+
                     <figure class="comparison-figure">
-                        <img class="quality-image" src="images/wireless-charger-next-to-face-150x267-25-percent.jpg" alt="Personal photograph reduced to 25 percent and enlarged with CSS">
+                        <img class="quality-image"
+                             src="images/wireless-charger-next-to-face-150x267-25-percent.jpg"
+                             alt="Personal photograph reduced to 25 percent and enlarged with CSS">
                         <figcaption>
                             <strong>25% source enlarged</strong><br>
                             150 x 267 pixels, 9,462 bytes (0.0090 MiB). Enlarging this smaller source reduces visible detail.
