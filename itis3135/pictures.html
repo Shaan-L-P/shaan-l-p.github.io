@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Everything Pictures</title>
+
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* This page uses the same light-blue background, lavender accents, and dark-blue links as the other course pages. */
+        body {
+            background-color: #b8d8fb;
+            color: #2a2a3a;
+            font-family: Helvetica, Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: "Montserrat", Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: #b8c8fa;
+            border-radius: 999px;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 25px;
+            color: #244f73;
+            border-bottom: 4px dashed #2e3f9c;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #244f73;
+            font-size: 1.45rem;
+            margin-top: 0;
+        }
+
+        h4 {
+            color: #2e3f9c;
+            font-size: 1.15rem;
+            margin-bottom: 0.6rem;
+        }
+
+        a, a:visited {
+            color: #2e3f9c;
+            font-weight: bold;
+        }
+
+        a:hover, a:focus {
+            color: #2e1f66;
+        }
+
+        nav {
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        nav + nav {
+            margin-top: -20px;
+        }
+
+        p {
+            color: #244f73;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* These classes organize sections, articles, figures, links, and responsive image comparisons. */
+        .picture-section {
+            margin: 2rem 0;
+        }
+
+        article {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.28);
+            border-radius: 10px;
+        }
+
+        .format-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .sample-figure {
+            margin: 1rem auto;
+            text-align: center;
+        }
+
+        .sample-image {
+            display: block;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        .proper-image {
+            max-width: 300px;
+        }
+
+        figcaption {
+            color: #244f73;
+            font-size: 0.9rem;
+            line-height: 1.45;
+            margin-top: 0.65rem;
+        }
+
+        /* The comparison-grid class places related images side by side and wraps them on smaller screens. */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.8rem;
+            align-items: start;
+        }
+
+        .comparison-figure {
+            min-width: 0;
+            margin: 0;
+            padding: 0.65rem;
+            background-color: #b8c8fa;
+            border-radius: 8px;
+        }
+
+        .example-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .quality-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .quality-image {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 4px dashed #2e3f9c;
+            margin: 2.5rem 0;
+        }
+
+        footer {
+            font-size: 1.1rem;
+            margin-top: 35px;
+            color: #2a2a3a;
+            border-top: 4px dashed #2e3f9c;
+            padding-top: 20px;
+        }
+
+        footer p {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: #2a2a3a;
+        }
+
+        @media (max-width: 800px) {
+            .comparison-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
+            .comparison-grid, .quality-grid {
+                grid-template-columns: 1fr;
+            }
+
+            article {
+                padding: 0.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <!-- Accumulus is the last script in the head, as required by the course. -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- This placeholder loads the shared course header and primary navigation from components/header.html. -->
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Everything Pictures</h2>
+
+        <p>
+            This page explores how digital images behave on the web. By comparing image formats,
+            file sizes, resizing methods, and incorrect proportions, I can see how editing an image
+            affects its appearance and storage requirements. The first section uses a red Toyota
+            Supra MK4 photograph from Pexels, and the second uses a photograph I took of a round
+            wireless charger next to my face.
+        </p>
+
+        <section class="picture-section">
+            <h3>Red Toyota Supra MK4: Image Formats, Resizing, and Proportions</h3>
+
+            <p>
+                I chose this red Toyota Supra MK4 photograph because its glossy bodywork, distinctive
+                headlights, reflections, and background provide plenty of fine detail to compare.
+                The supplied filename identifies the Pexels source as photo 9819403 and the contributor
+                as Alex the Photographer. The Pexels profile identifies the photographer as Alexandr
+                Ivanov and links to a gallery of other photographs. The uploaded JPEG is portrait-oriented
+                and measures 1365 x 2048 pixels. Its file size is 515,317 bytes (0.4914 MiB), which is
+                smaller than the approximately 5000 x 3000-pixel image suggested in the assignment.
+            </p>
+
+            <article>
+                <h4>Original Image and Format Conversions</h4>
+
+                <p>
+                    The original photograph is a JPEG file. Photographer credit:
+                    <a href="https://www.pexels.com/@alex-the-photographer/" target="_blank" rel="noopener noreferrer">Alexandr Ivanov on Pexels</a>.
+                    The original measures 1365 x 2048 pixels and uses 515,317 bytes (0.4914 MiB).
+                    The GIF, grayscale, and black-and-white versions let me compare how changing
+                    formats and color representation affects image detail and file size.
+                </p>
+
+                <!-- This div groups the four format links and lets them wrap on narrow screens. -->
+                <div class="format-links">
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg" target="_blank" rel="noopener noreferrer">Original JPEG</a>
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.gif" target="_blank" rel="noopener noreferrer">Original converted to GIF</a>
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-grayscale.jpg" target="_blank" rel="noopener noreferrer">Grayscale JPEG</a>
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-black-and-white.jpg" target="_blank" rel="noopener noreferrer">Black-and-white JPEG</a>
+                </div>
+
+                <figure class="sample-figure">
+                    <a href="https://www.pexels.com/@alex-the-photographer/" target="_blank" rel="noopener noreferrer">
+                        <img class="sample-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg" alt="Original red Toyota Supra MK4 photograph in color; image links to the Pexels photographer profile">
+                    </a>
+                    <figcaption>
+                        Original color photograph. 1365 x 2048 pixels, 515,317 bytes (0.4914 MiB).
+                        Photo credit: Alexandr Ivanov on Pexels. Click the image to visit the photographer's profile.
+                    </figcaption>
+                </figure>
+
+                <!-- This div arranges the GIF, grayscale, and black-and-white previews for visual comparison. -->
+                <div class="comparison-grid">
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.gif" alt="Red Toyota Supra MK4 converted to GIF">
+                        <figcaption>GIF: 1365 x 2048 pixels, 1,290,730 bytes (1.2309 MiB).</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-grayscale.jpg" alt="Red Toyota Supra MK4 converted to grayscale">
+                        <figcaption>Grayscale JPEG: 1365 x 2048 pixels, 455,574 bytes (0.4345 MiB).</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-black-and-white.jpg" alt="Red Toyota Supra MK4 converted to black and white">
+                        <figcaption>Black-and-white JPEG: 1365 x 2048 pixels, 305,020 bytes (0.2909 MiB).</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Downsizing Images with CSS</h4>
+
+                <p>
+                    This example displays the original image at 20% of its original width. The height
+                    is set to auto, so the browser preserves the original proportions. CSS changes
+                    only the displayed size; the original file remains 1365 x 2048 pixels and
+                    515,317 bytes (0.4914 MiB).
+                </p>
+
+                <!-- This inline width is 20% of the original 1365-pixel width; height:auto preserves the aspect ratio. -->
+                <figure class="sample-figure">
+                    <img src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg"
+                         alt="Original Toyota Supra photograph displayed at a smaller size with CSS"
+                         style="width: 273px; height: auto; max-width: 100%;">
+                    <figcaption>
+                        Original image displayed at 20% of its native width with CSS. Its proportions are preserved.
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with an Editor</h4>
+
+                <p>
+                    This copy was resized in an image editor to 600 pixels wide while preserving the
+                    original aspect ratio. Its dimensions are 600 x 900 pixels and its file size is
+                    124,780 bytes (0.1190 MiB). This creates a new, smaller image file, unlike CSS
+                    downsizing, which only changes the displayed size.
+                </p>
+
+                <figure class="sample-figure">
+                    <img class="sample-image proper-image"
+                         src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x900.jpg"
+                         alt="Red Toyota Supra MK4 properly resized to 600 by 900 pixels">
+                    <figcaption>Properly resized image: 600 x 900 pixels, 124,780 bytes (0.1190 MiB).</figcaption>
+                </figure>
+
+                <p>
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x900.jpg" target="_blank" rel="noopener noreferrer">Open the properly resized image</a>
+                </p>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with an Editor</h4>
+
+                <p>
+                    These four copies were made from the correctly resized image. In the first two,
+                    the width stays fixed while the height is reduced by about 33%, then reduced again.
+                    In the last two, the height stays fixed while the width is reduced by about 33%,
+                    then reduced again. These intentional distortions show why an image's original
+                    proportions should be preserved.
+                </p>
+
+                <!-- This div places four separate distorted-image figures side by side for comparison. -->
+                <div class="comparison-grid">
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x603-wrong-height-1.jpg" alt="Supra image with height reduced once while width remains 600 pixels">
+                        <figcaption><strong>Height reduced once</strong><br>600 x 603 pixels, 89,771 bytes (0.0856 MiB). Width remains fixed.</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x404-wrong-height-2.jpg" alt="Supra image with height reduced twice while width remains 600 pixels">
+                        <figcaption><strong>Height reduced twice</strong><br>600 x 404 pixels, 63,449 bytes (0.0605 MiB). Width remains fixed.</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-402x900-wrong-width-1.jpg" alt="Supra image with width reduced once while height remains 900 pixels">
+                        <figcaption><strong>Width reduced once</strong><br>402 x 900 pixels, 91,256 bytes (0.0870 MiB). Height remains fixed.</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-269x900-wrong-width-2.jpg" alt="Supra image with width reduced twice while height remains 900 pixels">
+                        <figcaption><strong>Width reduced twice</strong><br>269 x 900 pixels, 64,675 bytes (0.0617 MiB). Height remains fixed.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+
+                <p>
+                    The first image uses the properly resized 600 x 900-pixel file. The second uses
+                    a copy reduced to 25% of those dimensions. Both are displayed using the same CSS
+                    sizing rules. The smaller source contains fewer pixels, so enlarging it produces
+                    a softer image with less visible detail. The 25% file measures 150 x 225 pixels
+                    and uses 10,347 bytes (0.0099 MiB).
+                </p>
+
+                <!-- This div places the high-resolution and reduced-resolution sources side by side at the same display width. -->
+                <div class="comparison-grid quality-grid">
+                    <figure class="comparison-figure">
+                        <img class="quality-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x900.jpg" alt="Higher-resolution Toyota Supra image enlarged to the comparison display size">
+                        <figcaption><strong>Higher-resolution source</strong><br>600 x 900 pixels, 124,780 bytes (0.1190 MiB).</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="quality-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-150x225-25-percent.jpg" alt="Toyota Supra image reduced to 25 percent and enlarged with CSS">
+                        <figcaption><strong>25% source enlarged</strong><br>150 x 225 pixels, 10,347 bytes (0.0099 MiB). Enlarging this smaller source reduces visible detail.</figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-150x225-25-percent.jpg" target="_blank" rel="noopener noreferrer">Open the 25%-size image file</a>
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="picture-section">
+            <h3>Wireless Charger Next to My Face: Image Formats, Resizing, and Proportions</h3>
+
+            <p>
+                I took this photograph of myself holding a round wireless charger beside my face.
+                The circular charger gives the picture a clear geometric shape that can be compared
+                with the less uniform proportions of a face and hand. The original personal photograph
+                is a JPEG file measuring 1152 x 2048 pixels and 531,700 bytes (0.5071 MiB).
+            </p>
+
+            <article>
+                <h4>Original Image and Format Conversions</h4>
+
+                <p>
+                    The original photograph is a JPEG file that I took myself. The GIF, grayscale,
+                    and black-and-white versions let me compare how changing formats and color
+                    representation affects the appearance and file size.
+                </p>
+
+                <!-- This div groups the four personal-photo format links and allows them to wrap on smaller screens. -->
+                <div class="format-links">
+                    <a href="images/wireless-charger-next-to-face.jpeg" target="_blank" rel="noopener noreferrer">Original JPEG</a>
+                    <a href="images/wireless-charger-next-to-face.gif" target="_blank" rel="noopener noreferrer">Original converted to GIF</a>
+                    <a href="images/wireless-charger-next-to-face-grayscale.jpg" target="_blank" rel="noopener noreferrer">Grayscale JPEG</a>
+                    <a href="images/wireless-charger-next-to-face-black-and-white.jpg" target="_blank" rel="noopener noreferrer">Black-and-white JPEG</a>
+                </div>
+
+                <figure class="sample-figure">
+                    <a href="images/wireless-charger-next-to-face.jpeg" target="_blank" rel="noopener noreferrer">
+                        <img class="sample-image" src="images/wireless-charger-next-to-face.jpeg" alt="Shaan holding a round wireless charger beside his face, original full-color JPEG">
+                    </a>
+                    <figcaption>Original personal photograph: 1152 x 2048 pixels, 531,700 bytes (0.5071 MiB).</figcaption>
+                </figure>
+
+                <!-- This div arranges the personal photo's GIF, grayscale, and black-and-white versions for comparison. -->
+                <div class="comparison-grid">
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/wireless-charger-next-to-face.gif" alt="Personal charger photograph converted to GIF">
+                        <figcaption>GIF: 1152 x 2048 pixels, 1,367,124 bytes (1.3038 MiB).</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/wireless-charger-next-to-face-grayscale.jpg" alt="Personal charger photograph converted to grayscale">
+                        <figcaption>Grayscale JPEG: 1152 x 2048 pixels, 509,132 bytes (0.4855 MiB).</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/wireless-charger-next-to-face-black-and-white.jpg" alt="Personal charger photograph converted to black and white">
+                        <figcaption>Black-and-white JPEG: 1152 x 2048 pixels, 207,482 bytes (0.1979 MiB).</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Downsizing Images with CSS</h4>
+
+                <p>
+                    This example displays the original image at 20% of its original width. The height
+                    is set to auto, so the browser keeps the original proportions. CSS changes only
+                    the displayed size; the original file remains 1152 x 2048 pixels and 531,700 bytes
+                    (0.5071 MiB).
+                </p>
+
+                <!-- This inline width is 20% of the original 1152-pixel width; height:auto preserves the aspect ratio. -->
+                <figure class="sample-figure">
+                    <img src="images/wireless-charger-next-to-face.jpeg"
+                         alt="Original personal photograph displayed smaller with CSS"
+                         style="width: 230.4px; height: auto; max-width: 100%;">
+                    <figcaption>Original image displayed at 20% of its native width with CSS; proportions are preserved.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with an Editor</h4>
+
+                <p>
+                    This copy was resized in an image editor to 600 pixels wide while preserving
+                    the original aspect ratio. Its dimensions are 600 x 1067 pixels and its file
+                    size is 149,992 bytes (0.1430 MiB). This creates a new, smaller image file,
+                    unlike CSS downsizing, which only changes its displayed size.
+                </p>
+
+                <figure class="sample-figure">
+                    <img class="sample-image proper-image"
+                         src="images/wireless-charger-next-to-face-600x1067.jpg"
+                         alt="Personal charger photograph properly resized to 600 by 1067 pixels">
+                    <figcaption>Properly resized image: 600 x 1067 pixels, 149,992 bytes (0.1430 MiB).</figcaption>
+                </figure>
+
+                <p>
+                    <a href="images/wireless-charger-next-to-face-600x1067.jpg" target="_blank" rel="noopener noreferrer">Open the properly resized image</a>
+                </p>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with an Editor</h4>
+
+                <p>
+                    These four copies were made from the correctly resized image. In the first two,
+                    the width stays fixed while the height is reduced by about 33%, then reduced again.
+                    In the last two, the height stays fixed while the width is reduced by about 33%,
+                    then reduced again. These intentional distortions demonstrate why image proportions
+                    should be preserved.
+                </p>
+
+                <!-- This div places the four distorted personal photographs side by side for comparison. -->
+                <div class="comparison-grid">
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/wireless-charger-next-to-face-600x715-wrong-height-1.jpg" alt="Personal charger photograph with height reduced once while width remains fixed">
+                        <figcaption><strong>Height reduced once</strong><br>600 x 715 pixels, 103,761 bytes (0.0990 MiB). Width remains fixed.</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/wireless-charger-next-to-face-600x479-wrong-height-2.jpg" alt="Personal charger photograph with height reduced twice while width remains fixed">
+                        <figcaption><strong>Height reduced twice</strong><br>600 x 479 pixels, 70,415 bytes (0.0672 MiB). Width remains fixed.</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/wireless-charger-next-to-face-402x1067-wrong-width-1.jpg" alt="Personal charger photograph with width reduced once while height remains fixed">
+                        <figcaption><strong>Width reduced once</strong><br>402 x 1067 pixels, 105,279 bytes (0.1004 MiB). Height remains fixed.</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="example-image" src="images/wireless-charger-next-to-face-269x1067-wrong-width-2.jpg" alt="Personal charger photograph with width reduced twice while height remains fixed">
+                        <figcaption><strong>Width reduced twice</strong><br>269 x 1067 pixels, 71,338 bytes (0.0680 MiB). Height remains fixed.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+
+                <p>
+                    The first example uses the properly resized 600 x 1067-pixel file. The second
+                    uses a copy reduced to 25% of those dimensions. Both use the same CSS sizing rules.
+                    The smaller source has fewer pixels, so enlarging it produces a softer image with
+                    less visible detail. The 25% file measures 150 x 267 pixels and uses 9,462 bytes
+                    (0.0090 MiB).
+                </p>
+
+                <!-- This div places both personal-photo sources side by side at the same display width. -->
+                <div class="comparison-grid quality-grid">
+                    <figure class="comparison-figure">
+                        <img class="quality-image" src="images/wireless-charger-next-to-face-600x1067.jpg" alt="Higher-resolution personal photograph enlarged to the comparison display size">
+                        <figcaption><strong>Higher-resolution source</strong><br>600 x 1067 pixels, 149,992 bytes (0.1430 MiB).</figcaption>
+                    </figure>
+                    <figure class="comparison-figure">
+                        <img class="quality-image" src="images/wireless-charger-next-to-face-150x267-25-percent.jpg" alt="Personal photograph reduced to 25 percent and enlarged with CSS">
+                        <figcaption><strong>25% source enlarged</strong><br>150 x 267 pixels, 9,462 bytes (0.0090 MiB). Enlarging this smaller source reduces visible detail.</figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    <a href="images/wireless-charger-next-to-face-150x267-25-percent.jpg" target="_blank" rel="noopener noreferrer">Open the 25%-size image file</a>
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <!-- This placeholder loads the existing shared footer from components/footer.html. -->
+    <div data-include="components/footer.html"></div>
+
+    <!-- The existing component loader inserts the shared header and footer. -->
+    <script src="scripts/include_components.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
