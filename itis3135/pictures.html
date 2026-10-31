@@ -224,6 +224,8 @@
 </head>
 
 <body>
+    <!-- The div elements on this page have specific layout and loading purposes: the header and footer divs are placeholders that the shared-component script replaces with the site's reusable components, while the comparison-row divs group related figures so CSS Flexbox can arrange them side by side and wrap them on smaller screens. These divs provide grouping where no more meaningful semantic element is appropriate. No span elements are needed on this page. -->
+
     <!-- This placeholder loads the shared course header and primary navigation from components/header.html. -->
     <div data-include="components/header.html">
         <!-- This fallback h1 lets accessibility checkers detect the page's site heading before the shared header loads. The include loader replaces this entire placeholder with components/header.html. -->
@@ -265,17 +267,16 @@
                     formats and color representation affects image detail and file size.
                 </p>
 
+                <!-- This div groups the four format links and lets them wrap on narrow screens. -->
                 <div class="format-links">
-                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/red-toyota-supra-mk4-closeup-9819403%40alex-the-photographer_pexels.jpg"
-                       target="_blank" rel="noopener noreferrer">Original JPEG</a>
+                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/red-toyota-supra-mk4-closeup-9819403%40alex-the-photographer_pexels.jpg" target="_blank" rel="noopener noreferrer">Original JPEG</a>
                     <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.gif">Original converted to GIF</a>
                     <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-grayscale.jpg">Grayscale JPEG</a>
                     <a href="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-black-and-white.jpg">Black-and-white JPEG</a>
                 </div>
 
                 <figure class="sample-figure">
-                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/red-toyota-supra-mk4-closeup-9819403%40alex-the-photographer_pexels.jpg"
-                       target="_blank" rel="noopener noreferrer">
+                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/red-toyota-supra-mk4-closeup-9819403%40alex-the-photographer_pexels.jpg" target="_blank" rel="noopener noreferrer">
                         <img class="sample-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg" alt="Original red Toyota Supra MK4 photograph in color">
                     </a>
                     <figcaption>
@@ -284,6 +285,7 @@
                     </figcaption>
                 </figure>
 
+                <!-- This div arranges the GIF, grayscale, and black-and-white previews for visual comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
                         <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.gif" alt="Red Toyota Supra MK4 converted to GIF">
@@ -310,6 +312,7 @@
                     515,317 bytes (0.4914 MiB).
                 </p>
 
+                <!-- This inline width is 20% of the original 1365-pixel width; height:auto preserves the aspect ratio. -->
                 <figure class="sample-figure">
                     <img src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels.jpg"
                          alt="Original Toyota Supra photograph displayed at a smaller size with CSS"
@@ -353,6 +356,7 @@
                     proportions should be preserved.
                 </p>
 
+                <!-- This div places four separate distorted-image figures side by side for comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
                         <img class="example-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x603-wrong-height-1.jpg" alt="Supra image with height reduced once while width remains 600 pixels">
@@ -384,6 +388,7 @@
                     and uses 10,347 bytes (0.0099 MiB).
                 </p>
 
+                <!-- This div places the high-resolution and reduced-resolution sources side by side at the same display width. -->
                 <div class="comparison-row quality-row">
                     <figure class="comparison-figure">
                         <img class="quality-image" src="images/red-toyota-supra-mk4-closeup-9819403@alex-the-photographer_pexels-600x900.jpg" alt="Higher-resolution Toyota Supra image enlarged to the comparison display size">
@@ -422,25 +427,22 @@
                     representation affects the appearance and file size.
                 </p>
 
+                <!-- This div groups the four personal-photo format links and allows them to wrap on smaller screens. -->
                 <div class="format-links">
-                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/wireless-charger-next-to-face.jpeg"
-                       target="_blank" rel="noopener noreferrer">Original JPEG</a>
+                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/wireless-charger-next-to-face.jpeg" target="_blank" rel="noopener noreferrer">Original JPEG</a>
                     <a href="images/wireless-charger-next-to-face.gif">Original converted to GIF</a>
                     <a href="images/wireless-charger-next-to-face-grayscale.jpg">Grayscale JPEG</a>
                     <a href="images/wireless-charger-next-to-face-black-and-white.jpg">Black-and-white JPEG</a>
                 </div>
 
                 <figure class="sample-figure">
-                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/wireless-charger-next-to-face.jpeg"
-                       target="_blank" rel="noopener noreferrer">
+                    <a href="https://raw.githubusercontent.com/Shaan-L-P/shaan-l-p.github.io/main/itis3135/images/wireless-charger-next-to-face.jpeg" target="_blank" rel="noopener noreferrer">
                         <img class="sample-image" src="images/wireless-charger-next-to-face.jpeg" alt="Shaan holding a round wireless charger beside his face, original full-color JPEG">
                     </a>
-                    <figcaption>
-                        Original personal photograph: 1152 x 2048 pixels, 531,700 bytes (0.5071 MiB).
-                        Click the image to open the original JPEG in a new tab.
-                    </figcaption>
+                    <figcaption>Original personal photograph: 1152 x 2048 pixels, 531,700 bytes (0.5071 MiB). Click the image to open the original JPEG in a new tab.</figcaption>
                 </figure>
 
+                <!-- This div arranges the personal photo's GIF, grayscale, and black-and-white versions for comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
                         <img class="example-image" src="images/wireless-charger-next-to-face.gif" alt="Personal charger photograph converted to GIF">
@@ -467,6 +469,7 @@
                     (0.5071 MiB).
                 </p>
 
+                <!-- This inline width is 20% of the original 1152-pixel width; height:auto preserves the aspect ratio. -->
                 <figure class="sample-figure">
                     <img src="images/wireless-charger-next-to-face.jpeg"
                          alt="Original personal photograph displayed smaller with CSS"
@@ -508,6 +511,7 @@
                     should be preserved.
                 </p>
 
+                <!-- This div places the four distorted personal photographs side by side for comparison. -->
                 <div class="comparison-row">
                     <figure class="comparison-figure">
                         <img class="example-image" src="images/wireless-charger-next-to-face-600x715-wrong-height-1.jpg" alt="Personal charger photograph with height reduced once while width remains fixed">
@@ -539,6 +543,7 @@
                     (0.0090 MiB).
                 </p>
 
+                <!-- This div places both personal-photo sources side by side at the same display width. -->
                 <div class="comparison-row quality-row">
                     <figure class="comparison-figure">
                         <img class="quality-image" src="images/wireless-charger-next-to-face-600x1067.jpg" alt="Higher-resolution personal photograph enlarged to the comparison display size">
