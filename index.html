@@ -4,203 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Shaan's Webpage | Hi There!</title>
 
-    <!-- Favicon files hosted on GitHub Pages -->
+    <!-- Favicon paths -->
     <link rel="icon" type="image/jpeg" sizes="32x32"
-          href="https://shaan-l-p.github.io/images/favicon-32x32.jpg">
+        href="shaan-l-p.github.io/images/favicon-32x32.jpg">
     <link rel="icon" type="image/jpeg" sizes="16x16"
-          href="https://shaan-l-p.github.io/images/favicon-16x16.jpg">
-    <link rel="apple-touch-icon" sizes="180x180"
-          href="https://shaan-l-p.github.io/images/apple-touch-icon.jpg">
+        href="shaan-l-p.github.io/images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon"
+        href="shaan-l-p.github.io/images/apple-touch-icon.jpg">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
     <style>
-        :root {
-            --bg: #b8d8fb;
-            --pill-bg: #b8c8fa;
-            --pill-text: #2e3f9c;
-            --heading: #2f6f9f;
-            --divider: #2e3f9c;
-            --link: #2e3f9c;
-            --text: #2a2a3a;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
+        /*
+           CLASS ATTRIBUTE EXPLANATIONS:
+           page-header: Styles the main page header.
+           page-title: Styles the primary h1 heading.
+           section-title: Styles the main section headings.
+           subsection-title: Styles smaller subsection headings.
+           bridge-photo: Controls the Brooklyn Bridge image.
+        */
 
         body {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 1.5rem 3rem;
-            background-color: var(--bg);
-            font-family: "Courier New", Courier, monospace;
-            color: var(--text);
+            background-color: #b8d8fb;
+            color: #2a2a3a;
+            font-family: "Courier New", monospace;
+            line-height: 1.6;
         }
 
         h1, h2, h3 {
-            font-family: "Montserrat", Helvetica, sans-serif;
+            font-family: "Montserrat", sans-serif;
         }
 
-        /*
-         * CLASS ATTRIBUTE EXPLANATIONS:
-         * page-header styles the header container.
-         * page-title styles the main h1 heading.
-         * section-title styles the main h2 heading.
-         * subsection-title styles the h3 heading.
-         * bridge-photo controls the image's size and appearance.
-         * These classes apply specific styling to individual elements
-         * and prevent repeating the same CSS declarations.
-         */
-
+        /* The page-header class styles the area containing the page title. */
         .page-header {
-            background-color: var(--pill-bg);
-            border-radius: 999px;
-            margin: 1.5rem 0;
-            padding: 1.2rem 1.5rem;
             text-align: center;
+            padding: 2rem 0 1rem;
         }
 
+        /* The page-title class controls the appearance of the main heading. */
         .page-title {
-            margin: 0;
-            color: var(--pill-text);
-            font-size: 2.2rem;
-            font-weight: bold;
+            color: #2f6f9f;
+            margin-bottom: 0.5rem;
         }
 
-        hr {
-            border: none;
-            border-top: 4px dashed var(--divider);
-            margin: 1.5rem 0;
-        }
-
+        /* The section-title class styles the main content heading. */
         .section-title {
-            color: var(--heading);
-            font-size: 1.6rem;
+            color: #2f6f9f;
+            border-bottom: 2px solid #2e3f9c;
+            padding-bottom: 0.4rem;
         }
 
+        /* The subsection-title class styles secondary headings. */
         .subsection-title {
-            color: var(--heading);
-            font-size: 1.3rem;
+            color: #2f6f9f;
         }
 
-        figure {
-            margin: 1.5rem 0 0.5rem;
-        }
-
+        /* The bridge-photo class controls the displayed photograph. */
         .bridge-photo {
             display: block;
             width: 100%;
-            max-width: 300px;
+            max-width: 650px;
             height: auto;
-            margin: 0 auto;
-            border-radius: 8px;
+            margin: 1.5rem auto 0.5rem;
+            border-radius: 12px;
+        }
+
+        figure {
+            margin: 1.5rem 0;
+            text-align: center;
         }
 
         figcaption {
-            text-align: center;
             font-style: italic;
-            color: var(--heading);
-            margin-top: 0.5rem;
+            font-size: 0.9rem;
         }
 
-        p, ul {
-            font-size: 1.1rem;
-            color: var(--heading);
+        a {
+            color: #2e3f9c;
         }
 
-        li {
-            margin-bottom: 0.6rem;
+        a:hover {
+            color: #2f6f9f;
         }
 
-        a, a:visited {
-            color: var(--link);
-            text-decoration: underline;
-            font-weight: bold;
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 2px solid #2e3f9c;
+            text-align: center;
         }
 
-        a:hover, a:focus {
-            color: #2e1f66;
-        }
-
-        a:focus {
-            outline: 2px solid var(--divider);
-            outline-offset: 2px;
-        }
-
-        footer p {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--text);
-        }
-
-        footer small {
-            font-size: 0.8rem;
-            font-weight: normal;
-        }
-
-        @media (max-width: 600px) {
+        @media screen and (max-width: 600px) {
             body {
                 padding: 0 1rem 2rem;
             }
 
             .page-title {
-                font-size: 1.6rem;
-            }
-
-            .section-title {
-                font-size: 1.4rem;
-            }
-
-            p, ul, footer p {
-                font-size: 1rem;
+                font-size: 1.8rem;
             }
         }
     </style>
-
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- The page-header class styles the header container.
-         The page-title class styles the main h1 heading. -->
     <header class="page-header">
+        <!-- The page-title class styles this main heading. -->
         <h1 class="page-title">Shaan's Webpage</h1>
     </header>
 
-    <hr>
-
     <main>
-        <!-- The section-title class styles the page's h2 heading. -->
-        <h2 class="section-title">Hi There!</h2>
+        <section>
+            <!-- The section-title class styles this section heading. -->
+            <h2 class="section-title">Hi There!</h2>
 
-        <figure>
-            <!-- The bridge-photo class controls the image's dimensions and appearance. -->
-            <img class="bridge-photo"
-                 src="https://shaan-l-p.github.io/images/brooklyn-bridge.jpg"
-                 alt="Shaan Patel on the Brooklyn Bridge in New York City">
+            <figure>
+                <!-- The bridge-photo class styles the Brooklyn Bridge photograph. -->
+                <img
+                    class="bridge-photo"
+                    src="shaan-l-p.github.io/images/brooklyn-bridge.jpg"
+                    alt="Shaan Patel on the Brooklyn Bridge in New York City">
 
-            <figcaption>Brooklyn Bridge Summer 2025</figcaption>
-        </figure>
+                <figcaption>Brooklyn Bridge Summer 2025</figcaption>
+            </figure>
 
-        <p>
-            Welcome to my personal webpage! I'm a computer science student
-            concentrating in cybersecurity here at UNC Charlotte.
-        </p>
+            <p>
+                My name is Shaan Patel, and I am a Computer Science student
+                at the University of North Carolina at Charlotte concentrating
+                in Cybersecurity. Welcome to my personal website!
+            </p>
+        </section>
 
-        <!-- The subsection-title class styles the h3 section heading. -->
-        <h3 class="subsection-title">Interests</h3>
+        <section>
+            <!-- The section-title class styles this section heading. -->
+            <h2 class="section-title">Interests</h2>
 
-        <ul>
-            <li><strong>Favorite Artist:</strong> Bunii</li>
-            <li><strong>Favorite Show:</strong> <em>Invincible</em></li>
-            <li><strong>Hobbies:</strong> Gaming, drawing</li>
-        </ul>
+            <p>
+                Outside of school, I enjoy watching shows and anime,
+                playing video games, and drawing. Some of my interests include:
+            </p>
+
+            <ul>
+                <li>Bunii</li>
+                <li>Invincible</li>
+                <li>Gaming and drawing</li>
+            </ul>
+        </section>
     </main>
-
-    <hr>
 
     <footer>
         <p>
@@ -210,7 +171,9 @@
 
         <p><em>"Simple pages, built with care."</em></p>
 
-        <p><small>&copy; 2026 Shaan Patel. Designed by Shaan Patel.</small></p>
+        <p>
+            <small>&copy; 2026 Shaan Patel. Designed by Shaan Patel.</small>
+        </p>
     </footer>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
