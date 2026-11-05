@@ -46,15 +46,13 @@
 
         /*
          * CLASS ATTRIBUTE EXPLANATIONS:
-         * The page-header class styles the main header container.
-         * The page-title class styles the h1 site heading.
-         * The section-title class styles the h2 page heading.
-         * The subsection-title class styles the h3 section heading.
-         * The bridge-photo class controls the Brooklyn Bridge image's
-         * dimensions, alignment, and rounded corners.
-         *
-         * These class attributes apply specific styling to individual
-         * page elements without repeating CSS rules.
+         * page-header styles the header container.
+         * page-title styles the main h1 heading.
+         * section-title styles the main h2 heading.
+         * subsection-title styles the h3 heading.
+         * bridge-photo controls the image's size and appearance.
+         * These classes apply specific styling to individual elements
+         * and prevent repeating the same CSS declarations.
          */
 
         .page-header {
@@ -166,6 +164,8 @@
 </head>
 
 <body>
+    <!-- The page-header class styles the header container.
+         The page-title class styles the main h1 heading. -->
     <header class="page-header">
         <h1 class="page-title">Shaan's Webpage</h1>
     </header>
@@ -173,12 +173,15 @@
     <hr>
 
     <main>
+        <!-- The section-title class styles the page's h2 heading. -->
         <h2 class="section-title">Hi There!</h2>
 
         <figure>
+            <!-- The bridge-photo class controls the image's dimensions and appearance. -->
             <img class="bridge-photo"
                  src="https://shaan-l-p.github.io/images/brooklyn-bridge.jpg"
                  alt="Shaan Patel on the Brooklyn Bridge in New York City">
+
             <figcaption>Brooklyn Bridge Summer 2025</figcaption>
         </figure>
 
@@ -187,6 +190,7 @@
             concentrating in cybersecurity here at UNC Charlotte.
         </p>
 
+        <!-- The subsection-title class styles the h3 section heading. -->
         <h3 class="subsection-title">Interests</h3>
 
         <ul>
