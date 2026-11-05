@@ -21,24 +21,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-
     <style>
         /*
+           ORIGINAL COLOR PALETTE:
+           Background: #b8d8fb
+           Pill background: #b8c8fa
+           Pill and link text: #2e3f9c
+           Headings: #2f6f9f
+           Dividers: #2e3f9c
+           Main text: #2a2a3a
+
+           ORIGINAL FONTS:
+           Body: Courier New
+           Headings: Montserrat
+
            CLASS ATTRIBUTE EXPLANATIONS:
            page-header: Styles the main page header.
            page-title: Styles the primary h1 heading.
            section-title: Styles the main section headings.
-           subsection-title: Styles smaller subsection headings.
            bridge-photo: Controls the Brooklyn Bridge image.
         */
+
+        :root {
+            --background-color: #b8d8fb;
+            --pill-background: #b8c8fa;
+            --pill-text: #2e3f9c;
+            --heading-color: #2f6f9f;
+            --divider-color: #2e3f9c;
+            --link-color: #2e3f9c;
+            --main-text-color: #2a2a3a;
+        }
 
         body {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 1.5rem 3rem;
-            background-color: #b8d8fb;
-            color: #2a2a3a;
+            background-color: var(--background-color);
+            color: var(--main-text-color);
             font-family: "Courier New", monospace;
             line-height: 1.6;
         }
@@ -55,20 +74,15 @@
 
         /* The page-title class controls the appearance of the main heading. */
         .page-title {
-            color: #2f6f9f;
+            color: var(--heading-color);
             margin-bottom: 0.5rem;
         }
 
-        /* The section-title class styles the main content heading. */
+        /* The section-title class styles the main content headings. */
         .section-title {
-            color: #2f6f9f;
-            border-bottom: 2px solid #2e3f9c;
+            color: var(--heading-color);
+            border-bottom: 2px solid var(--divider-color);
             padding-bottom: 0.4rem;
-        }
-
-        /* The subsection-title class styles secondary headings. */
-        .subsection-title {
-            color: #2f6f9f;
         }
 
         /* The bridge-photo class controls the displayed photograph. */
@@ -91,18 +105,19 @@
             font-size: 0.9rem;
         }
 
-        a {
-            color: #2e3f9c;
+        a,
+        a:visited {
+            color: var(--link-color);
         }
 
         a:hover {
-            color: #2f6f9f;
+            color: var(--heading-color);
         }
 
         footer {
             margin-top: 3rem;
             padding-top: 1rem;
-            border-top: 2px solid #2e3f9c;
+            border-top: 2px solid var(--divider-color);
             text-align: center;
         }
 
@@ -116,6 +131,9 @@
             }
         }
     </style>
+
+    <!-- Accumulus (cloud) and Vicunadator (lama) script -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -176,6 +194,7 @@
         </p>
     </footer>
 
+    <!-- Standards checker -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
