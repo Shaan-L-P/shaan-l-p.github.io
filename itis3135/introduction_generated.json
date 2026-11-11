@@ -1,0 +1,82 @@
+{
+    "firstName": "Shaan",
+    "middleName": "",
+    "nickname": "",
+    "lastName": "Patel",
+    "acknowledgment": "I understand that this is a public document, and I will not include anything I would not want others to see.",
+    "acknowledgmentDate": "11/10/26",
+    "prettyNameDivider": "|",
+    "adjectives": "Silly",
+    "animal": "Platypus",
+    "img": "images/brooklyn-bridge.jpg",
+    "pictureAlt": "Shaan Patel on the Brooklyn Bridge in New York City",
+    "caption": "Brooklyn Bridge, NYC Summer 2025",
+    "personalInfo": {
+        "statement": "I am Shaan Patel, a student at UNC Charlotte studying Computer Science with a concentration in Cybersecurity.",
+        "personalBackground": "I am Shaan Patel, a student at UNC Charlotte studying Computer Science with a concentration in Cybersecurity.",
+        "professionalBackground": "I am interested in cybersecurity, ethical hacking, and learning how technology can be used to protect people and organizations. I have experience working with children as a Youth Development Leader at the YMCA, where I helped supervise groups and maintain a safe environment.",
+        "academicBackground": "I am studying Computer Science at UNC Charlotte and focusing on cybersecurity. My coursework has helped me build skills in programming, databases, and technology.",
+        "primaryWorkComputer": "MacBook Pro.",
+        "primaryWorkLocation": "Home or campus, depending on the assignment.",
+        "alternateComputerLocation": "Campus computers when needed.",
+        "interests": "I enjoy cybersecurity, technology, drawing, and electronic music. I also enjoy watching animated shows, including Invincible, and listening to artists such as Bunii."
+    },
+    "courses": [
+        {
+            "department": "ITIS",
+            "courseNumber": "3135",
+            "courseTitle": "Web Application",
+            "reasonForTaking": "Learning to create and develop websites using HTML, CSS, and other web technologies."
+        },
+        {
+            "department": "ITSC",
+            "courseNumber": "2181",
+            "courseTitle": "Intro to Computer Systems",
+            "reasonForTaking": "Learning about computer systems, hardware, software, and how computers operate."
+        },
+        {
+            "department": "ITSC",
+            "courseNumber": "3688",
+            "courseTitle": "CS and AI: Ethics, Society, Communication",
+            "reasonForTaking": "Exploring the ethical, social, and communication challenges connected to computing and artificial intelligence."
+        },
+        {
+            "department": "MATH",
+            "courseNumber": "2164",
+            "courseTitle": "Matrices and Linear Algebra",
+            "reasonForTaking": "Studying matrices, linear equations, and mathematical concepts used in computing and other fields."
+        },
+        {
+            "department": "ENGL",
+            "courseNumber": "3081",
+            "courseTitle": "Authors, Pop Culture, and Genre Studies",
+            "reasonForTaking": "Exploring literature, popular culture, and different genres through reading, discussion, and writing."
+        }
+    ],
+    "quote": "“You will face many defeats in life, but never let yourself be defeated.”",
+    "quoteAuthor": "Maya Angelou",
+    "funnyItem": "",
+    "somethingToShare": "",
+    "footerLinks": [
+        {
+            "label": "CLT Web",
+            "url": "https://webpages.charlotte.edu/spate338/"
+        },
+        {
+            "label": "GitHub.io",
+            "url": "https://shaan-l-p.github.io/"
+        },
+        {
+            "label": "GitHub",
+            "url": "https://github.com/shaan-l-p"
+        },
+        {
+            "label": "freeCodeCamp",
+            "url": "https://www.freecodecamp.org/shaanpateluncc"
+        },
+        {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/shaan-patel-uncc"
+        }
+    ]
+}
