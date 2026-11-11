@@ -99,7 +99,7 @@
         }
 
         .main-nav {
-            white-space: nowrap;
+            white-space: normal;
         }
 
         .main-nav a {
@@ -193,7 +193,7 @@
             border-radius: 12px;
         }
 
-        .form-section h3 {
+        .section-heading {
             margin-top: 5px;
         }
 
@@ -212,7 +212,10 @@
             padding: 12px;
             border: 2px solid #809bd0;
             border-radius: 6px;
+
+            /* White field background keeps typed text readable. */
             background-color: #ffffff;
+
             color: var(--text-color);
             font-family: Helvetica, Arial, sans-serif;
             font-size: 1rem;
@@ -237,12 +240,13 @@
             border-radius: 8px;
         }
 
-        .course-entry h4 {
+        .course-title {
             color: var(--heading-color);
             font-family: 'Montserrat', Helvetica, sans-serif;
         }
 
-        .form-buttons {
+        .form-buttons,
+        .generation-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
@@ -250,19 +254,24 @@
         }
 
         .form-buttons button,
+        .generation-buttons button,
         .add-course-button,
         .delete-course-button {
             padding: 12px 20px;
             border: none;
             border-radius: 8px;
             background-color: var(--link-color);
+
+            /* White text provides contrast against the dark blue buttons. */
             color: white;
+
             font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
         }
 
         .form-buttons button:hover,
+        .generation-buttons button:hover,
         .add-course-button:hover,
         .delete-course-button:hover {
             background-color: #2e1f66;
@@ -292,8 +301,18 @@
             cursor: pointer;
         }
 
-        [hidden] {
-            display: none !important;
+        .generated-output {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 250px;
+            padding: 15px;
+            border: 2px solid #809bd0;
+            border-radius: 8px;
+            background-color: #f1f5ff;
+            color: var(--text-color);
+            font-family: monospace;
+            font-size: 0.95rem;
+            resize: vertical;
         }
 
         @media (max-width: 600px) {
@@ -337,13 +356,20 @@
             .form-section {
                 padding: 12px;
             }
+
+            .form-buttons button,
+            .generation-buttons button {
+                width: 100%;
+            }
         }
     </style>
 
+    <!-- Accumulus validation script belongs at the end of the head. -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- This div loads the shared header component. -->
     <div data-include="components/header.html"></div>
 
     <h6>Shaan Patel | Silly Platypus</h6>
@@ -351,8 +377,12 @@
     <main>
         <h2>Introduction Form</h2>
 
+        <!-- These div elements group related form fields, courses, shared components, and generated output so CSS and JavaScript can manage them. -->
+        <!-- The IDs connect form controls to their labels and allow introduction.js to locate and update the relevant elements. -->
+
+        <!-- This section contains the introduction form. -->
         <section id="form-container">
-            <h3>Please submit the form below.</h3>
+            <h3>Please Submit the Form Below.</h3>
 
             <p class="required-note">
                 Fields marked with an asterisk (*) are required.
@@ -360,8 +390,9 @@
 
             <form id="introduction-form" class="introduction-form">
 
+                <!-- Each form-section div groups related fields into a styled section. -->
                 <div class="form-section">
-                    <h3>Personal Information</h3>
+                    <h3 class="section-heading">Personal Information</h3>
 
                     <label for="firstName">First Name *</label>
                     <input type="text" id="firstName" name="firstName"
@@ -402,7 +433,20 @@
                 </div>
 
                 <div class="form-section">
-                    <h3>Picture Information</h3>
+                    <h3 class="section-heading">Picture Information</h3>
+
+                    <!-- This figure displays the default image and previews uploaded images. -->
+                    <figure class="profile-figure">
+                        <img
+                            src="images/brooklyn-bridge.jpg"
+                            alt="Shaan Patel on the Brooklyn Bridge in New York City"
+                            class="profile-image"
+                            id="picture-preview">
+
+                        <figcaption id="picture-caption-preview">
+                            Brooklyn Bridge, NYC Summer 2025
+                        </figcaption>
+                    </figure>
 
                     <label for="picture">Profile Picture</label>
                     <input type="file" id="picture" name="picture"
@@ -424,7 +468,7 @@
                 </div>
 
                 <div class="form-section">
-                    <h3>Personal and Academic Background</h3>
+                    <h3 class="section-heading">Personal and Academic Background</h3>
 
                     <label for="personalStatement">Personal Statement / Personal Background *</label>
                     <textarea id="personalStatement" name="personalStatement"
@@ -456,114 +500,115 @@
                 </div>
 
                 <div class="form-section">
-                    <h3>Courses</h3>
+                    <h3 class="section-heading">Courses</h3>
 
                     <p class="required-note">
                         Add or remove courses using the buttons below.
                     </p>
 
+                    <!-- This div holds the course entries so JavaScript can add, remove, and number them. -->
                     <div id="courses-container">
 
+                        <!-- Each course-entry div groups the fields for one course. -->
                         <div class="course-entry">
-                            <h4>Course 1</h4>
+                            <h4 class="course-title">Course 1</h4>
 
-                            <label>Department *</label>
-                            <input type="text" name="department"
+                            <label for="course-1-department">Department *</label>
+                            <input type="text" id="course-1-department" name="department"
                                 value="ITIS" placeholder="Example: ITIS" required>
 
-                            <label>Course Number *</label>
-                            <input type="text" name="courseNumber"
+                            <label for="course-1-courseNumber">Course Number *</label>
+                            <input type="text" id="course-1-courseNumber" name="courseNumber"
                                 value="3135" placeholder="Example: 3135" required>
 
-                            <label>Course Name *</label>
-                            <input type="text" name="courseTitle"
+                            <label for="course-1-courseTitle">Course Name *</label>
+                            <input type="text" id="course-1-courseTitle" name="courseTitle"
                                 value="Web Application" placeholder="Course name" required>
 
-                            <label>Reason for Taking the Course *</label>
-                            <textarea name="reasonForTaking"
+                            <label for="course-1-reasonForTaking">Reason for Taking the Course *</label>
+                            <textarea id="course-1-reasonForTaking" name="reasonForTaking"
                                 placeholder="Why are you taking this course?" required>Learning to create and develop websites using HTML, CSS, and other web technologies.</textarea>
                         </div>
 
                         <div class="course-entry">
-                            <h4>Course 2</h4>
+                            <h4 class="course-title">Course 2</h4>
 
-                            <label>Department *</label>
-                            <input type="text" name="department"
-                                value="ITSC" placeholder="Example: ITIS" required>
+                            <label for="course-2-department">Department *</label>
+                            <input type="text" id="course-2-department" name="department"
+                                value="ITSC" placeholder="Example: ITSC" required>
 
-                            <label>Course Number *</label>
-                            <input type="text" name="courseNumber"
+                            <label for="course-2-courseNumber">Course Number *</label>
+                            <input type="text" id="course-2-courseNumber" name="courseNumber"
                                 value="2181" placeholder="Example: 2181" required>
 
-                            <label>Course Name *</label>
-                            <input type="text" name="courseTitle"
+                            <label for="course-2-courseTitle">Course Name *</label>
+                            <input type="text" id="course-2-courseTitle" name="courseTitle"
                                 value="Intro to Computer Systems" placeholder="Course name" required>
 
-                            <label>Reason for Taking the Course *</label>
-                            <textarea name="reasonForTaking"
+                            <label for="course-2-reasonForTaking">Reason for Taking the Course *</label>
+                            <textarea id="course-2-reasonForTaking" name="reasonForTaking"
                                 placeholder="Why are you taking this course?" required>Learning about computer systems, hardware, software, and how computers operate.</textarea>
                         </div>
 
                         <div class="course-entry">
-                            <h4>Course 3</h4>
+                            <h4 class="course-title">Course 3</h4>
 
-                            <label>Department *</label>
-                            <input type="text" name="department"
-                                value="ITSC" placeholder="Example: ITIS" required>
+                            <label for="course-3-department">Department *</label>
+                            <input type="text" id="course-3-department" name="department"
+                                value="ITSC" placeholder="Example: ITSC" required>
 
-                            <label>Course Number *</label>
-                            <input type="text" name="courseNumber"
+                            <label for="course-3-courseNumber">Course Number *</label>
+                            <input type="text" id="course-3-courseNumber" name="courseNumber"
                                 value="3688" placeholder="Example: 3688" required>
 
-                            <label>Course Name *</label>
-                            <input type="text" name="courseTitle"
+                            <label for="course-3-courseTitle">Course Name *</label>
+                            <input type="text" id="course-3-courseTitle" name="courseTitle"
                                 value="CS and AI: Ethics, Society, Communication" placeholder="Course name" required>
 
-                            <label>Reason for Taking the Course *</label>
-                            <textarea name="reasonForTaking"
+                            <label for="course-3-reasonForTaking">Reason for Taking the Course *</label>
+                            <textarea id="course-3-reasonForTaking" name="reasonForTaking"
                                 placeholder="Why are you taking this course?" required>Exploring the ethical, social, and communication challenges connected to computing and artificial intelligence.</textarea>
                         </div>
 
                         <div class="course-entry">
-                            <h4>Course 4</h4>
+                            <h4 class="course-title">Course 4</h4>
 
-                            <label>Department *</label>
-                            <input type="text" name="department"
+                            <label for="course-4-department">Department *</label>
+                            <input type="text" id="course-4-department" name="department"
                                 value="MATH" placeholder="Example: MATH" required>
 
-                            <label>Course Number *</label>
-                            <input type="text" name="courseNumber"
+                            <label for="course-4-courseNumber">Course Number *</label>
+                            <input type="text" id="course-4-courseNumber" name="courseNumber"
                                 value="2164" placeholder="Example: 2164" required>
 
-                            <label>Course Name *</label>
-                            <input type="text" name="courseTitle"
+                            <label for="course-4-courseTitle">Course Name *</label>
+                            <input type="text" id="course-4-courseTitle" name="courseTitle"
                                 value="Matrices and Linear Algebra" placeholder="Course name" required>
 
-                            <label>Reason for Taking the Course *</label>
-                            <textarea name="reasonForTaking"
+                            <label for="course-4-reasonForTaking">Reason for Taking the Course *</label>
+                            <textarea id="course-4-reasonForTaking" name="reasonForTaking"
                                 placeholder="Why are you taking this course?" required>Studying matrices, linear equations, and mathematical concepts used in computing and other fields.</textarea>
                         </div>
 
                         <div class="course-entry">
-                            <h4>Course 5</h4>
+                            <h4 class="course-title">Course 5</h4>
 
-                            <label>Department *</label>
-                            <input type="text" name="department"
+                            <label for="course-5-department">Department *</label>
+                            <input type="text" id="course-5-department" name="department"
                                 value="ENGL" placeholder="Example: ENGL" required>
 
-                            <label>Course Number *</label>
-                            <input type="text" name="courseNumber"
+                            <label for="course-5-courseNumber">Course Number *</label>
+                            <input type="text" id="course-5-courseNumber" name="courseNumber"
                                 value="3081" placeholder="Example: 3081" required>
 
-                            <label>Course Name *</label>
-                            <input type="text" name="courseTitle"
+                            <label for="course-5-courseTitle">Course Name *</label>
+                            <input type="text" id="course-5-courseTitle" name="courseTitle"
                                 value="Authors, Pop Culture, and Genre Studies" placeholder="Course name" required>
 
-                            <label>Reason for Taking the Course *</label>
-                            <textarea name="reasonForTaking"
+                            <label for="course-5-reasonForTaking">Reason for Taking the Course *</label>
+                            <textarea id="course-5-reasonForTaking" name="reasonForTaking"
                                 placeholder="Why are you taking this course?" required>Exploring literature, popular culture, and different genres through reading, discussion, and writing.</textarea>
                         </div>
-
                     </div>
 
                     <button type="button" id="add-course" class="add-course-button">
@@ -572,7 +617,7 @@
                 </div>
 
                 <div class="form-section">
-                    <h3>Quote and Additional Information</h3>
+                    <h3 class="section-heading">Quote and Additional Information</h3>
 
                     <label for="quote">Favorite Quote *</label>
                     <textarea id="quote" name="quote"
@@ -592,7 +637,7 @@
                 </div>
 
                 <div class="form-section">
-                    <h3>Footer Links</h3>
+                    <h3 class="section-heading">Footer Links</h3>
 
                     <p class="required-note">
                         Enter five websites or professional profiles.
@@ -644,24 +689,56 @@
                         placeholder="https://example.com" required>
                 </div>
 
+                <!-- This div groups the Submit, Reset, and Clear controls. -->
                 <div class="form-buttons">
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
                     <button type="button" id="clear-form">Clear</button>
                 </div>
+
+                <!-- These buttons connect to the HTML, JSON, and XML generation functions in introduction.js. -->
+                <div class="generation-buttons">
+                    <button type="button" id="generate-html">Generate HTML</button>
+                    <button type="button" id="generate-json">Generate JSON</button>
+                    <button type="button" id="generate-xml">Generate XML</button>
+                </div>
             </form>
         </section>
 
+        <!-- This section displays the generated introduction after form submission. -->
         <section id="result-container" hidden>
+            <h3 class="section-heading">Generated Introduction</h3>
+
+            <!-- This div is populated by introduction.js with the finished introduction. -->
             <div id="generated-introduction"></div>
-            <a href="#" id="reset-link" class="reset-link">Reset and Create Another Introduction</a>
+
+            <a href="#" id="reset-link" class="reset-link">
+                Reset and Create Another Introduction
+            </a>
+        </section>
+
+        <!-- This section displays the output produced by the HTML, JSON, and XML generation buttons. -->
+        <section id="generated-data-container" hidden>
+            <h3 class="section-heading">Generated Code</h3>
+
+            <label for="generated-data">Generated HTML, JSON, or XML</label>
+
+            <textarea
+                id="generated-data"
+                class="generated-output"
+                rows="12"
+                readonly
+                placeholder="Your generated code will appear here."></textarea>
         </section>
     </main>
 
+    <!-- This div loads the shared footer component. -->
     <div data-include="components/footer.html"></div>
 
     <script src="scripts/include_components.js"></script>
     <script src="scripts/introduction.js"></script>
+
+    <!-- Vicunadator validation script belongs at the end of the body. -->
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
