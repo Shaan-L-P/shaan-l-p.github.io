@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Introduction Form</title>
+
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --page-background: #b8d8fb;
+            --text-color: #2a2a3a;
+            --heading-color: #244f73;
+            --link-color: #2e3f9c;
+            --accent-color: #b8c8fa;
+        }
+
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 15px;
+            background-color: var(--page-background);
+            color: var(--text-color);
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: var(--accent-color);
+            border-radius: 999px;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 35px;
+            color: var(--heading-color);
+            border-bottom: 4px dashed var(--link-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--heading-color);
+        }
+
+        h6 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            color: var(--heading-color);
+            margin: 10px 0 25px 0;
+        }
+
+        a,
+        a:visited {
+            color: var(--link-color);
+            font-weight: bold;
+        }
+
+        a:hover,
+        a:focus {
+            color: #2e1f66;
+        }
+
+        nav {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            margin: 0 12px;
+            display: inline-block;
+        }
+
+        nav + nav {
+            margin-top: -25px;
+        }
+
+        .main-nav {
+            white-space: nowrap;
+        }
+
+        .main-nav a {
+            font-size: 0.85rem;
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+
+        .profile-figure {
+            text-align: center;
+            margin: 20px auto 35px;
+        }
+
+        .profile-image {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-style: italic;
+            color: var(--heading-color);
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            color: var(--heading-color);
+        }
+
+        ol {
+            font-size: 1.2rem;
+            padding-left: 30px;
+            color: var(--text-color);
+        }
+
+        ol li {
+            margin-bottom: 15px;
+        }
+
+        ol ol {
+            margin-top: 8px;
+            font-size: 1.05rem;
+        }
+
+        blockquote {
+            margin: 30px 20px;
+            padding: 20px 25px;
+            border-left: 5px solid var(--link-color);
+            border-radius: 8px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            font-size: 1.2rem;
+        }
+
+        .quote-credit {
+            display: block;
+            margin-top: 10px;
+            font-style: italic;
+            text-align: right;
+        }
+
+        footer {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            color: var(--text-color);
+            border-top: 4px dashed var(--link-color);
+            padding-top: 20px;
+        }
+
+        footer p {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: var(--text-color);
+        }
+
+        /* Introduction form styles */
+
+        .introduction-form {
+            margin-bottom: 40px;
+        }
+
+        .form-section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: var(--accent-color);
+            border-radius: 12px;
+        }
+
+        .form-section h3 {
+            margin-top: 5px;
+        }
+
+        .introduction-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: var(--heading-color);
+            font-weight: bold;
+        }
+
+        .introduction-form input,
+        .introduction-form textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #809bd0;
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: var(--text-color);
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        .introduction-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .introduction-form input:focus,
+        .introduction-form textarea:focus {
+            outline: 3px solid var(--link-color);
+            outline-offset: 2px;
+        }
+
+        .course-entry {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #dce8ff;
+            border: 2px solid #809bd0;
+            border-radius: 8px;
+        }
+
+        .course-entry h4 {
+            color: var(--heading-color);
+            font-family: 'Montserrat', Helvetica, sans-serif;
+        }
+
+        .form-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .form-buttons button,
+        .add-course-button,
+        .delete-course-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--link-color);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-buttons button:hover,
+        .add-course-button:hover,
+        .delete-course-button:hover {
+            background-color: #2e1f66;
+        }
+
+        .delete-course-button {
+            margin-top: 15px;
+            background-color: #8b2635;
+        }
+
+        .required-note {
+            font-size: 1rem;
+            color: var(--heading-color);
+        }
+
+        .footer-links {
+            margin-top: 30px;
+        }
+
+        .footer-links ul {
+            font-size: 1.1rem;
+        }
+
+        .reset-link {
+            display: inline-block;
+            margin: 30px 0;
+            cursor: pointer;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 12px;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+            }
+
+            .main-nav {
+                white-space: normal;
+            }
+
+            .main-nav a {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+
+            p,
+            ol {
+                font-size: 1.1rem;
+            }
+
+            ol ol {
+                font-size: 1rem;
+            }
+
+            blockquote {
+                margin: 20px 5px;
+                padding: 15px;
+            }
+
+            footer,
+            footer p {
+                font-size: 1.1rem;
+            }
+
+            .form-section {
+                padding: 12px;
+            }
+        }
+    </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+    <h6>Shaan Patel | Silly Platypus</h6>
+
+    <main>
+        <h2>Introduction Form</h2>
+
+        <section id="form-container">
+            <h3>Please submit the form below.</h3>
+
+            <p class="required-note">
+                Fields marked with an asterisk (*) are required.
+            </p>
+
+            <form id="introduction-form" class="introduction-form">
+
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName"
+                        value="Shaan" placeholder="Enter your first name" required>
+
+                    <label for="middleName">Middle Name or Initial</label>
+                    <input type="text" id="middleName" name="middleName"
+                        value="" placeholder="Enter your middle name or initial">
+
+                    <label for="nickname">Nickname or Preferred Name</label>
+                    <input type="text" id="nickname" name="nickname"
+                        value="" placeholder="Enter your preferred name">
+
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName"
+                        value="Patel" placeholder="Enter your last name" required>
+
+                    <label for="acknowledgment">Acknowledgment Statement *</label>
+                    <textarea id="acknowledgment" name="acknowledgment" required>I understand that this is a public document, and I will not include anything I would not want others to see.</textarea>
+
+                    <label for="acknowledgmentDate">Acknowledgment Date *</label>
+                    <input type="text" id="acknowledgmentDate"
+                        name="acknowledgmentDate" value="11/10/26"
+                        placeholder="MM/DD/YY" required>
+
+                    <label for="adjectives">Mascot Adjective *</label>
+                    <input type="text" id="adjectives" name="adjectives"
+                        value="Silly" placeholder="Enter a mascot adjective" required>
+
+                    <label for="animal">Mascot Animal *</label>
+                    <input type="text" id="animal" name="animal"
+                        value="Platypus" placeholder="Enter a mascot animal" required>
+
+                    <label for="prettyNameDivider">Name Divider *</label>
+                    <input type="text" id="prettyNameDivider"
+                        name="prettyNameDivider" value="|"
+                        placeholder="Example: ~, |, ♥" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Picture Information</h3>
+
+                    <label for="picture">Profile Picture</label>
+                    <input type="file" id="picture" name="picture"
+                        accept="image/*">
+
+                    <p class="required-note">
+                        If no image is uploaded, your original Brooklyn Bridge picture will be used.
+                    </p>
+
+                    <label for="pictureAlt">Picture Alternative Text *</label>
+                    <input type="text" id="pictureAlt" name="pictureAlt"
+                        value="Shaan Patel on the Brooklyn Bridge in New York City"
+                        placeholder="Describe your picture" required>
+
+                    <label for="caption">Picture Caption *</label>
+                    <input type="text" id="caption" name="caption"
+                        value="Brooklyn Bridge, NYC Summer 2025"
+                        placeholder="Enter a picture caption" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Personal and Academic Background</h3>
+
+                    <label for="personalStatement">Personal Statement / Personal Background *</label>
+                    <textarea id="personalStatement" name="personalStatement"
+                        placeholder="Tell visitors about yourself" required>I am Shaan Patel, a student at UNC Charlotte studying Computer Science with a concentration in Cybersecurity.</textarea>
+
+                    <label for="professionalBackground">Professional Background *</label>
+                    <textarea id="professionalBackground" name="professionalBackground"
+                        placeholder="Describe your professional background" required>I am interested in cybersecurity, ethical hacking, and learning how technology can be used to protect people and organizations. I have experience working with children as a Youth Development Leader at the YMCA, where I helped supervise groups and maintain a safe environment.</textarea>
+
+                    <label for="academicBackground">Academic Background *</label>
+                    <textarea id="academicBackground" name="academicBackground"
+                        placeholder="Describe your academic background" required>I am studying Computer Science at UNC Charlotte and focusing on cybersecurity. My coursework has helped me build skills in programming, databases, and technology.</textarea>
+
+                    <label for="primaryWorkComputer">Primary Work Computer *</label>
+                    <textarea id="primaryWorkComputer" name="primaryWorkComputer"
+                        placeholder="Describe your primary computer" required>MacBook Pro.</textarea>
+
+                    <label for="primaryWorkLocation">Primary Work Location *</label>
+                    <textarea id="primaryWorkLocation" name="primaryWorkLocation"
+                        placeholder="Where do you usually work?" required>Home or campus, depending on the assignment.</textarea>
+
+                    <label for="alternateComputerLocation">Alternate Computer or Location *</label>
+                    <textarea id="alternateComputerLocation" name="alternateComputerLocation"
+                        placeholder="Describe your alternate computer or location" required>Campus computers when needed.</textarea>
+
+                    <label for="interests">Interests and Hobbies *</label>
+                    <textarea id="interests" name="interests"
+                        placeholder="Describe your interests and hobbies" required>I enjoy cybersecurity, technology, drawing, and electronic music. I also enjoy watching animated shows, including Invincible, and listening to artists such as Bunii.</textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3>Courses</h3>
+
+                    <p class="required-note">
+                        Add or remove courses using the buttons below.
+                    </p>
+
+                    <div id="courses-container">
+
+                        <div class="course-entry">
+                            <h4>Course 1</h4>
+
+                            <label>Department *</label>
+                            <input type="text" name="department"
+                                value="ITIS" placeholder="Example: ITIS" required>
+
+                            <label>Course Number *</label>
+                            <input type="text" name="courseNumber"
+                                value="3135" placeholder="Example: 3135" required>
+
+                            <label>Course Name *</label>
+                            <input type="text" name="courseTitle"
+                                value="Web Application" placeholder="Course name" required>
+
+                            <label>Reason for Taking the Course *</label>
+                            <textarea name="reasonForTaking"
+                                placeholder="Why are you taking this course?" required>Learning to create and develop websites using HTML, CSS, and other web technologies.</textarea>
+                        </div>
+
+                        <div class="course-entry">
+                            <h4>Course 2</h4>
+
+                            <label>Department *</label>
+                            <input type="text" name="department"
+                                value="ITSC" placeholder="Example: ITSC" required>
+
+                            <label>Course Number *</label>
+                            <input type="text" name="courseNumber"
+                                value="2181" placeholder="Example: 2181" required>
+
+                            <label>Course Name *</label>
+                            <input type="text" name="courseTitle"
+                                value="Intro to Computer Systems" placeholder="Course name" required>
+
+                            <label>Reason for Taking the Course *</label>
+                            <textarea name="reasonForTaking"
+                                placeholder="Why are you taking this course?" required>Learning about computer systems, hardware, software, and how computers operate.</textarea>
+                        </div>
+
+                        <div class="course-entry">
+                            <h4>Course 3</h4>
+
+                            <label>Department *</label>
+                            <input type="text" name="department"
+                                value="ITSC" placeholder="Example: ITSC" required>
+
+                            <label>Course Number *</label>
+                            <input type="text" name="courseNumber"
+                                value="3688" placeholder="Example: 3688" required>
+
+                            <label>Course Name *</label>
+                            <input type="text" name="courseTitle"
+                                value="CS and AI: Ethics, Society, Communication" placeholder="Course name" required>
+
+                            <label>Reason for Taking the Course *</label>
+                            <textarea name="reasonForTaking"
+                                placeholder="Why are you taking this course?" required>Exploring the ethical, social, and communication challenges connected to computing and artificial intelligence.</textarea>
+                        </div>
+
+                        <div class="course-entry">
+                            <h4>Course 4</h4>
+
+                            <label>Department *</label>
+                            <input type="text" name="department"
+                                value="MATH" placeholder="Example: MATH" required>
+
+                            <label>Course Number *</label>
+                            <input type="text" name="courseNumber"
+                                value="2164" placeholder="Example: 2164" required>
+
+                            <label>Course Name *</label>
+                            <input type="text" name="courseTitle"
+                                value="Matrices and Linear Algebra" placeholder="Course name" required>
+
+                            <label>Reason for Taking the Course *</label>
+                            <textarea name="reasonForTaking"
+                                placeholder="Why are you taking this course?" required>Studying matrices, linear equations, and mathematical concepts used in computing and other fields.</textarea>
+                        </div>
+
+                        <div class="course-entry">
+                            <h4>Course 5</h4>
+
+                            <label>Department *</label>
+                            <input type="text" name="department"
+                                value="ENGL" placeholder="Example: ENGL" required>
+
+                            <label>Course Number *</label>
+                            <input type="text" name="courseNumber"
+                                value="3081" placeholder="Example: 3081" required>
+
+                            <label>Course Name *</label>
+                            <input type="text" name="courseTitle"
+                                value="Authors, Pop Culture, and Genre Studies" placeholder="Course name" required>
+
+                            <label>Reason for Taking the Course *</label>
+                            <textarea name="reasonForTaking"
+                                placeholder="Why are you taking this course?" required>Exploring literature, popular culture, and different genres through reading, discussion, and writing.</textarea>
+                        </div>
+
+                    </div>
+
+                    <button type="button" id="add-course" class="add-course-button">
+                        Add Course
+                    </button>
+                </div>
+
+                <div class="form-section">
+                    <h3>Quote and Additional Information</h3>
+
+                    <label for="quote">Favorite Quote *</label>
+                    <textarea id="quote" name="quote"
+                        placeholder="Enter your favorite quote" required>“You will face many defeats in life, but never let yourself be defeated.”</textarea>
+
+                    <label for="quoteAuthor">Quote Author *</label>
+                    <input type="text" id="quoteAuthor" name="quoteAuthor"
+                        value="Maya Angelou" placeholder="Enter the quote author" required>
+
+                    <label for="funnyItem">Funny Thing</label>
+                    <textarea id="funnyItem" name="funnyItem"
+                        placeholder="Share something funny or interesting"></textarea>
+
+                    <label for="somethingToShare">Something I Would Like to Share</label>
+                    <textarea id="somethingToShare" name="somethingToShare"
+                        placeholder="Share something else about yourself"></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3>Footer Links</h3>
+
+                    <p class="required-note">
+                        Enter five websites or professional profiles.
+                    </p>
+
+                    <label for="link1Label">Link 1 Name *</label>
+                    <input type="text" id="link1Label" name="link1Label"
+                        value="CLT Web" placeholder="Website name" required>
+
+                    <label for="link1Url">Link 1 URL *</label>
+                    <input type="url" id="link1Url" name="link1Url"
+                        value="https://webpages.charlotte.edu/spate338/"
+                        placeholder="https://example.com" required>
+
+                    <label for="link2Label">Link 2 Name *</label>
+                    <input type="text" id="link2Label" name="link2Label"
+                        value="GitHub.io" placeholder="Website name" required>
+
+                    <label for="link2Url">Link 2 URL *</label>
+                    <input type="url" id="link2Url" name="link2Url"
+                        value="https://github.com/shaan-l-p"
+                        placeholder="https://example.com" required>
+
+                    <label for="link3Label">Link 3 Name *</label>
+                    <input type="text" id="link3Label" name="link3Label"
+                        value="GitHub" placeholder="Website name" required>
+
+                    <label for="link3Url">Link 3 URL *</label>
+                    <input type="url" id="link3Url" name="link3Url"
+                        value="https://github.com/shaan-l-p"
+                        placeholder="https://example.com" required>
+
+                    <label for="link4Label">Link 4 Name *</label>
+                    <input type="text" id="link4Label" name="link4Label"
+                        value="freeCodeCamp" placeholder="Website name" required>
+
+                    <label for="link4Url">Link 4 URL *</label>
+                    <input type="url" id="link4Url" name="link4Url"
+                        value="https://www.freecodecamp.org/"
+                        placeholder="https://example.com" required>
+
+                    <label for="link5Label">Link 5 Name *</label>
+                    <input type="text" id="link5Label" name="link5Label"
+                        value="LinkedIn" placeholder="Website name" required>
+
+                    <label for="link5Url">Link 5 URL *</label>
+                    <input type="url" id="link5Url" name="link5Url"
+                        value="https://www.linkedin.com/"
+                        placeholder="https://example.com" required>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button" id="clear-form">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="result-container" hidden>
+            <div id="generated-introduction"></div>
+            <a href="#" id="reset-link" class="reset-link">Reset and Create Another Introduction</a>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/include_components.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
