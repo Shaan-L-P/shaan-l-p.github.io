@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shaan Patel's Silly Platypus | ITIS3135 | Class Introductions</title>
+
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --page-background: #b8d8fb;
+            --text-color: #2a2a3a;
+            --heading-color: #244f73;
+            --link-color: #2e3f9c;
+            --accent-color: #b8c8fa;
+            --card-background: #e5efff;
+            --border-color: #809bd0;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 15px;
+            background-color: var(--page-background);
+            color: var(--text-color);
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            margin: 0 0 35px 0;
+            color: #2e3f9c;
+            background-color: var(--accent-color);
+            border-radius: 999px;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin: 0 0 25px;
+            color: var(--heading-color);
+            border-bottom: 4px dashed var(--link-color);
+            padding-bottom: 10px;
+        }
+
+        h3, h4 { font-family: 'Montserrat', Helvetica, sans-serif; color: var(--heading-color); }
+        h3 { font-size: 1.35rem; margin: 0 0 10px; }
+        h4 { font-size: 1.05rem; margin: 18px 0 8px; }
+
+        .title-divider {
+            border: 0;
+            border-top: 4px dashed var(--link-color);
+            margin: 0 0 25px;
+        }
+
+        a, a:visited { color: var(--link-color); font-weight: bold; }
+        a:hover, a:focus { color: #2e1f66; }
+
+        nav { margin-bottom: 30px; text-align: center; }
+        nav a { display: inline-block; margin: 0 12px; }
+        nav + nav { margin-top: -20px; }
+        .main-nav { white-space: normal; }
+        .main-nav a { font-size: 0.85rem; margin: 0 6px; white-space: nowrap; }
+
+        .intro-copy {
+            max-width: 850px;
+            margin: 0 auto 25px;
+            color: var(--heading-color);
+            font-size: 1.1rem;
+        }
+
+        .intro-copy strong { color: var(--link-color); }
+
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            gap: 14px;
+            margin: 25px 0 18px;
+            padding: 18px;
+            background-color: var(--accent-color);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .toolbar-field {
+            display: flex;
+            flex: 1 1 230px;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .toolbar label { color: var(--heading-color); font-weight: bold; }
+
+        .toolbar input, .toolbar select {
+            width: 100%;
+            min-height: 44px;
+            padding: 10px 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 7px;
+            background-color: #ffffff;
+            color: var(--text-color);
+            font: inherit;
+        }
+
+        .toolbar input:focus, .toolbar select:focus, .toolbar button:focus,
+        .profile-card a:focus, summary:focus {
+            outline: 3px solid var(--link-color);
+            outline-offset: 2px;
+        }
+
+        .toolbar button {
+            min-height: 44px;
+            padding: 10px 18px;
+            border: 0;
+            border-radius: 7px;
+            background-color: var(--link-color);
+            color: #ffffff;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .toolbar button:hover:not(:disabled) { background-color: #2e1f66; }
+        .toolbar button:disabled { cursor: wait; opacity: 0.65; }
+
+        .status-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 8px 20px;
+            margin: 10px 2px 18px;
+        }
+
+        .status-message, .profile-count { margin: 0; color: var(--heading-color); font-size: 0.98rem; }
+        .profile-count { font-weight: bold; }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr));
+            align-items: start;
+            gap: 22px;
+        }
+
+        .profile-card {
+            min-width: 0;
+            overflow: hidden;
+            background-color: var(--card-background);
+            border: 2px solid var(--border-color);
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(36, 79, 115, 0.12);
+        }
+
+        .profile-image, .avatar-placeholder {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: center;
+            background-color: var(--accent-color);
+        }
+
+        .avatar-placeholder {
+            display: grid;
+            place-items: center;
+            color: var(--heading-color);
+            font-size: 4rem;
+        }
+
+        .profile-content { padding: 17px 18px 20px; }
+        .profile-eyebrow {
+            margin: 0 0 3px;
+            color: var(--link-color);
+            font-size: 0.78rem;
+            font-weight: bold;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+        .profile-name { margin: 0; font-size: 1.35rem; overflow-wrap: anywhere; }
+        .preferred-name { margin: 2px 0 10px; color: var(--heading-color); font-size: 0.95rem; }
+
+        .mascot-tag {
+            display: inline-block;
+            margin: 0 0 10px;
+            padding: 5px 10px;
+            border: 1px solid var(--link-color);
+            border-radius: 999px;
+            background-color: var(--accent-color);
+            color: var(--link-color);
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .picture-caption { margin: 0 0 14px; color: var(--heading-color); font-size: 0.85rem; font-style: italic; }
+
+        .personal-summary {
+            margin: 10px 0 14px;
+            color: var(--text-color);
+            font-size: 0.98rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+        }
+
+        .profile-quote {
+            margin: 15px 0;
+            padding: 13px 15px;
+            border-left: 4px solid var(--link-color);
+            border-radius: 7px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            font-size: 0.98rem;
+        }
+
+        .profile-quote p { margin: 0; }
+        .quote-credit {
+            display: block;
+            margin-top: 8px;
+            color: var(--heading-color);
+            font-size: 0.85rem;
+            font-style: italic;
+            text-align: right;
+        }
+
+        .profile-meta { display: flex; flex-wrap: wrap; gap: 7px 14px; margin: 13px 0; color: var(--heading-color); font-size: 0.82rem; }
+        .profile-details { margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 12px; }
+        .profile-details summary { color: var(--link-color); font-weight: bold; cursor: pointer; }
+        .details-section { margin-top: 14px; }
+        .details-section h4 { margin-top: 14px; }
+
+        .details-section p, .details-section li {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            overflow-wrap: anywhere;
+        }
+
+        .details-section p { margin: 6px 0 10px; }
+        .details-section ul { padding-left: 21px; margin: 6px 0 12px; }
+        .course-item { margin: 0 0 12px; }
+        .course-reason { margin: 3px 0 0 !important; color: var(--heading-color) !important; }
+        .profile-links { display: flex; flex-wrap: wrap; gap: 6px 13px; margin-top: 7px; }
+        .profile-links a { font-size: 0.88rem; }
+        .original-submission { display: inline-block; margin-top: 12px; font-size: 0.82rem; }
+
+        .empty-state {
+            margin: 25px 0;
+            padding: 25px;
+            border: 2px dashed var(--link-color);
+            border-radius: 12px;
+            color: var(--heading-color);
+            text-align: center;
+        }
+
+        footer { margin-top: 40px; padding-top: 20px; border-top: 4px dashed var(--link-color); color: var(--text-color); font-size: 1.1rem; }
+        footer p { margin: 15px 0; color: var(--text-color); font-size: 1rem; }
+
+        @media (max-width: 600px) {
+            body { padding: 15px 12px; }
+            .main-nav a { margin-bottom: 7px; font-size: 0.95rem; }
+            .toolbar { align-items: stretch; }
+            .toolbar button { width: 100%; }
+            .profile-image, .avatar-placeholder { height: 205px; }
+            footer, footer p { font-size: 0.95rem; }
+        }
+    </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- The shared component loader replaces this placeholder with the site header and navigation. -->
+    <div data-include="components/header.html">
+        <header><h1>Shaan Patel's Silly Platypus | ITIS3135</h1></header>
+    </div>
+
+    <main>
+        <hr class="title-divider">
+        <h2>Class Introductions</h2>
+
+        <p class="intro-copy">
+            Welcome to the class yearbook! Meet the people around our pond, get to know
+            their mascots and interests, and discover the quotes and stories they chose
+            to share. Every profile is pulled live from the class introduction form, so
+            new submissions can join the yearbook without changing this page.
+        </p>
+
+        <section class="toolbar" aria-label="Find and sort class profiles">
+            <div class="toolbar-field">
+                <label for="profile-search">Search names, mascots, or interests</label>
+                <input type="search" id="profile-search" placeholder="Try a name, animal, or interest">
+            </div>
+
+            <div class="toolbar-field">
+                <label for="profile-sort">Sort profiles</label>
+                <select id="profile-sort">
+                    <option value="name">Name, A to Z</option>
+                    <option value="recent">Recently updated</option>
+                </select>
+            </div>
+
+            <button type="button" id="refresh-profiles">Refresh yearbook</button>
+        </section>
+
+        <div class="status-row">
+            <p id="profiles-status" class="status-message" role="status" aria-live="polite">
+                Loading class introductions...
+            </p>
+            <p id="profile-count" class="profile-count"></p>
+        </div>
+
+        <section id="profile-grid" class="profile-grid" aria-label="Classmate profiles"></section>
+
+        <section id="empty-state" class="empty-state" hidden>
+            <h3>No profiles found</h3>
+            <p>Try another search, or check back after more classmates submit their introductions.</p>
+        </section>
+    </main>
+
+    <!-- The shared component loader replaces this placeholder with the existing site footer. -->
+    <div data-include="components/footer.html">
+        <footer><p>Shaan Patel | Silly code, serious design.</p></footer>
+    </div>
+
+    <script src="scripts/include_components.js"></script>
+    <script src="scripts/class_introductions.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
