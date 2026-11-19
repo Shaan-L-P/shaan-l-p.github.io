@@ -54,6 +54,52 @@
         return makeSafeUrl(source);
     }
 
+    /*
+     * Turns links on this site into relative paths and keeps them in the
+     * current tab. Links to other websites open in a new tab.
+     */
+    function getRelativeUrl(url) {
+        const currentParts = window.location.pathname.split("/").filter(Boolean);
+        const destinationParts = url.pathname.split("/").filter(Boolean);
+
+        currentParts.pop();
+
+        let commonIndex = 0;
+
+        while (
+            commonIndex < currentParts.length &&
+            commonIndex < destinationParts.length &&
+            currentParts[commonIndex] === destinationParts[commonIndex]
+        ) {
+            commonIndex += 1;
+        }
+
+        const upwardPath = "../".repeat(currentParts.length - commonIndex);
+        const downwardPath = destinationParts.slice(commonIndex).join("/");
+        const relativePath = upwardPath + downwardPath || "./";
+
+        return relativePath + url.search + url.hash;
+    }
+
+    function setSafeLink(anchor, value) {
+        const safeUrl = makeSafeUrl(value);
+
+        if (!safeUrl) return false;
+
+        const parsedUrl = new URL(safeUrl);
+
+        if (parsedUrl.origin === window.location.origin) {
+            anchor.href = getRelativeUrl(parsedUrl);
+            return true;
+        }
+
+        anchor.href = parsedUrl.href;
+        anchor.target = "_blank";
+        anchor.rel = "noopener noreferrer";
+
+        return true;
+    }
+
     function getDisplayName(profile) {
         const data = profile.data;
         const parts = [data.firstName, data.middleName, data.lastName]
@@ -107,7 +153,7 @@
         const text = getText(value);
         if (!text) return;
 
-        const paragraph = createElement("p");
+        const paragraph = createElement("p", "details-paragraph");
         const strong = createElement("strong", "", label + ": ");
         paragraph.append(strong, document.createTextNode(text));
         container.appendChild(paragraph);
@@ -167,9 +213,7 @@
         safeLinks.forEach(function (link) {
             const anchor = createElement("a", "", getText(link.label) || "Website");
 
-            anchor.href = makeSafeUrl(link.url);
-            anchor.target = "_blank";
-            anchor.rel = "noopener noreferrer";
+            if (!setSafeLink(anchor, link.url)) return;
 
             linkList.appendChild(anchor);
         });
@@ -268,9 +312,7 @@
                 "View original introduction data"
             );
 
-            originalLink.href = originalJsonUrl;
-            originalLink.target = "_blank";
-            originalLink.rel = "noopener noreferrer";
+            setSafeLink(originalLink, originalJsonUrl);
 
             details.appendChild(originalLink);
         }
