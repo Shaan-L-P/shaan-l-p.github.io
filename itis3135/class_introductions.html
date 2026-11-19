@@ -214,15 +214,18 @@
             font-weight: bold;
         }
 
+        /* profile-list uses inline-block cards for a layout supported by older CSS validators. */
         .profile-list {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            gap: 22px;
+            font-size: 0;
+            margin: -1%;
         }
 
         .profile-card {
-            flex: 1 1 285px;
+            display: inline-block;
+            vertical-align: top;
+            width: 31%;
+            margin: 1%;
+            font-size: 1rem;
             min-width: 0;
             max-width: 100%;
             overflow: hidden;
@@ -430,6 +433,10 @@
                 padding: 15px 12px;
             }
 
+            .profile-card {
+                width: 98%;
+            }
+
             .main-nav a {
                 margin-bottom: 7px;
                 font-size: 0.95rem;
@@ -441,6 +448,10 @@
 
             .toolbar button {
                 align-self: stretch;
+            }
+
+            .profile-card {
+                width: 48%;
             }
 
             .profile-image,
