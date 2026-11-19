@@ -114,7 +114,7 @@
     }
 
     function addSectionHeading(container, headingText) {
-        container.appendChild(createElement("h4", "", headingText));
+        container.appendChild(createElement("h4", "details-heading", headingText));
     }
 
     function buildCourses(container, courses) {
@@ -508,7 +508,7 @@
 
                 emptyState.hidden = false;
 
-                emptyState.querySelector("h3").textContent = "The pond is quiet";
+                emptyState.querySelector("h3").textContent = "The Pond Is Quiet";
 
                 emptyState.querySelector("p").textContent =
                     "No valid introduction submissions were returned. Check back after classmates submit their forms.";
@@ -516,7 +516,7 @@
                 return;
             }
 
-            emptyState.querySelector("h3").textContent = "No profiles found";
+            emptyState.querySelector("h3").textContent = "No Profiles Found";
 
             emptyState.querySelector("p").textContent =
                 "Try another search, or check back after more classmates submit their introductions.";
@@ -532,7 +532,7 @@
             emptyState.hidden = false;
 
             emptyState.querySelector("h3").textContent =
-                "Yearbook could not load";
+                "Yearbook Could Not Load";
 
             emptyState.querySelector("p").textContent =
                 "The class introduction service could not be reached. Check your connection and use the refresh button to try again.";
