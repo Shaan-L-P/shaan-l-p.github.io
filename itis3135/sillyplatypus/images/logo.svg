@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Silly Platypus explorer mascot</title>
+  <desc id="desc">A friendly brown platypus wearing a green explorer hat and holding a magnifying glass.</desc>
+  <ellipse cx="165" cy="190" rx="112" ry="10" fill="#193f34" opacity=".12"/>
+  <path d="M70 150 C51 151 29 166 17 179 C42 185 70 179 91 164Z" fill="#65472f"/>
+  <path d="M78 145 C63 111 82 80 119 70 C146 54 187 61 207 79 C233 84 249 105 244 129 C239 156 212 174 175 177 L119 173 C99 170 85 160 78 145Z" fill="#79583c"/>
+  <path d="M107 142 C122 155 158 165 190 150 C185 173 159 181 130 171 C117 166 110 155 107 142Z" fill="#e9d8b9"/>
+  <path d="M211 94 C237 82 276 87 299 101 C280 118 243 123 214 111Z" fill="#d59a43" stroke="#9f6d2e" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M229 103 C248 106 269 105 286 101" fill="none" stroke="#f1c36d" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="218" cy="89" r="5.8" fill="#1e2823"/>
+  <circle cx="220" cy="87" r="1.7" fill="#fff"/>
+  <path d="M233 72 C242 62 253 62 261 69" fill="none" stroke="#65472f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M117 70 C127 49 145 39 167 39 C190 39 207 51 214 68 L206 77 C178 68 148 68 122 81Z" fill="#315b49"/>
+  <path d="M103 79 C133 66 180 65 217 77 L214 86 C175 78 137 81 107 89Z" fill="#234d3e" stroke="#193f34" stroke-width="2"/>
+  <path d="M152 42 L157 25 L180 28 L185 46" fill="#c08b4f" stroke="#8b6139" stroke-width="2"/>
+  <path d="M144 54 C159 48 178 49 191 55" fill="none" stroke="#e6c58d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M107 165 L99 187 L116 187 L127 171" fill="#d59a43" stroke="#9f6d2e" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M176 171 L181 189 L198 189 L201 160" fill="#d59a43" stroke="#9f6d2e" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M116 137 C100 124 90 111 80 99" fill="none" stroke="#65472f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M79 99 L61 78" fill="none" stroke="#8b6139" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="53" cy="68" r="22" fill="#dcebe5" fill-opacity=".75" stroke="#315b49" stroke-width="6"/>
+  <path d="M69 84 L87 103" fill="none" stroke="#315b49" stroke-width="7" stroke-linecap="round"/>
+  <path d="M25 204 C53 196 80 196 103 204 M216 204 C242 196 266 198 290 205" fill="none" stroke="#6fa9a1" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="43" cy="191" r="3" fill="#6fa9a1"/>
+  <circle cx="270" cy="183" r="3" fill="#6fa9a1"/>
+</svg>
