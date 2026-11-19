@@ -215,14 +215,16 @@
         }
 
         .profile-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-            align-items: start;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
             gap: 22px;
         }
 
         .profile-card {
+            flex: 1 1 285px;
             min-width: 0;
+            max-width: 100%;
             overflow: hidden;
             background-color: var(--card-background);
             border: 2px solid var(--border-color);
@@ -364,7 +366,7 @@
             overflow-wrap: anywhere;
         }
 
-        .details-section p {
+        .details-section .details-paragraph {
             margin: 6px 0 10px;
         }
 
@@ -377,7 +379,7 @@
             margin: 0 0 12px;
         }
 
-        .details-section p.course-reason {
+        .course-reason {
             margin: 3px 0 0;
             color: var(--heading-color);
         }
