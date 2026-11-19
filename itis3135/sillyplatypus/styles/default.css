@@ -1,0 +1,349 @@
+/* Silly Platypus | Creekside Discovery Co. */
+:root {
+    --forest: #193f34;
+    --forest-light: #315b49;
+    --river: #6fa9a1;
+    --river-light: #dcebe5;
+    --cream: #f7f0df;
+    --paper: #fffaf0;
+    --sand: #e8d8b7;
+    --brown: #73583e;
+    --ink: #24352e;
+    --muted: #52665c;
+    --accent: #c08b4f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+a {
+    color: var(--forest-light);
+}
+
+a:hover,
+a:focus-visible {
+    color: #8b5a2b;
+}
+
+.skip-link {
+    position: absolute;
+    top: -5rem;
+    left: 1rem;
+    z-index: 5;
+    padding: 0.7rem 1rem;
+    background: var(--paper);
+    color: var(--forest);
+    border-radius: 0.5rem;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+header {
+    background: var(--forest);
+    color: var(--paper);
+    border-bottom: 0.45rem solid var(--river);
+}
+
+.masthead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 0.75rem;
+}
+
+.masthead img {
+    width: 112px;
+    height: 96px;
+    object-fit: contain;
+    border-radius: 0.7rem;
+}
+
+.brand {
+    text-align: left;
+}
+
+.brand p {
+    margin: 0;
+}
+
+.brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.9rem, 5vw, 3.2rem);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+.tagline {
+    margin-top: 0.35rem !important;
+    color: #f0dfba;
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0.55rem 1rem 1rem;
+}
+
+nav a {
+    padding: 0.45rem 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    color: var(--paper);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+    border-color: #d2c19a;
+    background: #f1e5c9;
+    color: var(--forest);
+}
+
+main {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 2rem auto 3rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--forest);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.18;
+}
+
+h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+}
+
+h2 {
+    margin-top: 2.3rem;
+    margin-bottom: 0.65rem;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.25rem;
+}
+
+p {
+    max-width: 72ch;
+}
+
+.intro {
+    max-width: 760px;
+    margin-top: 0;
+    color: var(--muted);
+    font-size: 1.15rem;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
+    align-items: center;
+    gap: clamp(1.25rem, 4vw, 3rem);
+    padding: clamp(1.2rem, 3vw, 2rem);
+    background: var(--paper);
+    border: 1px solid #e3d4b8;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.5rem 1.5rem rgb(54 67 52 / 8%);
+}
+
+.feature img,
+.content-image {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border: 0.45rem solid white;
+    border-radius: 0.85rem;
+    box-shadow: 0 0.3rem 1rem rgb(35 50 42 / 13%);
+}
+
+.feature img {
+    aspect-ratio: 4 / 3;
+}
+
+figure {
+    margin: 1.1rem 0;
+}
+
+figcaption {
+    margin-top: 0.45rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.button-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 2rem;
+    background: var(--forest);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+    background: #a76f37;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+    margin: 1.2rem 0;
+}
+
+article {
+    padding: 1rem;
+    background: var(--paper);
+    border: 1px solid #e3d4b8;
+    border-radius: 1rem;
+}
+
+article img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+    border-radius: 0.65rem;
+}
+
+.info-panel {
+    padding: 1.15rem 1.35rem;
+    background: var(--river-light);
+    border-left: 0.4rem solid var(--river);
+    border-radius: 0.6rem;
+}
+
+.hours-table {
+    width: 100%;
+    max-width: 620px;
+    border-collapse: collapse;
+    background: var(--paper);
+}
+
+.hours-table th,
+.hours-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #d9ceb7;
+    text-align: left;
+}
+
+.hours-table th {
+    width: 42%;
+    color: var(--forest);
+}
+
+.steps {
+    padding-left: 1.5rem;
+}
+
+.steps li {
+    margin: 0.6rem 0;
+    padding-left: 0.3rem;
+}
+
+footer {
+    padding: 1.5rem 1rem;
+    background: var(--forest);
+    color: var(--paper);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.25rem auto;
+}
+
+footer em {
+    color: #f0dfba;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+}
+
+footer small {
+    color: #d8e5db;
+}
+
+@media (max-width: 720px) {
+    .masthead {
+        gap: 0.7rem;
+        padding-top: 0.8rem;
+    }
+
+    .masthead img {
+        width: 82px;
+        height: 75px;
+    }
+
+    .feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature img {
+        max-height: 340px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 430px) {
+    nav {
+        gap: 0.15rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        width: min(100% - 1.2rem, 1100px);
+        margin-top: 1.2rem;
+    }
+
+    .masthead img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .tagline {
+        font-size: 0.86rem;
+    }
+}
