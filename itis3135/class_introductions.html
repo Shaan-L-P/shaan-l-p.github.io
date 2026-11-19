@@ -60,25 +60,27 @@
             padding-bottom: 10px;
         }
 
-        h3, h4 {
+        h3 {
             font-family: 'Montserrat', Helvetica, sans-serif;
             color: var(--heading-color);
-        }
-
-        h3 {
             font-size: 1.35rem;
             margin: 0 0 10px;
         }
 
         h4 {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            color: var(--heading-color);
             font-size: 1.05rem;
             margin: 18px 0 8px;
         }
 
-        .title-divider {
-            border: 0;
-            border-top: 4px dashed var(--link-color);
-            margin: 0 0 25px;
+        /* page-logo styles the local platypus image that identifies this class yearbook. */
+        .page-logo {
+            display: block;
+            max-width: 150px;
+            height: auto;
+            margin: 20px auto 30px;
+            border-radius: 8px;
         }
 
         a, a:visited {
@@ -128,7 +130,7 @@
         .toolbar {
             display: flex;
             flex-wrap: wrap;
-            align-items: end;
+            align-items: flex-end;
             gap: 14px;
             margin: 25px 0 18px;
             padding: 18px;
@@ -151,11 +153,11 @@
 
         .toolbar input,
         .toolbar select {
-            width: 100%;
             min-height: 44px;
             padding: 10px 12px;
             border: 2px solid var(--border-color);
             border-radius: 7px;
+            /* White field backgrounds keep typed text readable. */
             background-color: #ffffff;
             color: var(--text-color);
             font: inherit;
@@ -176,6 +178,7 @@
             border: 0;
             border-radius: 7px;
             background-color: var(--link-color);
+            /* White button text provides contrast against the dark blue background. */
             color: #ffffff;
             font: inherit;
             font-weight: bold;
@@ -213,7 +216,7 @@
 
         .profile-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
             align-items: start;
             gap: 22px;
         }
@@ -294,6 +297,8 @@
             font-size: 0.98rem;
             display: -webkit-box;
             -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -ms-box-orient: vertical;
             -webkit-line-clamp: 4;
             line-clamp: 4;
             overflow: hidden;
@@ -347,7 +352,8 @@
             margin-top: 14px;
         }
 
-        .details-section h4 {
+        /* details-heading gives generated section headings spacing without qualifying the h4 element. */
+        .details-section .details-heading {
             margin-top: 14px;
         }
 
@@ -371,9 +377,9 @@
             margin: 0 0 12px;
         }
 
-        .course-reason {
-            margin: 3px 0 0 !important;
-            color: var(--heading-color) !important;
+        .details-section p.course-reason {
+            margin: 3px 0 0;
+            color: var(--heading-color);
         }
 
         .profile-links {
@@ -431,7 +437,7 @@
             }
 
             .toolbar button {
-                width: 100%;
+                align-self: stretch;
             }
 
             .profile-image,
@@ -450,16 +456,17 @@
 </head>
 
 <body>
-    <!-- The shared component loader replaces this placeholder with the site header and navigation. -->
-    <div data-include="components/header.html">
-        <header>
-            <h1>Shaan Patel's Silly Platypus | ITIS3135</h1>
-        </header>
-    </div>
+    <!-- This div is a placeholder for the shared header component, which supplies the site h1 and navigation. -->
+    <div data-include="components/header.html"></div>
 
     <main>
-        <hr class="title-divider">
         <h2>Class Introductions</h2>
+
+        <img
+            class="page-logo"
+            src="images/silly-platypus-logo.jpg"
+            alt="Silly Platypus logo"
+        >
 
         <p class="intro-copy">
             Welcome to the class yearbook! Meet the people around our pond, get to know
@@ -468,6 +475,7 @@
             new submissions can join the yearbook without changing this page.
         </p>
 
+        <!-- These div elements group each toolbar label with its control and allow the controls to wrap on smaller screens. -->
         <section class="toolbar" aria-label="Find and sort class profiles">
             <div class="toolbar-field">
                 <label for="profile-search">Search names, mascots, or interests</label>
@@ -485,6 +493,7 @@
             <button type="button" id="refresh-profiles">Refresh yearbook</button>
         </section>
 
+        <!-- This div groups the loading status and profile count so they stay aligned and wrap together. -->
         <div class="status-row">
             <p id="profiles-status" class="status-message" role="status" aria-live="polite">
                 Loading class introductions...
@@ -495,17 +504,13 @@
         <section id="profile-grid" class="profile-grid" aria-label="Classmate profiles"></section>
 
         <section id="empty-state" class="empty-state" hidden>
-            <h3>No profiles found</h3>
+            <h3>No Profiles Found</h3>
             <p>Try another search, or check back after more classmates submit their introductions.</p>
         </section>
     </main>
 
-    <!-- The shared component loader replaces this placeholder with the existing site footer. -->
-    <div data-include="components/footer.html">
-        <footer>
-            <p>Shaan Patel | Silly code, serious design.</p>
-        </footer>
-    </div>
+    <!-- This div is a placeholder for the shared footer component, which supplies the designer credit and tagline. -->
+    <div data-include="components/footer.html"></div>
 
     <script src="scripts/include_components.js"></script>
     <script src="scripts/class_introductions.js"></script>
