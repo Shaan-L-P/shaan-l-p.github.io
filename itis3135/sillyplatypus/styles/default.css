@@ -22,7 +22,8 @@ html {
 }
 
 body {
-    margin: 0;
+    max-width: 1400px;
+    margin: 0 auto;
     background: var(--cream);
     color: var(--ink);
     font-family: "Trebuchet MS", Arial, sans-serif;
@@ -94,7 +95,7 @@ header {
 }
 
 .tagline {
-    margin-top: 0.35rem !important;
+    margin: 0.35rem 0 0;
     color: #f0dfba;
     font-size: 1rem;
 }
@@ -127,30 +128,39 @@ nav a[aria-current="page"] {
 }
 
 main {
-    width: min(1100px, calc(100% - 2rem));
+    max-width: 1100px;
+    width: calc(100% - 2rem);
     margin: 2rem auto 3rem;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     color: var(--forest);
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.18;
 }
 
 h1 {
+    margin: 0;
+    color: var(--paper);
+    font-size: clamp(1.9rem, 5vw, 3.2rem);
+    text-align: center;
+}
+
+h2 {
     margin: 0 0 0.75rem;
     font-size: clamp(2.1rem, 5vw, 3.5rem);
 }
 
-h2 {
+h3 {
     margin-top: 2.3rem;
     margin-bottom: 0.65rem;
     font-size: clamp(1.45rem, 3vw, 2rem);
 }
 
-h3 {
+h4 {
     margin: 0 0 0.45rem;
     font-size: 1.25rem;
 }
@@ -184,7 +194,7 @@ p {
     width: 100%;
     max-height: 420px;
     object-fit: cover;
-    border: 0.45rem solid white;
+    outline: 0.45rem solid #fff;
     border-radius: 0.85rem;
     box-shadow: 0 0.3rem 1rem rgb(35 50 42 / 13%);
 }
@@ -210,7 +220,8 @@ figcaption {
     padding: 0.7rem 1.1rem;
     border-radius: 2rem;
     background: var(--forest);
-    color: white;
+    /* White provides strong contrast against the forest-green button background. */
+    color: #fff;
     font-weight: bold;
     text-decoration: none;
 }
@@ -218,7 +229,8 @@ figcaption {
 .button-link:hover,
 .button-link:focus-visible {
     background: #a76f37;
-    color: white;
+    /* White keeps the button label readable on the dark hover background. */
+    color: #fff;
 }
 
 .cards {
@@ -334,7 +346,7 @@ footer small {
     }
 
     main {
-        width: min(100% - 1.2rem, 1100px);
+        width: calc(100% - 1.2rem);
         margin-top: 1.2rem;
     }
 
@@ -347,3 +359,8 @@ footer small {
         font-size: 0.86rem;
     }
 }
+
+/* The masthead and brand containers group the logo, site name, and tagline. */
+/* The feature, cards, info-panel, and steps classes identify reusable content layouts. */
+/* The skip-link class keeps keyboard navigation visible when focused. */
+/* The image-credits class separates attribution text from the footer's main content. */
