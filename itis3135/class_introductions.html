@@ -214,7 +214,7 @@
             font-weight: bold;
         }
 
-        .profile-grid {
+        .profile-list {
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
@@ -243,8 +243,9 @@
         }
 
         .avatar-placeholder {
-            display: grid;
-            place-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--heading-color);
             font-size: 4rem;
         }
@@ -503,7 +504,7 @@
             <p id="profile-count" class="profile-count"></p>
         </div>
 
-        <section id="profile-grid" class="profile-grid" aria-label="Classmate profiles"></section>
+        <section id="profile-grid" class="profile-list" aria-label="Classmate profiles"></section>
 
         <section id="empty-state" class="empty-state" hidden>
             <h3>No Profiles Found</h3>
