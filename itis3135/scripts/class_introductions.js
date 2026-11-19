@@ -371,10 +371,6 @@
         const content = createElement("div", "profile-content");
 
         content.appendChild(
-            createElement("p", "profile-eyebrow", "Pond resident")
-        );
-
-        content.appendChild(
             createElement("h3", "profile-name", displayName)
         );
 
