@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="See the fictional shop hours and seasonal activity schedule for Silly Platypus.">
-    <title>Silly Platypus | Hours and Events</title>
+    <title>Silly Platypus Creekside Discovery Co. | Silly Platypus Hours and Events</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/includes.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header>
-        <div class="masthead"><img src="images/logo.svg" alt="Silly Platypus mascot, a brown platypus in a green explorer hat holding a magnifying glass"><div class="brand"><p class="brand-name">Silly Platypus</p><p class="tagline"><em>Where every puddle holds a discovery.</em></p></div></div>
-        <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="hours.html" aria-current="page">Hours</a><a href="location.html">Location</a><a href="why.html">Why</a><a href="how.html">How</a></nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main id="main-content">
-        <h1>Silly Platypus Hours and Events</h1>
+        <h4>Silly Platypus Hours and Events</h4>
+        
         <p class="intro">Drop in for supplies, inspiration, and a little creekside curiosity.</p>
         <section class="feature">
             <div>
-                <h2>Silly Platypus welcomes weekend explorers</h2>
+                <h4>Silly Platypus welcomes weekend explorers</h4>
                 <p>Our imaginary storefront follows a relaxed schedule so families and outdoor explorers have time to browse before or after their adventures. These sample hours are part of the fictional business concept for this class project.</p>
                 <p>Seasonal activities can include beginner nature journaling, freshwater wildlife identification, and family-friendly creek walks. Activities are designed to focus on observation and respect for the environment.</p>
                 <div class="info-panel">
@@ -42,14 +41,13 @@
             </figure>
         </section>
         <section>
-            <h2>Silly Platypus plans seasonal discovery days</h2>
+            <h4>Silly Platypus plans seasonal discovery days</h4>
             <p>Our sample calendar includes Creek Discovery Saturdays, nature-journal afternoons, and freshwater wildlife workshops. Each event gives visitors a chance to practice observation and share what they notice.</p>
             <p>For this class concept, event dates are examples rather than live bookings. A real shop would publish current dates, registration details, weather updates, and any age or supervision requirements here.</p>
         </section>
     </main>
 
-    <footer><p><strong>Silly Platypus</strong> | <em>Where every puddle holds a discovery.</em></p><p><small>A fictional creekside discovery shop created for an ITIS 3135 class project.</small></p><p class="image-credits"><small>Photo credits: Platypus swimming photo by Maria Grist, <a href="https://commons.wikimedia.org/wiki/File:Platypus_swimming.jpg">Wikimedia Commons</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; second platypus photo by Warren Garst via Colorado State University Libraries, <a href="https://commons.wikimedia.org/wiki/File:Platypus_swimming_in_water_-_DPLA_-_1785e4714a1e88c22bb60794a26e658f.jpg">Wikimedia Commons</a>, also CC BY-SA 4.0; creek photo by Theo Bickel, <a href="https://unsplash.com/es/fotos/un-rio-que-fluye-a-traves-de-un-bosque-Iz3Q8r4YP5o">Unsplash</a>, used under the <a href="https://unsplash.com/license">Unsplash License</a>. The storefront illustration was created for this project.</small></p>
-    </footer>
+    <div data-include="components/footer.html"></div>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
