@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Silly Platypus Creekside Discovery Co. storefront</title>
+<desc id="desc">A cozy forest-green and timber nature shop beside a creek, with a sign, broad porch, windows, trees, stepping stones, and reeds.</desc>
+<defs>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#d8ebdc"/><stop offset="1" stop-color="#f7f0df"/></linearGradient>
+  <linearGradient id="water" x2="0" y2="1"><stop stop-color="#8fc4ba"/><stop offset="1" stop-color="#427f79"/></linearGradient>
+  <linearGradient id="wood" x2="0" y2="1"><stop stop-color="#b98a57"/><stop offset="1" stop-color="#805a39"/></linearGradient>
+  <pattern id="boards" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M0 32H34" stroke="#62452f" stroke-width="2" opacity=".35"/></pattern>
+</defs>
+<rect width="1200" height="820" fill="url(#sky)"/>
+<circle cx="980" cy="128" r="70" fill="#f1d89e" opacity=".8"/>
+<path d="M0 435Q190 360 370 430T760 405T1200 420V820H0Z" fill="#6b9467"/>
+<path d="M0 560Q240 500 440 570T840 550T1200 570V820H0Z" fill="#3f7158"/>
+<!-- trees -->
+<g fill="#315b49">
+  <path d="M70 450L155 125L240 450Z"/><path d="M20 450L105 195L190 450Z"/>
+  <path d="M965 430L1055 90L1145 430Z"/><path d="M1030 450L1120 170L1200 450Z"/>
+</g>
+<g fill="#6d956a">
+  <path d="M105 420L185 170L265 420Z"/><path d="M915 430L1000 150L1085 430Z"/>
+</g>
+<g stroke="#73583e" stroke-width="18" stroke-linecap="round"><path d="M155 420V520"/><path d="M1055 400V500"/><path d="M1120 415V510"/></g>
+<!-- shop foundation -->
+<path d="M250 520H970V655H250Z" fill="#73583e"/>
+<path d="M225 500H995V535H225Z" fill="#d5b787" stroke="#62452f" stroke-width="8"/>
+<!-- building -->
+<rect x="300" y="275" width="620" height="250" rx="8" fill="url(#wood)" stroke="#60452f" stroke-width="10"/>
+<rect x="300" y="275" width="620" height="250" fill="url(#boards)" opacity=".55"/>
+<!-- roof -->
+<path d="M235 300L610 80L985 300Z" fill="#315b49" stroke="#193f34" stroke-width="14" stroke-linejoin="round"/>
+<path d="M275 286L610 100L945 286Z" fill="#47745a"/>
+<path d="M275 300H945" stroke="#d6c39e" stroke-width="12"/>
+<!-- sign -->
+<rect x="423" y="205" width="374" height="78" rx="12" fill="#f7f0df" stroke="#73583e" stroke-width="8"/>
+<text x="610" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="#193f34">SILLY PLATYPUS</text>
+<text x="610" y="265" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#73583e">CREEKSIDE DISCOVERY CO.</text>
+<!-- windows -->
+<rect x="345" y="340" width="190" height="125" rx="5" fill="#cbe2d9" stroke="#60452f" stroke-width="12"/>
+<rect x="685" y="340" width="190" height="125" rx="5" fill="#cbe2d9" stroke="#60452f" stroke-width="12"/>
+<path d="M440 340V465M345 402H535M780 340V465M685 402H875" stroke="#73583e" stroke-width="8"/>
+<path d="M355 352L425 352L355 420ZM695 352L765 352L695 420Z" fill="#fff" opacity=".24"/>
+<!-- door -->
+<rect x="565" y="350" width="95" height="175" rx="5" fill="#315b49" stroke="#60452f" stroke-width="10"/>
+<rect x="577" y="365" width="71" height="70" fill="#b8d7ce" stroke="#e6d3ad" stroke-width="6"/>
+<circle cx="640" cy="465" r="7" fill="#e4c27d"/>
+<!-- porch and awning -->
+<path d="M250 485H970V520H250Z" fill="#e5d0aa" stroke="#60452f" stroke-width="7"/>
+<path d="M265 488V655M955 488V655M250 655H970" stroke="#60452f" stroke-width="13"/>
+<path d="M278 500H943V520H278Z" fill="#315b49"/>
+<!-- creek path -->
+<path d="M0 700Q190 610 370 700T760 685T1200 705V820H0Z" fill="url(#water)"/>
+<path d="M0 730Q190 655 375 730T760 713T1200 735" fill="none" stroke="#d3eee3" stroke-width="8" opacity=".75"/>
+<path d="M70 760Q245 690 410 760M830 765Q1010 690 1160 757" fill="none" stroke="#b7ded4" stroke-width="5" opacity=".6"/>
+<!-- stones and reeds -->
+<g fill="#c6b18c" stroke="#80664a" stroke-width="5">
+  <ellipse cx="175" cy="680" rx="38" ry="16"/><ellipse cx="245" cy="650" rx="28" ry="13"/>
+  <ellipse cx="1030" cy="685" rx="44" ry="17"/><ellipse cx="1100" cy="655" rx="26" ry="13"/>
+</g>
+<g fill="none" stroke="#315b49" stroke-width="8" stroke-linecap="round">
+  <path d="M90 672Q80 605 55 570M100 675Q125 605 145 590M1035 675Q1015 595 990 568M1048 680Q1080 600 1110 584"/>
+</g>
+<g fill="#9bba77"><ellipse cx="53" cy="568" rx="11" ry="25" transform="rotate(-25 53 568)"/><ellipse cx="146" cy="590" rx="11" ry="24" transform="rotate(25 146 590)"/><ellipse cx="990" cy="568" rx="11" ry="25" transform="rotate(-25 990 568)"/><ellipse cx="1110" cy="584" rx="11" ry="24" transform="rotate(25 1110 584)"/></g>
+</svg>
