@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Try interactive creekside activity tools from Silly Platypus Creekside Discovery Co.">
+    <title>Silly Platypus Creekside Discovery Co. | Activities</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/activities.css">
+    <script src="scripts/includes.js" defer></script>
+    <script src="scripts/activities.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div data-include="components/header.html"></div>
+
+    <main id="main-content">
+        <h2>Silly Platypus | Activities</h2>
+        <p class="intro">Explore a new way to learn about the creeks, ponds, and outdoor spaces around you.</p>
+        <p>The Silly Platypus activity station brings the shop's discovery kits to life with a few small interactive tools. Find an activity that fits your plans, keep a record of something you notice, or put together a sample kit before your next outdoor afternoon.</p>
+
+        <section class="feature">
+            <div>
+                <h3>Silly Platypus Makes Curiosity Hands-On</h3>
+                <p>These tools are designed for families, students, and first-time nature explorers. You can use them to plan an activity, organize your observations, and see how a few simple supplies can make a creek walk more engaging.</p>
+                <p>All prices shown in the kit planner are fictional examples for this class project. The observation log stays in this page during your current visit and is not sent to a server.</p>
+            </div>
+            <figure>
+                <img src="images/platypus-hero.jpg" alt="The Silly Platypus mascot ready to explore a freshwater habitat" loading="lazy" decoding="async">
+                <figcaption>Start small, look closely, and see what you discover.</figcaption>
+            </figure>
+        </section>
+
+        <section class="tool-panel" id="activity-finder">
+            <h3>Silly Platypus Activity Finder</h3>
+            <p>Choose where you plan to explore and the kind of activity you want. The suggestions below update automatically.</p>
+            <label class="tool-label" for="activity-setting">Where will you explore?</label>
+            <select class="tool-control" id="activity-setting">
+                <option value="all">Any setting</option>
+                <option value="creek">Creekside</option>
+                <option value="backyard">Backyard or park</option>
+                <option value="indoors">Indoors</option>
+            </select>
+            <label class="tool-label" for="activity-level">Who is the activity for?</label>
+            <select class="tool-control" id="activity-level">
+                <option value="all">Any experience level</option>
+                <option value="beginner">New explorer</option>
+                <option value="family">Family activity</option>
+                <option value="curious">Curious learner</option>
+            </select>
+
+            <div class="activity-results" id="activity-results">
+                <article class="activity-card" data-setting="creek backyard" data-level="beginner family">
+                    <h4>Puddle Detective Walk</h4>
+                    <p>Bring a notebook and magnifying glass to observe water, leaves, tracks, and other details without disturbing wildlife.</p>
+                    <p><strong>Setting:</strong> Creekside or backyard</p>
+                </article>
+                <article class="activity-card" data-setting="creek" data-level="curious family">
+                    <h4>Freshwater Field Notes</h4>
+                    <p>Use a River Ranger Guide to record the plants, birds, and insects you notice along a marked nature trail.</p>
+                    <p><strong>Setting:</strong> Creekside</p>
+                </article>
+                <article class="activity-card" data-setting="indoors backyard" data-level="beginner family">
+                    <h4>Mini Habitat Builder</h4>
+                    <p>Create a tabletop model of a pond edge and think about how plants, shelter, and water support living things.</p>
+                    <p><strong>Setting:</strong> Indoors or backyard</p>
+                </article>
+            </div>
+            <p class="tool-status" id="activity-status" aria-live="polite">Showing all three activity ideas.</p>
+        </section>
+
+        <section class="tool-panel" id="observation-journal">
+            <h3>Silly Platypus Field Journal</h3>
+            <p>Record a small discovery from your day. Add a title, date, and a few details, and the entry will appear in your journal below.</p>
+            <form id="observation-form">
+                <label class="tool-label" for="observation-title">What did you notice?</label>
+                <input class="tool-control" id="observation-title" name="observation-title" type="text" maxlength="70" required placeholder="Example: Tiny tracks beside the creek">
+                <label class="tool-label" for="observation-date">Date of observation</label>
+                <input class="tool-control" id="observation-date" name="observation-date" type="date" required>
+                <label class="tool-label" for="observation-details">Observation notes</label>
+                <textarea class="tool-control" id="observation-details" name="observation-details" rows="3" maxlength="300" required placeholder="Describe what you saw, heard, or wondered about."></textarea>
+                <button class="tool-button" type="submit">Add to my journal</button>
+            </form>
+            <p class="tool-status" id="observation-status" aria-live="polite">Your entries appear here for this visit only.</p>
+            <ul class="observation-list" id="observation-list" aria-label="Your field journal entries"></ul>
+        </section>
+
+        <section class="tool-panel" id="kit-planner">
+            <h3>Silly Platypus Kit Planner</h3>
+            <p>Choose a starter activity and add a few supplies. The estimated total and item list change whenever you update your selections.</p>
+            <label class="tool-label" for="kit-base">Choose a starter kit</label>
+            <select class="tool-control" id="kit-base">
+                <option value="0" data-name="No starter kit">No starter kit ($0)</option>
+                <option value="18" data-name="Puddle Explorer Kit">Puddle Explorer Kit ($18)</option>
+                <option value="14" data-name="River Ranger Guide">River Ranger Guide ($14)</option>
+                <option value="16" data-name="Burrow Builder Activity">Burrow Builder Activity ($16)</option>
+            </select>
+            <fieldset>
+                <legend><strong>Add optional supplies</strong></legend>
+                <div class="kit-options">
+                    <label><input type="checkbox" name="kit-extra" value="5" data-name="Pocket field notebook"> Pocket field notebook (+$5)</label>
+                    <label><input type="checkbox" name="kit-extra" value="7" data-name="Handheld magnifier"> Handheld magnifier (+$7)</label>
+                    <label><input type="checkbox" name="kit-extra" value="4" data-name="Freshwater wildlife cards"> Freshwater wildlife cards (+$4)</label>
+                    <label><input type="checkbox" name="kit-extra" value="6" data-name="Waterproof supply pouch"> Waterproof supply pouch (+$6)</label>
+                </div>
+            </fieldset>
+            <p>Estimated sample total: <output class="kit-total" id="kit-total" aria-live="polite">$0.00</output></p>
+            <ul id="kit-summary" aria-live="polite">
+                <li>No items selected yet.</li>
+            </ul>
+            <p class="tool-status">This planner is an example configurator, not a live checkout.</p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
