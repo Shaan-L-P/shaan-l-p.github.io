@@ -29,10 +29,4 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.error(error);
         }
     }));
-
-    // Run the standards checker only after the shared header and footer are in the page.
-    const checker = document.createElement("script");
-    checker.src = "https://divonbriesen.github.io/teaching/tools/standards-check.js";
-    checker.defer = true;
-    document.body.appendChild(checker);
 });
