@@ -1,4 +1,4 @@
-// Load the shared header and footer before running the site checker.
+// Load the shared header and footer components.
 // Keeping both components in one folder makes the business-site layout reusable.
 document.addEventListener("DOMContentLoaded", async function () {
     const placeholders = Array.from(document.querySelectorAll("[data-include]"));
