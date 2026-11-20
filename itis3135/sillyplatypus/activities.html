@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Try interactive creekside activity tools from Silly Platypus Creekside Discovery Co.">
-    <title>Silly Platypus Creekside Discovery Co. | Activities</title>
+    <title>Silly Platypus Creekside Discovery Co. | Silly Platypus | Activities</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/default.css">
     <link rel="stylesheet" href="styles/activities.css">
@@ -14,6 +14,8 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Class/ID rationale: .skip-link supports keyboard navigation; .intro styles lead copy; .feature aligns the introduction and image; .tool-panel groups each tool; .tool-label and .tool-control associate labels with fields; .tool-button styles the form action; .tool-heading styles tool headings; .activity-results and .activity-card create and filter the activity grid; .tool-status announces updates; .observation-list and .observation-remove manage journal entries; .kit-options lays out selectable supplies; .kit-total highlights the calculated price. IDs #main-content, #activity-finder, #activity-setting, #activity-level, #activity-results, #activity-status, #observation-journal, #observation-form, #observation-title, #observation-date, #observation-details, #observation-status, #observation-list, #field-journal-heading, #kit-planner, #kit-base, #kit-total, and #kit-summary are skip destinations, script hooks, label targets, or live-output targets. -->
+    <!-- This include div is a placeholder for the shared header component, keeping its markup in one reusable file. -->
     <div data-include="components/header.html"></div>
 
     <main id="main-content">
@@ -22,6 +24,7 @@
         <p>The Silly Platypus activity station brings the shop's discovery kits to life with a few small interactive tools. Find an activity that fits your plans, keep a record of something you notice, or put together a sample kit before your next outdoor afternoon.</p>
 
         <section class="feature">
+            <!-- This div groups the introduction text in the existing two-column feature layout. -->
             <div>
                 <h3>Silly Platypus Makes Curiosity Hands-On</h3>
                 <p>These tools are designed for families, students, and first-time nature explorers. You can use them to plan an activity, organize your observations, and see how a few simple supplies can make a creek walk more engaging.</p>
@@ -34,7 +37,7 @@
         </section>
 
         <section class="tool-panel" id="activity-finder">
-            <h3>Silly Platypus Activity Finder</h3>
+            <h3 class="tool-heading">Silly Platypus Activity Finder</h3>
             <p>Choose where you plan to explore and the kind of activity you want. The suggestions below update automatically.</p>
             <label class="tool-label" for="activity-setting">Where will you explore?</label>
             <select class="tool-control" id="activity-setting">
@@ -51,6 +54,7 @@
                 <option value="curious">Curious learner</option>
             </select>
 
+            <!-- This div groups the activity cards so the grid can be filtered without rebuilding the page. -->
             <div class="activity-results" id="activity-results">
                 <article class="activity-card" data-setting="creek backyard" data-level="beginner family">
                     <h4>Puddle Detective Walk</h4>
@@ -72,7 +76,7 @@
         </section>
 
         <section class="tool-panel" id="observation-journal">
-            <h3>Silly Platypus Field Journal</h3>
+            <h3 class="tool-heading" id="field-journal-heading">Silly Platypus Field Journal</h3>
             <p>Record a small discovery from your day. Add a title, date, and a few details, and the entry will appear in your journal below.</p>
             <form id="observation-form">
                 <label class="tool-label" for="observation-title">What did you notice?</label>
@@ -84,11 +88,11 @@
                 <button class="tool-button" type="submit">Add to my journal</button>
             </form>
             <p class="tool-status" id="observation-status" aria-live="polite">Your entries appear here for this visit only.</p>
-            <ul class="observation-list" id="observation-list" aria-label="Your field journal entries"></ul>
+            <ul class="observation-list" id="observation-list" aria-labelledby="field-journal-heading"></ul>
         </section>
 
         <section class="tool-panel" id="kit-planner">
-            <h3>Silly Platypus Kit Planner</h3>
+            <h3 class="tool-heading">Silly Platypus Kit Planner</h3>
             <p>Choose a starter activity and add a few supplies. The estimated total and item list change whenever you update your selections.</p>
             <label class="tool-label" for="kit-base">Choose a starter kit</label>
             <select class="tool-control" id="kit-base">
@@ -99,6 +103,7 @@
             </select>
             <fieldset>
                 <legend><strong>Add optional supplies</strong></legend>
+                <!-- This div arranges related checkbox options as one responsive group. -->
                 <div class="kit-options">
                     <label><input type="checkbox" name="kit-extra" value="5" data-name="Pocket field notebook"> Pocket field notebook (+$5)</label>
                     <label><input type="checkbox" name="kit-extra" value="7" data-name="Handheld magnifier"> Handheld magnifier (+$7)</label>
@@ -114,6 +119,7 @@
         </section>
     </main>
 
+    <!-- This include div is a placeholder for the shared footer component, keeping its markup in one reusable file. -->
     <div data-include="components/footer.html"></div>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>

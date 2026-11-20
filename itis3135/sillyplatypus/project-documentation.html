@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Project documentation for the Silly Platypus Creekside Discovery Co. website.">
-    <title>Silly Platypus Creekside Discovery Co. | Project Notes</title>
+    <title>Silly Platypus Creekside Discovery Co. | Silly Platypus | Project Notes</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/default.css">
     <link rel="stylesheet" href="styles/activities.css">
@@ -13,6 +13,8 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Class/ID rationale: .skip-link provides keyboard access; #main-content is its destination; .intro styles the lead paragraph; .feature aligns explanatory text and the image; .project-checklist presents requirement groups consistently; .peer-review-table organizes the feedback and revision record. -->
+    <!-- This include div is a placeholder for the shared header component, so the header markup is maintained in one file. -->
     <div data-include="components/header.html"></div>
 
     <main id="main-content">
@@ -21,6 +23,7 @@
         <p>Silly Platypus Creekside Discovery Co. is a fictional neighborhood shop offering creek exploration kits, freshwater wildlife guides, and simple nature activities. The website is intended to help families, students, and beginning nature explorers understand the shop's products, sample hours, fictional location, and ways to get started.</p>
 
         <section class="feature">
+            <!-- This div groups the descriptive copy beside the image in the feature grid. -->
             <div>
                 <h3>Silly Platypus Is Designed Around Its Visitors</h3>
                 <p>Visitors need to understand the available activities quickly, find the information that helps them plan a visit, and feel comfortable exploring even if they are new to nature journaling. The navigation separates the shop's story, products, hours, location, purpose, instructions, and interactive tools.</p>
@@ -80,6 +83,7 @@
         </section>
     </main>
 
+    <!-- This include div is a placeholder for the shared footer component, so the footer markup is maintained in one file. -->
     <div data-include="components/footer.html"></div>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
