@@ -14,7 +14,7 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <!-- class usage explanations and id usage explanations: .skip-link supports keyboard navigation; .intro styles lead copy; .feature aligns the introduction and image; .tool-panel groups each tool; .tool-label and .tool-control associate labels with fields; .tool-button styles the form action; .tool-heading styles tool headings; .activity-results and .activity-card create and filter the activity grid; .tool-status announces updates; .observation-list and .observation-remove manage journal entries; .kit-options lays out selectable supplies; .kit-total highlights the calculated price. IDs #main-content, #activity-finder, #activity-setting, #activity-level, #activity-results, #activity-status, #observation-journal, #observation-form, #observation-title, #observation-date, #observation-details, #observation-status, #observation-list, #field-journal-heading, #kit-planner, #kit-base, #kit-total, and #kit-summary are skip destinations, script hooks, label targets, or live-output targets. -->
+    <!-- class usage explanations and id usage explanations: .skip-link supports keyboard navigation; .intro styles lead copy; .feature aligns the introduction and image; .tool-panel groups each tool; .tool-label and .tool-control associate labels with fields; .tool-button styles the form action; .tool-heading styles tool headings; .activity-results and .activity-card create and filter the activity grid; .tool-status announces updates; .observation-list and .observation-remove manage journal entries; .kit-options lays out selectable supplies; .kit-total highlights the calculated price. IDs #main-content, #activity-finder, #activity-setting, #activity-level, #activity-results, #activity-status, #observation-journal, #observation-form, #observation-title, #observation-date, #observation-date-help, #observation-details, #observation-status, #observation-list, #field-journal-heading, #kit-planner, #kit-base, #kit-total, and #kit-summary are skip destinations, script hooks, label targets, or live-output targets. -->
     <!-- This include div is a placeholder for the shared header component, keeping its markup in one reusable file. -->
     <div data-include="components/header.html"></div>
 
@@ -82,7 +82,8 @@
                 <label class="tool-label" for="observation-title">What did you notice?</label>
                 <input class="tool-control" id="observation-title" name="observation-title" type="text" maxlength="70" required placeholder="Example: Tiny tracks beside the creek">
                 <label class="tool-label" for="observation-date">Date of observation</label>
-                <input class="tool-control" id="observation-date" name="observation-date" type="date" required>
+                <input class="tool-control" id="observation-date" name="observation-date" type="text" inputmode="numeric" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="YYYY-MM-DD" title="Enter a valid date in YYYY-MM-DD format, for example 2026-11-19." aria-describedby="observation-date-help" required>
+                <small id="observation-date-help">Enter the date as YYYY-MM-DD (example: 2026-11-19).</small>
                 <label class="tool-label" for="observation-details">Observation notes</label>
                 <textarea class="tool-control" id="observation-details" name="observation-details" rows="3" maxlength="300" required placeholder="Describe what you saw, heard, or wondered about."></textarea>
                 <button class="tool-button" type="submit">Add to my journal</button>
